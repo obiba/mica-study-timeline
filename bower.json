@@ -4,13 +4,18 @@
   "authors": [
     "Cedric Thiebault <cthiebault@p3g.com>"
   ],
-  "description": "D3 Timeline for Mica Studies",
-  "license": "GNU Public License version 3",
+  "description": "D3 Timeline for Mica Studies", 
+  "main": "study-timeline.js",
+  "dependencies": {
+  	// "d3-timeline": "0.1.0",
+    "d3": "~3.4.6"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "license": "GNU Public License version 3"
 }
