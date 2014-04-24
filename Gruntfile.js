@@ -9,8 +9,7 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON("package.json"),
       srcFiles: [
         "src/d3-timeline.js",
-        "src/study-timeline.js",
-        "src/study-timeline-legend.js"
+        "src/mica-study-timeline.js"
       ]
     },
     watch: {
