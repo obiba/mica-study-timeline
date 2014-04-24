@@ -1,4 +1,4 @@
-# Mica study D3 timeline
+# D3 Timeline for Mica Studies
 
 Inspired from [d3.chart.template](https://github.com/jgoodall/d3.chart.template)
 
