@@ -8,8 +8,7 @@ module.exports = function(grunt) {
     meta: {
       pkg: grunt.file.readJSON("package.json"),
       srcFiles: [
-        "src/d3-timeline.js",
-        "src/mica-study-timeline.js"
+        "src/d3-timeline.js"
       ]
     },
     watch: {
