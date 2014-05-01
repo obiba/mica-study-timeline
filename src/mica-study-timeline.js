@@ -1,95 +1,38 @@
-"use strict";
+(function ($) {
 
-// example of d3.chart. See
-// https://github.com/misoproject/d3.chart/wiki/quickstart
-// http://www.samselikoff.com/blog/2013/12/18/starting-out-with-d3-chart/
-// http://weblog.bocoup.com/reusability-with-d3/
+  "use strict";
 
-// TODO use this structure to implement timeline from drupal-study-timeline.js
+  $.MicaTimeline = function () {
+  };
 
+  $.MicaTimeline.prototype = {
 
-d3.chart("Circles", {
+    create: function (selectee, timelineData) {
+      var width = $(selectee).width();
+      var chart = d3.timeline()
+        .startYear(timelineData.start)
+        .beginning(timelineData.min)
+        .ending(timelineData.max)
+        .width(width)
+        .stack()
+        .tickFormat({
+          format: d3.format("d"),
+          tickTime: 1,
+          tickNumber: 1,
+          tickSize: 10
+        })
+        .margin({left: 15, right: 15, top: 0, bottom: 20})
+        .rotateTicks(timelineData.max > this.maxMonths ? 45 : 0)
+        .click(function (d, i, datum) {
+          $('#event-' + d.id).modal();
+        });
 
-  initialize: function () {
-    // create a base scale we will use later.
-    this.xScale = d3.scale.linear();
-
-    var circlesBase = this.base.append("g")
-        .classed("circles", true)
-        .attr("height", this.h)
-        .attr("width", this.w);
-
-    this.layer("circles", circlesBase, {
-      dataBind: function (data) {
-        var chart = this.chart();
-
-        // update the domain of the xScale since it depends on the data
-        chart.xScale.domain(d3.extent(data));
-
-        // return a data bound selection for the passed in data.
-        return this.selectAll("circle")
-            .data(data);
-
-      },
-      insert: function () {
-        var chart = this.chart();
-
-        // update the range of the xScale (account for radius width)
-        // on either side
-        chart.xScale.range([chart.r, chart.w - chart.r]);
-
-        // setup the elements that were just created
-        return this.append("circle")
-            .classed("circle", true)
-            .style("fill", "red")
-            .attr("cy", chart.h / 2)
-            .attr("r", chart.r);
-      },
-
-      // setup an enter event for the data as it comes in:
-      events: {
-        "enter": function () {
-          var chart = this.chart();
-
-          // position newly entering elements
-          return this.attr("cx", function (d) {
-            return chart.xScale(d);
-          });
-        }
-      }
-    });
-  },
-
-  // configures the width of the chart.
-  // when called without arguments, returns the
-  // current width.
-  width: function (newWidth) {
-    if (arguments.length === 0) {
-      return this.w;
+      d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
     }
-    this.w = newWidth;
-    return this;
-  },
+  };
 
-  // configures the height of the chart.
-  // when called without arguments, returns the
-  // current height.
-  height: function (newHeight) {
-    if (arguments.length === 0) {
-      return this.h;
-    }
-    this.h = newHeight;
-    return this;
-  },
+  $.MicaTimeline.defaultOptions = {
+    maxMonths: 300
+  };
 
-  // configures the radius of the circles in the chart.
-  // when called without arguments, returns the
-  // current radius.
-  radius: function (newRadius) {
-    if (arguments.length === 0) {
-      return this.r;
-    }
-    this.r = newRadius;
-    return this;
-  }
-});
+}(jQuery));

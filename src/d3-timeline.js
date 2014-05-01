@@ -52,11 +52,13 @@
 
             // figure out beginning and ending times if they are unspecified
             if (ending === 0 && beginning === 0) {
-              datum.times.forEach(function (time, i) {
-                if (time.starting_time < minTime || minTime === 0)
-                  minTime = time.starting_time;
-                if (time.ending_time > maxTime)
-                  maxTime = time.ending_time;
+              datum.events.forEach(function (event, i) {
+                if (event.starting_time < minTime || minTime === 0) {
+                  minTime = event.starting_time;
+                }
+                if (event.ending_time > maxTime) {
+                  maxTime = event.ending_time;
+                }
               });
             }
           });
@@ -98,7 +100,7 @@
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
-          var data = datum.times;
+          var data = datum.population.events;
           var hasLabel = (typeof(datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
               .append("path")
@@ -108,7 +110,7 @@
                 var rectWidth = getWidth(d, i);
                 return rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
               })
-              .style("fill", datum.color)
+              .style("fill", datum.population.color)
               .on("mouseover", function (d, i) {
                 hover(d, index, datum);
               })
