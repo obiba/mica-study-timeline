@@ -15,9 +15,6 @@
     "d3.js",
     "mica"
   ],
-  "d3.chart": {
-    "version": "0.1.2"
-  },
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-contrib-concat": "~0.3",

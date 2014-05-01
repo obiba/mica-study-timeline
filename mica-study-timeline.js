@@ -57,10 +57,12 @@
             // figure out beginning and ending times if they are unspecified
             if (ending === 0 && beginning === 0) {
               datum.events.forEach(function (event, i) {
-                if (event.starting_time < minTime || minTime === 0)
+                if (event.starting_time < minTime || minTime === 0) {
                   minTime = event.starting_time;
-                if (event.ending_time > maxTime)
+                }
+                if (event.ending_time > maxTime) {
                   maxTime = event.ending_time;
+                }
               });
             }
           });
