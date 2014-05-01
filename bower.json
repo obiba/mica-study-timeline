@@ -8,7 +8,7 @@
   "main": "mica-study-timeline.js",
   "dependencies": {
     "d3": "~3.4.6",
-    "d3.chart": "https://github.com/misoproject/d3.chart.git"
+    "jquery": "~2.0.3"
   },
   "ignore": [
     "**/.*",

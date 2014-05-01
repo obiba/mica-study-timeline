@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   "use strict";
 
@@ -8,13 +8,23 @@ module.exports = function(grunt) {
     meta: {
       pkg: grunt.file.readJSON("package.json"),
       srcFiles: [
-        "src/d3-timeline.js"
+        "src/d3-timeline.js",
+        "src/mica-study-timeline.js"
+      ],
+      cssFiles: [
+        "src/timeline.css"
       ]
     },
     watch: {
       scripts: {
         files: ["src/**/*.js"],
         tasks: ["jshint"]
+      }
+    },
+    cssmin : {
+      css:{
+        src: "src/*.css",
+        dest: "<%= meta.pkg.name %>.min.css"
       }
     },
     jshint: {
@@ -51,14 +61,16 @@ module.exports = function(grunt) {
           " */\n"
       },
       dist: {
-        files: {
-          "<%= meta.pkg.name %>.js": "<%= meta.srcFiles %>"
-        }
+        files: [
+          { "<%= meta.pkg.name %>.js": "<%= meta.srcFiles %>" },
+          { "<%= meta.pkg.name %>.css": "<%= meta.cssFiles %>" }
+        ]
       },
       release: {
-        files: {
-          "<%= meta.pkg.name %>.js": "<%= meta.srcFiles %>"
-        }
+        files: [
+          { "<%= meta.pkg.name %>.js": "<%= meta.srcFiles %>" },
+          { "<%= meta.pkg.name %>.css": "<%= meta.cssFiles %>" }
+        ]
       }
     },
     uglify: {
@@ -83,7 +95,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask("default", ["jshint", "concat:dist", "uglify:dist"]);
-  grunt.registerTask("release", ["jshint", "concat", "uglify"]);
+  grunt.registerTask("default", ["jshint", "concat:dist", "uglify:dist", 'cssmin:css']);
+  grunt.registerTask("release", ["jshint", "concat", "uglify", 'cssmin']);
 };

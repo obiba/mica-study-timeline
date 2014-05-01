@@ -1,16 +1,6 @@
 (function () {
 
-//  var MAX_MONTHS = 300;
-//  var data = [1, 3, 4, 6, 10];
-//  var chart = d3.select("#vis")
-//      .append("svg")
-//      .chart("Circles")
-//      .width(100)
-//      .height(50)
-//      .radius(5);
-//  chart.draw(data);
-
-  createTimeline(getTestData(), 1138);
+  new $.MicaTimeline().create("#vis", getTestData());
 
   function getTestData() {
     // https://www.maelstrom-research.org/content/canadian-multicentre-osteoporosis-study
@@ -122,30 +112,6 @@
       "min": 0,
       "max": 252
     };
-
-  }
-
-  function createTimeline(timelineData, width) {
-    var MAX_MONTHS = 300;
-    var chart = d3.timeline()
-      .startYear(timelineData.start)
-      .beginning(timelineData.min)
-      .ending(timelineData.max)
-      .width(width)
-      .stack()
-      .tickFormat({
-        format: d3.format("d"),
-        tickTime: 1,
-        tickNumber: 1,
-        tickSize: 10
-      })
-      .margin({left: 15, right: 15, top: 0, bottom: 20})
-      .rotateTicks(timelineData.max > MAX_MONTHS ? 45 : 0)
-      .click(function (d, i, datum) {
-        $('#event-' + d.id).modal();
-      });
-
-    d3.select("#vis").append("svg").attr("width", width).datum(timelineData.data).call(chart);
   }
 
 }());
