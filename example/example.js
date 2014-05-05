@@ -1,6 +1,73 @@
 (function () {
 
-  new $.MicaTimeline().create("#vis", getTestData());
+  var data = getTestData();
+  sortStudyPopulationsByDce(data.populations);
+  new $.MicaTimeline().create("#vis", data);
+
+//  test();
+
+  function test() {
+    var data = getTestData();
+    dumpDCE(data);
+    sortStudyPopulationsByDce(data.populations);
+    console.log("===========");
+    dumpDCE(data);
+  }
+
+  function dumpDCE(data) {
+    $.each(data.populations, function (i, population) {
+      $.each(population.dataCollectionEvents, function (j, dce) {
+        console.log(i, " StartY:", dce.startYear, "startMonth:", dce.startMonth, "EndYear:", dce.endYear, "EndMonth:", dce.endMonth);
+      });
+    });
+  }
+
+  function toMonths(y, m) {
+    return 12 * y + m;
+  }
+
+  function sortStudyPopulationsByDce(populations) {
+
+    $.each(populations, function (i, population) {
+      if (!population.hasOwnProperty('dataCollectionEvents')) next;
+      population.dataCollectionEvents.sort(sortByDates);
+    });
+
+    populations.sort(sortPopulation);
+    console.log(JSON.stringify(populations));
+  }
+
+  function sortByDates(a, b) {
+    var startA = toMonths(getDceField(a, 'startYear'), getDceField(a, 'startMonth'));
+    var startB = toMonths(getDceField(b, 'startYear'), getDceField(b, 'startMonth'));
+    if (startA === startB) {
+      var endA = toMonths(getDceField(a, 'endYear'), getDceField(a, 'endMonth'));
+      var endB = toMonths(getDceField(b, 'endYear'), getDceField(b, 'endMonth'));
+      if (endA === endB) return 0;
+      else return endA < endB ? -1 : 1;
+    }
+    return startA < startB ? -1 : 1;
+  }
+
+  function sortPopulation(a, b) {
+    if (!a.hasOwnProperty('dataCollectionEvents') || a.dataCollectionEvents.length == 0) return 1;
+    if (!b.hasOwnProperty('dataCollectionEvents') || b.dataCollectionEvents.length == 0) return 1;
+    var firstDceA = a.dataCollectionEvents[0];
+    var firstDceB = b.dataCollectionEvents[0];
+    var startA = toMonths(getDceField(firstDceA, 'startYear'), getDceField(firstDceA, 'startMonth'));
+    var startB = toMonths(getDceField(firstDceB, 'startYear'), getDceField(firstDceB, 'startMonth'));
+    if (startA == startB) {
+      var endA = toMonths(getDceField(firstDceA, 'endYear'), getDceField(firstDceA, 'endMonth'));
+      var endB = toMonths(getDceField(firstDceB, 'endYear'), getDceField(firstDceB, 'endMonth'));
+      if (endA == endB) return 0;
+      else return endA < endB ? -1 : 1;
+    }
+    else return startA < startB ? -1 : 1;
+  }
+
+  function getDceField(obj, field) {
+    return obj.hasOwnProperty(field) ? obj[field] : 0;
+  }
 
   function getTestData() {
     return {
@@ -354,6 +421,112 @@
               "startMonth": 1,
               "endYear": 2020,
               "endMonth": 12,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "administratives_databases",
+                "others"
+              ],
+              "administrativeDatabases": [
+                "aDB1",
+                "aDB2"
+              ],
+              "otherDataSources": [
+                {
+                  "lang": "en",
+                  "value": "Other data sources"
+                }
+              ],
+              "bioSamples": [
+                "Blood",
+                "Cell Tissue"
+              ],
+              "tissueTypes": [
+                {
+                  "lang": "en",
+                  "value": "Liver Tissue"
+                }
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Ear wax"
+                }
+              ],
+              "attachments": [
+                {
+                  "fileName": "patate.frite",
+                  "type": "zip",
+                  "description": [
+                    {
+                      "lang": "en",
+                      "value": "This is an attachment"
+                    }
+                  ],
+                  "lang": "en",
+                  "size": 1000000,
+                  "md5": "7822fe77621b0b2c542215e599a3b511"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataCollectionEvents": [
+            {
+              "id": "5362bcbae4b09be1985f344d",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Baseline Recruitment"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "Baseline data collection"
+                }
+              ],
+              "startYear": 2013,
+              "endYear": 2015,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "biological_samples"
+              ],
+              "administrativeDatabases": [
+                "aDB1"
+              ],
+              "bioSamples": [
+                "BioSamples.blood",
+                "BioSamples.urine",
+                "BioSamples.others"
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Other biological sample"
+                }
+              ]
+            },
+            {
+              "id": "5362bcbae4b09be1985f144e",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Follow-Up One"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "First follow-up from baseline data collection"
+                }
+              ],
+              "startYear": 1997,
+              "startMonth": 1,
+              "endYear": 2000,
+              "endMonth": 7,
               "dataSources": [
                 "questionnaires",
                 "physical_measures",

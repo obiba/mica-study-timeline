@@ -1,6 +1,6 @@
 /*! mica-study-timeline - v1.0.0-SNAPSHOT
  *  License: GNU Public License version 3
- *  Date: 2014-05-02
+ *  Date: 2014-05-05
  */
 (function () {
 
@@ -324,8 +324,10 @@
   $.MicaTimeline.prototype = {
 
     create: function (selectee, studyDto) {
-      var timelineData = studyDtoToTimelineData(studyDto);
+      var bounds = findBounds(studyDto.populations);
+      var timelineData = studyDtoToTimelineData(studyDto, bounds);
       if (timelineData === null) return;
+      console.log(JSON.stringify(timelineData));
 
       var width = $(selectee).width();
       var chart = d3.timeline()
@@ -352,16 +354,47 @@
   };
 
   /**
+   * Returns the date bounds of all population, startYear and maxYear (in months)
+   * @param populations
+   * @returns {{min: number, max: number, start: Number}}
+   */
+  function findBounds(populations) {
+    var startYear= Number.MAX_VALUE;
+    var maxYear= Number.MIN_VALUE;
+    $.each(populations, function (i, population) {
+      if (population.hasOwnProperty('dataCollectionEvents')) {
+        $.each(population.dataCollectionEvents, function (j, dce) {
+          console.log(dce.startYear, dce.endYear);
+          startYear = Math.min(startYear, dce.startYear);
+          maxYear = Math.max(maxYear, convertToMonths(dce.endYear - startYear, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
+        });
+      }
+    });
+
+    return {min: 0, max: Math.ceil(maxYear/12) * 12, start: startYear};
+  }
+
+  /**
+   * Converts to months
+   * @param year
+   * @param month
+   * @returns {number}
+   */
+  function convertToMonths(year, month) {
+//    console.log("y", year, "m", month, "=", (12 * parseInt(year, 10) + parseInt(month, 10)));
+    return 12 * parseInt(year, 10) + parseInt(month, 10);
+  }
+
+
+  /**
    * Converts a StudyDto to timeline compatible data format
    * @param studyDto
    */
-  function studyDtoToTimelineData(studyDto) {
-    var bound = {min: Number.MAX_VALUE, max: Number.MIN_VALUE};
-    var populations = getPopulationsData(studyDto, bound);
+  function studyDtoToTimelineData(studyDto, bounds) {
+    var populations = getPopulationsData(studyDto, bounds);
     if (populations.length === 0) return null;
-    var timelineData = {start: (bound.min - 1)/12, min: 0, max: bound.max - bound.min, data: populations};
-
-    console.log("RESULT:", timelineData);
+    var timelineData = {start: bounds.start, min: 0, max: bounds.max, data: populations};
+//    console.log("RESULT:", timelineData);
 
     return timelineData;
   }
@@ -370,7 +403,7 @@
    * Given a Study Dto, extracts the required fields and formats the data required for timeline rendering
    * @param studyDto
    */
-  function getPopulationsData(studyDto, bound) {
+  function getPopulationsData(studyDto, bounds) {
     if (studyDto === null || !studyDto.hasOwnProperty('populations')) return;
 
     var populations = [];
@@ -379,7 +412,7 @@
       populationData = {};
       setId(populationData, populationDto, 'id');
       setTitle(populationData, populationDto, 'name');
-      setEvents(populationData, populationDto.dataCollectionEvents, bound);
+      setEvents(populationData, populationDto.dataCollectionEvents, bounds);
       if (!jQuery.isEmptyObject(populationData)) {
         populationData.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
         populations.push({population: populationData});
@@ -387,7 +420,6 @@
     });
 
     return populations;
-
 
 
     /**
@@ -415,7 +447,7 @@
      * @param populationData
      * @param dto
      */
-    function setEvents(populationData, dto, bound) {
+    function setEvents(populationData, dto, bounds) {
       if (jQuery.isEmptyObject(dto)) return;
 
       var dces = [];
@@ -423,8 +455,8 @@
         var dce = {};
         setId(dce, dceDto, 'id');
         setTitle(dce, dceDto, 'name');
-        setStartingTime(dce, dceDto, bound);
-        setEndingTime(dce, dceDto, bound);
+        setStartingTime(dce, dceDto, bounds);
+        setEndingTime(dce, dceDto, bounds);
         if (!jQuery.isEmptyObject(dce)) dces.push(dce);
       });
 
@@ -435,11 +467,10 @@
        * @param dce
        * @param dceDto
        */
-      function setStartingTime(dce, dceDto, bound) {
+      function setStartingTime(dce, dceDto, bounds) {
         var start = dceDto.hasOwnProperty('startYear') ? dceDto.startYear : 0;
-        var end = dceDto.hasOwnProperty('startMonth') ? dceDto.startMonth : 1;
-        dce.starting_time = convertToMonths(start, start > 0 ? end : 0);
-        if (bound.min > dce.starting_time) bound.min = dce.starting_time;
+        var end = dceDto.hasOwnProperty('startMonth') ? dceDto.startMonth - 1 : 0;
+        dce.starting_time = convertToMonths(start - bounds.start, start > 0 ? end : 0);
       }
 
       /**
@@ -447,22 +478,10 @@
        * @param dce
        * @param dceDto
        */
-      function setEndingTime(dce, dceDto, bound) {
+      function setEndingTime(dce, dceDto, bounds) {
         var start = dceDto.hasOwnProperty('endYear') ? dceDto.endYear : 0;
         var end = dceDto.hasOwnProperty('endMonth') ? dceDto.endMonth : 12;
-        dce.ending_time = convertToMonths(start, start > 0 ? end : 0);
-        if (bound.max < dce.ending_time) bound.max = dce.ending_time;
-      }
-
-      /**
-       * Converts to months
-       * @param year
-       * @param month
-       * @returns {number}
-       */
-      function convertToMonths(year, month) {
-        console.log("y", year, "m", month, "=", (12 * parseInt(year, 10) + parseInt(month, 10)));
-        return 12 * parseInt(year, 10) + parseInt(month, 10);
+        dce.ending_time = convertToMonths(start - bounds.start, start > 0 ? end : 0);
       }
     }
   }

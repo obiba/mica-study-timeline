@@ -16,7 +16,7 @@
     "mica"
   ],
   "devDependencies": {
-    "grunt": "~0.4",
+    "grunt": "~0.4.4",
     "grunt-contrib-concat": "~0.3",
     "grunt-contrib-uglify": "~0.2",
     "grunt-contrib-jshint": "~0.6",
