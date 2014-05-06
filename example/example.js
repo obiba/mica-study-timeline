@@ -7,11 +7,20 @@
 //  test();
 
   function test() {
-    var data = getTestData();
-    dumpDCE(data);
-    sortStudyPopulationsByDce(data.populations);
-    console.log("===========");
-    dumpDCE(data);
+
+    var a = {x: 7,y:18};
+    var b = {x:1, y:8};
+    console.log(overlap(a, b));
+
+    function overlap(a, b) {
+      return Math.min(a.y, b.y) - Math.max(b.x, a.x);
+    }
+
+//    var data = getTestData();
+//    dumpDCE(data);
+//    sortStudyPopulationsByDce(data.populations);
+//    console.log("===========");
+//    dumpDCE(data);
   }
 
   function dumpDCE(data) {
@@ -29,7 +38,7 @@
   function sortStudyPopulationsByDce(populations) {
 
     $.each(populations, function (i, population) {
-      if (!population.hasOwnProperty('dataCollectionEvents')) next;
+      if (!population.hasOwnProperty('dataCollectionEvents')) return;
       population.dataCollectionEvents.sort(sortByDates);
     });
 
@@ -472,6 +481,13 @@
           ]
         },
         {
+          "id": "999bcbae4b09be1985f144c",
+          "name": [
+            {
+              "lang": "en",
+              "value": "CSC Population"
+            }
+          ],
           "dataCollectionEvents": [
             {
               "id": "5362bcbae4b09be1985f344d",
@@ -525,7 +541,73 @@
               ],
               "startYear": 1997,
               "startMonth": 1,
-              "endYear": 2000,
+              "endYear": 2014,
+              "endMonth": 7,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "administratives_databases",
+                "others"
+              ],
+              "administrativeDatabases": [
+                "aDB1",
+                "aDB2"
+              ],
+              "otherDataSources": [
+                {
+                  "lang": "en",
+                  "value": "Other data sources"
+                }
+              ],
+              "bioSamples": [
+                "Blood",
+                "Cell Tissue"
+              ],
+              "tissueTypes": [
+                {
+                  "lang": "en",
+                  "value": "Liver Tissue"
+                }
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Ear wax"
+                }
+              ],
+              "attachments": [
+                {
+                  "fileName": "patate.frite",
+                  "type": "zip",
+                  "description": [
+                    {
+                      "lang": "en",
+                      "value": "This is an attachment"
+                    }
+                  ],
+                  "lang": "en",
+                  "size": 1000000,
+                  "md5": "7822fe77621b0b2c542215e599a3b511"
+                }
+              ]
+            },
+            {
+              "id": "5362bcbae4b09be1985f1499",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Follow-Up One"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "First follow-up from baseline data collection"
+                }
+              ],
+              "startYear": 1998,
+              "startMonth": 1,
+              "endYear": 2001,
               "endMonth": 7,
               "dataSources": [
                 "questionnaires",
