@@ -34,7 +34,7 @@
           tickSize: 10
         })
         .margin({left: 15, right: 15, top: 0, bottom: 20})
-        .rotateTicks(timelineData.max > this.maxMonths ? 45 : 0)
+        .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
         .click(function (d, i, datum) {
           $('#event-' + d.id).modal();
         });
