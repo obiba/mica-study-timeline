@@ -1,55 +1,6 @@
 (function () {
 
-  var data = getTestData();
-  sortStudyPopulationsByDce(data.populations);
-  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", data);
-
-  function toMonths(y, m) {
-    return 12 * y + m;
-  }
-
-  function sortStudyPopulationsByDce(populations) {
-
-    $.each(populations, function (i, population) {
-      if (!population.hasOwnProperty('dataCollectionEvents')) return;
-      population.dataCollectionEvents.sort(sortByDates);
-    });
-
-    populations.sort(sortPopulation);
-    console.log(JSON.stringify(populations));
-  }
-
-  function sortByDates(a, b) {
-    var startA = toMonths(getDceField(a, 'startYear'), getDceField(a, 'startMonth'));
-    var startB = toMonths(getDceField(b, 'startYear'), getDceField(b, 'startMonth'));
-    if (startA === startB) {
-      var endA = toMonths(getDceField(a, 'endYear'), getDceField(a, 'endMonth'));
-      var endB = toMonths(getDceField(b, 'endYear'), getDceField(b, 'endMonth'));
-      if (endA === endB) return 0;
-      else return endA < endB ? -1 : 1;
-    }
-    return startA < startB ? -1 : 1;
-  }
-
-  function sortPopulation(a, b) {
-    if (!a.hasOwnProperty('dataCollectionEvents') || a.dataCollectionEvents.length == 0) return 1;
-    if (!b.hasOwnProperty('dataCollectionEvents') || b.dataCollectionEvents.length == 0) return 1;
-    var firstDceA = a.dataCollectionEvents[0];
-    var firstDceB = b.dataCollectionEvents[0];
-    var startA = toMonths(getDceField(firstDceA, 'startYear'), getDceField(firstDceA, 'startMonth'));
-    var startB = toMonths(getDceField(firstDceB, 'startYear'), getDceField(firstDceB, 'startMonth'));
-    if (startA == startB) {
-      var endA = toMonths(getDceField(firstDceA, 'endYear'), getDceField(firstDceA, 'endMonth'));
-      var endB = toMonths(getDceField(firstDceB, 'endYear'), getDceField(firstDceB, 'endMonth'));
-      if (endA == endB) return 0;
-      else return endA < endB ? -1 : 1;
-    }
-    else return startA < startB ? -1 : 1;
-  }
-
-  function getDceField(obj, field) {
-    return obj.hasOwnProperty(field) ? obj[field] : 0;
-  }
+  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", getTestData());
 
   function getTestData() {
     return {
