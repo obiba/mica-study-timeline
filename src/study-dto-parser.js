@@ -55,6 +55,7 @@
   /**
    * Converts a StudyDto to timeline compatible data format
    * @param studyDto
+   * @param bounds
    */
   function parseStudy(studyDto, bounds) {
     var populations = parsePopulations(studyDto, bounds);
@@ -66,6 +67,7 @@
   /**
    * Given a Study Dto, extracts the required fields and formats the data required for timeline rendering
    * @param studyDto
+   * @param bounds
    */
   function parsePopulations(studyDto, bounds) {
     if (studyDto === null || !studyDto.hasOwnProperty('populations')) return;
@@ -118,8 +120,10 @@
 
     /**
      * Set the data collection events of a given population
+     * @param lines
      * @param populationData
      * @param dto
+     * @param bounds
      */
     function parseEvents(lines, populationData, dto, bounds) {
       if (jQuery.isEmptyObject(dto)) return;
@@ -200,6 +204,7 @@
        * Sets the starting time of an event in months
        * @param dce
        * @param dceDto
+       * @param bounds
        */
       function setStartingTime(dce, dceDto, bounds) {
         dce.starting_time = getStartingTime(dceDto, bounds);
@@ -221,6 +226,7 @@
        * Sets the ending time of an event in months
        * @param dce
        * @param dceDto
+       * @param bounds
        */
       function setEndingTime(dce, dceDto, bounds) {
         dce.ending_time = getEndingTime(dceDto, bounds);
