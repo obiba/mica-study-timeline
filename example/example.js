@@ -2,9 +2,7 @@
 
   var data = getTestData();
   sortStudyPopulationsByDce(data.populations);
-  var timeline = new $.MicaTimeline(new $.StudyDtoParser());
-  timeline.create("#vis", data);
-  timeline.addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", data).addLegend();
 
   function toMonths(y, m) {
     return 12 * y + m;

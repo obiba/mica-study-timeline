@@ -646,6 +646,8 @@
 
       this.timelineData = timelineData;
       this.selectee = selectee;
+
+      return this;
     },
 
     addLegend: function () {
@@ -662,6 +664,8 @@
           ul.append(li);
         }
       });
+      
+      return this;
     }
   };
 
