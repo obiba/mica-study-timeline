@@ -584,7 +584,6 @@
   };
 
   function shadeColor(color, percent) {
-    console.log("Precent:", percent);
     // validate hex string
     var hex = String(color).replace(/[^0-9a-f]/gi, '');
     if (hex.length < 6) {
@@ -650,7 +649,6 @@
     },
 
     addLegend: function () {
-      console.log(JSON.stringify(this.timelineData));
       if (!this.timelineData.hasOwnProperty('data') || this.timelineData.data.length === 0) return;
       var ul = $("<ul id='legend' class='timeline-legend'>");
 
@@ -667,8 +665,13 @@
     }
   };
 
+  /**
+   * @param color
+   * @param title
+   * @returns {*|HTMLElement}
+   */
   function createLegendRow(color, title) {
-    var rect ="<rect width='20' height='20' x='2' y='2' rx='5' ry='5' style='fill:COLOR;'>&nbsp;".replace(/COLOR/, color);
+    var rect ="<rect width='20' height='20' x='2' y='2' rx='5' ry='5' style='fill:COLOR;'>".replace(/COLOR/, color);
     return $("<li><svg width='25' height='25'>"+rect+"</svg>"+title+"</li>");
   }
 

@@ -21,3 +21,8 @@ ul.timeline-legend {
 ul.timeline-legend li {
     list-style: none;
 }
+
+ul.timeline-legend svg {
+    vertical-align: middle;
+    margin-right: 3px;
+}
