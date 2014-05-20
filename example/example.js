@@ -1,6 +1,6 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", getTestData());
+  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", getTestData()).addLegend();
 
   function getTestData() {
     return {
@@ -195,216 +195,6 @@
       ],
       "populations": [
         {
-          "id": "5362bcbae4b09be1985f144c",
-          "name": [
-            {
-              "lang": "en",
-              "value": "CLSA Population"
-            }
-          ],
-          "description": [
-            {
-              "lang": "en",
-              "value": "This is a population"
-            }
-          ],
-          "recruitment": {
-            "dataSources": [
-              "questionnaires",
-              "administratives_databases",
-              "others"
-            ],
-            "generalPopulationSources": [
-              "selected_samples"
-            ],
-            "specificPopulationSources": [
-              "clinic_patients",
-              "other"
-            ],
-            "otherSpecificPopulationSource": [
-              {
-                "lang": "en",
-                "value": "Other specific population"
-              }
-            ],
-            "studies": [
-              {
-                "localizedStrings": [
-                  {
-                    "lang": "en",
-                    "value": "Canadian Community Health Survey (CCHS) – Healthy Aging"
-                  }
-                ]
-              },
-              {
-                "localizedStrings": [
-                  {
-                    "lang": "en",
-                    "value": "CARTaGENE"
-                  }
-                ]
-              }
-            ],
-            "otherSource": [
-              {
-                "lang": "en",
-                "value": "Other source of recruitment"
-              }
-            ]
-          },
-          "selectionCriteria": {
-            "gender": "women",
-            "ageMin": 45,
-            "ageMax": 85,
-            "countriesIso": [
-              "CAN"
-            ],
-            "criteria": [
-              "criteria1"
-            ],
-            "ethnicOrigin": [
-              {
-                "localizedStrings": [
-                  {
-                    "lang": "en",
-                    "value": "Serbian"
-                  }
-                ]
-              }
-            ],
-            "healthStatus": [
-              {
-                "localizedStrings": [
-                  {
-                    "lang": "en",
-                    "value": "Good"
-                  }
-                ]
-              }
-            ],
-            "otherCriteria": [
-              {
-                "lang": "en",
-                "value": "<p>Language: Individuals who are able to respond in either French or English.</p>\n<p>Exclusion criteria: The CLSA uses the same exclusion criteria as the Statistics Canada Canadian Community Health Survey – Healthy Aging. Excluded from the study are:</p>\n<ul><li>Residents of the three territories</li>\n<li>Full-time members of the Canadian Forces</li>\n<li>Individuals living in long-term care institutions (i.e., those providing 24-hour nursing care). However, those living in households and transitional housing arrangements (e.g., seniors’ residences, in which only minimal care is provided) will be included. CLSA cohort participants who become institutionalized during the course of the study will continue to be followed either through personal or proxy interview.</li>\n<li>Persons living on reserves and other Aboriginal settlements. However, individuals who are of First Nations descent who live outside reserves are included in the study.</li>\n<li>Individuals with cognitive impairment at baseline</li>\n</ul>"
-              }
-            ]
-          },
-          "numberOfParticipants": {
-            "participant": {
-              "noLimit": false,
-              "number": 50000
-            },
-            "sample": {
-              "noLimit": false,
-              "number": 30000
-            }
-          },
-          "dataCollectionEvents": [
-            {
-              "id": "5362bcbae4b09be1985f144d",
-              "name": [
-                {
-                  "lang": "en",
-                  "value": "Baseline Recruitment"
-                }
-              ],
-              "description": [
-                {
-                  "lang": "en",
-                  "value": "Baseline data collection"
-                }
-              ],
-              "startYear": 2010,
-              "endYear": 2015,
-              "dataSources": [
-                "questionnaires",
-                "physical_measures",
-                "biological_samples"
-              ],
-              "administrativeDatabases": [
-                "aDB1"
-              ],
-              "bioSamples": [
-                "BioSamples.blood",
-                "BioSamples.urine",
-                "BioSamples.others"
-              ],
-              "otherBioSamples": [
-                {
-                  "lang": "en",
-                  "value": "Other biological sample"
-                }
-              ]
-            },
-            {
-              "id": "5362bcbae4b09be1985f144e",
-              "name": [
-                {
-                  "lang": "en",
-                  "value": "Follow-Up One"
-                }
-              ],
-              "description": [
-                {
-                  "lang": "en",
-                  "value": "First follow-up from baseline data collection"
-                }
-              ],
-              "startYear": 2000,
-              "startMonth": 1,
-              "endYear": 2020,
-              "endMonth": 12,
-              "dataSources": [
-                "questionnaires",
-                "physical_measures",
-                "administratives_databases",
-                "others"
-              ],
-              "administrativeDatabases": [
-                "aDB1",
-                "aDB2"
-              ],
-              "otherDataSources": [
-                {
-                  "lang": "en",
-                  "value": "Other data sources"
-                }
-              ],
-              "bioSamples": [
-                "Blood",
-                "Cell Tissue"
-              ],
-              "tissueTypes": [
-                {
-                  "lang": "en",
-                  "value": "Liver Tissue"
-                }
-              ],
-              "otherBioSamples": [
-                {
-                  "lang": "en",
-                  "value": "Ear wax"
-                }
-              ],
-              "attachments": [
-                {
-                  "fileName": "patate.frite",
-                  "type": "zip",
-                  "description": [
-                    {
-                      "lang": "en",
-                      "value": "This is an attachment"
-                    }
-                  ],
-                  "lang": "en",
-                  "size": 1000000,
-                  "md5": "7822fe77621b0b2c542215e599a3b511"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "id": "999bcbae4b09be1985f144c",
           "name": [
             {
@@ -414,42 +204,6 @@
           ],
           "dataCollectionEvents": [
             {
-              "id": "5362bcbae4b09be1985f344d",
-              "name": [
-                {
-                  "lang": "en",
-                  "value": "Baseline Recruitment"
-                }
-              ],
-              "description": [
-                {
-                  "lang": "en",
-                  "value": "Baseline data collection"
-                }
-              ],
-              "startYear": 2013,
-              "endYear": 2015,
-              "dataSources": [
-                "questionnaires",
-                "physical_measures",
-                "biological_samples"
-              ],
-              "administrativeDatabases": [
-                "aDB1"
-              ],
-              "bioSamples": [
-                "BioSamples.blood",
-                "BioSamples.urine",
-                "BioSamples.others"
-              ],
-              "otherBioSamples": [
-                {
-                  "lang": "en",
-                  "value": "Other biological sample"
-                }
-              ]
-            },
-            {
               "id": "5362bcbae4b09be1985f144e",
               "name": [
                 {
@@ -463,9 +217,9 @@
                   "value": "First follow-up from baseline data collection"
                 }
               ],
-              "startYear": 1997,
+              "startYear": 1990,
               "startMonth": 1,
-              "endYear": 2014,
+              "endYear": 2018,
               "endMonth": 7,
               "dataSources": [
                 "questionnaires",
@@ -578,6 +332,462 @@
                   "lang": "en",
                   "size": 1000000,
                   "md5": "7822fe77621b0b2c542215e599a3b511"
+                }
+              ]
+            },
+            {
+              "id": "5362bcbae4b09be1985f344d",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Baseline Recruitment"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "Baseline data collection"
+                }
+              ],
+              "startYear": 2013,
+              "endYear": 2015,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "biological_samples"
+              ],
+              "administrativeDatabases": [
+                "aDB1"
+              ],
+              "bioSamples": [
+                "BioSamples.blood",
+                "BioSamples.urine",
+                "BioSamples.others"
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Other biological sample"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5362bcbae4b09be1985f144c",
+          "name": [
+            {
+              "lang": "en",
+              "value": "CLSA Population"
+            }
+          ],
+          "description": [
+            {
+              "lang": "en",
+              "value": "This is a population"
+            }
+          ],
+          "recruitment": {
+            "dataSources": [
+              "questionnaires",
+              "administratives_databases",
+              "others"
+            ],
+            "generalPopulationSources": [
+              "selected_samples"
+            ],
+            "specificPopulationSources": [
+              "clinic_patients",
+              "other"
+            ],
+            "otherSpecificPopulationSource": [
+              {
+                "lang": "en",
+                "value": "Other specific population"
+              }
+            ],
+            "studies": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Canadian Community Health Survey (CCHS) – Healthy Aging"
+                  }
+                ]
+              },
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "CARTaGENE"
+                  }
+                ]
+              }
+            ],
+            "otherSource": [
+              {
+                "lang": "en",
+                "value": "Other source of recruitment"
+              }
+            ]
+          },
+          "selectionCriteria": {
+            "gender": "women",
+            "ageMin": 45,
+            "ageMax": 85,
+            "countriesIso": [
+              "CAN"
+            ],
+            "criteria": [
+              "criteria1"
+            ],
+            "ethnicOrigin": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Serbian"
+                  }
+                ]
+              }
+            ],
+            "healthStatus": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Good"
+                  }
+                ]
+              }
+            ],
+            "otherCriteria": [
+              {
+                "lang": "en",
+                "value": "<p>Language: Individuals who are able to respond in either French or English.</p>\n<p>Exclusion criteria: The CLSA uses the same exclusion criteria as the Statistics Canada Canadian Community Health Survey – Healthy Aging. Excluded from the study are:</p>\n<ul><li>Residents of the three territories</li>\n<li>Full-time members of the Canadian Forces</li>\n<li>Individuals living in long-term care institutions (i.e., those providing 24-hour nursing care). However, those living in households and transitional housing arrangements (e.g., seniors’ residences, in which only minimal care is provided) will be included. CLSA cohort participants who become institutionalized during the course of the study will continue to be followed either through personal or proxy interview.</li>\n<li>Persons living on reserves and other Aboriginal settlements. However, individuals who are of First Nations descent who live outside reserves are included in the study.</li>\n<li>Individuals with cognitive impairment at baseline</li>\n</ul>"
+              }
+            ]
+          },
+          "numberOfParticipants": {
+            "participant": {
+              "noLimit": false,
+              "number": 50000
+            },
+            "sample": {
+              "noLimit": false,
+              "number": 30000
+            }
+          },
+          "dataCollectionEvents": [
+            {
+              "id": "5362bcbae4b09be1985f144e",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Follow-Up One"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "First follow-up from baseline data collection"
+                }
+              ],
+              "startYear": 2000,
+              "startMonth": 1,
+              "endYear": 2020,
+              "endMonth": 12,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "administratives_databases",
+                "others"
+              ],
+              "administrativeDatabases": [
+                "aDB1",
+                "aDB2"
+              ],
+              "otherDataSources": [
+                {
+                  "lang": "en",
+                  "value": "Other data sources"
+                }
+              ],
+              "bioSamples": [
+                "Blood",
+                "Cell Tissue"
+              ],
+              "tissueTypes": [
+                {
+                  "lang": "en",
+                  "value": "Liver Tissue"
+                }
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Ear wax"
+                }
+              ],
+              "attachments": [
+                {
+                  "fileName": "patate.frite",
+                  "type": "zip",
+                  "description": [
+                    {
+                      "lang": "en",
+                      "value": "This is an attachment"
+                    }
+                  ],
+                  "lang": "en",
+                  "size": 1000000,
+                  "md5": "7822fe77621b0b2c542215e599a3b511"
+                }
+              ]
+            },
+            {
+              "id": "5362bcbae4b09be1985f144d",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Baseline Recruitment"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "Baseline data collection"
+                }
+              ],
+              "startYear": 2010,
+              "endYear": 2015,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "biological_samples"
+              ],
+              "administrativeDatabases": [
+                "aDB1"
+              ],
+              "bioSamples": [
+                "BioSamples.blood",
+                "BioSamples.urine",
+                "BioSamples.others"
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Other biological sample"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4462bcbae4b09be1985f144c",
+          "name": [
+            {
+              "lang": "en",
+              "value": "CHINA Population"
+            }
+          ],
+          "description": [
+            {
+              "lang": "en",
+              "value": "This is a population"
+            }
+          ],
+          "recruitment": {
+            "dataSources": [
+              "questionnaires",
+              "administratives_databases",
+              "others"
+            ],
+            "generalPopulationSources": [
+              "selected_samples"
+            ],
+            "specificPopulationSources": [
+              "clinic_patients",
+              "other"
+            ],
+            "otherSpecificPopulationSource": [
+              {
+                "lang": "en",
+                "value": "Other specific population"
+              }
+            ],
+            "studies": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Canadian Community Health Survey (CCHS) – Healthy Aging"
+                  }
+                ]
+              },
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "CARTaGENE"
+                  }
+                ]
+              }
+            ],
+            "otherSource": [
+              {
+                "lang": "en",
+                "value": "Other source of recruitment"
+              }
+            ]
+          },
+          "selectionCriteria": {
+            "gender": "women",
+            "ageMin": 45,
+            "ageMax": 85,
+            "countriesIso": [
+              "CAN"
+            ],
+            "criteria": [
+              "criteria1"
+            ],
+            "ethnicOrigin": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Serbian"
+                  }
+                ]
+              }
+            ],
+            "healthStatus": [
+              {
+                "localizedStrings": [
+                  {
+                    "lang": "en",
+                    "value": "Good"
+                  }
+                ]
+              }
+            ],
+            "otherCriteria": [
+              {
+                "lang": "en",
+                "value": "<p>Language: Individuals who are able to respond in either French or English.</p>\n<p>Exclusion criteria: The CLSA uses the same exclusion criteria as the Statistics Canada Canadian Community Health Survey – Healthy Aging. Excluded from the study are:</p>\n<ul><li>Residents of the three territories</li>\n<li>Full-time members of the Canadian Forces</li>\n<li>Individuals living in long-term care institutions (i.e., those providing 24-hour nursing care). However, those living in households and transitional housing arrangements (e.g., seniors’ residences, in which only minimal care is provided) will be included. CLSA cohort participants who become institutionalized during the course of the study will continue to be followed either through personal or proxy interview.</li>\n<li>Persons living on reserves and other Aboriginal settlements. However, individuals who are of First Nations descent who live outside reserves are included in the study.</li>\n<li>Individuals with cognitive impairment at baseline</li>\n</ul>"
+              }
+            ]
+          },
+          "numberOfParticipants": {
+            "participant": {
+              "noLimit": false,
+              "number": 50000
+            },
+            "sample": {
+              "noLimit": false,
+              "number": 30000
+            }
+          },
+          "dataCollectionEvents": [
+            {
+              "id": "5362bcbae4b09be1985f144e",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Follow-Up One"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "First follow-up from baseline data collection"
+                }
+              ],
+              "startYear": 2000,
+              "startMonth": 1,
+              "endYear": 2020,
+              "endMonth": 12,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "administratives_databases",
+                "others"
+              ],
+              "administrativeDatabases": [
+                "aDB1",
+                "aDB2"
+              ],
+              "otherDataSources": [
+                {
+                  "lang": "en",
+                  "value": "Other data sources"
+                }
+              ],
+              "bioSamples": [
+                "Blood",
+                "Cell Tissue"
+              ],
+              "tissueTypes": [
+                {
+                  "lang": "en",
+                  "value": "Liver Tissue"
+                }
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Ear wax"
+                }
+              ],
+              "attachments": [
+                {
+                  "fileName": "patate.frite",
+                  "type": "zip",
+                  "description": [
+                    {
+                      "lang": "en",
+                      "value": "This is an attachment"
+                    }
+                  ],
+                  "lang": "en",
+                  "size": 1000000,
+                  "md5": "7822fe77621b0b2c542215e599a3b511"
+                }
+              ]
+            },
+            {
+              "id": "5362bcbae4b09be1985f144d",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "Baseline Recruitment"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "en",
+                  "value": "Baseline data collection"
+                }
+              ],
+              "startYear": 2010,
+              "endYear": 2015,
+              "dataSources": [
+                "questionnaires",
+                "physical_measures",
+                "biological_samples"
+              ],
+              "administrativeDatabases": [
+                "aDB1"
+              ],
+              "bioSamples": [
+                "BioSamples.blood",
+                "BioSamples.urine",
+                "BioSamples.others"
+              ],
+              "otherBioSamples": [
+                {
+                  "lang": "en",
+                  "value": "Other biological sample"
                 }
               ]
             }
