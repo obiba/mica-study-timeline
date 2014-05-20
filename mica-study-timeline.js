@@ -1,6 +1,6 @@
 /*! mica-study-timeline - v1.0.0-SNAPSHOT
  *  License: GNU Public License version 3
- *  Date: 2014-05-12
+ *  Date: 2014-05-20
  */
 (function () {
 
@@ -624,7 +624,6 @@
     create: function (selectee, studyDto) {
       if (this.parser === null || studyDto === null) return;
       var timelineData = this.parser.parse(studyDto);
-
       var width = $(selectee).width();
       var chart = d3.timeline()
         .startYear(timelineData.start)
@@ -645,9 +644,33 @@
         });
 
       d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
-    }
 
+      this.timelineData = timelineData;
+      this.selectee = selectee;
+    },
+
+    addLegend: function () {
+      console.log(JSON.stringify(this.timelineData));
+      if (!this.timelineData.hasOwnProperty('data') || this.timelineData.data.length === 0) return;
+      var ul = $("<ul id='legend' class='timeline-legend'>");
+
+      $(this.selectee).after(ul);
+
+      var processedPopulations = {};
+      $.each(this.timelineData.data, function(i, item) {
+        if (!processedPopulations.hasOwnProperty(item.population.title)) {
+          processedPopulations[item.population.title] = true;
+          var li = $(createLegendRow(item.population.color, item.population.title));
+          ul.append(li);
+        }
+      });
+    }
   };
+
+  function createLegendRow(color, title) {
+    var rect ="<rect width='20' height='20' x='2' y='2' rx='5' ry='5' style='fill:COLOR;'>&nbsp;".replace(/COLOR/, color);
+    return $("<li><svg width='25' height='25'>"+rect+"</svg>"+title+"</li>");
+  }
 
   /**
    * Default options
