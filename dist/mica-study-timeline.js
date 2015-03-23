@@ -1,6 +1,11 @@
-/*! mica-study-timeline - v1.0.0-SNAPSHOT
- *  License: GNU Public License version 3
- *  Date: 2014-06-26
+/*Copyright (c) 2015 OBiBa. All rights reserved.
+* This program and the accompanying materials
+* are made available under the terms of the GNU Public License v3.0.
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see  <http://www.gnu.org/licenses>
+
+* mica-study-timeline - v1.0.0-SNAPSHOT
+* Date: 2015-03-23
  */
 (function () {
 
@@ -615,8 +620,9 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter) {
     this.parser = dtoParser;
+    this.popupIdFormatter = popupIdFormatter;
   };
 
   /**
@@ -629,6 +635,7 @@
       if (this.parser === null || studyDto === null) return;
       var timelineData = this.parser.parse(studyDto);
       var width = $(selectee).width();
+      var that = this;
       var chart = d3.timeline()
         .startYear(timelineData.start)
         .beginning(timelineData.min)
@@ -644,7 +651,10 @@
         .margin({left: 15, right: 15, top: 0, bottom: 20})
         .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
         .click(function (d, i, datum) {
-          $('#event-' + d.id).modal();
+          if (that.popupIdFormatter) {
+            var popup = $(that.popupIdFormatter(studyDto, datum.population, d));
+            if (popup.length > 0) popup.modal();
+          }
         });
 
       d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);

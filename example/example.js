@@ -1,6 +1,11 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser()).create("#vis", getTestData()).addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getTestData()).addLegend();
+
+  function timelinePopupIdFormatter(studyDto, datum,dceId) {
+    console.log('Format a valid pop id.');
+    return '';
+  }
 
   function getTestData() {
     return {

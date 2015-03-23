@@ -6,8 +6,9 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter) {
     this.parser = dtoParser;
+    this.popupIdFormatter = popupIdFormatter;
   };
 
   /**
@@ -20,6 +21,7 @@
       if (this.parser === null || studyDto === null) return;
       var timelineData = this.parser.parse(studyDto);
       var width = $(selectee).width();
+      var that = this;
       var chart = d3.timeline()
         .startYear(timelineData.start)
         .beginning(timelineData.min)
@@ -35,7 +37,10 @@
         .margin({left: 15, right: 15, top: 0, bottom: 20})
         .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
         .click(function (d, i, datum) {
-          $('#event-' + d.id).modal();
+          if (that.popupIdFormatter) {
+            var popup = $(that.popupIdFormatter(studyDto, datum.population, d));
+            if (popup.length > 0) popup.modal();
+          }
         });
 
       d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
