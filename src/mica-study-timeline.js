@@ -6,9 +6,10 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
     this.parser = dtoParser;
     this.popupIdFormatter = popupIdFormatter;
+    this.useBootstrapTooltip = useBootstrapTooltip;
   };
 
   /**
@@ -44,6 +45,16 @@
         });
 
       d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
+
+      if (this.useBootstrapTooltip === true) {
+        d3.select(selectee).selectAll('#line-path')
+          .attr('data-placement', 'top')
+          .attr('data-toggle', 'tooltip')
+          .attr('data-original-title', function(d){
+            return d.title;
+          })
+          .selectAll('title').remove(); // remove default tooltip
+      }
 
       this.timelineData = timelineData;
       this.selectee = selectee;
