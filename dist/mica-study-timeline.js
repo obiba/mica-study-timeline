@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.0-SNAPSHOT
-* Date: 2015-03-24
+* Date: 2015-04-02
  */
 (function () {
 
@@ -336,8 +336,11 @@
   $.StudyDtoParser.prototype = {
 
     parse: function (studyDto) {
-      var bounds = findBounds(studyDto.populations);
-      return parseStudy(studyDto, bounds);
+      if (studyDto.populations) {
+        return parseStudy(studyDto, findBounds(studyDto.populations));
+      }
+
+      return null;
     }
   };
 
@@ -354,7 +357,7 @@
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
           startYear = Math.min(startYear, dce.startYear);
-          maxYear = Math.max(maxYear, convertToMonths(dce.endYear - startYear, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
+          maxYear = Math.max(maxYear, convertToMonths(dce.hasOwnProperty('endYear') ? dce.endYear - startYear : 0, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
         });
       }
     });
@@ -453,10 +456,14 @@
     function parseEvents(lines, populationData, dto, bounds) {
       if (jQuery.isEmptyObject(dto)) return;
 
-      lines.push(createPopulationItem(populationData, dto[0], bounds));
+      var parsedFirstDce = false;
+      if (dto[0].endYear) {
+        parsedFirstDce = true;
+        lines.push(createPopulationItem(populationData, dto[0], bounds));
+      }
 
       $.each(dto, function (i, dceDto) {
-        if (i === 0) return true; // first line is altreay populated
+        if (!dceDto.endYear || (parsedFirstDce && i === 0)) return true; // first line is already populated
         var addLine = true;
         $.each(lines, function (j, line) {
           var last = line.population.events[line.population.events.length - 1];
@@ -468,7 +475,7 @@
             return false;
           }
         });
-        if (addLine) {
+        if (addLine && dceDto.endYear) {
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         }
       });
@@ -544,7 +551,7 @@
       function getEndingTime(dceDto, bounds) {
         var start = dceDto.hasOwnProperty('endYear') ? dceDto.endYear : 0;
         var end = dceDto.hasOwnProperty('endMonth') ? dceDto.endMonth : 12;
-        return convertToMonths(start - bounds.start, start > 0 ? end : 0);
+        return convertToMonths(start > 0 ? start - bounds.start : 1, start > 0 ? end : 0);
       }
 
       /**
@@ -638,49 +645,12 @@
     create: function (selectee, studyDto) {
       if (this.parser === null || studyDto === null) return;
       var timelineData = this.parser.parse(studyDto);
-      var width = $(selectee).width();
-      var that = this;
-      var chart = d3.timeline()
-        .startYear(timelineData.start)
-        .beginning(timelineData.min)
-        .ending(timelineData.max)
-        .width(width)
-        .stack()
-        .tickFormat({
-          format: d3.format("d"),
-          tickTime: 1,
-          tickNumber: 1,
-          tickSize: 10
-        })
-        .margin({left: 15, right: 15, top: 0, bottom: 20})
-        .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
-        .click(function (d, i, datum) {
-          if (that.popupIdFormatter) {
-            var popup = $(that.popupIdFormatter(studyDto, datum.population, d));
-            if (popup.length > 0) popup.modal();
-          }
-        });
-
-      d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
-
-      if (this.useBootstrapTooltip === true) {
-        d3.select(selectee).selectAll('#line-path')
-          .attr('data-placement', 'top')
-          .attr('data-toggle', 'tooltip')
-          .attr('data-original-title', function(d){
-            return d.title;
-          })
-          .selectAll('title').remove(); // remove default tooltip
-      }
-
-      this.timelineData = timelineData;
-      this.selectee = selectee;
-
+      if (timelineData) createTimeline(this, timelineData, selectee, studyDto);
       return this;
     },
 
     addLegend: function () {
-      if (!this.timelineData.hasOwnProperty('data') || this.timelineData.data.length === 0) return;
+      if (!this.timelineData || !this.timelineData.hasOwnProperty('data') || this.timelineData.data.length === 0) return;
       var ul = $("<ul id='legend' class='timeline-legend'>");
 
       $(this.selectee).after(ul);
@@ -697,6 +667,45 @@
       return this;
     }
   };
+
+  function createTimeline(timeline, timelineData, selectee, studyDto) {
+    var width = $(selectee).width();
+    var chart = d3.timeline()
+      .startYear(timelineData.start)
+      .beginning(timelineData.min)
+      .ending(timelineData.max)
+      .width(width)
+      .stack()
+      .tickFormat({
+        format: d3.format("d"),
+        tickTime: 1,
+        tickNumber: 1,
+        tickSize: 10
+      })
+      .margin({left: 15, right: 15, top: 0, bottom: 20})
+      .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
+      .click(function (d, i, datum) {
+        if (timeline.popupIdFormatter) {
+          var popup = $(timeline.popupIdFormatter(studyDto, datum.population, d));
+          if (popup.length > 0) popup.modal();
+        }
+      });
+
+    d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
+
+    if (timeline.useBootstrapTooltip === true) {
+      d3.select(selectee).selectAll('#line-path')
+        .attr('data-placement', 'top')
+        .attr('data-toggle', 'tooltip')
+        .attr('data-original-title', function(d){
+          return d.title;
+        })
+        .selectAll('title').remove(); // remove default tooltip
+    }
+
+    timeline.timelineData = timelineData;
+    timeline.selectee = selectee;
+  }
 
   /**
    * @param color
