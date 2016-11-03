@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.0-SNAPSHOT
-* Date: 2015-08-28
+* Date: 2016-11-02
  */
 (function () {
 
@@ -663,7 +663,7 @@
           ul.append(li);
         }
       });
-      
+
       return this;
     },
 
@@ -703,7 +703,7 @@
       d3.select(selectee).selectAll('#line-path')
         .attr('data-placement', 'top')
         .attr('data-toggle', 'tooltip')
-        .attr('data-original-title', function(d){
+        .attr('title', function (d) {
           return d.title;
         })
         .selectAll('title').remove(); // remove default tooltip
