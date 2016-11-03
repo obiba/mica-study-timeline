@@ -39,7 +39,7 @@
           ul.append(li);
         }
       });
-      
+
       return this;
     },
 
@@ -79,7 +79,7 @@
       d3.select(selectee).selectAll('#line-path')
         .attr('data-placement', 'top')
         .attr('data-toggle', 'tooltip')
-        .attr('data-original-title', function(d){
+        .attr('title', function (d) {
           return d.title;
         })
         .selectAll('title').remove(); // remove default tooltip
