@@ -1,6 +1,6 @@
 {
   "name": "mica-study-timeline",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "1.0.1",
   "description": "D3 Timeline for Mica Studies",
   "author": {
     "name": "Cedric Thiebault",
