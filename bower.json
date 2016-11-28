@@ -8,7 +8,7 @@
   "main": ["./dist/mica-study-timeline.js", "./dist/mica-study-timeline.css"],
   "dependencies": {
     "d3": "3.5.5",
-    "jquery": "2.1.4"
+    "jquery": "2.2.4"
   },
   "ignore": [
     "**/.*",
