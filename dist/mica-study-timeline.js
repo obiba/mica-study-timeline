@@ -4,7 +4,7 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
-* mica-study-timeline - v1.0.2
+* mica-study-timeline - v1.0.x-SNAPSHOT
 * Date: 2016-11-29
  */
 (function () {
