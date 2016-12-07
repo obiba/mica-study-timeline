@@ -4,8 +4,8 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
-* mica-study-timeline - v1.0.x-SNAPSHOT
-* Date: 2016-11-29
+* mica-study-timeline - v1.0.0-SNAPSHOT
+* Date: 2016-12-07
  */
 (function () {
 
@@ -322,6 +322,7 @@
 
   "use strict";
 
+  var currentYear = new Date().getFullYear();
   /**
    * Constructor
    * @constructor
@@ -345,7 +346,7 @@
   };
 
 
-      /**
+  /**
    * Returns the date bounds of all population, startYear and maxYear (in months)
    * @param populations
    * @returns {{min: number, max: number, start: Number}}
@@ -357,7 +358,7 @@
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
           startYear = Math.min(startYear, dce.startYear);
-          maxYear = Math.max(maxYear, convertToMonths(dce.hasOwnProperty('endYear') ? dce.endYear - startYear : 0, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
+          maxYear = Math.max(maxYear, convertToMonths(dce.hasOwnProperty('endYear') ? dce.endYear - startYear : currentYear - startYear, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
         });
       }
     });
@@ -419,7 +420,7 @@
         if (populationDto.hasOwnProperty('dataCollectionEvents') && populationDto.dataCollectionEvents.length > 0) {
           parseEvents(lines, populationData, populationDto.dataCollectionEvents, bounds);
           // use a loop instead of array.concat() in order to add lines to the same populations variable (same instance)
-          $.each(lines, function(i,  line) {
+          $.each(lines, function (i, line) {
             populations.push(line);
           });
         }
@@ -457,13 +458,16 @@
       if (jQuery.isEmptyObject(dto)) return;
 
       var parsedFirstDce = false;
-      if (dto[0].endYear) {
-        parsedFirstDce = true;
-        lines.push(createPopulationItem(populationData, dto[0], bounds));
+      if (!dto[0].endYear) {
+        dto[0].endYear = currentYear;
       }
+      parsedFirstDce = true;
+      lines.push(createPopulationItem(populationData, dto[0], bounds));
 
       $.each(dto, function (i, dceDto) {
-        if (!dceDto.endYear || (parsedFirstDce && i === 0)) return true; // first line is already populated
+
+        if ((parsedFirstDce && i === 0)) return true; // first line is already populated
+        if(!dceDto.endYear) dceDto.endYear = currentYear;
         var addLine = true;
         $.each(lines, function (j, line) {
           var last = line.population.events[line.population.events.length - 1];
@@ -549,7 +553,7 @@
        * @returns {number}
        */
       function getEndingTime(dceDto, bounds) {
-        var start = dceDto.hasOwnProperty('endYear') ? dceDto.endYear : 0;
+        var start = dceDto.hasOwnProperty('endYear') ? dceDto.endYear : currentYear;
         var end = dceDto.hasOwnProperty('endMonth') ? dceDto.endMonth : 12;
         return convertToMonths(start > 0 ? start - bounds.start : 1, start > 0 ? end : 0);
       }
@@ -663,7 +667,7 @@
           ul.append(li);
         }
       });
-
+      
       return this;
     },
 
@@ -703,7 +707,7 @@
       d3.select(selectee).selectAll('#line-path')
         .attr('data-placement', 'top')
         .attr('data-toggle', 'tooltip')
-        .attr('title', function (d) {
+        .attr('data-original-title', function(d){
           return d.title;
         })
         .selectAll('title').remove(); // remove default tooltip
