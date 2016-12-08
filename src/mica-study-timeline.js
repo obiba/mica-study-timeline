@@ -19,9 +19,10 @@
   $.MicaTimeline.prototype = {
 
     create: function (selectee, studyDto) {
-      if (this.parser === null || studyDto === null) return;
-      var timelineData = this.parser.parse(studyDto);
-      if (timelineData) createTimeline(this, timelineData, selectee, studyDto);
+      var clone = jQuery.extend(true,{} , studyDto);
+      if (this.parser === null || clone === null) return;
+      var timelineData = this.parser.parse(clone);
+      if (timelineData) createTimeline(this, timelineData, selectee, clone);
       return this;
     },
 
