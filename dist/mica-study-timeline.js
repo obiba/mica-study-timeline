@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.x-SNAPSHOT
-* Date: 2016-12-08
+* Date: 2017-01-10
  */
 (function () {
 
@@ -323,11 +323,13 @@
   "use strict";
 
   var currentYear = new Date().getFullYear();
+  var locale;
   /**
    * Constructor
    * @constructor
    */
-  $.StudyDtoParser = function () {
+  $.StudyDtoParser = function (localSetting) {
+    locale = localSetting ? localSetting : 'en';
   };
 
   /**
@@ -335,7 +337,6 @@
    * @type {{create: create}}
    */
   $.StudyDtoParser.prototype = {
-
     parse: function (studyDto) {
       if (studyDto.populations) {
         return parseStudy(studyDto, findBounds(studyDto.populations));
@@ -438,13 +439,26 @@
     }
 
     /**
+     * Translate fields
+     * @param field
+     */
+
+    function translateField(field) {
+      var localField = field[0].value;
+      $.each(field, function (i, fieldLang) {
+        if (fieldLang.lang == locale) localField = fieldLang.value;
+      });
+      return localField;
+    }
+
+    /**
      * Sets the title field if present and only for the first local
      * @param obj
      * @param dto
      * @param field
      */
     function setTitle(obj, dto, field) {
-      if (dto.hasOwnProperty(field)) obj.title = dto[field][0].value;
+      if (dto.hasOwnProperty(field)) obj.title = translateField(dto[field]);
     }
 
     /**
@@ -458,10 +472,8 @@
       if (jQuery.isEmptyObject(dto)) return;
       var dceClone = jQuery.extend(true, {}, dto);
 
-
-
       $.each(dceClone, function (i, dceDto) {
-        if(!dceDto.endYear) dceDto.endYear = currentYear;
+        if (!dceDto.endYear) dceDto.endYear = currentYear;
         var addLine = true;
         $.each(lines, function (j, line) {
           var last = line.population.events[line.population.events.length - 1];

@@ -3,11 +3,13 @@
   "use strict";
 
   var currentYear = new Date().getFullYear();
+  var locale;
   /**
    * Constructor
    * @constructor
    */
-  $.StudyDtoParser = function () {
+  $.StudyDtoParser = function (localSetting) {
+    locale = localSetting ? localSetting : 'en';
   };
 
   /**
@@ -118,13 +120,26 @@
     }
 
     /**
+     * Translate fields
+     * @param field
+     */
+
+    function translateField(field) {
+      var localField = field[0].value;
+      $.each(field, function (i, fieldLang) {
+        if (fieldLang.lang == locale) localField = fieldLang.value;
+      });
+      return localField;
+    }
+
+    /**
      * Sets the title field if present and only for the first local
      * @param obj
      * @param dto
      * @param field
      */
     function setTitle(obj, dto, field) {
-      if (dto.hasOwnProperty(field)) obj.title = dto[field][0].value;
+      if (dto.hasOwnProperty(field)) obj.title = translateField(dto[field]);
     }
 
     /**
@@ -139,7 +154,7 @@
       var dceClone = jQuery.extend(true, {}, dto);
 
       $.each(dceClone, function (i, dceDto) {
-        if(!dceDto.endYear) dceDto.endYear = currentYear;
+        if (!dceDto.endYear) dceDto.endYear = currentYear;
         var addLine = true;
         $.each(lines, function (j, line) {
           var last = line.population.events[line.population.events.length - 1];
