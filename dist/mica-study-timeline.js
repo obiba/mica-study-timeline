@@ -323,13 +323,16 @@
   "use strict";
 
   var currentYear = new Date().getFullYear();
-  var locale;
+  var local = 'en';
+  if(Drupal.settings.angularjsApp.locale){
+    local = Drupal.settings.angularjsApp.locale;
+  }
+
   /**
    * Constructor
    * @constructor
    */
-  $.StudyDtoParser = function (localSetting) {
-    locale = localSetting ? localSetting : 'en';
+  $.StudyDtoParser = function () {
   };
 
   /**
@@ -337,6 +340,7 @@
    * @type {{create: create}}
    */
   $.StudyDtoParser.prototype = {
+
     parse: function (studyDto) {
       if (studyDto.populations) {
         return parseStudy(studyDto, findBounds(studyDto.populations));
@@ -443,10 +447,10 @@
      * @param field
      */
 
-    function translateField(field) {
+    function translateField(field){
       var localField = field[0].value;
-      $.each(field, function (i, fieldLang) {
-        if (fieldLang.lang == locale) localField = fieldLang.value;
+      $.each(field, function(i, fieldLang){
+        if(fieldLang.lang==local) localField = fieldLang.value;
       });
       return localField;
     }
@@ -473,7 +477,7 @@
       var dceClone = jQuery.extend(true, {}, dto);
 
       $.each(dceClone, function (i, dceDto) {
-        if (!dceDto.endYear) dceDto.endYear = currentYear;
+        if(!dceDto.endYear) dceDto.endYear = currentYear;
         var addLine = true;
         $.each(lines, function (j, line) {
           var last = line.population.events[line.population.events.length - 1];
