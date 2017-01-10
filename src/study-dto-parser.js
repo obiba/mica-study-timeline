@@ -3,6 +3,11 @@
   "use strict";
 
   var currentYear = new Date().getFullYear();
+  var local = 'en';
+  if(Drupal.settings.angularjsApp.locale){
+    local = Drupal.settings.angularjsApp.locale;
+  }
+
   /**
    * Constructor
    * @constructor
@@ -118,13 +123,26 @@
     }
 
     /**
+     * Translate fields
+     * @param field
+     */
+
+    function translateField(field){
+      var localField = field[0].value;
+      $.each(field, function(i, fieldLang){
+        if(fieldLang.lang==local) localField = fieldLang.value;
+      });
+      return localField;
+    }
+
+    /**
      * Sets the title field if present and only for the first local
      * @param obj
      * @param dto
      * @param field
      */
     function setTitle(obj, dto, field) {
-      if (dto.hasOwnProperty(field)) obj.title = dto[field][0].value;
+      if (dto.hasOwnProperty(field)) obj.title = translateField(dto[field]);
     }
 
     /**
