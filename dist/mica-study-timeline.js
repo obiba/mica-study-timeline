@@ -4,8 +4,8 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
-* mica-study-timeline - v1.0.x-SNAPSHOT
-* Date: 2017-01-10
+* mica-study-timeline - v1.0.3
+* Date: 2017-01-11
  */
 (function () {
 
@@ -337,6 +337,7 @@
    * @type {{create: create}}
    */
   $.StudyDtoParser.prototype = {
+
     parse: function (studyDto) {
       if (studyDto.populations) {
         return parseStudy(studyDto, findBounds(studyDto.populations));
