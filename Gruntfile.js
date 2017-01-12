@@ -1,6 +1,7 @@
+'use strict';
+
 module.exports = function (grunt) {
 
-  "use strict";
 
   // name is pulled from the package.json file's 'name'
 
