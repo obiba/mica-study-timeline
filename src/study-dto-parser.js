@@ -35,16 +35,23 @@
    */
   function findBounds(populations) {
     var startYear = Number.MAX_VALUE;
-    var maxYear = Number.MIN_VALUE;
+    var endYear = Number.MIN_VALUE;
+    var endMonth = -1;
+
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
           startYear = Math.min(startYear, dce.startYear);
-          maxYear = Math.max(maxYear, convertToMonths(dce.hasOwnProperty('endYear') ? dce.endYear - startYear : currentYear - startYear, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
+          var dceEndYear = dce.endYear ? dce.endYear : new Date().getFullYear();
+          if (endYear < dceEndYear) {
+            endYear = dceEndYear;
+            endMonth = dce.endMonth ? dce.endMonth : 12;
+          }
         });
       }
     });
 
+    var maxYear = convertToMonths(endYear - startYear, endMonth);
     return {min: 0, max: Math.ceil(maxYear / 12) * 12, start: startYear};
   }
 
