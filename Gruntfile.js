@@ -58,7 +58,7 @@ module.exports = function (grunt) {
     },
     concat: {
       options: {
-        banner: "/*Copyright (c) 2015 OBiBa. All rights reserved.\n" +
+        banner: "/*Copyright (c) 2018 OBiBa. All rights reserved.\n" +
         "* This program and the accompanying materials\n"+
         "* are made available under the terms of the GNU Public License v3.0.\n"+
         "* You should have received a copy of the GNU General Public License\n"+
