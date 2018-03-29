@@ -1,11 +1,11 @@
-/*Copyright (c) 2018 OBiBa. All rights reserved.
+/*Copyright (c) 2015 OBiBa. All rights reserved.
 * This program and the accompanying materials
 * are made available under the terms of the GNU Public License v3.0.
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
-* mica-study-timeline - v1.0.5
-* Date: 2018-02-21
+* mica-study-timeline - v1.0.3
+* Date: 2018-05-28
  */
 (function () {
 
@@ -355,23 +355,16 @@
    */
   function findBounds(populations) {
     var startYear = Number.MAX_VALUE;
-    var endYear = Number.MIN_VALUE;
-    var endMonth = -1;
-
+    var maxYear = Number.MIN_VALUE;
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
           startYear = Math.min(startYear, dce.startYear);
-          var dceEndYear = dce.endYear ? dce.endYear : new Date().getFullYear();
-          if (endYear < dceEndYear) {
-            endYear = dceEndYear;
-            endMonth = dce.endMonth ? dce.endMonth : 12;
-          }
+          maxYear = Math.max(maxYear, convertToMonths(dce.hasOwnProperty('endYear') ? dce.endYear - startYear : currentYear - startYear, dce.hasOwnProperty('endMonth') ? dce.endMonth : 12));
         });
       }
     });
 
-    var maxYear = convertToMonths(endYear - startYear, endMonth);
     return {min: 0, max: Math.ceil(maxYear / 12) * 12, start: startYear};
   }
 
@@ -648,10 +641,11 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip, seedModal) {
     this.parser = dtoParser;
     this.popupIdFormatter = popupIdFormatter;
     this.useBootstrapTooltip = useBootstrapTooltip;
+    this.seedModal = seedModal;
   };
 
   /**
@@ -711,8 +705,12 @@
       .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
-          var popup = $(timeline.popupIdFormatter(studyDto, datum.population, d));
-          if (popup.length > 0) popup.modal();
+          var modal = timeline.popupIdFormatter(studyDto, datum.population, d);
+          var popup = $(modal.id);
+          if (popup.length > 0) {
+            popup.modal();
+            timeline.seedModal(popup, modal.dceId);
+          }
         }
       });
 
