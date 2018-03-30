@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2017-09-01
+* Date: 2018-05-28
  */
 (function () {
 
@@ -648,10 +648,11 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip, seedModal) {
     this.parser = dtoParser;
     this.popupIdFormatter = popupIdFormatter;
     this.useBootstrapTooltip = useBootstrapTooltip;
+    this.seedModal = seedModal;
   };
 
   /**
@@ -711,8 +712,12 @@
       .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
-          var popup = $(timeline.popupIdFormatter(studyDto, datum.population, d));
-          if (popup.length > 0) popup.modal();
+          var modal = timeline.popupIdFormatter(studyDto, datum.population, d);
+          var popup = $(modal.id);
+          if (popup.length > 0) {
+            popup.modal();
+            timeline.seedModal(popup, modal.dceId);
+          }
         }
       });
 
