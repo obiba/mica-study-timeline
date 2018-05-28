@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2018-03-22
+* Date: 2018-05-28
  */
 (function () {
 
@@ -719,7 +719,6 @@
             timeline.seedModal(popup, modal.dceId);
           }
         }
-
       });
 
     d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
