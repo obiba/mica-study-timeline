@@ -82,13 +82,21 @@
     d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
 
     if (timeline.useBootstrapTooltip === true) {
-      d3.select(selectee).selectAll('#line-path')
-        .attr('data-placement', 'top')
-        .attr('data-toggle', 'tooltip')
-        .attr('title', function (d) {
-          return d.title;
-        })
-        .selectAll('title').remove(); // remove default tooltip
+      // Bootstrap 3.3.7, Avoid using $.offset() on SVGs since it gives incorrect results in jQuery 3.
+      // have to update Jquery to version 3
+      //ToDo
+      // d3.select(selectee).selectAll('#line-path')
+      //   .attr('data-placement', 'top')
+      //   .attr('data-toggle', 'tooltip')
+      //   .attr('title', function (d) {
+      //     return d.title;
+      //   })
+      //   .selectAll('title').remove(); // remove default tooltip
+      // $('[data-toggle="tooltip"]').on('shown.bs.tooltip', function () {
+      //   var top = $(this).css('top');
+      //   console.log(top);
+      //
+      // });
     }
 
     timeline.timelineData = timelineData;
