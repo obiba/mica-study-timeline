@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2019-02-07
+* Date: 2021-09-23
  */
 (function () {
 
@@ -482,19 +482,18 @@
 
       $.each(dceClone, function (i, dceDto) {
         if (!dceDto.endYear) dceDto.endYear = currentYear;
-        var addLine = true;
-        $.each(lines, function (j, line) {
-          var last = line.population.events[line.population.events.length - 1];
+        if (i === "0") {
+          lines.push(createPopulationItem(populationData, dceDto, bounds));
+        } else {
+          var lastItems = lines[lines.length - 1].population.events;
+          var lastItem = lastItems[lastItems.length -1];
           var startingTime = getStartingTime(dceDto, bounds);
           var endingTime = getEndingTime(dceDto, bounds);
-          if (!overlap(startingTime, endingTime, last.starting_time, last.ending_time)) {
-            line.population.events.push(createEventItem(dceDto, bounds));
-            addLine = false;
-            return false;
+          if (overlap(startingTime, endingTime, lastItem.starting_time, lastItem.ending_time)) {
+            lines.push(createPopulationItem(populationData, dceDto, bounds));
+          } else {
+            lastItems.push(createEventItem(dceDto, bounds, lastItem.groupId));
           }
-        });
-        if (addLine && dceDto.endYear) {
-          lines.push(createPopulationItem(populationData, dceDto, bounds));
         }
       });
 
@@ -740,6 +739,7 @@
       //
       // });
     }
+
     timeline.timelineData = timelineData;
     timeline.selectee = selectee;
   }

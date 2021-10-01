@@ -1,6 +1,6 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getTestData()).addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getTestOrderedDceRendering()).addLegend();
 
   function timelinePopupIdFormatter(studyDto, datum,dceId) {
     console.log('Format a valid pop id.');
@@ -157,6 +157,146 @@
         }
       ]
     }
+  }
+
+  function getTestOrderedDceRendering() {
+    return {
+      "id": "3d",
+      "name": [
+        {
+          "lang": "en",
+          "value": "3D Study - Design, Develop, Discover"
+        },
+        {
+          "lang": "fr",
+          "value": "3D Study - Design, Develop, Discover"
+        }
+      ],
+      "acronym": [
+        {
+          "lang": "en",
+          "value": "3D"
+        },
+        {
+          "lang": "fr",
+          "value": "3D"
+        }
+      ],
+      "populations": [
+        {
+          "id": "1",
+          "name": [
+            {
+              "lang": "en",
+              "value": "3D - Mothers"
+            }
+          ],
+          "dataCollectionEvents": [
+            {
+              "id": "1",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - Prenatal visit 1 (8 to 14 weeks)"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 2,
+              "endYear": 2012,
+              "endMonth": 4,
+              "weight": 0
+            },
+            {
+              "id": "2",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - Prenatal visit 2 (20 to 24 weeks)"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 5,
+              "endYear": 2012,
+              "endMonth": 11,
+              "weight": 1
+            },
+            {
+              "id": "3",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - Prenatal visit 3 (32 to 35 weeks)"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 10,
+              "endYear": 2013,
+              "endMonth": 2,
+              "weight": 2
+            },
+            {
+              "id": "4",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - Delivery and immediate postpartum"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 11,
+              "endYear": 2013,
+              "endMonth": 3,
+              "weight": 3
+            },
+            {
+              "id": "6",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - 3 months postpartum"
+                }
+              ],
+              "startYear": 2011,
+              "startMonth": 3,
+              "endYear": 2013,
+              "endMonth": 7,
+              "weight": 4
+            },
+            {
+              "id": "7",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - 12 months postpartum"
+                }
+              ],
+              "startYear": 2011,
+              "startMonth": 12,
+              "endYear": 2014,
+              "endMonth": 3,
+              "weight": 5
+            },
+            {
+              "id": "8",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "3D - Mothers - 24 months postpartum"
+                }
+              ],
+              "startYear": 2013,
+              "startMonth": 3,
+              "endYear": 2015,
+              "endMonth": 3,
+              "weight": 6
+            }
+          ],
+          "weight": 0
+        }
+      ],
+      "studyResourcePath": "individual-study",
+      "obiba.mica.CollectionStudyDto.type": {}
+    };
   }
 
   function getTestData() {
