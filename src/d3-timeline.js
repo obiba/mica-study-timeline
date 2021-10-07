@@ -19,7 +19,6 @@
       },
       colorCycle = d3.scale.category20(),
       display = "rect",
-      startYear = 0,
       beginning = 0,
       ending = 0,
       margin = {left: 30, right: 30, top: 30, bottom: 30},
@@ -74,30 +73,25 @@
 
       var scaleFactor = (1 / (ending - beginning)) * (width - margin.left - margin.right);
 
-      var formatTime = tickFormat.format;
-      var formatByYear = function (d) {
-        return startYear + (parseInt(formatTime(d), null) / 12); // print in years
-      };
-
       // draw the axis
       var xScale = d3.time.scale()
-        .domain([beginning, ending])
+        .domain([beginning.getFullYear(), ending.getFullYear()])
         .range([margin.left, width - margin.right]);
 
       var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient(orient)
-        .tickFormat(formatByYear)
+        .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning, ending + 1, 12))
-        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0);
+        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
+      ;
 
       // draw axis
       g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
         .call(xAxis);
-
 
       // draw the chart
       g.each(function (d, i) {
@@ -274,12 +268,6 @@
     timeline.colors = function (colorFormat) {
       if (!arguments.length) return colorCycle;
       colorCycle = colorFormat;
-      return timeline;
-    };
-
-    timeline.startYear = function (b) {
-      if (!arguments.length) return startYear;
-      startYear = b;
       return timeline;
     };
 

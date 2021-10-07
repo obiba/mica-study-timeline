@@ -20,6 +20,7 @@
 
     parse: function (studyDto) {
       if (studyDto.populations) {
+        ensureStartEndDates(studyDto.populations);
         return parseStudy(studyDto, findBounds(studyDto.populations));
       }
 
@@ -27,6 +28,47 @@
     }
   };
 
+  /**
+   * The input date must be ISO 8601 (yyyy-MM-dd)
+   * @param date
+   * @returns {Date}
+   */
+  function makeDateFromString(date) {
+    const parts = date.split(/-/).map(function(t)  {
+      return parseInt(t);
+    });
+
+    return makeDate(parts[0], parts[1]-1, parts[2]);
+  }
+
+  function makeDate(year, month, day) {
+    return new Date(year, month, day);
+  }
+
+  function makeStartDate(year, month) {
+    return makeDate(year, (month || 1) - 1, 1);
+  }
+
+  function makeEndDate(year, month) {
+    var m = (month || 12) - 1;
+    var d = new Date(year, m+1, 0).getDate();
+    return makeDate(year, m, d);
+  }
+
+  /**
+   * Ensurre all dates are normalized; no need to for start/end year/month
+   * @param populations
+   */
+  function ensureStartEndDates(populations) {
+    $.each(populations, function (i, population) {
+      if (population.hasOwnProperty('dataCollectionEvents')) {
+        $.each(population.dataCollectionEvents, function (j, dce) {
+          dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
+          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear, dce.endMonth);
+        });
+      }
+    });
+  }
 
   /**
    * Returns the date bounds of all population, startYear and maxYear (in months)
@@ -36,7 +78,6 @@
   function findBounds(populations) {
     var startYear = Number.MAX_VALUE;
     var endYear = Number.MIN_VALUE;
-    var endMonth = -1;
 
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
@@ -45,24 +86,14 @@
           var dceEndYear = dce.endYear ? dce.endYear : new Date().getFullYear();
           if (endYear < dceEndYear) {
             endYear = dceEndYear;
-            endMonth = dce.endMonth ? dce.endMonth : 12;
           }
         });
       }
     });
-
-    var maxYear = convertToMonths(endYear - startYear, endMonth);
-    return {min: 0, max: Math.ceil(maxYear / 12) * 12, start: startYear};
-  }
-
-  /**
-   * Converts to months
-   * @param year
-   * @param month
-   * @returns {number}
-   */
-  function convertToMonths(year, month) {
-    return 12 * parseInt(year, 10) + parseInt(month, 10);
+    return {
+      min: makeStartDate(startYear),
+      max: makeStartDate(endYear+1)
+    };
   }
 
   /**
@@ -73,7 +104,7 @@
   function parseStudy(studyDto, bounds) {
     var populations = parsePopulations(studyDto, bounds);
     if (populations.length === 0) return null;
-    var timelineData = {start: bounds.start, min: 0, max: bounds.max, data: populations};
+    var timelineData = {start: bounds.start, min: bounds.min, max: bounds.max, data: populations};
     return timelineData;
   }
 
@@ -91,7 +122,6 @@
     $.each(studyDto.populations, parsePopulationsInternal(populations, colors));
 
     return populations;
-
 
     /**
      * Defined merely to pass extra arguments to the $.each iterator closure
@@ -161,14 +191,13 @@
       var dceClone = jQuery.extend(true, {}, dto);
 
       $.each(dceClone, function (i, dceDto) {
-        if (!dceDto.endYear) dceDto.endYear = currentYear;
         if (i === "0") {
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         } else {
           var lastItems = lines[lines.length - 1].population.events;
           var lastItem = lastItems[lastItems.length -1];
-          var startingTime = getStartingTime(dceDto, bounds);
-          var endingTime = getEndingTime(dceDto, bounds);
+          var startingTime = dceDto.startDate;
+          var endingTime = dceDto.endDate;
           if (overlap(startingTime, endingTime, lastItem.starting_time, lastItem.ending_time)) {
             lines.push(createPopulationItem(populationData, dceDto, bounds));
           } else {
@@ -218,37 +247,13 @@
       }
 
       /**
-       * Given a DCE returns the starting time in months
-       * @param dceDto
-       * @param bounds
-       * @returns {number}
-       */
-      function getStartingTime(dceDto, bounds) {
-        var start = dceDto.hasOwnProperty('startYear') ? dceDto.startYear : 0;
-        var end = dceDto.hasOwnProperty('startMonth') ? dceDto.startMonth - 1 : 0;
-        return convertToMonths(start - bounds.start, start > 0 ? end : 0);
-      }
-
-      /**
        * Sets the starting time of an event in months
        * @param dce
        * @param dceDto
        * @param bounds
        */
       function setStartingTime(dce, dceDto, bounds) {
-        dce.starting_time = getStartingTime(dceDto, bounds);
-      }
-
-      /**
-       * Given a DCE returns the ending time in months
-       * @param dceDto
-       * @param bounds
-       * @returns {number}
-       */
-      function getEndingTime(dceDto, bounds) {
-        var start = dceDto.hasOwnProperty('endYear') ? dceDto.endYear : currentYear;
-        var end = dceDto.hasOwnProperty('endMonth') ? dceDto.endMonth : 12;
-        return convertToMonths(start > 0 ? start - bounds.start : 1, start > 0 ? end : 0);
+        dce.starting_time = dceDto.startDate;
       }
 
       /**
@@ -258,7 +263,7 @@
        * @param bounds
        */
       function setEndingTime(dce, dceDto, bounds) {
-        dce.ending_time = getEndingTime(dceDto, bounds);
+        dce.ending_time = dceDto.endDate;
       }
     }
   }

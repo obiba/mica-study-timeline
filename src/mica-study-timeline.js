@@ -55,7 +55,6 @@
   function createTimeline(timeline, timelineData, selectee, studyDto) {
     var width = $(selectee).width();
     var chart = d3.timeline()
-      .startYear(timelineData.start)
       .beginning(timelineData.min)
       .ending(timelineData.max)
       .width(width)
@@ -67,7 +66,7 @@
         tickSize: 10
       })
       .margin({left: 15, right: 15, top: 0, bottom: 20})
-      .rotateTicks(timelineData.max > $.MicaTimeline.defaultOptions.maxMonths ? 45 : 0)
+      .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
           var modal = timeline.popupIdFormatter(studyDto, datum.population, d);
