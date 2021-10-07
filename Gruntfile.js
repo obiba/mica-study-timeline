@@ -32,6 +32,7 @@ module.exports = function (grunt) {
     },
     jshint: {
       options: {
+        esversion: 6,
         indent: 2,
         globalstrict: true,
         laxcomma: true

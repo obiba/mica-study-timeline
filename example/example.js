@@ -205,7 +205,8 @@
               "endYear": 2012,
               "endMonth": 4,
               "weight": 0
-            },
+            }
+            ,
             {
               "id": "2",
               "name": [
@@ -284,6 +285,7 @@
                   "value": "3D - Mothers - 24 months postpartum"
                 }
               ],
+              "startDate": "2013-03-12",
               "startYear": 2013,
               "startMonth": 3,
               "endYear": 2015,
