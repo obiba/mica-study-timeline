@@ -6,11 +6,10 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip, seedModal) {
+  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
     this.parser = dtoParser;
     this.popupIdFormatter = popupIdFormatter;
     this.useBootstrapTooltip = useBootstrapTooltip;
-    this.seedModal = seedModal;
   };
 
   /**
@@ -69,33 +68,21 @@
       .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
-          var modal = timeline.popupIdFormatter(studyDto, datum.population, d);
-          var popup = $(modal.id);
-          if (popup.length > 0) {
-            popup.modal();
-            timeline.seedModal(popup, modal.dceId);
-          }
+          var popup = $(timeline.popupIdFormatter(studyDto, datum.population, d));
+          if (popup.length > 0) popup.modal();
         }
       });
 
     d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
 
     if (timeline.useBootstrapTooltip === true) {
-      // Bootstrap 3.3.7, Avoid using $.offset() on SVGs since it gives incorrect results in jQuery 3.
-      // have to update Jquery to version 3
-      //ToDo
-      // d3.select(selectee).selectAll('#line-path')
-      //   .attr('data-placement', 'top')
-      //   .attr('data-toggle', 'tooltip')
-      //   .attr('title', function (d) {
-      //     return d.title;
-      //   })
-      //   .selectAll('title').remove(); // remove default tooltip
-      // $('[data-toggle="tooltip"]').on('shown.bs.tooltip', function () {
-      //   var top = $(this).css('top');
-      //   console.log(top);
-      //
-      // });
+      d3.select(selectee).selectAll('#line-path')
+        .attr('data-placement', 'top')
+        .attr('data-toggle', 'tooltip')
+        .attr('title', function (d) {
+          return d.title;
+        })
+        .selectAll('title').remove(); // remove default tooltip
     }
 
     timeline.timelineData = timelineData;
