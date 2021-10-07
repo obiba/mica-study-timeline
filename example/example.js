@@ -1,6 +1,6 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getTestOrderedDceRendering()).addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getTestYearMonthDay()).addLegend();
 
   function timelinePopupIdFormatter(studyDto, datum,dceId) {
     console.log('Format a valid pop id.');
@@ -291,6 +291,157 @@
               "endYear": 2015,
               "endMonth": 3,
               "weight": 6
+            }
+          ],
+          "weight": 0
+        }
+      ],
+      "studyResourcePath": "individual-study",
+      "obiba.mica.CollectionStudyDto.type": {}
+    };
+  }
+
+  function getTestYearMonthDay() {
+    return {
+      "id": "3d",
+      "name": [
+        {
+          "lang": "en",
+          "value": "3D Study - Design, Develop, Discover"
+        },
+        {
+          "lang": "fr",
+          "value": "3D Study - Design, Develop, Discover"
+        }
+      ],
+      "acronym": [
+        {
+          "lang": "en",
+          "value": "3D"
+        },
+        {
+          "lang": "fr",
+          "value": "3D"
+        }
+      ],
+      "populations": [
+        {
+          "id": "1",
+          "name": [
+            {
+              "lang": "en",
+              "value": "3D - Mothers"
+            }
+          ],
+          "dataCollectionEvents": [
+            {
+              "id": "1",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE01"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 1,
+              "startDay": "2010-01-01",
+              "endYear": 2010,
+              "endMonth": 1,
+              "endDay": "2010-01-16",
+              "weight": 0
+            }
+            ,
+            {
+              "id": "2",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE02"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 1,
+              "startDay": "2010-01-16",
+              "endYear": 2010,
+              "endMonth": 1,
+              "endDay": "2010-02-01",
+              "weight": 1
+            }
+            ,
+            {
+              "id": "3",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE03"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 2,
+              "startDay": "2010-02-01",
+              "endYear": 2010,
+              "endMonth": 2,
+              "endDay": "2010-02-14",
+              "weight": 2
+            },
+            {
+              "id": "4",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE04"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 2,
+              "startDay": "2010-02-14",
+              "endYear": 2010,
+              "endMonth": 2,
+              "weight": 3
+            },
+            {
+              "id": "5",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE05"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 2,
+              "startDay": "2010-02-28",
+              "endYear": 2010,
+              "endMonth": 2,
+              "endDay": "2010-03-16",
+              "weight": 3
+            },
+            {
+              "id": "6",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE05"
+                }
+              ],
+              "startYear": 2010,
+              "startMonth": 2,
+              "endYear": 2011,
+              "endMonth": 2,
+              "weight": 3
+            },
+            {
+              "id": "6",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "DCE05"
+                }
+              ],
+              "startYear": 2011,
+              "startMonth": 3,
+              "endYear": 2011,
+              "endMonth": 6,
+              "weight": 3
             }
           ],
           "weight": 0
