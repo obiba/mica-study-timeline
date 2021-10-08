@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2021-10-07
+* Date: 2021-10-08
  */
 (function () {
 
@@ -363,6 +363,12 @@
     return makeDate(year, m, d);
   }
 
+  function ensureDceWeightOrder(events) {
+    (events || []).sort(function(a, b) {
+      return  a.weight - b.weight;
+    });
+  }
+
   /**
    * Ensurre all dates are normalized; no need to for start/end year/month
    * @param populations
@@ -370,6 +376,8 @@
   function ensureStartEndDates(populations) {
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
+        ensureDceWeightOrder(population.dataCollectionEvents);
+
         $.each(population.dataCollectionEvents, function (j, dce) {
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
           dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear, dce.endMonth);
