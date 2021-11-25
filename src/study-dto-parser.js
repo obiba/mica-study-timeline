@@ -203,12 +203,21 @@
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         } else {
           var lastItems = lines[lines.length - 1].population.events;
-          var lastItem = lastItems[lastItems.length -1];
           var startingTime = dceDto.startDate;
           var endingTime = dceDto.endDate;
-          if (overlap(startingTime, endingTime, lastItem.starting_time, lastItem.ending_time)) {
-            lines.push(createPopulationItem(populationData, dceDto, bounds));
-          } else {
+          var overlapped = false;
+          var lastItem = null;
+
+          for (var last = lastItems.length - 1; last >= 0 && !overlapped; last--) {
+            lastItem = lastItems[last];
+
+            if (overlap(startingTime, endingTime, lastItem.starting_time, lastItem.ending_time)) {
+              lines.push(createPopulationItem(populationData, dceDto, bounds));
+              overlapped = true;
+            }
+          }
+
+          if (!overlapped) {
             lastItems.push(createEventItem(dceDto, bounds, lastItem.groupId));
           }
         }
