@@ -93,7 +93,7 @@
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
           startYear = Math.min(startYear, dce.startDate.getFullYear());
-          var dceEndYear = dce.endDate ? dce.endDate.getFullYear() : new Date().getFullYear();
+          var dceEndYear = dce.endDate.getFullYear();
           if (endYear < dceEndYear) {
             endYear = dceEndYear;
           }
