@@ -72,7 +72,9 @@
 
         $.each(population.dataCollectionEvents, function (j, dce) {
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
-          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear, dce.endMonth);
+          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear > dce.startYear ? currentYear : dce.startYear, dce.endMonth);
+          console.debug('Start Year', dce.startDate);
+          console.debug('End Year', dce.endDate);
         });
       }
     });
@@ -90,8 +92,8 @@
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
-          startYear = Math.min(startYear, dce.startYear);
-          var dceEndYear = dce.endYear ? dce.endYear : new Date().getFullYear();
+          startYear = Math.min(startYear, dce.startDate.getFullYear());
+          var dceEndYear = dce.endDate ? dce.endDate.getFullYear() : new Date().getFullYear();
           if (endYear < dceEndYear) {
             endYear = dceEndYear;
           }
