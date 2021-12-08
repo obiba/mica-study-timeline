@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2021-11-24
+* Date: 2021-12-08
  */
 (function () {
 
@@ -380,7 +380,7 @@
 
         $.each(population.dataCollectionEvents, function (j, dce) {
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
-          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear, dce.endMonth);
+          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear > dce.startYear ? currentYear : dce.startYear, dce.endMonth);
         });
       }
     });
@@ -398,8 +398,8 @@
     $.each(populations, function (i, population) {
       if (population.hasOwnProperty('dataCollectionEvents')) {
         $.each(population.dataCollectionEvents, function (j, dce) {
-          startYear = Math.min(startYear, dce.startYear);
-          var dceEndYear = dce.endYear ? dce.endYear : new Date().getFullYear();
+          startYear = Math.min(startYear, dce.startDate.getFullYear());
+          var dceEndYear = dce.endDate.getFullYear();
           if (endYear < dceEndYear) {
             endYear = dceEndYear;
           }
