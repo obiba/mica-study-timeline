@@ -73,8 +73,6 @@
         $.each(population.dataCollectionEvents, function (j, dce) {
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
           dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear > dce.startYear ? currentYear : dce.startYear, dce.endMonth);
-          console.debug('Start Year', dce.startDate);
-          console.debug('End Year', dce.endDate);
         });
       }
     });
