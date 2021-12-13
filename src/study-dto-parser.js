@@ -72,7 +72,12 @@
 
         $.each(population.dataCollectionEvents, function (j, dce) {
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
-          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(dce.endYear || currentYear > dce.startYear ? currentYear : dce.startYear, dce.endMonth);
+
+          var endYear = dce.endYear;
+          if (!endYear) {
+            endYear = currentYear > dce.startYear ? currentYear : dce.startYear;
+          }
+          dce.endDate = dce.endDay ? makeDateFromString(dce.endDay) : makeEndDate(endYear, dce.endMonth);
         });
       }
     });
