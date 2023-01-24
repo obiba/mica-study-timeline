@@ -23,3 +23,14 @@ ul.timeline-legend svg {
     vertical-align: middle;
     margin-right: 3px;
 }
+
+.grid .tick {
+    stroke: gray;
+    opacity: 0.4 !important;
+}
+
+.grid-tooltip .tick {
+    stroke: red;  /* for debugging */
+    opacity: 0 !important;
+    stroke-width: 30px;
+}
