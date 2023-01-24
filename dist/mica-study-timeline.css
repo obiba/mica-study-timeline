@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.1.3
-* Date: 2021-12-13
+* Date: 2023-01-26
  */
 .axis path,
 .axis line {
@@ -31,4 +31,15 @@ ul.timeline-legend li {
 ul.timeline-legend svg {
     vertical-align: middle;
     margin-right: 3px;
+}
+
+.grid .tick {
+    stroke: gray;
+    opacity: 0.4 !important;
+}
+
+.grid-tooltip .tick {
+    stroke: red;  /* for debugging */
+    opacity: 0 !important;
+    stroke-width: 30px;
 }
