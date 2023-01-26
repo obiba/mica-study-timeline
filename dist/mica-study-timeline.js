@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-01-24
+* Date: 2023-01-26
  */
 (function () {
 
@@ -100,8 +100,7 @@
       g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
-        .call(xAxis);
-        
+        .call(xAxis);        
              
       if (rotateTicks) {
         g.selectAll("text")
@@ -116,20 +115,19 @@
       setHeight();
 
       g.append("g")         
-      .attr("class", "grid")
-      .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
-      .call(make_vertical_gridline());
+        .attr("class", "grid")
+        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .call(make_vertical_gridline());
 
       g.append("g")         
-      .attr("class", "grid-tooltip")
-      .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
-      .call(make_vertical_gridline());
+        .attr("class", "grid-tooltip")
+        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .call(make_vertical_gridline());
 
       // Add tooltip
       d3.selectAll('.grid-tooltip > .tick').each(function(d, i) {
         d3.select(this).insert("title",":first-child").html(d);
       });
-
 
       // draw the chart
       g.each(function (d, i) {
@@ -180,8 +178,6 @@
       });
 
       function make_vertical_gridline() {        
-        console.log('>>>>',(d3.range(beginning.getFullYear(), ending.getFullYear()+1)));
-
         return d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
