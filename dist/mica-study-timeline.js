@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2021-12-13
+* Date: 2023-01-24
  */
 (function () {
 
@@ -101,6 +101,35 @@
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
         .call(xAxis);
+        
+             
+      if (rotateTicks) {
+        g.selectAll("text")
+          .attr("transform", function (d) {
+            return "rotate(" + rotateTicks + ")translate(" +
+              (this.getBBox().width / 2 + 10) + "," + // TODO: change this 10
+              this.getBBox().height / 2 + ")";
+          });
+      }
+
+      var gSize = g[0][0].getBoundingClientRect();
+      setHeight();
+
+      g.append("g")         
+      .attr("class", "grid")
+      .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+      .call(make_vertical_gridline());
+
+      g.append("g")         
+      .attr("class", "grid-tooltip")
+      .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+      .call(make_vertical_gridline());
+
+      // Add tooltip
+      d3.selectAll('.grid-tooltip > .tick').each(function(d, i) {
+        d3.select(this).insert("title",":first-child").html(d);
+      });
+
 
       // draw the chart
       g.each(function (d, i) {
@@ -150,18 +179,18 @@
         });
       });
 
-      if (rotateTicks) {
-        g.selectAll("text")
-          .attr("transform", function (d) {
-            return "rotate(" + rotateTicks + ")translate(" +
-              (this.getBBox().width / 2 + 10) + "," + // TODO: change this 10
-              this.getBBox().height / 2 + ")";
-          });
+      function make_vertical_gridline() {        
+        console.log('>>>>',(d3.range(beginning.getFullYear(), ending.getFullYear()+1)));
+
+        return d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .tickFormat("")
+            .tickSubdivide(1)
+            .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+            .tickSize(-height, tickFormat.tickSize / 2, 0);
       }
-
-      var gSize = g[0][0].getBoundingClientRect();
-      setHeight();
-
+    
       function getXPos(d, i) {
         return margin.left + (d.starting_time - beginning) * scaleFactor;
       }
