@@ -11,6 +11,7 @@ module.exports = function (grunt) {
       srcFiles: [
         "src/d3-timeline.js",
         "src/study-dto-parser.js",
+        "src/studies-dto-parser.js",
         "src/color-generator.js",
         "src/mica-study-timeline.js"
       ],

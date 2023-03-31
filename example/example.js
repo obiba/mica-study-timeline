@@ -1,6 +1,6 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getDCEsWithOverlapDates()).addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getStartYearOnly()).addLegend();
 
   function timelinePopupIdFormatter(studyDto, datum,dceId) {
     console.log('Format a valid pop id.');
@@ -66,6 +66,33 @@
                 }
               ],
               "startYear": 2016
+            }
+          ]
+        },
+        {
+          "id": "pop2",
+          "name": [
+            {
+              "lang": "en",
+              "value": "DADA"
+            }
+          ],
+          "recruitment": {
+
+          },
+          "selectionCriteria": {
+
+          },
+          "dataCollectionEvents": [
+            {
+              "id": "dce1",
+              "name": [
+                {
+                  "lang": "en",
+                  "value": "dce one"
+                }
+              ],
+              "startYear": 2017
             }
           ]
         }

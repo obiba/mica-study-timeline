@@ -207,7 +207,7 @@
         if (i === "0") {
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         } else {
-          var lastItems = lines[lines.length - 1].population.events;
+          var lastItems = lines[lines.length - 1].events;
           var startingTime = dceDto.startDate;
           var endingTime = dceDto.endDate;
           var overlapped = false;
@@ -250,7 +250,7 @@
       function createPopulationItem(populationData, dceDto, bounds) {
         var cloneObject = jQuery.extend({}, populationData);
         cloneObject.events = [createEventItem(dceDto, bounds)];
-        return {population: cloneObject};
+        return cloneObject;
       }
 
       /**

@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-01-26
+* Date: 2023-03-31
  */
 (function () {
 
@@ -19,6 +19,7 @@
       scroll = function () {},
       orient = "bottom",
       width = null,
+      heightWithoutRotation = null,
       height = null,
       tickFormat = {
         format: d3.format("d"),
@@ -100,8 +101,10 @@
       g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
-        .call(xAxis);        
-             
+        .call(xAxis);
+
+      setHeightWithoutRotation(g[0][0].getBoundingClientRect());
+
       if (rotateTicks) {
         g.selectAll("text")
           .attr("transform", function (d) {
@@ -111,17 +114,16 @@
           });
       }
 
-      var gSize = g[0][0].getBoundingClientRect();
-      setHeight();
+      setHeight(g[0][0].getBoundingClientRect());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
         .call(make_vertical_gridline());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid-tooltip")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
         .call(make_vertical_gridline());
 
       // Add tooltip
@@ -132,7 +134,7 @@
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
-          var data = datum.population.events;
+          var data = datum.events;
           var hasLabel = (typeof(datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
             .append("path")
@@ -143,7 +145,7 @@
               var rectWidth = getWidth(d, i);
               return rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
-            .style("fill", datum.population.color)
+            .style("fill", datum.color)
             .on("mouseover", function (d, i) {
               hover(d, index, datum);
             })
@@ -156,10 +158,28 @@
 
           // add the label
           if (hasLabel) {
-            gParent.append('text')
+            // gParent.append('text')
+            //   .attr("class", "timeline-label")
+            //   .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
+            //   .text(hasLabel ? datum.label : datum.id);
+
+            var fullItemHeight = itemHeight + itemMargin;
+            var rowsDown = margin.top + (fullItemHeight / 2) + fullItemHeight * (yAxisMapping[index] || 1);
+
+            gParent.append("text")
               .attr("class", "timeline-label")
-              .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
-              .text(hasLabel ? datum.label : datum.id);
+              .attr("transform", "translate(" + 0 + "," + rowsDown + ")")
+              .text(hasLabel ? datum.label : datum.id)
+              .on("click", function (d, i) {
+
+                console.log("label click!");
+                var point = mouse(this);
+                gParent.append("rect")
+                  .attr("id", "clickpoint")
+                  .attr("x", point[0])
+                  .attr("width", 10)
+                  .attr("height", itemHeight);
+              });
           }
 
           if (typeof(datum.icon) != "undefined") {
@@ -177,16 +197,16 @@
         });
       });
 
-      function make_vertical_gridline() {        
+      function make_vertical_gridline() {
         return d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
             .tickFormat("")
             .tickSubdivide(1)
             .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
-            .tickSize(-height, tickFormat.tickSize / 2, 0);
+          .tickSize(-heightWithoutRotation, tickFormat.tickSize / 2, 0);
       }
-    
+
       function getXPos(d, i) {
         return margin.left + (d.starting_time - beginning) * scaleFactor;
       }
@@ -195,7 +215,24 @@
         return (d.ending_time - d.starting_time) * scaleFactor;
       }
 
-      function setHeight() {
+      function setHeightWithoutRotation(gSize) {
+        if (!gParentItem.attr("height")) {
+          if (itemHeight) {
+            // set height based off of item height
+            heightWithoutRotation = gSize.height + gSize.top - gParentSize.top;
+          } else {
+            throw "height of the timeline is not set";
+          }
+        } else {
+          if (!height) {
+            heightWithoutRotation = gParentItem.attr("height");
+          } else {
+            heightWithoutRotation = height;
+          }
+        }
+      }
+
+      function setHeight(gSize) {
         if (!height && !gParentItem.attr("height")) {
           if (itemHeight) {
             // set height based off of item height
@@ -540,7 +577,7 @@
         if (i === "0") {
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         } else {
-          var lastItems = lines[lines.length - 1].population.events;
+          var lastItems = lines[lines.length - 1].events;
           var startingTime = dceDto.startDate;
           var endingTime = dceDto.endDate;
           var overlapped = false;
@@ -583,7 +620,7 @@
       function createPopulationItem(populationData, dceDto, bounds) {
         var cloneObject = jQuery.extend({}, populationData);
         cloneObject.events = [createEventItem(dceDto, bounds)];
-        return {population: cloneObject};
+        return cloneObject;
       }
 
       /**
@@ -622,6 +659,230 @@
       }
     }
   }
+
+}(jQuery));
+
+(function ($) {
+
+  "use strict";
+
+  var currentYear = new Date().getFullYear();
+  var locale;
+  /**
+   * Constructor
+   * @constructor
+   */
+  $.StudiesDtoParser = function (localSetting) {
+    locale = localSetting ? localSetting : 'en';
+  };
+
+  /**
+   * Class method definition
+   * @type {{create: create}}
+   */
+  $.StudiesDtoParser.prototype = {
+
+    parse: function (studiesDto) {
+      if (studiesDto) {
+        ensureValidity(studiesDto);
+        var result = parseStudies(studiesDto, findBounds(studiesDto));
+        console.dir(result);
+        return result;
+      }
+
+      return null;
+    }
+  };
+
+  /**
+   * The input date must be ISO 8601 (yyyy-MM-dd)
+   * @param date
+   * @returns {Date}
+   */
+  function makeDateFromString(date) {
+    const parts = date.split(/-/).map(function (t) {
+      return parseInt(t);
+    });
+
+    return makeDate(parts[0], parts[1] - 1, parts[2]);
+  }
+
+  function makeDate(year, month, day) {
+    return new Date(year, month, day);
+  }
+
+  function makeStartDate(year, month) {
+    return makeDate(year, (month || 1) - 1, 1);
+  }
+
+  function makeEndDate(year, month) {
+    var m = (month || 12) - 1;
+    var d = new Date(year, m + 1, 0).getDate();
+    return makeDate(year, m, d);
+  }
+
+  function ensureModel(study) {
+    if (!study.hasOwnProperty('model') && study.hasOwnProperty('content')) {
+      study.model = JSON.parse(study.content);
+    }
+  }
+
+  /**
+   * Ensurre all dates are normalized; no need to for start/end year/month
+   * @param studies
+   */
+  function ensureStartEndDates(study) {
+    study.model.startDate = makeStartDate(study.model.startYear);
+
+    var endYear = study.endYear;
+    if (!endYear) {
+      endYear = currentYear > study.model.startYear ? currentYear : study.model.startYear;
+    }
+    study.model.endDate = makeEndDate(endYear);
+  }
+
+  /**
+   * Ensurre validity
+   * @param studies
+   */
+  function ensureValidity(studies) {
+    $.each(studies, function (i, study) {
+      ensureModel(study);
+      ensureStartEndDates(study);
+    });
+  }
+
+  /**
+   * Returns the date bounds of all population, startYear and maxYear (in months)
+   * @param studies
+   * @returns {{min: number, max: number, start: Number}}
+   */
+  function findBounds(studies) {
+    var startYear = Number.MAX_VALUE;
+    var endYear = Number.MIN_VALUE;
+
+    $.each(studies, function (i, study) {
+      if (study.model) {
+        startYear = Math.min(startYear, study.model.startDate.getFullYear());
+        var studyEndYear = study.model.endDate.getFullYear();
+        if (endYear < studyEndYear) {
+          endYear = studyEndYear;
+        }
+      }
+    });
+    return {
+      min: makeStartDate(startYear),
+      max: makeStartDate(endYear + 1)
+    };
+  }
+
+  /**
+   * Converts a StudyDto to timeline compatible data format
+   * @param studyDtos
+   * @param bounds
+   */
+  function parseStudies(studyDtos, bounds) {
+    var color = new $.ColorGenerator().nextColor();
+    var studies = [];
+    var studyData;
+
+    $.each(studyDtos, function (i, studyDto) {
+      studyData = {};
+      setId(studyData, studyDto, 'id');
+      setTitle(studyData, studyDto, 'name');
+      studyData.label = translateField(studyDto.acronym);
+      studyData.color = color;
+      studies.push(createStudyItem(studyData, studyDto, bounds));
+    });
+
+    if (studies.length < 1) return null;
+    var timelineData = { start: bounds.start, min: bounds.min, max: bounds.max, data: studies };
+    return timelineData;
+  }
+
+  /**
+   * Sets the 'id' field if present
+   * @param obj
+   * @param dto
+   * @param field
+   */
+  function setId(obj, dto, field) {
+    if (dto.hasOwnProperty(field)) obj[field] = dto[field];
+  }
+
+  /**
+   * Translate fields
+   * @param field
+   */
+
+  function translateField(field) {
+    var localField = field[0].value;
+    $.each(field, function (i, fieldLang) {
+      if (fieldLang.lang == locale) localField = fieldLang.value;
+    });
+    return localField;
+  }
+
+  /**
+   * Sets the title field if present and only for the first local
+   * @param obj
+   * @param dto
+   * @param field
+   */
+  function setTitle(obj, dto, field) {
+    if (dto.hasOwnProperty(field)) obj.title = translateField(dto[field]);
+  }
+
+
+  /**
+   * Create a study item
+   * @param studyData
+   * @param studyDto
+   * @param bounds
+   * @returns {{population: *}}
+   */
+  function createStudyItem(studyData, studyDto, bounds) {
+    var cloneObject = jQuery.extend({}, studyData);
+    cloneObject.events = [createEventItem(studyDto)];
+    return cloneObject;
+  }
+
+  /**
+   * Creates an time event item
+   * @param studyDto
+   * @param bounds
+   * @returns {{}}
+   */
+  function createEventItem(studyDto) {
+    var study = {};
+    setId(study, studyDto, 'id');
+    setTitle(study, studyDto, 'name');
+    setStartingTime(study, studyDto);
+    setEndingTime(study, studyDto);
+    return study;
+  }
+
+  /**
+   * Sets the starting time of an event in months
+   * @param dce
+   * @param studyDto
+   * @param bounds
+   */
+  function setStartingTime(dce, studyDto) {
+    dce.starting_time = studyDto.model.startDate;
+  }
+
+  /**
+   * Sets the ending time of an event in months
+   * @param dce
+   * @param studyDto
+   * @param bounds
+   */
+  function setEndingTime(dce, studyDto) {
+    dce.ending_time = studyDto.model.endDate;
+  }
+
+
 
 }(jQuery));
 
@@ -715,9 +976,9 @@
 
       var processedPopulations = {};
       $.each(this.timelineData.data, function(i, item) {
-        if (!processedPopulations.hasOwnProperty(item.population.title)) {
-          processedPopulations[item.population.title] = true;
-          var li = $(createLegendRow(item.population.color, item.population.title));
+        if (!processedPopulations.hasOwnProperty(item.title)) {
+          processedPopulations[item.title] = true;
+          var li = $(createLegendRow(item.color, item.title));
           ul.append(li);
         }
       });

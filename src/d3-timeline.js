@@ -10,6 +10,7 @@
       scroll = function () {},
       orient = "bottom",
       width = null,
+      heightWithoutRotation = null,
       height = null,
       tickFormat = {
         format: d3.format("d"),
@@ -91,8 +92,10 @@
       g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
-        .call(xAxis);        
-             
+        .call(xAxis);
+
+      setHeightWithoutRotation(g[0][0].getBoundingClientRect());
+
       if (rotateTicks) {
         g.selectAll("text")
           .attr("transform", function (d) {
@@ -102,17 +105,16 @@
           });
       }
 
-      var gSize = g[0][0].getBoundingClientRect();
-      setHeight();
+      setHeight(g[0][0].getBoundingClientRect());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
         .call(make_vertical_gridline());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid-tooltip")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
         .call(make_vertical_gridline());
 
       // Add tooltip
@@ -123,7 +125,7 @@
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
-          var data = datum.population.events;
+          var data = datum.events;
           var hasLabel = (typeof(datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
             .append("path")
@@ -134,7 +136,7 @@
               var rectWidth = getWidth(d, i);
               return rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
-            .style("fill", datum.population.color)
+            .style("fill", datum.color)
             .on("mouseover", function (d, i) {
               hover(d, index, datum);
             })
@@ -147,10 +149,28 @@
 
           // add the label
           if (hasLabel) {
-            gParent.append('text')
+            // gParent.append('text')
+            //   .attr("class", "timeline-label")
+            //   .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
+            //   .text(hasLabel ? datum.label : datum.id);
+
+            var fullItemHeight = itemHeight + itemMargin;
+            var rowsDown = margin.top + (fullItemHeight / 2) + fullItemHeight * (yAxisMapping[index] || 1);
+
+            gParent.append("text")
               .attr("class", "timeline-label")
-              .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
-              .text(hasLabel ? datum.label : datum.id);
+              .attr("transform", "translate(" + 0 + "," + rowsDown + ")")
+              .text(hasLabel ? datum.label : datum.id)
+              .on("click", function (d, i) {
+
+                console.log("label click!");
+                var point = mouse(this);
+                gParent.append("rect")
+                  .attr("id", "clickpoint")
+                  .attr("x", point[0])
+                  .attr("width", 10)
+                  .attr("height", itemHeight);
+              });
           }
 
           if (typeof(datum.icon) != "undefined") {
@@ -168,16 +188,16 @@
         });
       });
 
-      function make_vertical_gridline() {        
+      function make_vertical_gridline() {
         return d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
             .tickFormat("")
             .tickSubdivide(1)
             .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
-            .tickSize(-height, tickFormat.tickSize / 2, 0);
+          .tickSize(-heightWithoutRotation, tickFormat.tickSize / 2, 0);
       }
-    
+
       function getXPos(d, i) {
         return margin.left + (d.starting_time - beginning) * scaleFactor;
       }
@@ -186,7 +206,24 @@
         return (d.ending_time - d.starting_time) * scaleFactor;
       }
 
-      function setHeight() {
+      function setHeightWithoutRotation(gSize) {
+        if (!gParentItem.attr("height")) {
+          if (itemHeight) {
+            // set height based off of item height
+            heightWithoutRotation = gSize.height + gSize.top - gParentSize.top;
+          } else {
+            throw "height of the timeline is not set";
+          }
+        } else {
+          if (!height) {
+            heightWithoutRotation = gParentItem.attr("height");
+          } else {
+            heightWithoutRotation = height;
+          }
+        }
+      }
+
+      function setHeight(gSize) {
         if (!height && !gParentItem.attr("height")) {
           if (itemHeight) {
             // set height based off of item height

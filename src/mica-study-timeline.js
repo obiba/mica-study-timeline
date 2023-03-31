@@ -34,9 +34,9 @@
 
       var processedPopulations = {};
       $.each(this.timelineData.data, function(i, item) {
-        if (!processedPopulations.hasOwnProperty(item.population.title)) {
-          processedPopulations[item.population.title] = true;
-          var li = $(createLegendRow(item.population.color, item.population.title));
+        if (!processedPopulations.hasOwnProperty(item.title)) {
+          processedPopulations[item.title] = true;
+          var li = $(createLegendRow(item.color, item.title));
           ul.append(li);
         }
       });
