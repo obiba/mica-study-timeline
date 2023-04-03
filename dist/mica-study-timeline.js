@@ -1024,7 +1024,7 @@
       .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
-          var popup = $(timeline.popupIdFormatter(studyDto, datum.population, d));
+          var popup = $(timeline.popupIdFormatter(studyDto, datum, d));
           if (popup.length > 0) popup.modal();
         }
       });
