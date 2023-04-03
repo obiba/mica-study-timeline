@@ -51,8 +51,21 @@
     }
   };
 
+  function calculateTextSize(text) {
+    if (!d3) return;
+    var container = d3.select('body').append('svg');
+    container.append('text')
+      .attr("class", "timeline-label")
+      .attr({ x: -99999, y: -99999 }) // place off screen
+      .text(text);
+    var size = container.node().getBBox();
+    container.remove();
+    return { width: size.width, height: size.height };
+  }
+
   function createTimeline(timeline, timelineData, selectee, studyDto) {
     var width = $(selectee).width();
+    var margin = { left: 15 + (timelineData.longestLabel ? calculateTextSize(timelineData.longestLabel).width : 0), right: 15, top: 0, bottom: 20 };
     var chart = d3.timeline()
       .beginning(timelineData.min)
       .ending(timelineData.max)
@@ -64,7 +77,7 @@
         tickNumber: 1,
         tickSize: 10
       })
-      .margin({left: 15, right: 15, top: 0, bottom: 20})
+      .margin(margin)
       .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {

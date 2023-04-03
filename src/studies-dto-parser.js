@@ -4,6 +4,7 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+
   /**
    * Constructor
    * @constructor
@@ -22,12 +23,12 @@
       if (studiesDto) {
         ensureValidity(studiesDto);
         var result = parseStudies(studiesDto, findBounds(studiesDto));
-        console.dir(result);
         return result;
       }
 
       return null;
-    }
+    },
+
   };
 
   /**
@@ -121,6 +122,7 @@
     var color = new $.ColorGenerator().nextColor();
     var studies = [];
     var studyData;
+    var longestLabel = "";
 
     $.each(studyDtos, function (i, studyDto) {
       studyData = {};
@@ -128,11 +130,15 @@
       setTitle(studyData, studyDto, 'name');
       studyData.label = translateField(studyDto.acronym);
       studyData.color = color;
+
+      // Use this calculate margin in timeline
+      if (longestLabel.length < studyData.label.length) longestLabel = studyData.label;
+
       studies.push(createStudyItem(studyData, studyDto, bounds));
     });
 
     if (studies.length < 1) return null;
-    var timelineData = { start: bounds.start, min: bounds.min, max: bounds.max, data: studies };
+    var timelineData = { start: bounds.start, min: bounds.min, max: bounds.max, data: studies, longestLabel: longestLabel };
     return timelineData;
   }
 

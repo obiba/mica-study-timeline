@@ -5,9 +5,9 @@
   d3.timeline = function () {
     var DISPLAY_TYPES = ["circle", "rect"];
 
-    var hover = function () {},
-      click = function () {},
-      scroll = function () {},
+    var hover = function () { },
+      click = function () { },
+      scroll = function () { },
       orient = "bottom",
       width = null,
       heightWithoutRotation = null,
@@ -22,7 +22,7 @@
       display = "rect",
       beginning = 0,
       ending = 0,
-      margin = {left: 30, right: 30, top: 30, bottom: 30},
+      margin = { left: 30, right: 30, top: 30, bottom: 30 },
       stacked = false,
       rotateTicks = false,
       itemHeight = 10,
@@ -84,9 +84,9 @@
         .orient(orient)
         .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
         .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
-      ;
+        ;
 
       // draw axis
       g.append("g")
@@ -109,24 +109,24 @@
 
       g.append("g")
         .attr("class", "grid")
-        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
       g.append("g")
         .attr("class", "grid-tooltip")
-        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
       // Add tooltip
-      d3.selectAll('.grid-tooltip > .tick').each(function(d, i) {
-        d3.select(this).insert("title",":first-child").html(d);
+      d3.selectAll('.grid-tooltip > .tick').each(function (d, i) {
+        d3.select(this).insert("title", ":first-child").html(d);
       });
 
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
           var data = datum.events;
-          var hasLabel = (typeof(datum.label) != "undefined");
+          var hasLabel = (typeof (datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
             .append("path")
             .attr('id', 'line-path')
@@ -149,20 +149,15 @@
 
           // add the label
           if (hasLabel) {
-            // gParent.append('text')
-            //   .attr("class", "timeline-label")
-            //   .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
-            //   .text(hasLabel ? datum.label : datum.id);
-
             var fullItemHeight = itemHeight + itemMargin;
             var rowsDown = margin.top + (fullItemHeight / 2) + fullItemHeight * (yAxisMapping[index] || 1);
 
             gParent.append("text")
               .attr("class", "timeline-label")
-              .attr("transform", "translate(" + 0 + "," + rowsDown + ")")
+              .attr("text-anchor", "end")
+              .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")
               .text(hasLabel ? datum.label : datum.id)
               .on("click", function (d, i) {
-
                 console.log("label click!");
                 var point = mouse(this);
                 gParent.append("rect")
@@ -173,7 +168,7 @@
               });
           }
 
-          if (typeof(datum.icon) != "undefined") {
+          if (typeof (datum.icon) != "undefined") {
             gParent.append('image')
               .attr("class", "timeline-label")
               .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
@@ -190,11 +185,11 @@
 
       function make_vertical_gridline() {
         return d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .tickFormat("")
-            .tickSubdivide(1)
-            .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+          .scale(xScale)
+          .orient("bottom")
+          .tickFormat("")
+          .tickSubdivide(1)
+          .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
           .tickSize(-heightWithoutRotation, tickFormat.tickSize / 2, 0);
       }
 

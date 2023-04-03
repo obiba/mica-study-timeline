@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-03-31
+* Date: 2023-04-03
  */
 (function () {
 
@@ -14,9 +14,9 @@
   d3.timeline = function () {
     var DISPLAY_TYPES = ["circle", "rect"];
 
-    var hover = function () {},
-      click = function () {},
-      scroll = function () {},
+    var hover = function () { },
+      click = function () { },
+      scroll = function () { },
       orient = "bottom",
       width = null,
       heightWithoutRotation = null,
@@ -31,7 +31,7 @@
       display = "rect",
       beginning = 0,
       ending = 0,
-      margin = {left: 30, right: 30, top: 30, bottom: 30},
+      margin = { left: 30, right: 30, top: 30, bottom: 30 },
       stacked = false,
       rotateTicks = false,
       itemHeight = 10,
@@ -93,9 +93,9 @@
         .orient(orient)
         .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
         .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
-      ;
+        ;
 
       // draw axis
       g.append("g")
@@ -118,24 +118,24 @@
 
       g.append("g")
         .attr("class", "grid")
-        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
       g.append("g")
         .attr("class", "grid-tooltip")
-        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
       // Add tooltip
-      d3.selectAll('.grid-tooltip > .tick').each(function(d, i) {
-        d3.select(this).insert("title",":first-child").html(d);
+      d3.selectAll('.grid-tooltip > .tick').each(function (d, i) {
+        d3.select(this).insert("title", ":first-child").html(d);
       });
 
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
           var data = datum.events;
-          var hasLabel = (typeof(datum.label) != "undefined");
+          var hasLabel = (typeof (datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
             .append("path")
             .attr('id', 'line-path')
@@ -158,20 +158,15 @@
 
           // add the label
           if (hasLabel) {
-            // gParent.append('text')
-            //   .attr("class", "timeline-label")
-            //   .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
-            //   .text(hasLabel ? datum.label : datum.id);
-
             var fullItemHeight = itemHeight + itemMargin;
             var rowsDown = margin.top + (fullItemHeight / 2) + fullItemHeight * (yAxisMapping[index] || 1);
 
             gParent.append("text")
               .attr("class", "timeline-label")
-              .attr("transform", "translate(" + 0 + "," + rowsDown + ")")
+              .attr("text-anchor", "end")
+              .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")
               .text(hasLabel ? datum.label : datum.id)
               .on("click", function (d, i) {
-
                 console.log("label click!");
                 var point = mouse(this);
                 gParent.append("rect")
@@ -182,7 +177,7 @@
               });
           }
 
-          if (typeof(datum.icon) != "undefined") {
+          if (typeof (datum.icon) != "undefined") {
             gParent.append('image')
               .attr("class", "timeline-label")
               .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
@@ -199,11 +194,11 @@
 
       function make_vertical_gridline() {
         return d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .tickFormat("")
-            .tickSubdivide(1)
-            .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
+          .scale(xScale)
+          .orient("bottom")
+          .tickFormat("")
+          .tickSubdivide(1)
+          .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
           .tickSize(-heightWithoutRotation, tickFormat.tickSize / 2, 0);
       }
 
@@ -668,6 +663,7 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+
   /**
    * Constructor
    * @constructor
@@ -686,12 +682,12 @@
       if (studiesDto) {
         ensureValidity(studiesDto);
         var result = parseStudies(studiesDto, findBounds(studiesDto));
-        console.dir(result);
         return result;
       }
 
       return null;
-    }
+    },
+
   };
 
   /**
@@ -785,6 +781,7 @@
     var color = new $.ColorGenerator().nextColor();
     var studies = [];
     var studyData;
+    var longestLabel = "";
 
     $.each(studyDtos, function (i, studyDto) {
       studyData = {};
@@ -792,11 +789,15 @@
       setTitle(studyData, studyDto, 'name');
       studyData.label = translateField(studyDto.acronym);
       studyData.color = color;
+
+      // Use this calculate margin in timeline
+      if (longestLabel.length < studyData.label.length) longestLabel = studyData.label;
+
       studies.push(createStudyItem(studyData, studyDto, bounds));
     });
 
     if (studies.length < 1) return null;
-    var timelineData = { start: bounds.start, min: bounds.min, max: bounds.max, data: studies };
+    var timelineData = { start: bounds.start, min: bounds.min, max: bounds.max, data: studies, longestLabel: longestLabel };
     return timelineData;
   }
 
@@ -993,8 +994,21 @@
     }
   };
 
+  function calculateTextSize(text) {
+    if (!d3) return;
+    var container = d3.select('body').append('svg');
+    container.append('text')
+      .attr("class", "timeline-label")
+      .attr({ x: -99999, y: -99999 }) // place off screen
+      .text(text);
+    var size = container.node().getBBox();
+    container.remove();
+    return { width: size.width, height: size.height };
+  }
+
   function createTimeline(timeline, timelineData, selectee, studyDto) {
     var width = $(selectee).width();
+    var margin = { left: 15 + (timelineData.longestLabel ? calculateTextSize(timelineData.longestLabel).width : 0), right: 15, top: 0, bottom: 20 };
     var chart = d3.timeline()
       .beginning(timelineData.min)
       .ending(timelineData.max)
@@ -1006,7 +1020,7 @@
         tickNumber: 1,
         tickSize: 10
       })
-      .margin({left: 15, right: 15, top: 0, bottom: 20})
+      .margin(margin)
       .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
