@@ -690,19 +690,6 @@
 
   };
 
-  /**
-   * The input date must be ISO 8601 (yyyy-MM-dd)
-   * @param date
-   * @returns {Date}
-   */
-  function makeDateFromString(date) {
-    const parts = date.split(/-/).map(function (t) {
-      return parseInt(t);
-    });
-
-    return makeDate(parts[0], parts[1] - 1, parts[2]);
-  }
-
   function makeDate(year, month, day) {
     return new Date(year, month, day);
   }
@@ -728,9 +715,9 @@
    * @param studies
    */
   function ensureStartEndDates(study) {
-    study.model.startDate = makeStartDate(study.model.startYear);
+    study.model.startDate = makeStartDate(study.model.startYear || currentYear);
 
-    var endYear = study.endYear;
+    var endYear = study.model.endYear;
     if (!endYear) {
       endYear = currentYear > study.model.startYear ? currentYear : study.model.startYear;
     }
