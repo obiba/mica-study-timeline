@@ -56,11 +56,12 @@
    * @param studies
    */
   function ensureStartEndDates(study) {
-    study.model.startDate = makeStartDate(study.model.startYear || currentYear);
+    var startYear = study.model.startYear || currentYear;
+    study.model.startDate = makeStartDate(startYear);
 
     var endYear = study.model.endYear;
     if (!endYear) {
-      endYear = currentYear > study.model.startYear ? currentYear : study.model.startYear;
+      endYear = currentYear > startYear ? currentYear : startYear;
     }
     study.model.endDate = makeEndDate(endYear);
   }
