@@ -3,6 +3,7 @@
     fill: none;
     stroke: black;
     shape-rendering: crispEdges;
+    stroke-width: 0.05rem;
 }
 
 .axis text {

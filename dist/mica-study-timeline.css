@@ -5,13 +5,14 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-04-03
+* Date: 2023-04-11
  */
 .axis path,
 .axis line {
     fill: none;
     stroke: black;
     shape-rendering: crispEdges;
+    stroke-width: 0.05rem;
 }
 
 .axis text {

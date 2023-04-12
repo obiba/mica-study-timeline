@@ -98,11 +98,10 @@
 
       if (rotateTicks) {
         g.selectAll("text")
-          .attr("transform", function (d) {
-            return "rotate(" + rotateTicks + ")translate(" +
-              (this.getBBox().width / 2 + 10) + "," + // TODO: change this 10
-              this.getBBox().height / 2 + ")";
-          });
+          .style("text-anchor", "end")
+          .attr("dx", "3em")
+          .attr("dy", ".15em")
+          .attr("transform", "rotate("+rotateTicks+")");
       }
 
       setHeight(g[0][0].getBoundingClientRect());
