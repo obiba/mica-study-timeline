@@ -1,10 +1,7662 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudiesDtoParser(), timelinePopupIdFormatter).create("#vis", getStudies());
+  new $.MicaTimeline(new $.StudiesDtoParser(), timelinePopupIdFormatter).create("#vis", getLotsOfStudies());
 
   function timelinePopupIdFormatter(studyDto, datum, dceId) {
     console.log('Format a valid pop id.');
     return '';
+  }
+
+  function getLotsOfStudies() {
+    return [
+      {
+        "id": "active",
+        "timestamps": {
+          "created": "2019-07-23T14:11:55.142",
+          "lastUpdate": "2021-05-05T09:38:48.582"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Advanced Cognitive Training for Independent and Vital Elderly"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ACTIVE"
+          }
+        ],
+        "design": "clinical_trial",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2832
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The primary objective of the trial is to test the effects of three distinct cognitive interventions on primary outcome measures of cognitively demanding daily activities related to living independently (e.g., food preparation, driving, medication use, financial management). Each of the three interventions is targeted at improving memory, or reasoning, or speed of information processing.</p>\r\n\r\n<p>A secondary objective of the trial is to investigate the process by which the interventions affect the primary outcomes, including exploring whether a set of proximal outcomes (measures of the basic abilities being trained) serve as mediators of the effects of cognitive training on the primary outcome measures.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2832},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"<p>Baseline and Intervention: 2832 participants</p>\\r\\n\\r\\n<p>Immediate post-test: 2561 participants</p>\\r\\n\\r\\n<p>Booster: 1113 participants</p>\\r\\n\\r\\n<p>1 year: 2336 participants</p>\\r\\n\\r\\n<p>2 years: 2244 participants</p>\\r\\n\\r\\n<p>Booster at 3 year: 1113 participants</p>\\r\\n\\r\\n<p>3 years: 1879 participants&nbsp;</p>\\r\\n\\r\\n<p>5 years: 1879 participants</p>\\r\\n\\r\\n<p>10 years: 1220 participants</p>\\r\\n\"}},\"website\":\"http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/4248?q=Advanced%20Cognitive%20Training%20for%20Independent%20and%20Vital%20Elderly%20%28ACTIVE%29\",\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"clinical_trial\"],\"design\":\"clinical_trial\",\"followUpInfo\":{\"en\":\"<p>ACTIVE is a multisite, randomized, controlled clinical trial. Participants were randomly assigned to one of three intervention&nbsp;groups (memory, reasoning, or speed-of-processing training) or a no-contact control group.&nbsp;Outcome assessments were conducted immediately and 1, 2, 3, 5 and 10 years after the intervention.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1998,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Rebok GW, Ball K, Guey LT, Jones RN, et al. Ten-year effects of the advanced cognitive training for independent and vital elderly cognitive training trial on cognition and everyday functioning in older adults. 2014; 62(1): 16-24.\",\"endYear\":2008,\"pubmedId\":\"24417410\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886922d\",\"title\":\"Dr.\",\"firstName\":\"George W.\",\"lastName\":\"Rebok\",\"email\":\"grebok@jhsph.edu\",\"phone\":\"(410) 955-8550\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Johns Hopkins University\"},\"department\":{\"en\":\"Department of Mental Health\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"George W. Rebok\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886922e\",\"title\":\"Dr.\",\"firstName\":\"Karlene\",\"lastName\":\"Ball\",\"email\":\"kball@uab.edu\",\"phone\":\"205-975-2296\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Alabama\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Birmingham\"},\"state\":\"Alabama\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Karlene Ball\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886922f\",\"title\":\"Dr.\",\"firstName\":\"Michael\",\"lastName\":\"Marsiske\",\"email\":\"marsiske@phhp.ufl.edu\",\"phone\":\"352-273-5097\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Florida\"},\"department\":{\"en\":\"Department of Clinical and Health Psychology\"},\"address\":{\"city\":{\"en\":\"Gainesville\"},\"state\":\"Florida\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michael Marsiske\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869230\",\"title\":\"Dr.\",\"firstName\":\"John\",\"lastName\":\"Morris\",\"email\":\"jnm@hsl.harvard.edu\",\"phone\":\"617-971-5301\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Hebrew Senior Life Insitute for Aging Research\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John Morris\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869231\",\"title\":\"Dr.\",\"firstName\":\"Sharon\",\"lastName\":\"Tennstedt\",\"email\":\"tennsted@bu.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Boston University\"},\"department\":{\"en\":\"Department of Community Health Sciences\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Sharon Tennstedt\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869232\",\"title\":\"Dr.\",\"firstName\":\"Frederick W.\",\"lastName\":\"Unverzagt\",\"email\":\"funverza@iupui.edu\",\"phone\":\"(317) 274-1079\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Indiana University School of Medicine\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Indianapolis\"},\"state\":\"Indiana\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"},{\"parentId\":\"regards\",\"role\":\"investigator\"},{\"parentId\":\"regards\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Frederick W. Unverzagt\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869233\",\"title\":\"Dr.\",\"firstName\":\"Sherry L.\",\"lastName\":\"Willis\",\"email\":\"oldage@u.washington.edu\",\"phone\":\"(206) 281-4050\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"},{\"parentId\":\"active\",\"role\":\"contact\"},{\"parentId\":\"sls\",\"role\":\"investigator\"},{\"parentId\":\"sls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Sherry L. Willis\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869234\",\"title\":\"Dr.\",\"firstName\":\"Richard N.\",\"lastName\":\"Jones\",\"email\":\"jones@mail.hrca.harvard.edu\",\"phone\":\"617-363-8493\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Hebrew Senior Life Institute for Aging Research\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard N. Jones\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869233\",\"title\":\"Dr.\",\"firstName\":\"Sherry L.\",\"lastName\":\"Willis\",\"email\":\"oldage@u.washington.edu\",\"phone\":\"(206) 281-4050\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"},{\"parentId\":\"active\",\"role\":\"contact\"},{\"parentId\":\"sls\",\"role\":\"investigator\"},{\"parentId\":\"sls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Sherry L. Willis\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"no\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "bcs70",
+        "timestamps": {
+          "created": "2019-07-23T14:12:13.691",
+          "lastUpdate": "2020-02-05T11:07:21.911"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "1970 British Cohort Study"
+          },
+          {
+            "lang": "fr",
+            "value": "1970 British Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BCS70"
+          },
+          {
+            "lang": "fr",
+            "value": "BCS70"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 17198
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>In 1970, the aims of the BCS70 study were to look at the social and biological characteristics of the mother in relation to neonatal morbidity, and to compare the results with those of the 1958 National Child Development Study.</p>\r\n\r\n<p>With each successive sweep, the scope of the enquiry has broadened from a strictly medical focus at birth, to encompass physical, educational, social and economic development.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>In 1970, the aims of the BCS70 study were to look at the social and biological characteristics of the mother in relation to neonatal morbidity, and to compare the results with those of the 1958 National Child Development Study.</p>\n\n<p>With each successive sweep, the scope of the enquiry has broadened from a strictly medical focus at birth, to encompass physical, educational, social and economic development.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "others",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":17198},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.cls.ioe.ac.uk/page.aspx?&sitesectionid=795&sitesectiontitle=Welcome+to+the+1970+British+Cohort+Study+(BCS70)\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Alice Sullivan\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Following the initial birth survey, the participants were followed-up at ages 5, 10, 16, 26, 30. 34, 38 and 42 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"The study is part of the CLOSER network (www.closer.ac.uk).\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1970,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Alice Sullivan\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Elliott J, Shepherd P. Cohort profile: 1970 British Birth Cohort (BCS70). International Journal of Epidemiology, 2006; 35(4): 836-43.\",\"pubmedId\":\"16931528\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886926c\",\"title\":\"Dr.\",\"firstName\":\"Alice\",\"lastName\":\"Sullivan\",\"email\":\"a.sullivan@ioe.ac.uk\",\"phone\":\"+44 (0)207 612 6661\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of London\"},\"department\":{\"en\":\"Centre for Longitudinal Studies\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"bcs70\",\"role\":\"investigator\"},{\"parentId\":\"bcs70\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Alice Sullivan\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886926c\",\"title\":\"Dr.\",\"firstName\":\"Alice\",\"lastName\":\"Sullivan\",\"email\":\"a.sullivan@ioe.ac.uk\",\"phone\":\"+44 (0)207 612 6661\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of London\"},\"department\":{\"en\":\"Centre for Longitudinal Studies\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"bcs70\",\"role\":\"investigator\"},{\"parentId\":\"bcs70\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Alice Sullivan\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "alsa",
+        "timestamps": {
+          "created": "2019-07-23T14:12:02.407",
+          "lastUpdate": "2021-10-04T16:37:42.330"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Australian Longitudinal Study of Ageing"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ALSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2087
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The general purpose of the ALSA study is to gain further understanding of how social, biomedical and environmental factors are associated with age related changes in health and well-being of persons aged 70 years and over. Emphasis is given in the overall study to defining and exploring the concept of healthy, active ageing, particularly in a South Australian context. The research has a number of specific objectives. These include:</p>\r\n\r\n<ul>\r\n\t<li>determination of levels of health and functional status of an older population and to track the changes in these characteristics over time</li>\r\n\t<li>identification of factors which promote and maintain health and well-being in an ageing population</li>\r\n\t<li>identification of risk factors for major morbid conditions and social, behavioural and other problems among an ageing population</li>\r\n\t<li>analysis of the effects on transitions in health and functional status of age, gender, different patterns of co-morbidity, availability and nature of informal and formal support arrangements, social and economic circumstances, health care provision and utilisation and other variables of interest</li>\r\n\t<li>assessment of the effects of disease processes on functional status and the demand for health care services and both informal and formal long term care</li>\r\n\t<li>examination of the patterns of, the need for, and the utilisation of informal and formal sources of long-term care as they relate to social support networks, economic and housing conditions, care giving arrangements and the availability of appropriate services and</li>\r\n\t<li>examination of mortality outcomes in the light of changes in health and functional status, medical interventions, self-assessed health, social networks, and individual psychological characteristics</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2087},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.flinders.edu.au/sabs/fcas/alsa/\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"<p>ALSA also&nbsp;include spouses of married couples.</p>\\r\\n\"}},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":true},\"markerPaper\":\"Luszcz MA, Giles LC, Anstey KJ, Browne-yung KC, Walker RA, Windsor TD. Cohort Profile: The Australian Longitudinal Study of Ageing (ALSA). International Journal of Epidemioly. 2016;45(4):1054-1063.\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869259\",\"title\":\"Prof.\",\"firstName\":\"Mary\",\"lastName\":\"Luszcz\",\"email\":\"mary.luszcz@flinders.edu.au\",\"phone\":\"+61 8 82012481\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Flinders University\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mary Luszcz\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925a\",\"title\":\"Dr.\",\"firstName\":\"Lynne\",\"lastName\":\"Giles\",\"email\":\"lynne.giles@adelaide.edu.au\",\"phone\":\"+61 8 8313 0234\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Adelaide\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lynne Giles\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925b\",\"title\":\"Dr.\",\"firstName\":\"Tim\",\"lastName\":\"Windsor\",\"email\":\"tim.windsor@flinders.edu.au\",\"phone\":\"+61 8 82017588\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Flinders University\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tim Windsor\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925c\",\"title\":\"Dr.\",\"firstName\":\"Ruth\",\"lastName\":\"Walker\",\"email\":\"ruth.walker@flinders.edu.au\",\"phone\":\"+61 8 82017936\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Flinders University\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ruth Walker\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925d\",\"title\":\"Dr.\",\"firstName\":\"Michelle\",\"lastName\":\"Miller\",\"email\":\"michelle.miller@flinders.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Flinders University\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michelle Miller\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925e\",\"title\":\"Prof.\",\"firstName\":\"Denis\",\"lastName\":\"Gerstorf\",\"email\":\"denis.gerstorf@hu-berlin.de\",\"phone\":\"(030) 2093-9422\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Humboldt-Universität zu Berlin\"},\"address\":{\"countryIso\":\"DE\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Denis Gerstorf\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886925f\",\"title\":\"Prof.\",\"firstName\":\"Christiane\",\"lastName\":\"Hoppmann\",\"email\":\"choppmann@psych.ubc.ca\",\"phone\":\"(604) 822-8428\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of British Columbia\"},\"address\":{\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Christiane Hoppmann\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869260\",\"title\":\"Dr.\",\"firstName\":\"Helena\",\"lastName\":\"Chui\",\"email\":\"h.chui@bradford.ac.uk\",\"phone\":\"+44 (0)1274 23 3522\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bradford\"},\"department\":{\"en\":\"Psychology\"},\"address\":{\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Helena Chui\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869261\",\"firstName\":\"Penny\",\"lastName\":\"Edwards\",\"email\":\"penny.edwards@flinders.edu.u\",\"phone\":\"+61 8 82017567\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Flinders University\"},\"address\":{\"countryIso\":\"AU\"}},\"studyMemberships\":[{\"parentId\":\"alsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Penny Edwards\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false,\"pubmedId\":\"25468824\",\"access_supplementary_info\":{\"en\":\"Andrews, G., Cheok, F., & Carr, S. (1989). The Australian Longitudinal Study of Ageing. Australian Journal on Ageing, 8, 31-35.\"}}"
+      },
+      {
+        "id": "blsa",
+        "timestamps": {
+          "created": "2019-07-23T14:12:17.364",
+          "lastUpdate": "2021-05-05T09:38:51.881"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Baltimore Longitudinal Study of Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BLSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1300
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "750303fb-e225-4a47-b0ea-9541458227a1",
+          "fileName": "logo_blsa.png",
+          "type": "logo",
+          "lang": "en",
+          "size": 9940,
+          "md5": "c2590bdcd37b05ddc0a7f18f6f3f31c4",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.122"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The general objective of the BLSA study is to characterize the many aspects of the aging process and learn how people can successfully adapt to aging. To achieve it the following specific objectives are targeted:</p>\r\n\r\n<ul>\r\n\t<li>Describe longitudinal physical and cognitive changes that define aging;&nbsp;</li>\r\n\t<li>Identify genetic, physical, behavioral, and environmental factors that affect the rate of change in these traits;&nbsp;</li>\r\n\t<li>Understand the interrelationship between aging and chronic disease and other conditions, and their independent and joint impact on age-related decline.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1300},\"sample\":{\"noLimit\":false,\"number\":1300}},\"website\":\"http://www.blsa.nih.gov/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephanie Studenski\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>At enrolment, participants are aged 20 years and older. They&nbsp;are followed for life regardless of the development of comorbidities and conditions and undergo extensive testing every 1 to 4 years depending on age. Participants under age 60 are assessed every 4 years, those aged 60 to 79 years are assessed every 2 years and participants aged 80 and older are assessed annually, meaning the assessment interval changes for a participant as he ages.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1958,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephanie Studenski\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Stone JL, Norris AH. Activities and attitudes of participants in the Baltimore longitudinal study. Journal of gerontology, 1966; 21(4): 575-80.\",\"pubmedId\":\"5918312\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886926f\",\"title\":\"MD.\",\"firstName\":\"Stephanie\",\"lastName\":\"Studenski\",\"email\":\"studenskisa@mail.nih.gov\",\"phone\":\"410-350-3936\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute of Aging\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"blsa\",\"role\":\"investigator\"},{\"parentId\":\"blsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephanie Studenski\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869270\",\"title\":\"MD.\",\"firstName\":\"Luigi \",\"lastName\":\"Ferrucci\",\"email\":\"ferruccilu@mail.nih.gov\",\"phone\":\"410-350-3936\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute of Aging\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"blsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Luigi  Ferrucci\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886926f\",\"title\":\"MD.\",\"firstName\":\"Stephanie\",\"lastName\":\"Studenski\",\"email\":\"studenskisa@mail.nih.gov\",\"phone\":\"410-350-3936\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute of Aging\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"blsa\",\"role\":\"investigator\"},{\"parentId\":\"blsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephanie Studenski\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "act",
+        "timestamps": {
+          "created": "2019-07-23T14:11:53.616",
+          "lastUpdate": "2023-02-14T16:16:00.672"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Adult Changes in Thought Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Adult Changes in Thought Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ACT"
+          },
+          {
+            "lang": "fr",
+            "value": "ACT"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 4960
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Adult Changes in Thought&nbsp;(ACT) is a prospective cohort study that focuses on dementia and Alzheimer's disease.&nbsp;&nbsp;It aims to create a \"living laboratory\" to study aging and dementia in older adults.The ACT study collects a variety of detailed information on demographics, risk factors, lifestyle, genetics, comorbidities, and outcomes and shares these data with interested investigators throughout the world.</p>\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Adult Changes in Thought&nbsp;(ACT) is a prospective cohort study that focuses on dementia and Alzheimer's disease.&nbsp;&nbsp;It aims to create a \"living laboratory\" to study aging and dementia in older adults.The ACT study collects a variety of detailed information on demographics, risk factors, lifestyle, genetics, comorbidities, and outcomes and shares these data with interested investigators throughout the world.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "biological_samples",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":true,\"number\":4960},\"sample\":{\"noLimit\":true,\"number\":4960},\"info\":{\"en\":\"<p>The ACT study is made up of three cohorts:</p>\\n\\n<p>From 1994-1996 we enrolled a cohort of 2,581 people aged<u>&nbsp;</u>65 years and older without dementia.</p>\\n\\n<p>From 2000-2002, we enrolled an expansion cohort of 811 people using the same inclusion criteria.</p>\\n\\n<p>From 2004-present, we began continuous enrollment using the same inclusion criteria to replace attrition from dementia, dropout, and death. We have a consistent cohort of ~2000 at risk for dementia. The total current enrollment of all three groups is 4,960.</p>\\n\"}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Erin Bowles\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The participants are followed up with interviews every two years until diagnosis of dementia and/or Alzheimer's disease.</p>\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1994,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Erin Bowles\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Kukull WA, Higdon R, Bowen JD, et al. Dementia and Alzheimer Disease Incidence: A Prospective Cohort Study. Arch Neurol. 2002;59(11):1737-1746. doi:10.1001/archneur.59.11.1737.\",\"pubmedId\":\"12433261\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886921d\",\"title\":\"Dr.\",\"firstName\":\"Eric B.\",\"lastName\":\"Larson\",\"email\":\"larson.e@ghc.org\",\"phone\":\"206-287-2988\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Group Health Research Institute\"},\"address\":{\"street\":{\"en\":\"1730 Minor Ave\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98101-1448\",\"state\":\"WA\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"act\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eric B. Larson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886921e\",\"title\":\"MD.\",\"firstName\":\"Paul \",\"lastName\":\"Crane\",\"email\":\"pcrane@u.washington.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"act\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Crane\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886921f\",\"firstName\":\"Erin \",\"lastName\":\"Bowles\",\"email\":\"aiello.e@ghc.org\",\"phone\":\"206-287-2708\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Group Health Research Institute\"},\"address\":{\"street\":{\"en\":\"1730 Minor Ave\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98101-1448\",\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"act\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Erin  Bowles\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b0107838869220\",\"firstName\":\"Darlene \",\"lastName\":\"White\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Group Health Research Institute\"},\"address\":{\"street\":{\"en\":\"1730 Minor Ave\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98101-1448\",\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"act\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Darlene  White\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b0107838869221\",\"firstName\":\"KatieRose \",\"lastName\":\"Richmire\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Group Health Research Institute\"},\"address\":{\"street\":{\"en\":\"1730 Minor Ave\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98101-1448\",\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"act\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"KatieRose  Richmire\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false,\"otherMarkerPapers\":[{}]}"
+      },
+      {
+        "id": "ajcar",
+        "timestamps": {
+          "created": "2019-07-23T14:12:01.218",
+          "lastUpdate": "2020-07-28T17:19:58.205"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Atma Jaya Cognitive and Aging Research"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "AJCAR"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 860
+        },
+        "countries": [
+          "IDN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objective of the Atma Jaya Cognitive and Aging Research is to investigate the relationship between the presence of APOE 𝜀4 genotype in the elderly and cognitive function.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":860},\"sample\":{\"noLimit\":false,\"number\":860}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Yuda Turana\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Assessment is scheduled at 2 years interval with interview.\"},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2011,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Turana Y, Ranakusuma TAS, Purba JS, et al. Enhancing diagnostic accuracy of aMCI in the elderly: Combination of olfactory test, pupillary response test, BDNF plasma level, and APOE genotype. International Journal of Alzheimer's Disease, 2014; 2014.\",\"pubmedId\":\"24639912\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"5899fa4ce4b0967b30e9076c\",\"title\":\"Dr.\",\"firstName\":\"Yuda\",\"lastName\":\"Turana\",\"email\":\"yudaturana@yahoo.com\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Atma Jaya Catholic University of Indonesia\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Jakarta\"},\"countryIso\":\"Indonesia\"}},\"studyMemberships\":[{\"parentId\":\"ajcar\",\"role\":\"investigator\"},{\"parentId\":\"ajcar\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Yuda Turana\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"5899fa4ce4b0967b30e9076c\",\"title\":\"Dr.\",\"firstName\":\"Yuda\",\"lastName\":\"Turana\",\"email\":\"yudaturana@yahoo.com\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Atma Jaya Catholic University of Indonesia\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Jakarta\"},\"countryIso\":\"Indonesia\"}},\"studyMemberships\":[{\"parentId\":\"ajcar\",\"role\":\"investigator\"},{\"parentId\":\"ajcar\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Yuda Turana\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Rolland Y, Resnick B, Katz PR, et al. Nursing home research: the first International Association of Gerontology and Geriatrics (IAGG) research conference. Journal of American Medical Directors Association. 2014 ;15(5):313-25.</p>\\n<p>Turana Y, Widjaja NT, Handajani YS. Association Between APOE Ε4 Genotype And Memory Impairment In Elderly With Normal Global Cognitive Assessment. Diagnostics 2015, 5(4), 615-623.</p>\\n<p>Kim BY, Lee SH, Graham PL, Angelucci F, et al. Peripheral Brain-Derived Neurotrophic Factor Levels in Alzheimer’s Disease and Mild Cognitive Impairment: a Comprehensive Systematic Review and Meta-analysis. Molecular Neurobiology. 2016; 2016.</p>\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "ilse",
+        "timestamps": {
+          "created": "2019-07-23T14:13:40.812",
+          "lastUpdate": "2020-02-05T11:07:43.407"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Interdisciplinary Longitudinal Study of Adult Development"
+          },
+          {
+            "lang": "fr",
+            "value": "Interdisciplinary Longitudinal Study of Adult Development"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ILSE"
+          },
+          {
+            "lang": "fr",
+            "value": "ILSE"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1002
+        },
+        "countries": [
+          "DEU"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The goal of the Interdisciplinary Longitudinal Study of Adult Development&nbsp;(ILSE) is to identify individual, social and economic determinants of a healthy, self-determined and satisfied ageing. The population-based, representative ILSE study contributes substantially to interdisciplinary basic research, has far-reaching importance for the development of prevention programs to improve the quality of life in middle and old age, and takes on essential sociopolitical topics (i.e., voluntary engagement, job situation of older workers, anticipation of need of care).&nbsp;</span><br />\r\n<span>As an interdisciplinary longitudinal study (involved disciplines: developmental psychology, medicine, ecological gerontology, geronto-psychiatry, psychosomatics, dentistry, media research) the ILSE offers the opportunity to analyze inter- and intra-individual differences and changes over the life-span as well as relations between environmental factors, behavioral aspects, life-events, health behaviors, mental and physical health and well-being. The biographical approach pursued by the ILSE study is based on the assumption that the quality of developmental experiences in early life-phases influence the performance and possibilities of adaptation in later life in a unique way.</span></p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p><span>The goal of the Interdisciplinary Longitudinal Study of Adult Development&nbsp;(ILSE) is to identify individual, social and economic determinants of a healthy, self-determined and satisfied ageing. The population-based, representative ILSE study contributes substantially to interdisciplinary basic research, has far-reaching importance for the development of prevention programs to improve the quality of life in middle and old age, and takes on essential sociopolitical topics (i.e., voluntary engagement, job situation of older workers, anticipation of need of care).&nbsp;</span><br />\n<span>As an interdisciplinary longitudinal study (involved disciplines: developmental psychology, medicine, ecological gerontology, geronto-psychiatry, psychosomatics, dentistry, media research) the ILSE offers the opportunity to analyze inter- and intra-individual differences and changes over the life-span as well as relations between environmental factors, behavioral aspects, life-events, health behaviors, mental and physical health and well-being. The biographical approach pursued by the ILSE study is based on the assumption that the quality of developmental experiences in early life-phases influence the performance and possibilities of adaptation in later life in a unique way.</span></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1002},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.psychologie.uni-heidelberg.de/ae/apa/research/ilse.html\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Mike Martin\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Subjects have been followed up since 1993/94 for an average time of 12 years within three examination waves.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>At the first measurement point, the ILSE sample consisted of 1390 persons from East (research centres: Leipzig and Rostock) and West Germany (research centres: Heidelberg, Bonn and Erlangen-Nuremberg). The representative ILSE sample was stratified by sex and cohort membership (born 1930-32 and 1950-52, respectively).</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1993,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Mike Martin\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Sattler, C., Wahl, H.-W., Schröder, J., Kruse, A., Schönknecht, P., Kunzmann, U., Braun, T., Degen, C., Nitschke, I., Rahmlow, W., Rammelsberg, P., Siebert, J. S., Tauber, B., Wendelstein, B., Zenthöfer, A. (in press).  Interdisciplinary Longitudinal Study on Adult Development and Aging (ILSE). In N. Pachana (Ed.), Encyclopedia of Geropsychology: New York: Springer.\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694c6\",\"title\":\"Prof.\",\"firstName\":\"Hans-Werner \",\"lastName\":\"Wahl\",\"email\":\"h.w.wahl@psychologie.uni-heidelberg.de\",\"phone\":\"+49 (0)6221 - 54 81 10\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Institute of Psychology\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Hans-Werner  Wahl\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694c7\",\"title\":\"Prof.\",\"firstName\":\"Johannes \",\"lastName\":\"Schröder\",\"email\":\"johannes_schroeder@med.uni-heidelberg.de\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Department of Geriatric Psychiatry\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Johannes  Schröder\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694c8\",\"title\":\"Dr.\",\"firstName\":\"Christine\",\"lastName\":\"Sattler\",\"email\":\"christine.sattler@psychologie.uni-heidelberg.de\",\"phone\":\"06221 / 54-7370\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Industrial and Organizational Psychology\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Christine Sattler\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694c9\",\"title\":\"Prof.\",\"firstName\":\"Ute\",\"lastName\":\"Kunzmann\",\"email\":\"kunzmann@uni-leipzig.de\",\"phone\":\"0341-97-35967\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Leipzig University\"},\"department\":{\"en\":\"Institute of Psychology\"},\"address\":{\"city\":{\"en\":\"Leipzig\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ute Kunzmann\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694ca\",\"title\":\"Prof.\",\"firstName\":\"Peter\",\"lastName\":\"Schönknecht\",\"email\":\"peter.schoenknecht@medizin.uni-leipzig.de\",\"phone\":\"0341-9724-506\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Leipzig University\"},\"department\":{\"en\":\"Clinic of Psychiatry and Psychology\"},\"address\":{\"city\":{\"en\":\"Leipzig\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter Schönknecht\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694cb\",\"title\":\"Prof.\",\"firstName\":\"Peter\",\"lastName\":\"Rammelsberg\",\"email\":\"peter_rammelsberg@med.uni-heidelberg.de\",\"phone\":\"06221-566998\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Department of Prosthodontics\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter Rammelsberg\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694cc\",\"firstName\":\"Benjamin \",\"lastName\":\"Tauber\",\"email\":\" benjamin.tauber@psychologie.uni-heidelberg.de\",\"phone\":\"+49 (0)6221 - 54 81 14\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Institute of Psychology\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Benjamin  Tauber\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694cd\",\"firstName\":\"Jelena S. \",\"lastName\":\"Siebert\",\"email\":\" jelena.siebert@psychologie.uni-heidelberg.de\",\"phone\":\"+49 (0)6221 - 54 81 31\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Heidelberg\"},\"department\":{\"en\":\"Institute of Psychology\"},\"address\":{\"city\":{\"en\":\"Heidelberg\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ilse\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jelena S.  Siebert\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Zusätzliche Informationen befinden&nbsp;sich hier (<span>in Deutsch)</span>:&nbsp;https://www.klinikum.uni-heidelberg.de/ILSE.109593.0.html</p>\\r\\n\"}}"
+      },
+      {
+        "id": "kp",
+        "timestamps": {
+          "created": "2019-07-23T14:13:52.938",
+          "lastUpdate": "2020-02-05T11:07:45.819"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Kungsholmen Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "KP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1810
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "021fc15e-f199-421a-a7b2-678f90028f9c",
+          "fileName": "logga.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 4076,
+          "md5": "6be817b18269aa9fce2e955a3f52dfd6",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.107"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The general aim of the Kungsholmen Project is to provide new knowledge concerning the human aging process from medical, psychological, and social perspectives, with special focus on dementia disorders."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "biological_samples",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1810},\"sample\":{\"noLimit\":false,\"number\":1810}},\"website\":\"http://www.kungsholmenproject.se/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Laura Fratiglioni\",\"date\":\"2015-02-19\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The KP involves 5 times of assessment spanning a period of 13 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1987,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Laura Fratiglioni\",\"date\":\"2015-02-19\"},\"markerPaper\":\"Fratiglioni L, Viitanen M, Bäckman L, Sandman PO, Winblad B. Occurrence of dementia in advanced age: the study design of the Kungsholmen Project. Neuroepidemiology. 1992;11 Suppl 1:29-36.\",\"endYear\":2000,\"pubmedId\":\"1603245\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869369\",\"firstName\":\"Bengt \",\"lastName\":\"Winblad\",\"email\":\"bengt.winblad@ki.se\",\"phone\":\"+46 8 585 854 74\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Aging Research Center\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Bengt  Winblad\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936a\",\"title\":\"Prof.\",\"firstName\":\"Laura \",\"lastName\":\"Fratiglioni\",\"email\":\"laura.fratiglioni@ki.se\",\"phone\":\"+46 8 690 5818\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institutet\"},\"department\":{\"en\":\"Aging Research Center\"},\"address\":{\"street\":{\"en\":\"Gävlegatan 16\"},\"city\":{\"en\":\"Stockholm\"},\"zip\":\"113 30\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"},{\"parentId\":\"snac-k\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Laura  Fratiglioni\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936b\",\"title\":\"Dr.\",\"firstName\":\"Eva \",\"lastName\":\"Strauss\",\"email\":\"eva.von.strauss@ki.se\",\"phone\":\"+46 8 690 5847\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institute, Aging Research Center\"},\"address\":{\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"},{\"parentId\":\"kp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Eva  Strauss\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936c\",\"firstName\":\"Lars \",\"lastName\":\"Bäckman\",\"email\":\"lars.backman.1@ki.se\",\"phone\":\"+46 8 690 5826\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Aging Research Center\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lars  Bäckman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936d\",\"firstName\":\"Åke \",\"lastName\":\"Wahlin\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jönköping University \"},\"department\":{\"en\":\"School of health sciences\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Åke  Wahlin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936e\",\"firstName\":\"Johan \",\"lastName\":\"Fastbom\",\"email\":\"johan.fastbom@ki.se\",\"phone\":\"+46 8 690 6874\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Aging Research Center\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Johan  Fastbom\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886936f\",\"firstName\":\"Anders \",\"lastName\":\"Wimo\",\"email\":\"anders.wimo@ki.se\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Aging Research Center\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Anders  Wimo\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"580a2d8fe4b0d546326d2534\",\"firstName\":\"Maria\",\"lastName\":\"Wahlberg\",\"email\":\"Maria.Wahlberg@ki.se\",\"phone\":\"+46 (0) 8-690 58 17\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institute\"},\"department\":{\"en\":\"Department of Neurobiology, Care Sciences and Society (NVS), H1\"},\"address\":{\"street\":{\"en\":\"Solnavägen 1\"},\"city\":{\"en\":\"Solna\"},\"zip\":\"171 77\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Maria Wahlberg\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "mrc-nshd",
+        "timestamps": {
+          "created": "2019-07-23T14:14:27.106",
+          "lastUpdate": "2020-02-05T11:07:55.336"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Medical Research Council National Survey of Health and Development"
+          },
+          {
+            "lang": "fr",
+            "value": "Medical Research Council National Survey of Health and Development"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MRC NSHD"
+          },
+          {
+            "lang": "fr",
+            "value": "MRC NSHD"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5362
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aim of the MRC Unit for Lifelong Health and Ageing at UCL is&nbsp;to identify social and biological factors that affect lifelong&nbsp;health, ageing and the development of chronic disease risk.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The aim of the MRC Unit for Lifelong Health and Ageing at UCL is&nbsp;to identify social and biological factors that affect lifelong&nbsp;health, ageing and the development of chronic disease risk.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5362},\"sample\":{\"noLimit\":false,\"number\":2756}},\"website\":\"http://www.nshd.mrc.ac.uk/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Diana Kuh\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Since the birth survey in 1946, there have been 22 further ‘sweeps’ of all cohort members at ages 2 and 4 years, 6, 7, 8, 9, 10, 11, 13 and 15 years, 16, 19, 20, 22, 23, 25, 26 and 31 years, 36, 43, 53 and 60-64 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>Study members have been the prime source of data but in the early sweeps data was collected from mothers, teachers and doctors.</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1946,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Diana Kuh\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Wadsworth M, Kuh D, Richards M, Hardy R. Cohort Profile: The 1946 National Birth Cohort (MRC National Survey of Health and Development). Int J Epidemiol. 2006 Feb;35(1):49-54. Epub 2005 Oct 4.\",\"pubmedId\":\"16204333\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549156e4b01078388690d4\",\"title\":\"Prof.\",\"firstName\":\"Diana \",\"lastName\":\"Kuh\",\"email\":\"d.kuh@ucl.ac.uk\",\"phone\":\"020 7670 5701\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"UCL School of Life and Medical Sciences\"},\"department\":{\"en\":\"MRC Unit for Lifelong Health & Ageing\"},\"address\":{\"street\":{\"en\":\"33 Bedford Place\"},\"city\":{\"en\":\"London\"},\"zip\":\"WC1B 5JU\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"mrc-nshd\",\"role\":\"investigator\"},{\"parentId\":\"mrc-nshd\",\"role\":\"contact\"}],\"networkMemberships\":[{\"parentId\":\"ialsa\",\"role\":\"investigator\"}],\"fullName\":\"Diana  Kuh\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549156e4b01078388690d4\",\"title\":\"Prof.\",\"firstName\":\"Diana \",\"lastName\":\"Kuh\",\"email\":\"d.kuh@ucl.ac.uk\",\"phone\":\"020 7670 5701\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"UCL School of Life and Medical Sciences\"},\"department\":{\"en\":\"MRC Unit for Lifelong Health & Ageing\"},\"address\":{\"street\":{\"en\":\"33 Bedford Place\"},\"city\":{\"en\":\"London\"},\"zip\":\"WC1B 5JU\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"mrc-nshd\",\"role\":\"investigator\"},{\"parentId\":\"mrc-nshd\",\"role\":\"contact\"}],\"networkMemberships\":[{\"parentId\":\"ialsa\",\"role\":\"investigator\"}],\"fullName\":\"Diana  Kuh\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Also in the network&nbsp;<span>HALCyon (</span><a href=\\\"http://www.halcyon.ac.uk/\\\" target=\\\"_blank\\\">http://www.halcyon.ac.uk/</a><span>).</span></p>\\r\\n\\r\\n<p>&nbsp;</p>\\r\\n\\r\\n<p>Kuh D, Pierce M, Adams J, Deanfield J, Ekelund U, Friberg P, Ghosh AK, Harwood N, Hughes A, Macfarlane PW, Mishra G, Pellerin D, Wong A, Stephen AM, Richards M, Hardy R; NSHD scientific and data collection team. <strong>Cohort profile: updating the cohort profile for the MRC National Survey of Health and Development: a new clinic-based data collection for ageing research.</strong> Int J Epidemiol. 2011 Feb;40(1):e1-9. doi: 10.1093/ije/dyq231. PubMed PMID: 21345808; PubMed Central PMCID: PMC3043283.</p>\\r\\n\\r\\n<p>The MRC National Survey of Health and Development is also known as the 1946 British Birth Cohort Study.</p>\\r\\n\\r\\n<p>Funding agencies: Medical Research Council.</p>\\r\\n\\r\\n<p>A bibliography of published research based on data collected by the MRC National Survey of Health and Development is provided on the NSHD website: <a href=\\\"http://www.nshd.mrc.ac.uk/findings/publications.aspx\\\">http://www.nshd.mrc.ac.uk/findings/publications.aspx</a></p>\\r\\n\"}}"
+      },
+      {
+        "id": "snac-k",
+        "timestamps": {
+          "created": "2019-07-23T14:15:19.281",
+          "lastUpdate": "2020-05-13T13:42:18.829"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Swedish National Study of Aging and Care in Kungsholmen"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SNAC-K"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4430
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "a4e8401d-3d57-4a1d-a98a-c8470e47c58e",
+          "fileName": "SNAC-K 3 grön RGB.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 14012,
+          "md5": "a417e46f05110d2db25f29c8f9ae8758",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.056"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>SNAC-K is a longitudinal study on the influence of life-time environmental and biological factors on medical, psychological and social health in late adulthood. It aims to increase the understanding of the aging process, and to identify possible preventive strategies to improve health and care of older adults.</p>\n\n<p>The study consists of two parts: the population part and the care and services part. In the population part, a large, representative panel of elders in different age cohorts is followed over time to record and describe the aging process from different aspects. In the care and services part, a systematic, longitudinal, individually-based collection of data is performed concerning provision of care and services together with functional ability, specific health care problems, and living conditions of the recipients living in the area.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4430},\"sample\":{\"noLimit\":false,\"number\":3800},\"info\":{\"en\":\"<p> Every six years, a new group of 60-year-olds is added to the study population and every third year a new group of 81-year-olds is added.</p>\\n\\n<p>Three additional cohorts have been added to the baseline in 2007-2008 (81 year-olds), 2010-2012 (60 year-olds) and 2013-2015 (81 year-olds). In 2019-2021 new cohorts of 60 and 81 year-olds will be included.</p>\\nMore detailed information can be found <a href=\\\"https://www.snac-k.se/for-researchers/data-description/\\\">here</a>\"}},\"website\":\"http://www.snac-k.se/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"A sub-sample of 613 participants underwent MRI brain scanning.\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Laura Fratiglioni\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The participants are followed-up at ages 60, 66, 72, 78, 81, 84, 87, 90, 93, 96 and 99 years. 60- 70 year olds are followed-up every 6 years and 81+ year olds are followed-up ever 3 years.</p>\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"Every 3 years participants 81+ years old are followed-up and every 6 years, participants 60-70 are followed-up. New cohorts were added in 2007-2010 (81 year olds), 2010-2012 (60 year olds), 2013-2015 (81 year olds).\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":2001,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Laura Fratiglioni\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Lagergren M, Fratiglioni L, Hallberg IR et al., A longitudinal study integrating population, care and social services data. The Swedish National study on Aging and Care (SNAC). Aging Clin Exp Res. 2004 Apr;16(2):158-68.\",\"pubmedId\":\"15195992\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b010783886936a\",\"title\":\"Prof.\",\"firstName\":\"Laura \",\"lastName\":\"Fratiglioni\",\"email\":\"laura.fratiglioni@ki.se\",\"phone\":\"+46 8 690 5818\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institutet\"},\"department\":{\"en\":\"Aging Research Center\"},\"address\":{\"street\":{\"en\":\"Gävlegatan 16\"},\"city\":{\"en\":\"Stockholm\"},\"zip\":\"113 30\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"kp\",\"role\":\"investigator\"},{\"parentId\":\"snac-k\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Laura  Fratiglioni\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"582e1907e4b07c14f8993878\",\"firstName\":\"Maria\",\"lastName\":\"Wahlberg\",\"email\":\"maria.wahlberg@ki.se\",\"phone\":\"+4686905817\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institutet\"},\"department\":{\"en\":\"Aging Research Center\"},\"address\":{\"street\":{\"en\":\"Gävlegatan 16\"},\"city\":{\"en\":\"Stockholm\"},\"zip\":\"113 30\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"snac-k\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Maria Wahlberg\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false,\"access_supplementary_info\":{\"en\":\"\"}}"
+      },
+      {
+        "id": "oats",
+        "timestamps": {
+          "created": "2019-07-23T14:14:42.629",
+          "lastUpdate": "2021-05-05T09:39:26.348"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Older Australian Twins Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "OATS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 623
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aims of the OATS study are:</p>\r\n\r\n<ul>\r\n\t<li>To find out what influences memory and thinking as we age;</li>\r\n\t<li>To investigate environmental influences such as lifetime physical and mental activity, socioeconomic environment, and nutrition;</li>\r\n\t<li>To investigate how biological factors such as hypertension and antioxidant levels interact with genes to influence brain ageing;</li>\r\n\t<li>To determine which influences on the ageing process are genetic and which are environmental and how the two interact.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":623},\"sample\":{\"noLimit\":false,\"number\":580}},\"website\":\"https://cheba.unsw.edu.au/project/older-australian-twins-study\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kristan Kang\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants are followed-up every 2 years for a full assessment (face-to-face), and for a brief telephone interview in each alternate year.</p>\\r\\n\"},\"recruitments\":[\"families\"]},\"startYear\":2007,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kristan Kang\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Sachdev PS, Lammel A, Trollor JN, et al. A comprehensive neuropsychiatric study of elderly twins: the Older Australian Twins Study. Twin research and human genetics: the official journal of the International Society for Twin Studies, 2009; 12(6): 573-82.\",\"pubmedId\":\"19943720\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869398\",\"title\":\"Prof.\",\"firstName\":\"Perminder \",\"lastName\":\"Sachdev\",\"email\":\"p.sachdev@unsw.edu.au\",\"phone\":\"02-93823763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"mas\",\"role\":\"contact\"},{\"parentId\":\"oats\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"contact\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Perminder  Sachdev\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944f\",\"title\":\"Prof.\",\"firstName\":\"David \",\"lastName\":\"Ames\",\"email\":\"dames@unimelb.edu.au\",\"phone\":\"83872305\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Melbourne\"},\"address\":{\"city\":{\"en\":\"Parkville\"},\"state\":\"Victoria\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David  Ames\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869450\",\"title\":\"Dr.\",\"firstName\":\"Margie \",\"lastName\":\"Wright\",\"phone\":\"+61 7 3362 0225\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"QIMR Berghofer Medical Research Institute\"},\"address\":{\"city\":{\"en\":\"Herston\"},\"state\":\"Brisbane\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Margie  Wright\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869451\",\"title\":\"Dr.\",\"firstName\":\"Teresa \",\"lastName\":\"Lee\",\"email\":\"teresa.lee@unsw.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"Centre for Healthy Brain Ageing\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Teresa  Lee\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869452\",\"title\":\"Dr.\",\"firstName\":\"Julian \",\"lastName\":\"Trollor\",\"phone\":\"02 9931 9160\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Julian  Trollor\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939f\",\"title\":\"Dr.\",\"firstName\":\"Wei \",\"lastName\":\"Wen\",\"email\":\"Wei.Wen@unsw.edu.au\",\"phone\":\"02-93823730\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Wei  Wen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869399\",\"title\":\"Prof.\",\"firstName\":\"Henry \",\"lastName\":\"Brodaty\",\"email\":\"h.brodaty@unsw.edu.au\",\"phone\":\"02 9385 2585\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Henry  Brodaty\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869453\",\"title\":\"Prof.\",\"firstName\":\"Nick \",\"lastName\":\"Martin\",\"email\":\"Nick.Martin@qimrberghofer.edu.au\",\"phone\":\"+61 7 3362 0278\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"QIMR Berghofer Medical Research Institute\"},\"address\":{\"city\":{\"en\":\"Herston\"},\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nick  Martin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869355\",\"title\":\"MD.\",\"firstName\":\"Peter \",\"lastName\":\"Schofield\",\"email\":\"Peter.Schofield@newcastle.edu.au\",\"phone\":\"(02) 4033 5739\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter  Schofield\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939d\",\"title\":\"Dr.\",\"firstName\":\"John \",\"lastName\":\"Crawford\",\"email\":\"john.crawford@unsw.edu.au\",\"phone\":\"+61 2 9385-0440\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John  Crawford\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939e\",\"title\":\"Dr.\",\"firstName\":\"Kristan \",\"lastName\":\"Kang\",\"email\":\"k.kang@unsw.edu.au\",\"phone\":\"02 9385 0430\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Kristan  Kang\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869454\",\"title\":\"Dr.\",\"firstName\":\"Jocelyn \",\"lastName\":\"Bowden\",\"email\":\"jocelyn.bowden@unsw.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jocelyn  Bowden\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869398\",\"title\":\"Prof.\",\"firstName\":\"Perminder \",\"lastName\":\"Sachdev\",\"email\":\"p.sachdev@unsw.edu.au\",\"phone\":\"02-93823763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"mas\",\"role\":\"contact\"},{\"parentId\":\"oats\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"contact\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Perminder  Sachdev\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "obas",
+        "timestamps": {
+          "created": "2019-07-23T14:14:43.737",
+          "lastUpdate": "2021-05-05T09:39:27.146"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Oregon Brain Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "OBAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 305
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Oregon Brain Aging Study aims to:</p>\r\n\r\n<ol>\r\n\t<li>Determine if there are individuals especially resistant to brain aging as evidenced by a long cognitive heath span (CHS)</li>\r\n\t<li>Identify circumscribed quantitative aging phenotypes that best predict CHS</li>\r\n\t<li>Establish which neuropathologic signs of brain aging best explain changes in the quantitative phenotypes associated with CHS.</li>\r\n</ol>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":305},\"sample\":{\"noLimit\":false,\"number\":297}},\"website\":\"\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"<p>MRI volumetrics, Neuropathologic findings, APOE.</p>\\n<p><b>Request OBAS data from the OHSU Layton Center:</b><br> <a href=\\\"https://www.ohsu.edu/xd/health/services/brain/getting-treatment/diagnosis/alzheimers-aging-dementia/research/for-researchers/clinical-data-resources.cfm\\\">https://www.ohsu.edu/xd/health/services/brain/getting-treatment/diagnosis/alzheimers-aging-dementia/research/for-researchers/clinical-data-resources.cfm</a></p>\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Jeffrey A. Kaye\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Full protocol administered in person annually. Shorter protocol administered at 6 months intervals between annual exams (administered in person until 2006, then changed to telephone follow-up)</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>The Oregon Brain Aging Study (OBAS) was initiated in 1989 at the NIA/Layton Oregon Aging and Alzheimer’s Disease Center consisting of community-dwelling, functionally independent adults aged 55 years and older.&nbsp; Between 1989 and 2005, 376 subjects were evaluated, and 305 subjects met inclusion criteria and were enrolled. 293 of the 305 subjects were 65 years of age or older. Initial entry criteria required subjects to be free of most co-morbid illnesses. In order to include subjects who were more representative of the general population, entry criteria was modified in 2004 to include subjects with well-controlled, chronic medical conditions common with advanced age, such as hypertension and coronary artery disease.&nbsp;Attrition rates caused by loss to follow-up other than death were less than 1% per year.</p>\\r\\n\"}},\"startYear\":1989,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Howieson DB, Holm LA, Kaye JA, Oken BS, Howieson J. Neurologic function in the optimally healthy oldest old. Neuropsychological evaluation. Neurology 1993;43:1882-1886\",\"pubmedId\":\"8413942\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549156e4b01078388690d3\",\"firstName\":\"Jeffrey \",\"lastName\":\"Kaye\",\"academicLevel\":\"MD.\",\"email\":\"kaye@ohsu.edu\",\"phone\":\"(503) 577-1321\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oregon Health & Science University\"},\"department\":{\"en\":\"Oregon Center for Aging & Technology\"},\"address\":{\"street\":{\"en\":\"3181 SW Sam Jackson Park Rd\"},\"city\":{\"en\":\"Portland\"},\"zip\":\"97239 OR\",\"state\":\"Oregon\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"obas\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"ialsa\",\"role\":\"investigator\"}],\"fullName\":\"Jeffrey  Kaye\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869455\",\"firstName\":\"Robin \",\"lastName\":\"Guariglia\",\"email\":\"guarigli@ohsu.edu\",\"phone\":\"(503) 494-6977\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oregon Health & Science University\"},\"department\":{\"en\":\"Layton Aging & Alzheimer's Research Center\"},\"address\":{\"street\":{\"en\":\"3181 SW Sam Jackson Park Rd\"},\"city\":{\"en\":\"Portland\"},\"zip\":\"OR  97239\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"obas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Robin  Guariglia\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Kaye JA, Oken BS, Howieson DB, Howieson J, Holm LA, Dennison K. Neurologic evaluation of the optimally healthy oldest old. Archives of Neurology 1994;51:1205-1211. <b>PMID: 7986175.</b></p>\\r\\n\\r\\n<p>Silbert LC, Dodge HH, Perkins LG, Sherbakov L, Lahna D, Erten-Lyons D, Woltjer R, Shinto L, Kaye JA. Trajectory of white matter hyperintensity burden preceding mild cognitive impairment. Neurology 79:741-747, 2012.<b>PMC3421153.</b></p>\\r\\n\\r\\n<p>Dodge HH, Zitzelberger T, Oken BS, Howieson D, Kaye J. A randomized placebo-controlled trial of ginkgo biloba for the prevention of cognitive decline. Neurology 70:1809-1817, 2008.&nbsp; <b>PMC2639649.</b></p>\\r\\n\"}}"
+      },
+      {
+        "id": "share",
+        "timestamps": {
+          "created": "2019-07-23T14:15:13.369",
+          "lastUpdate": "2021-08-04T18:28:17.199"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Survey of Health, Ageing and Retirement in Europe"
+          },
+          {
+            "lang": "fr",
+            "value": "Survey of Health, Ageing and Retirement in Europe"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SHARE"
+          },
+          {
+            "lang": "fr",
+            "value": "SHARE"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "AUT",
+          "DNK",
+          "HUN",
+          "SWE",
+          "CHE",
+          "IRL",
+          "ESP",
+          "EST",
+          "NLD",
+          "BEL",
+          "ISR",
+          "SVN",
+          "POL",
+          "HRV",
+          "LUX",
+          "CZE",
+          "PRT",
+          "FRA",
+          "DEU",
+          "ITA",
+          "GRC"
+        ],
+        "logo": {
+          "id": "559bec79e4b0603f6a060e11",
+          "fileName": "shareLogo.jpg",
+          "lang": "en",
+          "size": 30475,
+          "md5": "cc079a7f80028ef3c10fa24dcae0725b",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.186"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The Survey of Health, Ageing and Retirement in Europe (SHARE) is a multidisciplinary and cross-national panel database of micro data on health, socio-economic status and social and family networks of approximately 123,000 individuals (more than 293,000 interviews) from 20 European countries (+Israel) aged 50 or older. SHARE’s scientific power is based on its panel design that grasps the dynamic character of the ageing process."
+          },
+          {
+            "lang": "fr",
+            "value": "The Survey of Health, Ageing and Retirement in Europe (SHARE) is a multidisciplinary and cross-national panel database of micro data on health, socio-economic status and social and family networks of approximately 123,000 individuals (more than 293,000 interviews) from 20 European countries (+Israel) aged 50 or older. SHARE’s scientific power is based on its panel design that grasps the dynamic character of the ageing process."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":true},\"sample\":{\"noLimit\":true}},\"website\":\"http://www.share-project.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{\"en\":\"Access to the SHARE data is provided free of charge to all scientists globally. For details on how to register as a SHARE user, please visit http://www.share-project.org/data-access-documentation/research-data-center-data-access.html.\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Information is collected every 2 years. Most participating countries managed to stick to the schedule.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Börsch-Supan A, Brandt M, Hunkler C, Kneip T, Korbmacher J, Malter F, Schaan B, Stuck S, Zuber S; SHARE Central Coordination Team. Data Resource Profile: the Survey of Health, Ageing and Retirement in Europe (SHARE). International Journal of Epidemiology, 2013; 42(4): 992-1001.\",\"pubmedId\":\"23778574\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b0107838869486\",\"title\":\"Prof.\",\"firstName\":\"Axel\",\"lastName\":\"Börsch-Supan\",\"email\":\"boersch-supan@mea.mpisoc.mpg.de\",\"phone\":\"+49-(0)89-38602-357\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Max Planck Institute for Social Law and Social Policy\"},\"department\":{\"en\":\"Munich Center for the Economics of Aging\"},\"address\":{\"street\":{\"en\":\"Amalienstraße 33\"},\"city\":{\"en\":\"München\"},\"zip\":\"80799\",\"countryIso\":\"Germany\"}},\"studyMemberships\":[{\"parentId\":\"share\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Axel Börsch-Supan\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869487\",\"title\":\"Prof.\",\"firstName\":\"Guglielmo\",\"lastName\":\"Weber\",\"email\":\"guglielmo.weber@unipd.it\",\"phone\":\"049 8274271\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Università degli Studi di Padova\"},\"department\":{\"en\":\"Department of Economics and Management\"},\"address\":{\"city\":{\"en\":\"Padova\"},\"countryIso\":\"Italy\"}},\"studyMemberships\":[{\"parentId\":\"share\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Guglielmo Weber\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869488\",\"title\":\"Dr.\",\"firstName\":\"Annette\",\"lastName\":\"Scherpenzeel\",\"email\":\"scherpenzeel@mea.mpisoc.mpg.de\",\"phone\":\"+49 (89) 38602 - 311\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Max Planck Institute for Social Law and Social Policy\"},\"department\":{\"en\":\"Munich Center for the Economics of Aging\"},\"address\":{\"city\":{\"en\":\"Munich\"},\"countryIso\":\"Germany\"}},\"studyMemberships\":[{\"parentId\":\"share\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Annette Scherpenzeel\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869489\",\"title\":\"Dr.\",\"firstName\":\"Frederic\",\"lastName\":\"Malter\",\"email\":\"malter@mea.mpisoc.mpg.de\",\"phone\":\"+49(0)89-38602-309\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Max Planck Institute for Social Law and Social Policy\"},\"department\":{\"en\":\"Munich Center for the Economics of Aging\"},\"address\":{\"city\":{\"en\":\"Munich\"},\"countryIso\":\"Germany\"}},\"studyMemberships\":[{\"parentId\":\"share\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Frederic Malter\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b010783886948a\",\"title\":\"Prof.\",\"firstName\":\"Axel\",\"lastName\":\"Börsch-Supan\",\"email\":\"boersch-supan©mea.mpisoc.mpg.de\",\"phone\":\"+49-(0)89-38602-357\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Max Planck Institute for Social Law and Social Policy\"},\"department\":{\"en\":\"Munich Center for the Economics of Aging\"},\"address\":{\"city\":{\"en\":\"Munichc\"},\"countryIso\":\"Germany\"}},\"studyMemberships\":[{\"parentId\":\"share\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Axel Börsch-Supan\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "satsa",
+        "timestamps": {
+          "created": "2019-07-23T14:15:09.888",
+          "lastUpdate": "2021-10-19T14:44:58.240"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Swedish Adoption/Twin Study of Aging"
+          },
+          {
+            "lang": "fr",
+            "value": "Swedish Adoption/Twin Study of Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SATSA"
+          },
+          {
+            "lang": "fr",
+            "value": "SATSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2019
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "5e67b433fe987760e72263f0",
+          "fileName": "salt.png",
+          "lang": "en",
+          "size": 23956,
+          "md5": "d7fe78094868bac7ab892c797d5ff2b1",
+          "timestamps": {
+            "created": "2020-03-10T11:37:22.895"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Swedish Adoption/Twin Study on Aging (SATSA) was designed to study the origins of individual differences in aging and the environmental and genetic factors that are involved.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Swedish Adoption/Twin Study on Aging (SATSA) was designed to study the origins of individual differences in aging and the environmental and genetic factors that are involved.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2019},\"sample\":{\"noLimit\":false,\"number\":859}},\"website\":\"http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/3843\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Chandra Reynolds\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>SATSA was started with a survey in 1984, and eight additional waves were conducted in 1987, 1990, 1993, 2004, 2007, 2010, 2012 and 2014. The questionnaire was initially sent to all twins from the Swedish Twin Registry who were separated at an early age and raised apart. There was also a control sample of twins who were raised together. </p>\\n\\n<p>From 1986 to 2014, there were ten waves of an in-person testing (IPT) component for pairs who were over 50 years of age and had both responded to the initial questionnaire. </p>\"},\"recruitments\":[\"families\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1984,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Pedersen, N. L., McClearn, G. E., Plomin, R., Nesselroade, J. R., Berg, S., & DeFaire, U. (1991). The Swedish Adoption Twin Study of Aging: an update. Acta Genet Med Gemellol (Roma), 40(1), 7-20.\",\"pubmedId\":\"1950353\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b0107838869478\",\"title\":\"Prof.\",\"firstName\":\"Nancy\",\"lastName\":\"Pedersen\",\"email\":\"Nancy.Pedersen@ki.se\",\"phone\":\"+46 8 5248 7418\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institutet\"},\"department\":{\"en\":\"Department of Medical Epidemiology and Biostatistics\"},\"address\":{\"city\":{\"en\":\"Stockholm\"},\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"satsa\",\"role\":\"investigator\"},{\"parentId\":\"satsa\",\"role\":\"contact\"},{\"parentId\":\"lifegene-1\",\"role\":\"investigator\"},{\"parentId\":\"lifegene-1\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nancy Pedersen\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b0107838869478\",\"title\":\"Prof.\",\"firstName\":\"Nancy\",\"lastName\":\"Pedersen\",\"email\":\"Nancy.Pedersen@ki.se\",\"phone\":\"+46 8 5248 7418\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Karolinska Institutet\"},\"department\":{\"en\":\"Department of Medical Epidemiology and Biostatistics\"},\"address\":{\"city\":{\"en\":\"Stockholm\"},\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"satsa\",\"role\":\"investigator\"},{\"parentId\":\"satsa\",\"role\":\"contact\"},{\"parentId\":\"lifegene-1\",\"role\":\"investigator\"},{\"parentId\":\"lifegene-1\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nancy Pedersen\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Also see (attached):</p>\\r\\n\\r\\n<p>Finkel, D., &amp; Pedersen, N. L. (2004). Processing Speed and Longitudinal Trajectories of Change for Cognitive Abilities: The Swedish Adoption/Twin Study of Aging. <em>Aging, Neuropsychology, and Cognition, 11</em>(2-3), 325-345. doi: 10.1080/13825580490511152</p>\\r\\n\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "octo-twin",
+        "timestamps": {
+          "created": "2019-07-23T14:14:46.185",
+          "lastUpdate": "2020-12-07T11:11:02.392"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Origin of Variances in the Oldest-Old: Octogenarian Twins"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "OCTO-Twin"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 702
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "b61c1247-68c5-4806-b6d8-cf2df4f4f6be",
+          "fileName": "octo twin logo.png",
+          "type": "logo",
+          "lang": "en",
+          "size": 6820,
+          "md5": "5d2be6db4f0e80f543925e991f2dde7e",
+          "timestamps": {
+            "created": "2017-09-21T10:00:27.272"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The study aimed to investigate the etiology of individual differences among twin-pairs age 80 and older, on a range of domains including health and functional capacity, cognitive functioning, psychological well-being, personality and personal control.&nbsp;</p>\n\n<p>&nbsp;</p>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":702},\"sample\":{\"noLimit\":false,\"number\":552}},\"website\":\"https://www.gu.se/forskning/octo-twin-studien-en-studie-av-tvillingpar-80-ar-och-aldre-i-sverige\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof Boo Johansson\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Participants were assessed up to 5 times at 2-year intervals providing up to 8 years of follow-up</p>\\r\\n\"},\"recruitments\":[\"families\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1991,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"[McClearn, G. E., Johansson, B., Berg, S., Pedersen, N. L., Ahern, F., Petrill, S. A., et al. (1997). Substantial genetic influence on cognitive abilities in twins 80 or more years old. Science, 276, 1560-1563.]\",\"endYear\":2002,\"pubmedId\":\"9171059\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"59c3c741e4b0d9d77cd2df0f\",\"title\":\"Prof.\",\"firstName\":\"Boo \",\"lastName\":\"Johansson\",\"email\":\"Boo.Johansson@psy.gu.se\",\"phone\":\" +46 -31 7861656\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Dept of Psychology\"},\"address\":{\"street\":{\"en\":\"Box 500, 40530 Gothenburg\"}}},\"studyMemberships\":[{\"parentId\":\"octo-twin\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Boo  Johansson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"59c3c741e4b0d9d77cd2df10\",\"title\":\"Prof.\",\"firstName\":\"Boo \",\"lastName\":\"Johansson\",\"email\":\"Boo.Johansson@psy.gu.se\",\"phone\":\" +46 -31 7861656\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Dept of Psychology\"},\"address\":{\"street\":{\"en\":\"Box 500, 40530 Gothenburg\"}}},\"studyMemberships\":[{\"parentId\":\"octo-twin\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Boo  Johansson\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "adni",
+        "timestamps": {
+          "created": "2019-07-23T14:11:57.592",
+          "lastUpdate": "2021-08-10T12:15:47.653"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Alzheimer's Disease Neuroimaging Initiative"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ADNI"
+          }
+        ],
+        "design": "case_control",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1650
+        },
+        "countries": [
+          "CAN",
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Alzheimer's Disease Neuroimaging Initiative (ADNI) was launched in 2004 to explore&nbsp;combinations of biomarkers (currently existing neuroimaging, cerebrospinal fluid, and blood markers) to determine which are most powerful for diagnosis of Alzheimer's disease and monitoring of treatment effects. &nbsp;Its overall goals are:</p>\r\n\r\n<ol>\r\n\t<li>Development of optimized methods and uniform standards for the acquisition of longitudinal, multicenter MRI and FDG-PET data on patients with Alzheimer's disease and mild cognitive impairment as well as healthy elderly controls;</li>\r\n\t<li>Implementation of these optimized methods and acquisition of longitudinal structural and metabolic imaging data in a large cohort of healthy elderly, mildly cognitively impaired, and&nbsp;Alzheimer's disease patients and validation of these imaging surrogates with parallel acquired biomarkers and clinical and cognitive measures;&nbsp;&nbsp;</li>\r\n\t<li>Identification of those neuroimaging measures, cognitive measures, and biomarkers, which provide the maximum power for the diagnosis of mild&nbsp;cognitive&nbsp;impairment, and&nbsp;Alzheimer's disease and for the assessment of treatment effects in trials involving healthy elderly,&nbsp;mildly cognitively impaired, and&nbsp;Alzheimer's disease;</li>\r\n\t<li>Creation of a generally accessible imaging and clinical data repository, which describe longitudinal changes in brain structure and metabolism, cognitive function, and biomarkers in healthy elderly,&nbsp;mildly cognitively impaired, and&nbsp;Alzheimer's disease patients.</li>\r\n</ol>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1650},\"sample\":{\"noLimit\":false,\"number\":1650}},\"website\":\"http://www.adni-info.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Michael Weiner\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"case_control\"],\"design\":\"case_control\",\"followUpInfo\":{\"en\":\"<p>ADNI1:&nbsp;</p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Alzheimer's disease subjects are studied at 0, 6, 12, and 24&nbsp;months with a clinical exam. &nbsp;At month&nbsp;18,&nbsp;phone contact is made.</li>\\r\\n\\t<li>Mild cognitive impairment subjects with high risk for conversion to&nbsp;Alzheimer's disease are studied at 0, 6, 12, 18, 24, and 36 months. &nbsp;At month 30, phone contact is made.</li>\\r\\n\\t<li>Age matched controls are&nbsp;studied at&nbsp;0, 6, 12, 24 and 36&nbsp;months with a clinical exam. &nbsp;At months 18 and 30, phone contact is made.</li>\\r\\n</ul>\\r\\n\\r\\n<p>ADNI GO:</p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Early mild cognitive impairment subjects are followed up at 0, 3, 6, 12, and 18 months</li>\\r\\n\\t<li>Cognitively normal and late mild cognitive impairment subjects have four scheduled visits, two in-clinic, and two telephone checks</li>\\r\\n</ul>\\r\\n\\r\\n<p>ADNI2:</p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Cognitively normal and early/late mild cognitive impairment subjects are followed up at 0, 3, and 6 months, with ongoing annual clinic visits, and ongoing 6 month interim phone calls</li>\\r\\n\\t<li>New Alzheimer's disease participants are followed at 0, 3, 6, 12, 18, and 24 months, with ongoing 6 month follow-ups by phone</li>\\r\\n</ul>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Michael Weiner\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Weiner MW et al. The Alzheimer's Disease Neuroimaging Initiative: a review of papers published since its inception. Alzheimers Dement. 2013 Sep;9(5):e111-94. doi: 10.1016/j.jalz.2013.05.1769. Epub 2013 Aug 7.\",\"endYear\":2016,\"pubmedId\":\"23932184\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869245\",\"title\":\"Prof.\",\"firstName\":\"Michael W. \",\"lastName\":\"Weiner\",\"email\":\"Michael.weiner@ucsf.edu\",\"phone\":\"415-221-4810 ext. 3642\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Francisco\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"San Francisco\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"adni\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Michael W.  Weiner\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869246\",\"title\":\"Prof.\",\"firstName\":\"Paul \",\"lastName\":\"Aisen\",\"email\":\"paisen@ucsd.edu\",\"phone\":\"858-246-1365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Diego\"},\"department\":{\"en\":\"Department of Neurosciences\"},\"address\":{\"city\":{\"en\":\"La Jolla\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Aisen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869247\",\"title\":\"MD.\",\"firstName\":\"Ronald C.\",\"lastName\":\"Petersen\",\"email\":\"peter8@mayo.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Neurology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ronald C. Petersen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869248\",\"title\":\"MD.\",\"firstName\":\"Clifford R. \",\"lastName\":\"Jack\",\"email\":\"jack.clifford@mayo.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Radiology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Clifford R.  Jack\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869249\",\"title\":\"Prof.\",\"firstName\":\"William \",\"lastName\":\"Jagust\",\"email\":\"jagust@berkeley.edu\",\"phone\":\"(510) 643-6537\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, Berkeley\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Berkeley\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"William  Jagust\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886924a\",\"title\":\"MD.\",\"firstName\":\"John C. \",\"lastName\":\"Morris\",\"email\":\"morrisj@abraxas.wustl.edu\",\"phone\":\"314-286-2683\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Washington University\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"St. Louis\"},\"state\":\"Missouri\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John C.  Morris\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886924b\",\"title\":\"Dr.\",\"firstName\":\"Andrew J. \",\"lastName\":\"Saykin\",\"email\":\"asaykin@iupui.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Indiana University\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Indianapolis\"},\"state\":\"Indiana\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Andrew J.  Saykin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886924c\",\"title\":\"MD.\",\"firstName\":\"John Q. \",\"lastName\":\"Trojanowski\",\"email\":\"trojanow@mail.med.upenn.edu\",\"phone\":\"215-662-6399\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pennsylvania\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Philadelphia\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John Q.  Trojanowski\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886924d\",\"title\":\"Prof.\",\"firstName\":\"Arthur W. \",\"lastName\":\"Toga\",\"email\":\"toga@loni.usc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"adni\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Arthur W.  Toga\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886924e\",\"title\":\"Dr.\",\"firstName\":\"Laurel \",\"lastName\":\"Beckett\",\"email\":\"labeckett@ucdavis.edu\",\"phone\":\"530-754-7161\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, Davis\"},\"department\":{\"en\":\"Public Health Sciences\"},\"address\":{\"city\":{\"en\":\"Davis\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Laurel  Beckett\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869245\",\"title\":\"Prof.\",\"firstName\":\"Michael W. \",\"lastName\":\"Weiner\",\"email\":\"Michael.weiner@ucsf.edu\",\"phone\":\"415-221-4810 ext. 3642\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Francisco\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"San Francisco\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"adni\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Michael W.  Weiner\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b010783886924d\",\"title\":\"Prof.\",\"firstName\":\"Arthur W. \",\"lastName\":\"Toga\",\"email\":\"toga@loni.usc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"adni\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Arthur W.  Toga\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p><span>For additional information, access to data and study documentation, please go to&nbsp;<a href=\\\"http://adni.loni.usc.edu/\\\" target=\\\"_blank\\\">http://adni.loni.usc.edu/</a>.</span></p>\\r\\n\"}}"
+      },
+      {
+        "id": "aric",
+        "timestamps": {
+          "created": "2019-07-23T14:12:07.627",
+          "lastUpdate": "2021-05-05T09:38:50.961"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Atherosclerosis Risk in Communities Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ARIC"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 15792
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>ARIC is designed to investigate the etiology and natural history of atherosclerosis, the etiology of clinical atherosclerotic diseases, and variation in cardiovascular risk factors, medical care and disease by race, gender, location, and date. The objectives of the study are:</p>\r\n\r\n<ul>\r\n\t<li>Examine the ARIC cohort to characterize heart failure stages in the community, identify genetic and environmental factors leading to ventricular dysfunction and vascular stiffness, and assess longitudinal changes in pulmonary function and identify determinants of its decline;</li>\r\n\t<li>Cohort follow-up for cardiovascular events, including CHD, heart failure, stroke, and atrial fibrillation, and for the study risk factors related to progression of subclinical to clinical CVD;</li>\r\n\t<li>Enhance the ARIC cohort study with cardiovascular outcomes research to assess quality and outcomes of medical care for heart failure and heart failure risk factors;</li>\r\n\t<li>Community surveillance to monitor long-term trends in hospitalized MI, CHD deaths, and heart failure (inpatient and outpatient);</li>\r\n\t<li>Provide a platform for ancillary studies, training for new investigators, and data sharing.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":15792},\"sample\":{\"noLimit\":false,\"number\":15264}},\"website\":\"https://www2.cscc.unc.edu/aric/description\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Josef Coresh\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>The participants were re-examined every 3 years with the first exam occurring in 1987-1989, the second in 1990-1992, the third in 1993-1995, the fourth in 1996-1998 and the fifth&nbsp;in 2011-2013.</p>\\r\\n\\r\\n<p>Follow-up also occurred annually or semi-annually by telephone to maintain contact and to assess health status of the cohort.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1987,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Josef Coresh\"},\"markerPaper\":\"The Atherosclerosis Risk in Communities (ARIC) Study: design and objectives. The ARIC investigators. American Journal of Epidemiology, 1989; 129(4): 687-702.\",\"pubmedId\":\"2646917\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869265\",\"title\":\"MD.\",\"firstName\":\"Josef \",\"lastName\":\"Coresh\",\"email\":\"coresh@jhu.edu\",\"phone\":\"410-955-0495\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Johns Hopkins University\"},\"department\":{\"en\":\"Bloomberg School of Public Health\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"},{\"parentId\":\"aric\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Josef  Coresh\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869266\",\"title\":\"Dr.\",\"firstName\":\"Lloyd E. \",\"lastName\":\"Chambless\",\"email\":\"wchambless@unc.edu\",\"phone\":\"919-962-3264\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of North Carolina\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Chapel Hill\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lloyd E.  Chambless\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869267\",\"title\":\"Dr.\",\"firstName\":\"Thomas H. \",\"lastName\":\"Mosley\",\"email\":\"tmosley@umc.edu\",\"phone\":\"(601) 984-2763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Thomas H.  Mosley\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869268\",\"title\":\"Dr.\",\"firstName\":\"Eric \",\"lastName\":\"Boerwinkle\",\"email\":\"Eric.Boerwinkle@uth.tmc.edu\",\"phone\":\"713-500-9803\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Texas\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Houston\"},\"state\":\"Texas\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eric  Boerwinkle\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869269\",\"title\":\"MD.\",\"firstName\":\"Gerardo \",\"lastName\":\"Heiss\",\"email\":\"gerardo_heiss@unc.edu\",\"phone\":\"919-962-3253\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of North Carolina\"},\"department\":{\"en\":\"Gillings School of Global Public Health\"},\"address\":{\"city\":{\"en\":\"Chapel Hill\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Gerardo  Heiss\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886926a\",\"title\":\"MD.\",\"firstName\":\"Aaron \",\"lastName\":\"Folsom\",\"email\":\"folso001@umn.edu\",\"phone\":\"612-626-8862\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Minnesota\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Minneapolis\"},\"state\":\"Minnesota\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"},{\"parentId\":\"aric\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Aaron  Folsom\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869265\",\"title\":\"MD.\",\"firstName\":\"Josef \",\"lastName\":\"Coresh\",\"email\":\"coresh@jhu.edu\",\"phone\":\"410-955-0495\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Johns Hopkins University\"},\"department\":{\"en\":\"Bloomberg School of Public Health\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"},{\"parentId\":\"aric\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Josef  Coresh\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b010783886926a\",\"title\":\"MD.\",\"firstName\":\"Aaron \",\"lastName\":\"Folsom\",\"email\":\"folso001@umn.edu\",\"phone\":\"612-626-8862\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Minnesota\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Minneapolis\"},\"state\":\"Minnesota\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"investigator\"},{\"parentId\":\"aric\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Aaron  Folsom\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b010783886926b\",\"firstName\":\"Sandy H. \",\"lastName\":\"Irving\",\"email\":\"Sandy_Irving@unc.edu\",\"phone\":\"(919) 962-3259\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of North Carolina\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Chapel Hill\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"aric\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Sandy H.  Irving\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "atp",
+        "timestamps": {
+          "created": "2019-07-23T14:12:10.255",
+          "lastUpdate": "2022-02-10T14:35:33.488"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Alberta's Tomorrow Project"
+          },
+          {
+            "lang": "fr",
+            "value": "Alberta's Tomorrow Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ATP"
+          },
+          {
+            "lang": "fr",
+            "value": "ATP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 52810
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "6053aad189bf5438e86b2479",
+          "fileName": "ATPLogo1.jpg",
+          "lang": "en",
+          "size": 35388,
+          "md5": "ede8fefcb73dea17f000121ecec5bc1f",
+          "timestamps": {
+            "created": "2021-03-18T15:32:33.188"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The aim of the Alberta's Tomorrow Project (ATP) is to provide a platform to support the study of cancer and other chronic diseases. Another objective is to link cohort data with provincially managed health care databases and other health records. Those two objectives combined will allow ATP to study patterns of health care utilization and their association with risks and outcomes of chronic diseases."
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The principal objective of Alberta’s Tomorrow Project (ATP) is to develop a long-term cohort study that will act as a research platform to facilitate research into how various aspects of lifestyle, modifiable behaviours, environmental and genetic factors interact to influence risk of cancer, and other chronic diseases.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "biological_samples",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":52810},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"Phase I: 31,211 participants<br>Survey 2004: 9,693 participants<br>Survey 2008: 20,799 participants<br>Phase II: 39,418 participants<br>Follow-up: 33,742 participants<br>COVID-19: 19,049 participants\"}},\"website\":\"http://myatp.ca/\",\"access\":{\"access_bio_samples\":\"yes\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"After baseline (Phase I), participants were followed-up 3 times, in 2004, 2008 and 2017. Follow-ups are planned for at least 50 years.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2000,\"specificAuthorization\":{\"authorized\":false},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b0107838869468\",\"title\":\"Dr.\",\"firstName\":\"Paula\",\"lastName\":\"Robson\",\"email\":\"paula.robson@albertahealthservices.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Alberta Health Services - CancerControl Alberta\"},\"department\":{\"en\":\"Richmond Road Diagnostic & Treatment Centre\"},\"address\":{\"street\":{\"en\":\"1820 Richmond Road SW\"},\"city\":{\"en\":\"Calgary\"},\"zip\":\"T2T 5C7\",\"state\":\"AB\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"atp\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"cptp\",\"role\":\"investigator\"}],\"fullName\":\"Paula Robson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b0107838869469\",\"firstName\":\"Jennifer\",\"lastName\":\"Vena\",\"email\":\"jennifer.vena@albertahealthservices.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Alberta Health Services - CancerControl Alberta\"},\"department\":{\"en\":\"Richmond Road Diagnostic & Treatment Centre\"},\"address\":{\"street\":{\"en\":\"1820 Richmond Road SW\"},\"city\":{\"en\":\"Calgary\"},\"zip\":\"T2T 5C7\",\"state\":\"AB\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"atp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jennifer Vena\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549152e4b01078388690cc\",\"firstName\":\"Alberta's\",\"lastName\":\"Tomorrow Project\",\"email\":\"ATP.Research@albertahealthservices.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Research Inquiries & Accessing ATP Data\"},\"address\":{}},\"studyMemberships\":[{\"parentId\":\"atp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Alberta's Tomorrow Project\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"\"},\"markerPaper\":\"Ye M, Robson PJ, Eurich DT, et al. Cohort Profile: Alberta's Tomorrow Project. International of Journal Epidemiology, 2017; 46(4):1097-1098\",\"pubmedId\":\"28338725\",\"access_fees\":false,\"access_restrictions\":false,\"otherMarkerPapers\":[{}]}"
+      },
+      {
+        "id": "abc1936",
+        "timestamps": {
+          "created": "2019-07-23T14:11:52.461",
+          "lastUpdate": "2020-02-05T11:07:16.649"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Aberdeen 1936 Birth Cohort"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ABC1936"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 498
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aim of ABC1936 was to identify major childhood influences on dementia risk and to improve early detection of dementia.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":498},\"sample\":{\"noLimit\":false,\"number\":485}},\"website\":\"http://www.abdn.ac.uk/aberdeen-birth-cohort/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Leone Craig\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The ABC1936 participants undertook a general intelligence test at age 11 years, in 1947, and were recruited for the ABC1936 cohort between 1999 and 2003. They were then followed-up every 2 years until 2011.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p><span>Sub-sample of the participants of the Scottish Mental Survey of 1947.</span></p>\\r\\n\"}},\"startYear\":1999,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Leone Craig\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Starr JM, Deary IJ, Fox H, Whalley LJ. Blood pressure and cognition in the Aberdeen 1936 birth cohort. Gerontology, 2007; 53(6): 432-7.\",\"endYear\":2011,\"pubmedId\":\"18042996\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869206\",\"title\":\"Dr.\",\"firstName\":\"Roy \",\"lastName\":\"Soiza\",\"email\":\"r.l.soiza@abdn.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Health Services Research Unit\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Roy  Soiza\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869207\",\"title\":\"Prof.\",\"firstName\":\"Alison \",\"lastName\":\"Murray\",\"email\":\"a.d.murray@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438362\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Aberdeen Biomedical Imaging Centre\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Alison  Murray\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869208\",\"title\":\"Prof.\",\"firstName\":\"Geraldine \",\"lastName\":\"McNeill\",\"email\":\"g.mcneill@abdn.ac.uk\",\"phone\":\"+44 (0)1224 437129\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Rowett Institute of Nutrition and Health\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Geraldine  McNeill\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869209\",\"title\":\"Prof.\",\"firstName\":\"Louise \",\"lastName\":\"Phillips\",\"email\":\"louise.phillips@abdn.ac.uk\",\"phone\":\"+44 (0)1224 272229\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"School of Psychology\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Louise  Phillips\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920a\",\"title\":\"Dr.\",\"firstName\":\"Leone \",\"lastName\":\"Craig\",\"email\":\"l.craig@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438040\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Applied Health Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Leone  Craig\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920b\",\"title\":\"Prof.\",\"firstName\":\"Paul \",\"lastName\":\"Haggarty\",\"email\":\"p.haggarty@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438630\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Rowett Institute of Nutrition and Health\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Haggarty\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920c\",\"title\":\"Dr.\",\"firstName\":\"Roger \",\"lastName\":\"Staff\",\"email\":\"r.staff@abdn.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Roger  Staff\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886920a\",\"title\":\"Dr.\",\"firstName\":\"Leone \",\"lastName\":\"Craig\",\"email\":\"l.craig@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438040\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Applied Health Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Leone  Craig\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b010783886920d\",\"firstName\":\"Dawn \",\"lastName\":\"Younie\",\"email\":\"d.younie@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Aberdeen Biomedical Imaging Centre\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Dawn  Younie\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "ages",
+        "timestamps": {
+          "created": "2019-07-23T14:12:00.155",
+          "lastUpdate": "2020-02-05T11:07:18.597"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Age, Gene/Environment Susceptibility - Reykjavik Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Age, Gene/Environment Susceptibility - Reykjavik Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "AGES"
+          },
+          {
+            "lang": "fr",
+            "value": "AGES"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5764
+        },
+        "countries": [
+          "ISL"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objectives of the study were:</p>\r\n\r\n<ul>\r\n\t<li>To identify genetic and other new risk factors for selected diseases and conditions including: atherosclerosis, cognitive impairment, dementia and subtypes (i.e. Alzheimer's disease), stroke, sarcopenia, obesity, osteoporosis, diabetes, and osteoarthritis;</li>\r\n\t<li>To characterize phenotypes for these diseases and conditions, and study them in relation to genetic susceptibility, gene function and genetic/environmental contributions to disease;</li>\r\n\t<li>To identify contributory molecular markers associated with these conditions including markers of cellular maintenance and repair, markers of oxidative stress, and immunologic and endocrine indicators.</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The objectives of the study were:</p>\n\n<ul>\n\t<li>To identify genetic and other new risk factors for selected diseases and conditions including: atherosclerosis, cognitive impairment, dementia and subtypes (i.e. Alzheimer's disease), stroke, sarcopenia, obesity, osteoporosis, diabetes, and osteoarthritis;</li>\n\t<li>To characterize phenotypes for these diseases and conditions, and study them in relation to genetic susceptibility, gene function and genetic/environmental contributions to disease;</li>\n\t<li>To identify contributory molecular markers associated with these conditions including markers of cellular maintenance and repair, markers of oxidative stress, and immunologic and endocrine indicators.</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5764},\"sample\":{\"noLimit\":false,\"number\":5764}},\"website\":\"http://www.hjarta.is/english/ages\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The AGES-Reykjavik examination is completed in 3 clinic visits, with a participant's full examination completed within a 4 to 6 weeks time window.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2002,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Harris TB, Launer LJ, Eiriksdottir G, et al. Age, Gene/Environment Susceptibility-Reykjavik Study: multidisciplinary applied phenomics. American journal of epidemiology, 2007; 165(9): 1076-87.\",\"pubmedId\":\"17351290\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869256\",\"title\":\"Dr.\",\"firstName\":\"Vilmundur \",\"lastName\":\"Gudnason\",\"email\":\"v.gudnason@hjarta.is\",\"phone\":\"+ 354 535 18 00\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Icelandic Heart Association\"},\"address\":{\"city\":{\"en\":\"Kópavogur\"},\"countryIso\":\"ISL\"}},\"studyMemberships\":[{\"parentId\":\"ages\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Vilmundur  Gudnason\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869257\",\"title\":\"MD.\",\"firstName\":\"Tamara \",\"lastName\":\"Harris\",\"email\":\"harrista@nia.nih.gov\",\"phone\":\"301-496-6044\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Epidemiology, Demography, and Biometry\"},\"address\":{\"city\":{\"en\":\"Bethesda\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ages\",\"role\":\"investigator\"},{\"parentId\":\"ages\",\"role\":\"contact\"},{\"parentId\":\"health-abc\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tamara  Harris\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869258\",\"title\":\"Dr.\",\"firstName\":\"Lenore \",\"lastName\":\"Launer\",\"email\":\"launerl@nia.nih.gov\",\"phone\":\"301-496-6214\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Epidemiology, Demography, and Biometry\"},\"address\":{\"city\":{\"en\":\"Bethesda\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ages\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lenore  Launer\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869257\",\"title\":\"MD.\",\"firstName\":\"Tamara \",\"lastName\":\"Harris\",\"email\":\"harrista@nia.nih.gov\",\"phone\":\"301-496-6044\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Epidemiology, Demography, and Biometry\"},\"address\":{\"city\":{\"en\":\"Bethesda\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ages\",\"role\":\"investigator\"},{\"parentId\":\"ages\",\"role\":\"contact\"},{\"parentId\":\"health-abc\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tamara  Harris\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "bcgp",
+        "timestamps": {
+          "created": "2019-07-23T14:12:12.598",
+          "lastUpdate": "2021-06-11T13:47:33.023"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "British Columbia Generations Project"
+          },
+          {
+            "lang": "fr",
+            "value": "BC Generations Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BCGP"
+          },
+          {
+            "lang": "fr",
+            "value": "BCGP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 29850
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "af6f330f-2b90-4324-92c8-8eaffdb94c0a",
+          "fileName": "bg-logo.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 5545,
+          "md5": "79b82a628e3df6e59475e23310ef55d4",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.081"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The British Columbia Generations Project (BCGP) is British Columbia's (Canada) largest, prospective, population-based cohort, health research databank and biobank. It aims at better understanding the effects of environmental exposures, lifestyle, and genetics on chronic diseases such as cancer."
+          },
+          {
+            "lang": "fr",
+            "value": "<p><span>The BC Generations Project is a major health research project investigating environmental, lifestyle and genetic factors in the development of cancer and other chronic diseases in British Columbia, Canada.</span></p>\n\n<div>&nbsp;</div>\n\n<div>&nbsp;</div>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":29850},\"sample\":{\"noLimit\":false,\"number\":26459},\"info\":{\"en\":\"\"}},\"website\":\"http://www.bcgenerationsproject.ca/\",\"access\":{\"access_bio_samples\":\"yes\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"After baseline assessment, participants were first followed-up in 2016-2017. Data linkage from BC Cancer registry is received annually for participants who consent to it. BCGP participants will continue to be followed periodically for up to 50 years, depending on funding.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2008,\"specificAuthorization\":{\"authorized\":false},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"57b37d55e4b099280256e5f3\",\"title\":\"Dr.\",\"firstName\":\"Nhu\",\"lastName\":\"Le\",\"email\":\"nle@bccrc.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"British Columbia Cancer Research Centre\"},\"department\":{\"en\":\"Cancer Control Research\"},\"address\":{\"street\":{\"en\":\"675 W 10th Ave\"},\"city\":{\"en\":\"Vancouver\"},\"zip\":\"V5Z 1L\",\"state\":\"BC\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"bcgp\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"cptp\",\"role\":\"investigator\"}],\"fullName\":\"Nhu Le\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57b37d2ee4b099280256e5f2\",\"title\":\"Dr.\",\"firstName\":\"Trevor\",\"lastName\":\"Dummer\",\"email\":\"trevor.dummer@ubc.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"British Columbia Cancer Research Centre\"},\"department\":{\"en\":\"Cancer Control Research\"},\"address\":{\"street\":{\"en\":\"Room 165 - 2206 East Mall\"},\"city\":{\"en\":\"Vancouver\"},\"zip\":\"V6T 1Z3\",\"state\":\"BC\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"bcgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Trevor Dummer\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694c4\",\"firstName\":\"Eunice \",\"lastName\":\"Rousseau\",\"email\":\"erousseau@bccrc.ca\",\"phone\":\"604-675-8060\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"British Columbia Cancer Research Centre\"},\"department\":{\"en\":\"Cancer Control Research\"},\"address\":{\"street\":{\"en\":\"675 W 10th Ave.\"},\"city\":{\"en\":\"Vancouver\"},\"zip\":\"V5Z 1L3\",\"state\":\"British Columbia\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"bcgp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Eunice  Rousseau\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694c5\",\"firstName\":\"Treena\",\"lastName\":\"McDonald\",\"email\":\"tmcdonald@bccrc.ca\",\"phone\":\"604-675-8000 ext 7609\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"British Columbia Cancer Research Centre\"},\"department\":{\"en\":\"Cancer Control Research\"},\"address\":{\"street\":{\"en\":\"675 W 10th Ave.\"},\"city\":{\"en\":\"Vancouver\"},\"zip\":\"V5Z 1L3\",\"state\":\"British Columbia\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"bcgp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Treena McDonald\"},\"role\":\"contact\"}]},\"markerPaper\":\"Dhalla A, McDonald TE, Gallagher RP, Spinelli JJ, Brooks-Wilson AR, Lee TK, Lai C, Borugian MJ, Woods RR, Le ND, Dummer TJB, Cohort Profile: The British Columbia Generations Project (BCGP), Int J Epidemiol, 2018 Aug 28, dyy160\",\"pubmedId\":\"30169793\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "hs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:34.901",
+          "lastUpdate": "2020-02-05T11:07:41.885"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Hisayama Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 9833
+        },
+        "countries": [
+          "JPN"
+        ],
+        "logo": {
+          "id": "5d56bb5cba94c12e7bd69741",
+          "fileName": "logo.jpg",
+          "lang": "en",
+          "size": 5344,
+          "md5": "fd69ac1b16cad8a58a9559c25f9449f2",
+          "timestamps": {
+            "created": "2019-08-16T10:19:08.353"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Hisayama Study is an ongoing population-based prospective cohort study in the town of Hisayama, a suburb of the Fukuoka metropolitan area in the southern part of Japan. This study was started in 1961 to determine the prevalence and incidence of cerebrovascular and cardiovascular diseases and their risk factors. In addition, comprehensive surveys of cognitive impairment in the elderly living in&nbsp;this town have been conducted since 1985.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":9833},\"sample\":{\"noLimit\":false,\"number\":9833}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Toshiharu Ninomiya\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>The participants were followed up by repeated comprehensive health examinations every 2-3 years until 1974 and then every 5 years after that, in addition to usual annual health check-ups.</span></p>\\n\\n<p>Comprehensive surveys of cognitive impairment in the elderly living in Hisayama town were also conducted every 6-7 years since 1985 (1985, 1992, 1998, 2005, and 2012).</p>\"},\"recruitments\":[\"individuals\"]},\"startYear\":1961,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Toshiharu Ninomiya\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Ninomiya, T. Japanese Legacy Cohort Studies: The Hisayama Study. Journal of Epidemiology, 2018; 28(11): 444-451.\",\"pubmedId\":\"30298863\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869349\",\"title\":\"Prof.\",\"firstName\":\"Yutaka \",\"lastName\":\"Kiyohara\",\"email\":\"Kiyohara@envmed.med.kyushu-u.ac.jp\",\"phone\":\"092-642-6104\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Kyushu University\"},\"department\":{\"en\":\"Faculty of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Fukuoka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"hs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yutaka  Kiyohara\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886934a\",\"title\":\"Dr.\",\"firstName\":\"Toshiharu \",\"lastName\":\"Ninomiya\",\"email\":\"nino@intmed2.med.kyushu-u.ac.jp\",\"phone\":\"092-642-6151\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Kyushu University\"},\"department\":{\"en\":\"Faculty of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Fukuoka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"hs\",\"role\":\"investigator\"},{\"parentId\":\"hs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Toshiharu  Ninomiya\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886934b\",\"title\":\"Dr.\",\"firstName\":\"Jun \",\"lastName\":\"Hata\",\"email\":\"junhata@envmed.med.kyushu-u.ac.jp\",\"phone\":\"092-642-6107\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Kyushu University\"},\"department\":{\"en\":\"Faculty of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Fukuoka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"hs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jun  Hata\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886934c\",\"title\":\"Dr.\",\"firstName\":\"Tomoyuki \",\"lastName\":\"Ohara\",\"phone\":\"092-642-5627\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Kyushu University\"},\"department\":{\"en\":\"Faculty of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Fukuoka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"hs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tomoyuki  Ohara\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886934a\",\"title\":\"Dr.\",\"firstName\":\"Toshiharu \",\"lastName\":\"Ninomiya\",\"email\":\"nino@intmed2.med.kyushu-u.ac.jp\",\"phone\":\"092-642-6151\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Kyushu University\"},\"department\":{\"en\":\"Faculty of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Fukuoka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"hs\",\"role\":\"investigator\"},{\"parentId\":\"hs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Toshiharu  Ninomiya\"},\"role\":\"contact\"}]},\"website\":\"http://www.hisayama.med.kyushu-u.ac.jp/en/\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "hunter-cs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:38.336",
+          "lastUpdate": "2021-05-05T09:39:10.030"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Hunter Community Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Hunter CS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 3253
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aims of the Hunter CS study are to provide:</p>\r\n\r\n<ul>\r\n\t<li>a broad spectrum of measures of ageing that includes clinical, genetic, biochemical, health services, economic, environmental as well as social and&nbsp;behavioural measures;</li>\r\n\t<li>sufficient statistical power to test a range of important hypotheses about common acute and chronic disease events, i.e. percentage incidence of a particular disease over 10-year follow-up;</li>\r\n\t<li>a comparison population for studies involving the use of case series from local hospital;</li>\r\n\t<li>a repository of stored biological samples, covering plasma, serum, whole blood, DNA and whole cells;</li>\r\n\t<li>virtual follow-up through individual-level linkage with databases including Medicare Australia, Pharmaceutical Benefits Scheme, hospital separations, cancer, cardiovascular disease, death and other registries;</li>\r\n\t<li>a reference population for economic, social science, environmental, health services, health promotion, clinical and&nbsp;genetic research.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":3253},\"sample\":{\"noLimit\":false,\"number\":2534}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The cohort is followed-up with repeated questionnaires and clinical assessment every few years to update exposure and outcome information as funding permits.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"McEvoy M, Smith W, D'Este C, Duke J, Peel R, Schofield P, Scott R, Byles J, Henry D, Ewald B, Hancock S, Smith D, Attia J. Cohort profile: The Hunter Community Study. International journal of epidemiology, 2010; 39(6): 1452-63.\",\"pubmedId\":\"20056765\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869351\",\"title\":\"Dr.\",\"firstName\":\"John \",\"lastName\":\"Attia\",\"email\":\"John.Attia@newcastle.edu.au\",\"phone\":\"(02) 4042 0500\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"},{\"parentId\":\"hunter-cs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John  Attia\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869352\",\"title\":\"Dr.\",\"firstName\":\"Wayne \",\"lastName\":\"Smith\",\"email\":\"Wayne.Smith@newcastle.edu.au\",\"phone\":\"(02) 9816 0426\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Wayne  Smith\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869353\",\"title\":\"Dr.\",\"firstName\":\"Catherine \",\"lastName\":\"D'Este\",\"email\":\"Catherine.DEste@newcastle.edu.au\",\"phone\":\"(02) 40420517\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Catherine  D'Este\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869354\",\"title\":\"Dr.\",\"firstName\":\"Rodney \",\"lastName\":\"Scott\",\"email\":\"Rodney.Scott@newcastle.edu.au\",\"phone\":\"(02) 4921 4974\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Biomedical Sciences and Pharmacy\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Rodney  Scott\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869355\",\"title\":\"MD.\",\"firstName\":\"Peter \",\"lastName\":\"Schofield\",\"email\":\"Peter.Schofield@newcastle.edu.au\",\"phone\":\"(02) 4033 5739\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter  Schofield\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869351\",\"title\":\"Dr.\",\"firstName\":\"John \",\"lastName\":\"Attia\",\"email\":\"John.Attia@newcastle.edu.au\",\"phone\":\"(02) 4042 0500\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Newcastle\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Callaghan\"},\"zip\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"hunter-cs\",\"role\":\"investigator\"},{\"parentId\":\"hunter-cs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John  Attia\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "hsad",
+        "timestamps": {
+          "created": "2019-07-23T14:13:36.087",
+          "lastUpdate": "2021-05-05T09:39:08.185"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Harvard Study of Adult Development"
+          },
+          {
+            "lang": "fr",
+            "value": "Harvard Study of Adult Development"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HSAD"
+          },
+          {
+            "lang": "fr",
+            "value": "HSAD"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 724
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "a8161582-f708-4fa6-a11c-43718071cab4",
+          "fileName": "Harvad study logo.PNG",
+          "type": "logo",
+          "lang": "en",
+          "size": 89377,
+          "md5": "4e797e5082fb349ec07eaa5b40fb0389",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.824"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "Longitudinal study of two groups of men over the adult lifespan, tracking major domains of mental and physical health, social functioning, and work life.\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p lang=\"en-CA\"><font face=\"BMXDTQ+BakerSignet, serif\"><font size=\"3\"><font face=\"Arial, serif\"><font size=\"2\">Longitudinal study of two groups of men over the adult lifespan, tracking major domains of mental and physical health, social functioning, and work life.</font></font></font></font></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "others",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":724},\"sample\":{\"noLimit\":false,\"number\":130},\"info\":{\"en\":\"other than the 130 original male participants; 62 female spouses provided biological samples and some psychosocial data.\"}},\"website\":\"http://www.massgeneral.org/psychiatry/research/adult_dev_home.aspx\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"Videotaped marital interactions, functional and structural MRI data\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Robert J. Waldinger, M.D.\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Questionnaire follow-up every 2 years; medical records obtained every 5 years, in-person interviews approx. every 10 years.\"},\"recruitments\":[\"individuals\",\"other\"],\"otherRecruitment\":{\"en\":\"Spouses of original male participants\"},\"info\":{\"en\":\"268 Harvard College sophomores and 456 Inner City Boston boys all recruited in the late 1930s and early 1940s\"}},\"startYear\":1938,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Robert J. Waldinger, M.D.\"},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886934d\",\"title\":\"MD.\",\"firstName\":\"Robert J. \",\"lastName\":\"Waldinger\",\"email\":\"rwaldinger@partners.org\",\"phone\":\"617-643-4339 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Harvard Medical School \"},\"department\":{\"en\":\"MGH Center for Psychodynamic Therapy and Research/Laboratory of Adult Development \"},\"address\":{\"street\":{\"en\":\"15 Parkman Street -- WAC 805F \"},\"city\":{\"en\":\"Boston\"},\"zip\":\"02114\",\"state\":\"Massassuchet\"}},\"studyMemberships\":[{\"parentId\":\"hsad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert J.  Waldinger\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886934e\",\"firstName\":\"Hannah M.\",\"lastName\":\"Yee\",\"email\":\"HMYee@mgh.harvard.edu\",\"phone\":\"+1 (617) 643-7403\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Massachusetts General Hospital \"},\"department\":{\"en\":\"Harvard Study of Adult Development\"},\"address\":{\"street\":{\"en\":\"151 Merrimac Street\"},\"city\":{\"en\":\"Boston\"},\"zip\":\"02114\",\"state\":\"MA\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"hsad\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Hannah M. Yee\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "caps",
+        "timestamps": {
+          "created": "2019-07-23T14:12:23.384",
+          "lastUpdate": "2020-02-05T11:07:25.223"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Caerphilly Cohort Study of Older Men"
+          },
+          {
+            "lang": "fr",
+            "value": "Caerphilly Cohort Study of Older Men"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CaPS"
+          },
+          {
+            "lang": "fr",
+            "value": "CaPS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2959
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The initial aims of the study were to examine the importance of lipids, haemostatic factors, and hormones such as testosterone, cortisol and insulin (Lichtenstein et al 1987) in the development of ischaemic heart disease (IHD). Subsequently, other hypotheses were included with a specific interest in platelet function, and psychosocial variables. With the ageing of the cohort, additional outcomes have been included in particular stroke, hearing problems and cognitive function.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The initial aims of the study were to examine the importance of lipids, haemostatic factors, and hormones such as testosterone, cortisol and insulin (Lichtenstein et al 1987) in the development of ischaemic heart disease (IHD). Subsequently, other hypotheses were included with a specific interest in platelet function, and psychosocial variables. With the ageing of the cohort, additional outcomes have been included in particular stroke, hearing problems and cognitive function.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "cognitive_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2959},\"sample\":{\"noLimit\":false,\"number\":1500},\"info\":{\"en\":\"<p>The target number of participants with biological samples varies depending on type of sample.</p>\\r\\n\"}},\"website\":\"http://www.bris.ac.uk/social-community-medicine/projects/caerphilly/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"<p>If approved by access committee</p>\\r\\n\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Yoav Ben-Shlomo\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1979,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869279\",\"title\":\"Prof.\",\"firstName\":\"Yoav \",\"lastName\":\"Ben-Shlomo\",\"email\":\"y.ben-shlomo@bristol.ac.uk\",\"phone\":\"+44 (0) 117 928 7206\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community \"},\"address\":{\"street\":{\"en\":\"Canynge Hall, 39 Whatley Road\"},\"city\":{\"en\":\"Bristol\"},\"zip\":\"BS8 2PS\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"},{\"parentId\":\"caps\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Yoav  Ben-Shlomo\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886927a\",\"title\":\"Dr.\",\"firstName\":\"John\",\"lastName\":\"Gallacher\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Cardiff University\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John Gallacher\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886927b\",\"title\":\"Prof.\",\"firstName\":\"George\",\"lastName\":\"Smith\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"George Smith\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886927c\",\"title\":\"Prof.\",\"firstName\":\"Peter\",\"lastName\":\"Elwood\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter Elwood\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886927d\",\"title\":\"Dr.\",\"firstName\":\"John\",\"lastName\":\"Yarnell\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John Yarnell\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869279\",\"title\":\"Prof.\",\"firstName\":\"Yoav \",\"lastName\":\"Ben-Shlomo\",\"email\":\"y.ben-shlomo@bristol.ac.uk\",\"phone\":\"+44 (0) 117 928 7206\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community \"},\"address\":{\"street\":{\"en\":\"Canynge Hall, 39 Whatley Road\"},\"city\":{\"en\":\"Bristol\"},\"zip\":\"BS8 2PS\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"caps\",\"role\":\"investigator\"},{\"parentId\":\"caps\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Yoav  Ben-Shlomo\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "clsa",
+        "timestamps": {
+          "created": "2019-07-23T14:12:36.696",
+          "lastUpdate": "2022-04-06T13:53:36.009"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Canadian Longitudinal Study on Aging"
+          },
+          {
+            "lang": "fr",
+            "value": "Canadian Longitudinal Study on Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CLSA"
+          },
+          {
+            "lang": "fr",
+            "value": "CLSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 51338
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "59663fd8e4b090e7930df8ce",
+          "fileName": "CLSA_Logo_Wordmark_RGB_webpage.png",
+          "lang": "en",
+          "size": 39132,
+          "md5": "f81eaa862ce97f1560a8e37942ce5dc9",
+          "timestamps": {
+            "created": "2017-07-12T11:27:19.542"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Canadian Longitudinal Study on Aging (CLSA) is a large, national, long-term study that will follow approximately 50,000 men and women between the ages of 45 and 85 for at least 20 years. The study aims to collect information on the changing biological, medical, psychological, social, lifestyle and economic aspects of people’s lives. These factors will be studied in order to understand aging as a dynamic process and the interrelationship among intrinsic and extrinsic factors\nfrom mid life to older age.</p>\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Canadian Longitudinal Study on Aging (CLSA) is a large, national, long-term study that will follow approximately 50,000 men and women between the ages of 45 and 85 for at least 20 years. The study will collect information on the changing biological, medical, psychological, social, lifestyle and economic aspects of people’s lives. These factors will be studied in order to understand how, individually and in combination, they have an impact in both maintaining health and in the development of disease and disability as people age.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "biological_samples",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":51338},\"sample\":{\"noLimit\":false,\"number\":30000}},\"website\":\"http://www.clsa-elcv.ca/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"date\":\"2021-08-04\",\"authorizer\":\"Jennifer Boyko\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"followUpInfo\":{\"en\":\"First-follow-up was in 2015-2018 and the second one in 2018-2021. Each participant is re-contacted every 3 years and will be followed for at least 20 years or until death.\"},\"otherRecruitment\":{},\"info\":{\"en\":\"\"}},\"startYear\":2011,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Raina PS, Wolfson C, Kirkland SA, et al. The Canadian longitudinal study on aging (CLSA). Can J Aging, 2009. 28(3): p. 221-9.\",\"pubmedId\":\"19860977\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692ac\",\"title\":\"Prof.\",\"firstName\":\"Parminder\",\"lastName\":\"Raina\",\"email\":\"praina@mcmaster.ca\",\"phone\":\"1-905-525-9140 ext. 22197\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McMaster University\"},\"department\":{\"en\":\"Department of Clinical Epidemiology & Biostatistics\"},\"address\":{\"city\":{\"en\":\"Hamilton\"},\"state\":\"Ontario\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"mindmap\",\"role\":\"investigator\"}],\"fullName\":\"Parminder Raina\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692ae\",\"title\":\"Dr.\",\"firstName\":\"Susan\",\"lastName\":\"Kirkland\",\"email\":\"susan.kirkland@dal.ca\",\"phone\":\"1-902-494-1235\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Dalhousie University\"},\"department\":{\"en\":\"Faculty of Medicine, Community Health & Epidemiology\"},\"address\":{\"city\":{\"en\":\"Halifax\"},\"state\":\"Nova Scotia\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Susan Kirkland\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549156e4b01078388690d9\",\"title\":\"Dr.\",\"firstName\":\"Christina\",\"lastName\":\"Wolfson\",\"email\":\"christina.wolfson@mcgill.ca\",\"phone\":\"1-514-934-1934 ext. 44739\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McGill University\"},\"department\":{\"en\":\"Department of Epidemiology and Biostatistics and Occupational Health\"},\"address\":{\"city\":{\"en\":\"Montreal\"},\"state\":\"Quebec\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"frele\",\"role\":\"investigator\"},{\"parentId\":\"clsa\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"qsc\",\"role\":\"investigator\"}],\"fullName\":\"Christina Wolfson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692af\",\"title\":\"Dr.\",\"firstName\":\"Ine\",\"lastName\":\"Wauben\",\"academicLevel\":\"Managing Director\",\"email\":\"wauben@mcmaster.ca\",\"phone\":\"1-905-525-9140 ext. 22395\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McMaster University\"},\"address\":{\"city\":{\"en\":\"Hamilton\"},\"state\":\"Ontario\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ine Wauben\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b01078388692ad\",\"firstName\":\"Roxanne\",\"lastName\":\"Cheeseman\",\"academicLevel\":\"Administrative Coordinator\",\"email\":\"cheesem@mcmaster.ca\",\"phone\":\"1-905-525-9140 ext. 22197\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McMaster University\"},\"address\":{\"city\":{\"en\":\"Hamilton\"},\"state\":\"Ontario\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"investigator\"},{\"parentId\":\"clsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Roxanne Cheeseman\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b01078388692b0\",\"firstName\":\"Canadian\",\"lastName\":\"Longitudinal Study on Aging\",\"email\":\"access@clsa-elcv.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Coordinating Centre\"},\"department\":{\"en\":\"Department of Clinical Epidemiology and Biostatistics\"},\"address\":{\"street\":{\"en\":\"1280 Main St. W. Suite 309A\"},\"city\":{\"en\":\"Hamilton\"},\"zip\":\"L8S 4K1\",\"state\":\"Ontario\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Canadian Longitudinal Study on Aging\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b01078388692b1\",\"firstName\":\"Canadian\",\"lastName\":\"Longitudinal Study on Aging\",\"email\":\"stat@rimuhc.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Statistical Analysis Centre\"},\"department\":{\"en\":\"Research Institute of the McGill University Health Centre\"},\"address\":{\"street\":{\"en\":\"2155 Guy Street, 4th Floor (Room 431)\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H3H 2R9\",\"state\":\"Québec\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"clsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Canadian Longitudinal Study on Aging\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false,\"access_info_location\":[\"study_representative\"],\"access_supplementary_info\":{\"en\":\"General inquiries: info@clsa-elcv.ca\"},\"access_info_representative\":{\"email\":\"access@clsa-elcv.ca\",\"name\":\"Data Access Inquiries\",\"title\":\"\"},\"info\":{\"en\":\"Raina P, Wolfson C., Kirkland S, Griffith L.E., et al. (2019) Cohort profile: The Canadian Longitudinal Study on Aging (CLSA). International Journal of Epidemiology, Volume 48, Issue 6, 1752-1753j\\nhttps://doi.org/10.1093/ije/dyz173\"}}"
+      },
+      {
+        "id": "heliad",
+        "timestamps": {
+          "created": "2019-07-23T14:13:31.313",
+          "lastUpdate": "2020-12-03T12:30:31.717"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Hellenic Longitudinal Investigation of Aging and Diet"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HELIAD"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1943
+        },
+        "countries": [
+          "GRC"
+        ],
+        "logo": {
+          "id": "5fc9208bfe98770c2be5fee9",
+          "fileName": "Dra2YecU8AELdJt1.jpg",
+          "lang": "en",
+          "size": 23087,
+          "md5": "3af27810a9981a19c3c68992bcd57aef",
+          "timestamps": {
+            "created": "2020-12-03T12:29:47.006"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objectives of the&nbsp;Hellenic Longitudinal Investigation of Aging and&nbsp;Diet (HELIAD) are&nbsp;<span>to investigate&nbsp;</span><span>in the Greek&nbsp;population,&nbsp;</span><span>associations between&nbsp;</span><span>the Mediterranean-type diet </span><span>and cognitive dysfunction/age-related neuropsychiatric diseases, and&nbsp;to estimate&nbsp;the prevalence and incidence of Alzheimer’s disease, other&nbsp;dementias, mild cognitive impairment, and other&nbsp;neuropsychiatric conditions of aging.</span></p>\n\n<p>The study also ascertains several demographic, medical, social, environmental,&nbsp;clinical, nutritional, and neuropsychological&nbsp;determinants and lifestyle activities.</p>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1943},\"sample\":{\"noLimit\":false,\"number\":1386}},\"website\":\"\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Nikolaos Scarmeas\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>Follow-ups with face-to-face interviews at 3 year intervals.</span></p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"\"}},\"startYear\":2011,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Nikolaos Scarmeas\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Dardiotis et al. The Hellenic Longitudinal Investigation of Aging and Diet (HELIAD): Rationale, study design, and cohort description. Neuroepidemiology, 2014;43:9-14.\",\"pubmedId\":\"24993387\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869331\",\"title\":\"MD.\",\"firstName\":\"Nikolaos \",\"lastName\":\"Scarmeas\",\"email\":\" ns257@columbia.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Colombia University Medical Center\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"street\":{\"en\":\"Sergievsky Center, 622 West 168th street, PH 19th floor\"},\"city\":{\"en\":\"New York \"},\"zip\":\"NY 10032\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nikolaos  Scarmeas\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869332\",\"title\":\"Dr.\",\"firstName\":\"Efthimios \",\"lastName\":\"Dardiotis\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Thessaly\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Larissa\"},\"state\":\"Thessaly\",\"countryIso\":\"GRC\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Efthimios  Dardiotis\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869333\",\"title\":\"Prof.\",\"firstName\":\"Mary Helen \",\"lastName\":\"Kosmidis\",\"email\":\"kosmidis@psy.auth.gr\",\"phone\":\"+30 2310997308\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Aristotle University of Thessaloniki\"},\"department\":{\"en\":\"Department of Experimental and Cognitive Psychology\"},\"address\":{\"street\":{\"en\":\"54124 Thessaloniki, Room 421a, New Building, Faculty of Philosophy\"},\"city\":{\"en\":\"Thessaloniki\"},\"countryIso\":\"GRC\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mary Helen  Kosmidis\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869334\",\"title\":\"Dr.\",\"firstName\":\"Mary \",\"lastName\":\"Yannakoulia\",\"email\":\"myiannak@hua.gr\",\"phone\":\"+ 30 210 9549175 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Harokopion University of Athens\"},\"department\":{\"en\":\"Department of Nutrition and Dietetics\"},\"address\":{\"street\":{\"en\":\"El. Venizelou 70, 17671\"},\"city\":{\"en\":\"Athens\"},\"countryIso\":\"GRC\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mary  Yannakoulia\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869335\",\"title\":\"Prof.\",\"firstName\":\" Georgios M. \",\"lastName\":\"Hadjigeorgiou\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Thessaly\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Larissa\"},\"countryIso\":\"GRC\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\" Georgios M.  Hadjigeorgiou\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869336\",\"title\":\"Dr.\",\"firstName\":\"Eleni\",\"lastName\":\"Margioti\",\"email\":\"eleni_margioti@yahoo.gr\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Athens Association of alzheimer's Disease and Related Disorders\"},\"address\":{\"city\":{\"en\":\"Athens\"},\"countryIso\":\"GRC\"}},\"studyMemberships\":[{\"parentId\":\"heliad\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Eleni Margioti\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "hcs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:29.026",
+          "lastUpdate": "2021-05-05T09:39:04.854"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Hertfordshire Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HCS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 6099
+        },
+        "countries": [
+          "GBR"
+        ],
+        "logo": {
+          "id": "ed3c0b7a-5cda-4316-97b9-f8b22dbc8604",
+          "fileName": "hertslogoblue.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 2304,
+          "md5": "c99ad954949802676999e9e21b78b2dc",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.910"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The principal objective of the Hertfordshire Cohort Study is to evaluate interactions between the genome, the intrauterine and early postnatal environment, and adult diet and lifestyle in the aetiology of chronic disorders in later life (cardiovascular disease, type II diabetes mellitus and obesity; osteoporosis, osteoarthritis and sarcopenia). The study aims to place these interactions within a life-course model for disease pathogenesis, and to characterize the physiological mechanisms underlying the pathways to these chronic disorders e.g. resetting of hypothalamic–pituitary–adrenal and GH/IGF-I axes.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":6099},\"sample\":{\"noLimit\":false,\"number\":2997},\"info\":{\"en\":\"<p>Baseline: 6099 participants</p>\\r\\n\\r\\n<p>Home interviews: 3325 participants</p>\\r\\n\\r\\n<p>Clinic visits: 2997 participants</p>\\r\\n\\r\\n<p>DXA scans: 966 participants</p>\\r\\n\"}},\"website\":\"http://www.mrc.soton.ac.uk/herts/\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Cyrus Cooper\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>In 1998, the NHSCR was used to trace 21,063 men and women born in Hertfordshire between 1931 and 1939, for whom birth and infancy data had been recorded. The NHSCR&nbsp; identified 8,650 men and women as still resident in the county; of these 7,106 were registered with a GP. We obtained GP permission to contact &nbsp;6,099 men and women; 3,225 of these agreed to participate in a home interview and 2,997 also attended a clinic at which their demographic, socioeconomic, health and lifestyle characteristics were identified.&nbsp; The &nbsp;baseline visits and clinics were phased by region of the county and were completed between late 1998 and 2004. A subset of 966 of the men and women resident in East Hertfordshire also underwent a baseline DXA scan; 642 of these subsequently participated in a four year follow-up study of musculoskeletal outcomes (bone loss rates, fracture, falls,&nbsp; sarcopenia, and frailty).</p>\\r\\n\\r\\n<p>With their consent, the entire cohort of 2,997 men and women who participated in the baseline clinic are being followed up through primary care and hospital records for clinical outcomes including incident coronary heart disease, cerebrovascular disease, chronic airflow obstruction and fracture. The cohort members are flagged with the NHS Central Register for notification of deaths.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1931,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Cyrus Cooper\"},\"markerPaper\":\"Syddall HE, Aihie Sayer A, Dennison EM, Martin HJ, Barker DJ, Cooper C. Cohort profile: the Hertfordshire cohort study. Int J Epidemiol. 2005 Dec;34(6):1234-42. Epub 2005 Jun 17.\",\"endYear\":2004,\"pubmedId\":\"15964908\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886931a\",\"title\":\"Prof.\",\"firstName\":\"Cyrus \",\"lastName\":\"Cooper\",\"email\":\"cc@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"has\",\"role\":\"contact\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Cyrus  Cooper\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869326\",\"title\":\"Prof.\",\"firstName\":\"Elaine Margaret\",\"lastName\":\"Dennison\",\"email\":\"emd@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Elaine Margaret Dennison\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886931b\",\"title\":\"Prof.\",\"firstName\":\"Avan Aihie \",\"lastName\":\"Sayer\",\"email\":\"aas@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Avan Aihie  Sayer\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886931a\",\"title\":\"Prof.\",\"firstName\":\"Cyrus \",\"lastName\":\"Cooper\",\"email\":\"cc@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"has\",\"role\":\"contact\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Cyrus  Cooper\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"no\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "ncds",
+        "timestamps": {
+          "created": "2019-07-23T14:14:29.405",
+          "lastUpdate": "2020-02-05T11:07:57.070"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "National Child Development Study"
+          },
+          {
+            "lang": "fr",
+            "value": "National Child Development Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NCDS"
+          },
+          {
+            "lang": "fr",
+            "value": "NCDS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 18558
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The National Childhood Development Study is the second of Britain’s world renowned national longitudinal birth cohort studies. Each follows a large sample of individuals born over a limited period of time through the course of their lives, charting the effects of events and circumstances in early life on outcomes and achievements later on. They show how histories of health, wealth, education, family and employment are interwoven for individuals and vary between them.\r\n\r\nThe data collected across the sweeps of the study form a high quality data resource for scientific investigations across a full range of domains of individuals' lives and across different points in time in them."
+          },
+          {
+            "lang": "fr",
+            "value": "The National Childhood Development Study is the second of Britain’s world renowned national longitudinal birth cohort studies. Each follows a large sample of individuals born over a limited period of time through the course of their lives, charting the effects of events and circumstances in early life on outcomes and achievements later on. They show how histories of health, wealth, education, family and employment are interwoven for individuals and vary between them.\n\nThe data collected across the sweeps of the study form a high quality data resource for scientific investigations across a full range of domains of individuals' lives and across different points in time in them."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":18558},\"sample\":{\"noLimit\":false,\"number\":9337}},\"website\":\"http://www.cls.ioe.ac.uk/ncds\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Since the birth survey in 1958, there have been eight further ‘sweeps’ of all cohort members at ages 7, 11, 16, 23, 33, 42, 46 and 50.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>Cohort members have been the prime source of data but in the early sweeps data was collected from parents (mothers in the majority of cases), teachers and doctors. At the age of 33 data was also collected from co-resident partners and for a third of the sample data was also collected from any co-resident natural or adopted children of the cohort member.</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1958,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Alissa Goodman\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Chris Power and Jane Elliott, Cohort profile: 1958 British birth cohort (National Child Development Study)\",\"pubmedId\":\"16155052\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869420\",\"title\":\"Prof.\",\"firstName\":\"Alissa\",\"lastName\":\"Goodman\",\"email\":\"a.goodman@ioe.ac.uk\",\"phone\":\"020 7612 6231\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Centre for Longitudinal Studies, Institute of Education\"},\"address\":{\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"ncds\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Alissa Goodman\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869421\",\"firstName\":\"Matthew\",\"lastName\":\"Brown\",\"email\":\"m.brown@ioe.ac.uk\",\"phone\":\"+44 207 911 5325\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Centre for Longitudinal Studies, Institute of Education\"},\"address\":{\"city\":{\"en\":\"London\"},\"zip\":\"WC1H 0AL\"}},\"studyMemberships\":[{\"parentId\":\"ncds\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Matthew Brown\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>The National Child Development Study is also known as the 1958 British Birth Cohort Study.</p>\\r\\n\\r\\n<div>Funding agencies: Government Departments, Wellcome Trust, Medical Research Council and Economic Social Research Council.</div>\\r\\n\\r\\n<div>The National Child Development Study is also known as the British 1958 cohort.</div>\\r\\n\\r\\n<p>A searchable bibliography of published research based on data collected by the National Child Development Study is provided on the Centre for Longitudinal Studies website: www.cls.ioe.ac.uk/bibliography</p>\\r\\n\"}}"
+      },
+      {
+        "id": "jhs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:45.502",
+          "lastUpdate": "2020-02-05T11:07:44.435"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Jackson Heart Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Jackson Heart Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "JHS"
+          },
+          {
+            "lang": "fr",
+            "value": "JHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5306
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "5762efb1e4b04568f476bcc2",
+          "fileName": "MASTER JHS_logo_2011 copy.png",
+          "lang": "en",
+          "size": 52883,
+          "md5": "0466869038b1fd8d776f0e99192ca18f",
+          "timestamps": {
+            "created": "2016-06-16T14:28:06.046"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The primary objective of the Jackson Heart Study is to investigate the causes of cardiovascular disease (CVD) in African Americans to learn how to best prevent this group of diseases in the future. </p>\n<p>Specific objectives include:<ul>\n<li>Identification of factors, which influence the development, and worsening of CVD in African Americans, with an emphasis on manifestations related to high blood pressure (such as remodeling of the left ventricle of the heart, coronary artery disease, heart failure, stroke, and disorders affecting the blood vessels of the kidney).</li>\n<li>Building research capabilities in minority institutions at the undergraduate and graduate level by developing partnerships between minority and majority institutions and enhancing participation of minority investigators in large-scale epidemiologic studies.</li>\n<li>Attracting minority students to and preparing them for careers in health sciences.</li></ul></p>"
+          },
+          {
+            "lang": "fr",
+            "value": "to be completed"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5306},\"sample\":{\"noLimit\":false,\"number\":5000},\"info\":{}},\"website\":\"https://www.jacksonheartstudy.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"Images\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Adolfo Correa\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"The Jackson Heart Study conducted three cohort examinations, an initial clinic examination from 2000 to 2004 (Exam1), followed by a second exam from 2005 to 2008 (Exam 2) and a final exam in 2009 to 2013 (Exam 3). The participants are contacted annually starting in 2001, and ascertainment of hospitalizations for cardiovascular events and deaths is ongoing.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2000,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Adolfo Correa\"},\"markerPaper\":\"Taylor HA Jr, Wilson JG, Jones DW, Sarpong DF, Srinivasan A, Garrison RJ, Nelson C, Wyatt SB. Toward resolution of cardiovascular health disparities in African Americans: design and methods of the Jackson Heart Study. Ethnicity and Diseases. 2005; 15(4 Suppl 6): S6-4-17.\",\"pubmedId\":\"16320381\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"5762f043e4b04568f476bcc5\",\"title\":\"Dr.\",\"firstName\":\"Adolfo\",\"lastName\":\"Correa\",\"email\":\"Acorrea@umc.edu\",\"phone\":\"601-815-5775\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"},{\"parentId\":\"jhs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Adolfo Correa\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dbf89de4b099280256e7ae\",\"title\":\"Dr.\",\"firstName\":\"Clifton\",\"lastName\":\"Addison\",\"email\":\"clifton.addison@jsums.edu\",\"phone\":\"(601) 979-8765\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jackson State University\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Clifton Addison\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dbfa69e4b099280256e7af\",\"title\":\"Dr.\",\"firstName\":\"Donna\",\"lastName\":\"Antoine-LaVigne\",\"email\":\"Donna.antoine-lavigne@jsums.edu\",\"phone\":\"(601) 979-8740\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jackson State University\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Donna Antoine-LaVigne\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dbfabce4b099280256e7b0\",\"title\":\"Dr.\",\"firstName\":\"Brenda\",\"lastName\":\"Campbell Jenkins\",\"email\":\"brenda.w.campbell@jsums.edu\",\"phone\":\"(601) 979-8731\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jackson State University\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Brenda Campbell Jenkins\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc160de4b099280256e7b1\",\"title\":\"Dr.\",\"firstName\":\"Michael\",\"lastName\":\"Griswold\",\"email\":\"mgriswold@umc.edu\",\"phone\":\"(601) 984-2696\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"department\":{\"en\":\"Center of Biostatistics and Bioinformatics\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michael Griswold\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc16d5e4b099280256e7b2\",\"title\":\"Dr.\",\"firstName\":\"Nancy\",\"lastName\":\"Min\",\"email\":\"Ymin@umc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nancy Min\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc1777e4b099280256e7b3\",\"title\":\"Dr.\",\"firstName\":\"Solomon\",\"lastName\":\"Musani\",\"email\":\"SMusani@ms.sop.uab.edu\",\"phone\":\"(205) 975-9213\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Solomon Musani\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc1b45e4b099280256e7b4\",\"title\":\"Dr.\",\"firstName\":\"Arnita\",\"lastName\":\"Ford Norwood\",\"email\":\"AFNorwood@umc.edu\",\"phone\":\"(601) 815-5783\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Arnita Ford Norwood\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc2da5e4b099280256e7b5\",\"title\":\"Dr.\",\"firstName\":\"Marinelle\",\"lastName\":\"Payton\",\"email\":\"marinelle.payton@jsums.edu\",\"phone\":\"(601) 979-8817\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jackson State University\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Marinelle Payton\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc2df7e4b099280256e7b6\",\"title\":\"Dr.\",\"firstName\":\"Mario\",\"lastName\":\"Sims\",\"email\":\"msims2@umc.edu\",\"phone\":\"(601) 815-5784\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mario Sims\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc2f91e4b099280256e7b7\",\"title\":\"Dr.\",\"firstName\":\"Wendy\",\"lastName\":\"Brown White\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Tougaloo College\"},\"address\":{\"city\":{\"en\":\"Tougaloo\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Wendy Brown White\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57dc31f7e4b099280256e7b8\",\"title\":\"Dr.\",\"firstName\":\"James\",\"lastName\":\"Wilson\",\"email\":\"JGWilson2@umc.edu\",\"phone\":\"(601) 984-2855\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"James Wilson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57e2a005e4b099280256e7d2\",\"title\":\"Dr.\",\"firstName\":\"Nimr\",\"lastName\":\"Fahmy\",\"email\":\"nfahmy@tougaloo.edu\",\"phone\":\"601-977-7754\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Tougaloo College\"},\"address\":{\"city\":{\"en\":\"Tougaloo\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nimr Fahmy\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57e2a083e4b099280256e7d3\",\"title\":\"Dr.\",\"firstName\":\"Asoka\",\"lastName\":\"Srinivasan\",\"email\":\"asrinivasan@tougaloo.edu\",\"phone\":\"601-977-7781\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Tougaloo College\"},\"address\":{\"city\":{\"en\":\"Tougaloo\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Asoka Srinivasan\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57e2a103e4b099280256e7d4\",\"title\":\"Dr.\",\"firstName\":\"Karen\",\"lastName\":\"Winters\",\"email\":\"kwinters@umc.edu\",\"phone\":\"(601) 984-6246\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Karen Winters\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"5762f043e4b04568f476bcc5\",\"title\":\"Dr.\",\"firstName\":\"Adolfo\",\"lastName\":\"Correa\",\"email\":\"Acorrea@umc.edu\",\"phone\":\"601-815-5775\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Mississippi Medical Center\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Jackson\"},\"state\":\"Mississippi\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"jhs\",\"role\":\"investigator\"},{\"parentId\":\"jhs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Adolfo Correa\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "mcs",
+        "timestamps": {
+          "created": "2019-07-23T14:14:14.258",
+          "lastUpdate": "2020-02-05T11:07:51.832"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Millenium Cohort Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Millenium Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MCS"
+          },
+          {
+            "lang": "fr",
+            "value": "MCS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 18552
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objective of the study is to chart the initial conditions of social, economic and health advantages and disadvantages facing children born at the start of the 21st century. The MCS covers a wide variety of topics including parenting, child care, school choice, child behaviour and cognitive development,&nbsp;child and parental health, parents' employment and education, income and poverty, household characteristics,&nbsp;neighbourhood and residential mobility, and social capital and ethnicity.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The main objective of the study is to chart the initial conditions of social, economic and health advantages and disadvantages facing children born at the start of the 21st century. The MCS covers a wide variety of topics including parenting, child care, school choice, child behaviour and cognitive development,&nbsp;child and parental health, parents' employment and education, income and poverty, household characteristics,&nbsp;neighbourhood and residential mobility, and social capital and ethnicity.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":18552},\"sample\":{\"noLimit\":false,\"number\":11027},\"info\":{\"en\":\"<p>18 552 families (18 827 children)</p>\\r\\n\"}},\"website\":\"http://www.cls.ioe.ac.uk/mcs\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof Emla Fitzsimons\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants were first surveyed when they were 9 months of age. Follow-ups have currently been conducted at ages 3, 5, 7 and 11 years. A further sweep of data collection is currently taking place for age 14 years.</p>\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>A key asset of the MCS is that certain sub-groups of the population were intentionally over-sampled, namely children living in disadvantaged areas, children of ethnic minority backgrounds and children growing up in the smaller nations of the UK.</p><p>The study is part of the CLOSER network (www.closer.ac.uk).</p>\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":2001,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof Emla Fitzsimons\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Connelly R, Platt L. Cohort Profile: UK Millennium Cohort Study (MCS). International journal of epidemiology, 2014: 1-7.\",\"pubmedId\":\"24550246\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b01078388693a6\",\"title\":\"Prof\",\"firstName\":\"Emla\",\"lastName\":\"Fitzsimons\",\"email\":\"e.fitzsimons@ioe.ac.uk\",\"phone\":\"+44 (0)20 7331 5129\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institute of Education, University of London\"},\"department\":{\"en\":\"Department of Quantitative Social Science\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"mcs\",\"role\":\"investigator\"},{\"parentId\":\"mcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Emla Fitzsimons\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b01078388693a6\",\"title\":\"Prof\",\"firstName\":\"Emla\",\"lastName\":\"Fitzsimons\",\"email\":\"e.fitzsimons@ioe.ac.uk\",\"phone\":\"+44 (0)20 7331 5129\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institute of Education, University of London\"},\"department\":{\"en\":\"Department of Quantitative Social Science\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"mcs\",\"role\":\"investigator\"},{\"parentId\":\"mcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Emla Fitzsimons\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "lasa",
+        "timestamps": {
+          "created": "2019-07-23T14:13:54.111",
+          "lastUpdate": "2021-05-05T09:39:12.536"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Longitudinal Aging Study Amsterdam"
+          },
+          {
+            "lang": "fr",
+            "value": "Longitudinal Aging Study Amsterdam"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LASA"
+          },
+          {
+            "lang": "fr",
+            "value": "LASA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5132
+        },
+        "countries": [
+          "NLD"
+        ],
+        "logo": {
+          "id": "6f69158f-8fe2-4561-9458-cfc004be017a",
+          "fileName": "lasa_logo.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 14047,
+          "md5": "9f7184d108a88a9935dd4431869dab07",
+          "timestamps": {
+            "created": "2017-09-21T10:00:24.115"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>LASA is designed to be an interdisciplinary, longitudinal study. Although basically scientific in nature, the study should provide a basis for developing and evaluating (central and local government) policy in the field of aging. The global objective of current policy in the field of aging can be formulated as enhancing the autonomy and quality of life of older persons. It is expected that by using longitudinal data, policy relevant aspects of aging can be identified and new policy aims can be developed. Moreover, assumptions from which policy measures are developed can be tested, and effects of policy changes can be assessed prospectively. LASA is primarily an observational study; the database will allow testing of various specific hypotheses. Full intervention studies will not be included in LASA.</p>\n<p>The attached data dictionaries only contain a selection of all variables which have been translated from Dutch.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>LASA is designed to be an interdisciplinary, longitudinal study. Although basically scientific in nature, the study should provide a basis for developing and evaluating (central and local government) policy in the field of aging. The global objective of current policy in the field of aging can be formulated as enhancing the autonomy and quality of life of older persons. It is expected that by using longitudinal data, policy relevant aspects of aging can be identified and new policy aims can be developed. Moreover, assumptions from which policy measures are developed can be tested, and effects of policy changes can be assessed prospectively. LASA is primarily an observational study; the database will allow testing of various specific hypotheses. Full intervention studies will not be included in LASA.</p>\n<p>The attached data dictionaries only contain a selection of all variables which have been translated from Dutch.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5132},\"sample\":{\"noLimit\":false,\"number\":4188}},\"website\":\"http://www.lasa-vu.nl/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dorly Deeg\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Every three years, the participants are re-examined.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dorly Deeg\"},\"markerPaper\":\"Huisman M, Poppelaars J, van der Horst M, Beekman AT, Brug J, van Tilburg TG,  Deeg DJ. Cohort profile: the Longitudinal Aging Study Amsterdam. Int J Epidemiol. 2011 Aug;40(4):868-76.\",\"pubmedId\":\"21216744\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"59c3c720e4b0d9d77cd2df03\",\"title\":\"Dr.\",\"firstName\":\"Marja \",\"lastName\":\"Aartsen\",\"email\":\"m.j.aartsen@vu.nl\",\"phone\":\"+31 20 59 86784\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"VU University Amsterdam\"}},\"studyMemberships\":[{\"parentId\":\"lasa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Marja  Aartsen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c720e4b0d9d77cd2df04\",\"title\":\"Dr.\",\"firstName\":\"Natasja \",\"lastName\":\"Schoor\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"VU University medical centre Amsterdam\"}},\"studyMemberships\":[{\"parentId\":\"lasa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Natasja  Schoor\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c720e4b0d9d77cd2df05\",\"title\":\"Dr.\",\"firstName\":\"Marjolein \",\"lastName\":\"Groenou\",\"email\":\"m.i.broesevangroenou@vu.nl\",\"phone\":\"+31 20 59 86898\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"VU University Amsterdam\"}},\"studyMemberships\":[{\"parentId\":\"lasa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Marjolein  Groenou\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c720e4b0d9d77cd2df06\",\"title\":\"Dr.\",\"firstName\":\"Hannie \",\"lastName\":\"Comijs\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"VU University medical centre Amsterdam\"}},\"studyMemberships\":[{\"parentId\":\"lasa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Hannie  Comijs\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"59c3c720e4b0d9d77cd2df07\",\"title\":\"Dr.\",\"firstName\":\"Dorly\",\"lastName\":\"Deeg\",\"email\":\"djh.deeg@vumc.nl\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"VU University medical centre Amsterdam\"}},\"studyMemberships\":[{\"parentId\":\"lasa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Dorly Deeg\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>See&nbsp;http://www.lasa-vu.nl/community/staff/LASAstaff.html for a complete list of LASA staff.</p>\\r\\n\\r\\n<p>Function of investigators:</p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Dr Dorly Deeg&nbsp;(principal investigator)</li>\\r\\n\\t<li>Dr Marja Aartsen (head of group on social functioning)</li>\\r\\n\\t<li>Dr Marjolein Broese van Groenou ( head of group use of care)</li>\\r\\n\\t<li>Dr Hannie Comijs (head of group on emotional and cognitive functioning)</li>\\r\\n\\t<li>Dr Natasja van Schoor (co-head of group on physical functioning)</li>\\r\\n</ul>\\r\\n\"}}"
+      },
+      {
+        "id": "ngcs",
+        "timestamps": {
+          "created": "2019-07-23T14:14:33.041",
+          "lastUpdate": "2021-04-09T15:49:54.518"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Cognition and Aging in the USA"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CogUSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1514
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The goals of CogUSA were: \n1) to develop efficient methods of assessing well-recognized components of intelligence and personality that can be administered by either face-to-face or telephone surveys;\n2) to collect multivariate information to better understand how various cognitive abilities change with age."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1514},\"sample\":{\"noLimit\":false}},\"website\":\"\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"John J. McArdle, Ph.D.\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Three waves took place between 2007 and 2009.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2007,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"John J. McArdle, Ph.D.\",\"date\":\"1969-12-31\"},\"markerPaper\":\"McArdle, J. J. (2005). The development of RAM rules for latent variable structural equation modeling. In A. Madeau & J.J. McArdle, (Eds.) Contemporary Advances in Psychometrics (pp. 225-273). Mahwah, NJ: Lawrence Erlbaum Associates, Inc.\",\"endYear\":2009,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869439\",\"title\":\"Dr.\",\"firstName\":\"John J.\",\"lastName\":\"McArdle\",\"email\":\"jmcardle@usc.edu\",\"phone\":\"(213) 740-2276\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ngcs\",\"role\":\"investigator\"},{\"parentId\":\"ngcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John J. McArdle\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886943a\",\"title\":\"Dr.\",\"firstName\":\"Williard L.\",\"lastName\":\"Rodgers\",\"email\":\"wrodgers@umich.edu\",\"phone\":\"734.763.6623\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"},\"department\":{\"en\":\"Population Studies Center\"},\"address\":{\"city\":{\"en\":\"Ann Arbor\"},\"state\":\"Michigan\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ngcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Williard L. Rodgers\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869348\",\"firstName\":\"Robert J.\",\"lastName\":\"Willis\",\"email\":\"rjwillis@umich.edu\",\"phone\":\"734.936.0314\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert J. Willis\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869439\",\"title\":\"Dr.\",\"firstName\":\"John J.\",\"lastName\":\"McArdle\",\"email\":\"jmcardle@usc.edu\",\"phone\":\"(213) 740-2276\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"ngcs\",\"role\":\"investigator\"},{\"parentId\":\"ngcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John J. McArdle\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "nora",
+        "timestamps": {
+          "created": "2019-07-23T14:14:37.797",
+          "lastUpdate": "2021-08-04T18:09:39.381"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Nordic Research on Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NORA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1465
+        },
+        "countries": [
+          "DNK",
+          "SWE",
+          "FIN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The purpose of the study was to analyze functional capacity, health, living habits and living conditions among 75-year-old residents of three Nordic localities, namely Glostrup in Denmark, Göteborg in Sweden, and Jyväskylä in Finland."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1465},\"sample\":{\"noLimit\":false}},\"website\":\"https://www.gerec.fi/en/nordic-comparative-and-longitudinal-study-of-75-80-year-olds-nora-1/\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Baseline measurements were conducted in Jyväskylä and Glostrup in 1989, and in Göteborg in 1990. The follow-up study was carried out five years later.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1989,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Kauppinen, M., Davidsen, M., & Valter, S. (2002). Design, material and methods in the NORA study. Nordic Research on Ageing. Aging clinical and experimental research, 14(3 Suppl), 5-9.\",\"endYear\":1995,\"pubmedId\":\"12475128\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869319\",\"title\":\"Dr.\",\"firstName\":\"Boo \",\"lastName\":\"Johansson\",\"email\":\"boo.johansson@psy.gu.se\",\"phone\":\"+46 (31) 786 16 56\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Gothenburg\"},\"countryIso\":\"SE\"}},\"studyMemberships\":[{\"parentId\":\"h-70\",\"role\":\"investigator\"},{\"parentId\":\"nora\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Boo  Johansson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944b\",\"title\":\"Dr.\",\"firstName\":\"Pertti\",\"lastName\":\"Era\",\"email\":\"pertti.era@sport.jyu.fi\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Jyvaskyla\"},\"department\":{\"en\":\"Dep. Sports and Health Sciences\"},\"address\":{\"countryIso\":\"Finland\"}},\"studyMemberships\":[{\"parentId\":\"nora\",\"role\":\"investigator\"},{\"parentId\":\"nora\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Pertti Era\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b010783886944b\",\"title\":\"Dr.\",\"firstName\":\"Pertti\",\"lastName\":\"Era\",\"email\":\"pertti.era@sport.jyu.fi\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Jyvaskyla\"},\"department\":{\"en\":\"Dep. Sports and Health Sciences\"},\"address\":{\"countryIso\":\"Finland\"}},\"studyMemberships\":[{\"parentId\":\"nora\",\"role\":\"investigator\"},{\"parentId\":\"nora\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Pertti Era\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "invece.ab",
+        "timestamps": {
+          "created": "2019-07-23T14:13:43.184",
+          "lastUpdate": "2021-05-05T09:39:10.801"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Brain Ageing in Abbiategrasso Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "InveCe.Ab"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1321
+        },
+        "countries": [
+          "ITA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The goals of the InveCe.Ab study are:</p>\r\n\r\n<ul>\r\n\t<li>To estimate the prevalence and incidence of dementia and its subtypes, mild cognitive impairment, and cognitive impairment with no dementia in people 70 to 74 years of age at baseline;</li>\r\n\t<li>To investigate the potential risk or protective value of various epidemiologic, clinical, and biological factors as determinants of the quality of cognitive aging and dementia onset. Special attention is given to understanding how modifiable risk factors impact cognitive impairment with and without dementia.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1321},\"sample\":{\"noLimit\":false,\"number\":1321}},\"website\":\"http://www.golgicenci.it/en/studio-invece/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Antonio Guaita\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The first follow-up assessments took place approximately 24 months after the first examination and the second after 48 months.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2009,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Antonio Guaita\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Guaita A, Colombo M, Vaccaro R, et al. Brain aging and dementia during the transition from late adulthood to old age: design and methodology of the \\\"Invece.Ab\\\" population-based study. BMC Geriatrics, 2013; 13: 98-106.\",\"endYear\":2015,\"pubmedId\":\"24063518\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869361\",\"title\":\"MD.\",\"firstName\":\"Antonio \",\"lastName\":\"Guaita\",\"email\":\"a.guaita@golgicenci.it\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Golgi Cenci Foundation\"},\"address\":{\"city\":{\"en\":\"Abbiategrasso\"},\"state\":\"Milan\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"invece.ab\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Antonio  Guaita\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869362\",\"title\":\"Dr.\",\"firstName\":\"Daniele\",\"lastName\":\"Zaccaria\",\"email\":\"d.zaccaria@golgicenci.it\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Golgi Cenci Foundation\"},\"address\":{\"city\":{\"en\":\"Abbiategrasso\"},\"state\":\"Milan\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"invece.ab\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Daniele Zaccaria\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "map",
+        "timestamps": {
+          "created": "2019-07-23T14:14:09.051",
+          "lastUpdate": "2021-05-05T09:39:16.212"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Memory and Aging Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MAP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1700
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "9696da5c-e9e3-47b5-a87c-4e9eff1047d0",
+          "fileName": "MAPLogo.png",
+          "type": "logo",
+          "lang": "en",
+          "size": 18843,
+          "md5": "391ffc51dd3624a240cbf000a6b7f8da",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.887"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The overall goal of the Memory and Aging Project is to identify the structural bases of neural reserve and examine the neurobiologic mechanisms through which environmental and genetic risk factors lead to the functional consequences of four neurologic diseases of aging.</span></p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1700},\"sample\":{\"noLimit\":false,\"number\":1700}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"David Bennett\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Annual follow-up</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1997,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"David Bennett\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Bennett DA, Schneider JA, Buchman AS, Barnes LL, Boyle PA, Wilson RS. Overview and Findings From the Rush Memory and Aging Project. Curr Alzheimer Res. 2012; 9(6):646-663.\",\"pubmedId\":\"22471867\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869394\",\"title\":\"MD.\",\"firstName\":\"David A. \",\"lastName\":\"Bennett\",\"email\":\"David_A_Bennett@rush.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush University Medical Center\"},\"address\":{\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"investigator\"},{\"parentId\":\"ros\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David A.  Bennett\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869395\",\"firstName\":\"Annie \",\"lastName\":\"Barz\",\"email\":\"Anne_Barz@rush.edu\",\"phone\":\"312-942-8974\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"department\":{\"en\":\"Rush Univeristy Medical Center\"},\"address\":{\"street\":{\"en\":\"600 S. Paulina, room 1029\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60612\",\"state\":\"IL\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Annie  Barz\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549162e4b0107838869396\",\"firstName\":\"Gregory \",\"lastName\":\"Klein\",\"email\":\"Gregory_Klein@rush.edu\",\"phone\":\"312-942-3365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"address\":{\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Gregory  Klein\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>The ability to maintain cognition despite the accumulation of AD pathology is known as cognitive or neural reserve. Theories of neural reserve include brain reserve capacity, and neural efficiency or compensation, i.e., brains differ in their response to the accumulation of AD pathology. In the initial funding period we found that many older persons without dementia or MCI meet pathologic criteria for AD, indicating that other factors must be involved in determining the extent to which AD pathology impairs cognition. We found that AD pathology often does not cause dementia in the absence of cerebral infarcts and Lewy bodies. Further, we found that loneliness, psychological distress, and cognitive activity were all related to incident AD, but were not related to measures of AD pathology, infarcts, or Lewy bodies, suggesting that other as yet unknown factors can alter brain reserve capacity. Finally, we found that the relation of AD pathology to cognition varied by social network size and level of processing resources (working memory and perceptual speed), consistent with neural efficiency or compensation. The proposed continuation of the Rush Memory and Aging Project, a community-based longitudinal epidemiologic study of risk factors for incident AD that includes brain donation at death, will build on findings from the initial funding period. The choice of risk factors was guided by the recommendations of the recent Cognitive and Emotional Health Project. The renewal is organized into three conceptual themes linking factors to incident AD and neuropathology. Specifically, we hypothesize that a) apolipoprotein E allele status, diabetes, and pulmonary function will be associated with incident AD via cerebrovascular pathology; b) the relation of neuropathology to cognition will vary by level of life course SES and physical activity; and c) depressive symptoms and parkinsonian signs will predict incident AD, but will actually represent early non-cognitive manifestations of AD pathology in neuronal populations subserving affective behavior and motor function, respectively. Since prevention is the best long-term strategy for reducing the burden of cognitive impairment in the U.S., and understanding the neurobiologic pathways linking risk factors to cognition is essential for the development of therapeutic interventions, the proposed study, with its involvement of community dwelling older men and women as subjects with a wide range of SES, is in a position to provide new knowledge critical to public health. The prevention of Alzheimer's disease provides the best long-term strategy to reduce the human and economic toll of disease, and understanding the biologic pathways linking risk factors to cognition is essential for developing therapeutic interventions. Thus, the proposed epidemiologic study of risk factors for AD that includes organ donation, with its involvement of community dwelling older men and women with a wide range of socioeconomic status, is in a position to provide new knowledge critical to public health.</p>\\r\\n\\r\\n<p><strong>Data/Bio-specimen Access: </strong> To apply for access to RADC data/tissue, please enter an electronic request at our website: https://www.radc.rush.edu/res/ext/home.htm.</p>\\r\\n\"}}"
+      },
+      {
+        "id": "tlcs",
+        "timestamps": {
+          "created": "2019-07-23T14:15:33.962",
+          "lastUpdate": "2020-07-21T12:03:42.672"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Terman Life-Cycle Study of Children with High Ability"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Terman"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1528
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The study aimed to discover similarities and differences between a group of children with high intelligence quotients and a group of children typical of the general population. It also aimed to replace myths about intellectually superior children with documented facts.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1528},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"<p>1470 children with an IQ of 135 or above</p>\\r\\n\\r\\n<p>58 siblings</p>\\r\\n\"}},\"website\":\"http://thedata.harvard.edu/dvn/dv/mra/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/00882\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants were restudied at 5 to 10 years intervals over the subsequent 70 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1922,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Schwartz JE, Friedman HS, Tucker JS, Tomlinson-Keasey C, Wingard DL, Criqui MH. Sociodemographic and psychosocial factors in childhood as predictors of adult mortality. American journal of public health. 1995; 85(9): 1237-45.\",\"endYear\":1991,\"pubmedId\":\"7661231\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b0107838869491\",\"title\":\"Dr.\",\"firstName\":\"Lewis M. \",\"lastName\":\"Terman\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"},\"address\":{\"city\":{\"en\":\"Stanford\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"tlcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lewis M.  Terman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869492\",\"title\":\"Dr.\",\"firstName\":\"Robert R. \",\"lastName\":\"Sears\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"},\"address\":{\"city\":{\"en\":\"Stanford\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"tlcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert R.  Sears\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869493\",\"title\":\"Dr.\",\"firstName\":\"Lee \",\"lastName\":\"Cronbach\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"},\"address\":{\"city\":{\"en\":\"Stanford\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"tlcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lee  Cronbach\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869494\",\"title\":\"Dr.\",\"firstName\":\"Pauline S. \",\"lastName\":\"Sears\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"},\"address\":{\"city\":{\"en\":\"Stanford\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"tlcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Pauline S.  Sears\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869495\",\"title\":\"Dr.\",\"firstName\":\"Albert \",\"lastName\":\"Hastorf\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"},\"address\":{\"city\":{\"en\":\"Stanford\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"tlcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Albert  Hastorf\"},\"role\":\"investigator\"}],\"contact\":[]}}"
+      },
+      {
+        "id": "vls",
+        "timestamps": {
+          "created": "2019-07-23T14:15:42.010",
+          "lastUpdate": "2021-11-03T13:17:56.240"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Victoria Longitudinal Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Victoria Longitudinal Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "VLS"
+          },
+          {
+            "lang": "fr",
+            "value": "VLS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1598
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "fb8d0a77-9a6c-4a78-a709-d4efcfe17a52",
+          "fileName": "Banner2.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 21603,
+          "md5": "a79e5595b5978ae5cfcfc3ab1f150166",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.151"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>A 20-year prospective study, the VLS operates in two coordinated labs: the main scientific headquarters at the University of Alberta (UAlberta) and a satellite data collection lab at the University of Victoria (UVic).</p>\n\n<p>The general objective of the VLS is to examine actual short- and long-term changes in (and relationships among) multiple aspects of health, functionality, cognition, and neuropsychological status in middle-aged and older adults. Accordingly, we collect comprehensive data on participants (initially aged 55-85 years; now ranging from about 63-103 years) through repeated observations at regular intervals (3-4 years). Three sequential cohorts are followed longitudinally, including VLS Sample 1 (begun in the 1980s), VLS Sample 2 (begun in the 1990s), and VLS Sample 3 (begun in the 2000s). Multiple comparison and control groups are developed as needed.</p>\n\n<p>The continuing <strong>general aim </strong>of the VLS is to follow successive, large, and well-characterized cohorts of initially healthy (physically, cognitively, psychologically) middle-aged and older adults as they experience a variety of normal and pathological changes related to cognition.</p>\n\n<p>The <strong>descriptive goal </strong>is to chart multiple cognitive differences and changes over selected periods (or age ranges).</p>\n\n<p>The <strong>explanatory goal </strong>is to identify interrelationships, covariates, modulators, and protection/risk factors as they pertain to cognitive differences, changes, and sequelae.</p>\n\n<p>The <strong>public health goal </strong>is to pursue descriptive and explanatory research not only in typical aging but in response to:</p>\n\n<p>(a) changing health status of VLS participants,</p>\n\n<p>(b) evolving public health concerns and priorities, and</p>\n\n<p>(c) emerging issues of public and personal health relevance (e.g., diabetes and cognitive aging).</p>\n\n<p><strong>Target conditions </strong>include:</p>\n\n<p>(a) healthy cognitive changes with aging (e.g., successful aging),</p>\n\n<p>(b) normal cognitive decline,</p>\n\n<p>(c) preclinical and neurodegenerative decline (e.g., mild cognitive impairment), and</p>\n\n<p>(d) variable and differential cases and trajectories.</p>\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>A 20-year prospective study, the VLS operates in two coordinated labs: the main scientific headquarters at the University of Alberta (UAlberta) and a satellite data collection lab at the University of Victoria (UVic).</p>\n\n<p>The general objective of the VLS is to examine actual short- and long-term changes in (and relationships among) multiple aspects of health, functionality, cognition, and neuropsychological status in middle-aged and older adults. Accordingly, we collect comprehensive data on participants (initially aged 55-85 years; now ranging from about 63-103 years) through repeated observations at regular intervals (3-4 years). Three sequential cohorts are followed longitudinally, including VLS Sample 1 (begun in the 1980s), VLS Sample 2 (begun in the 1990s), and VLS Sample 3 (begun in the 2000s). Multiple comparison and control groups are developed as needed.</p>\n\n<p>The continuing <strong>general aim </strong>of the VLS is to follow successive, large, and well-characterized cohorts of initially healthy (physically, cognitively, psychologically) middle-aged and older adults as they experience a variety of normal and pathological changes related to cognition.</p>\n\n<p>The <strong>descriptive goal </strong>is to chart multiple cognitive differences and changes over selected periods (or age ranges).</p>\n\n<p>The <strong>explanatory goal </strong>is to identify interrelationships, covariates, modulators, and protection/risk factors as they pertain to cognitive differences, changes, and sequelae.</p>\n\n<p>The <strong>public health goal </strong>is to pursue descriptive and explanatory research not only in typical aging but in response to:</p>\n\n<p>(a) changing health status of VLS participants,</p>\n\n<p>(b) evolving public health concerns and priorities, and</p>\n\n<p>(c) emerging issues of public and personal health relevance (e.g., diabetes and cognitive aging).</p>\n\n<p><strong>Target conditions </strong>include:</p>\n\n<p>(a) healthy cognitive changes with aging (e.g., successful aging),</p>\n\n<p>(b) normal cognitive decline,</p>\n\n<p>(c) preclinical and neurodegenerative decline (e.g., mild cognitive impairment), and</p>\n\n<p>(d) variable and differential cases and trajectories.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1598},\"sample\":{\"noLimit\":false,\"number\":705}},\"website\":\"http://www.ualberta.ca/~vlslab/index.html\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stuart MacDonald\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"other\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>There are 3 sequential cohorts of participants (Sample 1 first tested in 1986, n=487; Sample 2 first tested in 1992, n=534; Sample 3 first tested in 2000, n=577).&nbsp; Longitudinal follow-up testing is conducted at three year intervals from a participant's original start date.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>The Victoria Longitudinal Study follows a Longitudinal Sequential design. It began in the late 1980s with the first sample. The second independent sample began in the 1990s. The third independent sample began in the early 2000s. Each sample is tested repeatedly and regularly (3-4-year intervals). Thus, Sample 1 has been tested on eight different occasions (over about 24 years), Sample 2 has been tested on five different occasions (over about 15 years), and Sample 3 has been tested on three occasions (over about 8 years). Each occasion of testing involves about 12 hours of contact time (plus homework!) with each participant. All participants in the three samples are initially between the ages of 55 and 85 years. Multiple comparison groups (e.g., younger, middle-aged, special populations) of adults have been assembled. Whereas the VLS static N is about 2000, the dynamic n is about 6000.</p>\\r\\n\"},\"otherRecruitment\":{}},\"startYear\":1986,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stuart MacDonald\",\"date\":\"1969-12-31\"},\"markerPaper\":\"http://www.ualberta.ca/~vlslab\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694a8\",\"title\":\"Dr.\",\"firstName\":\"Roger A.\",\"lastName\":\"Dixon\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Alberta\"},\"department\":{\"en\":\"Canada Research Chair, Professor of Psychology\"},\"address\":{\"city\":{\"en\":\"Edmonton\"},\"state\":\"Alberta\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"vls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Roger A. Dixon\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694a9\",\"title\":\"Dr.\",\"firstName\":\"Stuart W.S.\",\"lastName\":\"MacDonald\",\"email\":\"smacd@uvic.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Victoria\"},\"department\":{\"en\":\"Associate Professor\"},\"address\":{\"city\":{\"en\":\"Victoria\"},\"state\":\"British Columbia\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"vls\",\"role\":\"investigator\"},{\"parentId\":\"vls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stuart W.S. MacDonald\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694a9\",\"title\":\"Dr.\",\"firstName\":\"Stuart W.S.\",\"lastName\":\"MacDonald\",\"email\":\"smacd@uvic.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Victoria\"},\"department\":{\"en\":\"Associate Professor\"},\"address\":{\"city\":{\"en\":\"Victoria\"},\"state\":\"British Columbia\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"vls\",\"role\":\"investigator\"},{\"parentId\":\"vls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stuart W.S. MacDonald\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Biological samples are currently being processed; access to biosamples will be considered in the future.</p>\\r\\n\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "ship",
+        "timestamps": {
+          "created": "2019-07-23T14:15:14.559",
+          "lastUpdate": "2022-11-15T17:29:50.191"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Study of Health in Pomerania"
+          },
+          {
+            "lang": "fr",
+            "value": "Study of Health in Pomerania"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SHIP"
+          },
+          {
+            "lang": "fr",
+            "value": "SHIP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 12728
+        },
+        "countries": [
+          "DEU"
+        ],
+        "logo": {
+          "id": "6836e78a-0617-4c4f-b95d-93a1b125a193",
+          "fileName": "ship-logo.png",
+          "type": "logo",
+          "lang": "en",
+          "size": 9577,
+          "md5": "b8c2ea1765a5848dbf291261a758b53f",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.851"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Study of Health In Pomerania is a population-based cohort study. It has two main objectives:</p>\n\n* To assess prevalence and incidence of common risk factors, subclinical disorders and clinical diseases; and\n* To investigate the complex associations among risk factors, subclinical disorders and clinical diseases.\n\n<p>A particular characteristic of the SHIP is that it does not focus on a selected disease; it rather attempts to describe health-related conditions with the widest focus possible. Important medical areas of investigation include cardiovascular diseases, diabetes mellitus, liver and biliary tract diseases, neurological diseases, thyroid diseases, dental diseases, lung diseases, addiction and risk behaviour, among others.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>The Study of Health In Pomerania has two main objectives:</p>\n\n<ol>\n\t<li>to assess prevalence and incidence of common risk factors, subclinical disorders and clinical diseases; and</li>\n\t<li>to investigate the complex associations among risk factors, subclinical disorders and clinical diseases.</li>\n</ol>\n\n<p>A particular characteristic of the SHIP is that it does not focus on a selected disease; it rather attempts to describe health-related conditions with the widest focus possible. Important medical areas of investigation include cardiovascular diseases, diabetes mellitus, liver and biliary tract diseases, neurological diseases, thyroid diseases, dental diseases, lung diseases, addiction and risk behaviour, among others.</p>\n<p>The attached data dictionaries only contain a selection of all variables which have been translated from German.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "cognitive_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":12728},\"sample\":{\"noLimit\":false,\"number\":12728},\"info\":{\"en\":\"<p>START cohort: 4308 participants</p><p>TREND cohort: 4420 participants</p><p>NEXT cohort: data collection is ongoing, target N=4000 participants</p>\"}},\"website\":\"http://www2.medizin.uni-greifswald.de/cm/fv/ship.html\",\"access\":{\"access_bio_samples\":\"yes\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"PD Dr. Carsten Oliver Schmidt\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Participants of the START cohort have been followed up four times: 5 years, 11 years, 16 years, and 21 years after the initial data collection</p>\\n\\n<p>Participants of the TREND cohort have been followed up once 6 years after the initial data collection.</p>\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"\"}},\"startYear\":1997,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"PD Dr. Carsten Oliver Schmidt\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Völzke H, Schössow J, Schmidt CO, et al. Cohort Profile Update: The Study of Health in Pomerania (SHIP), International Journal of Epidemiology, 2022;dyac034.\",\"pubmedId\":\"35348705\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b010783886948b\",\"title\":\"Prof.\",\"firstName\":\"Dr. med. Henry \",\"lastName\":\"Völzke\",\"email\":\"voelzke@uni-greifswald.de\",\"phone\":\"03834 86 7707\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institute for Community Medicine\"},\"address\":{}},\"studyMemberships\":[{\"parentId\":\"ship\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Dr. med. Henry  Völzke\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b010783886948c\",\"firstName\":\"Institute for Community Medicine \",\"lastName\":\"SHIP-KEF\",\"phone\":\"++ 49 (0) 3834/86 75 41\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Research Network Community Medicine\"},\"address\":{\"city\":{\"en\":\"Greifswald\"},\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"ship\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Institute for Community Medicine  SHIP-KEF\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b010783886948d\",\"firstName\":\"PD Dr. Carsten-Oliver \",\"lastName\":\"Schmidt\",\"email\":\"carsten.schmidt@uni-greifswald.de\",\"phone\":\"0049 3834 867713\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institut für Community Medicine\"},\"address\":{}},\"studyMemberships\":[{\"parentId\":\"ship\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"PD Dr. Carsten-Oliver  Schmidt\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"Additional publications are available at [www.fvcm.med.uni-greifswald.de/publikationen_engl.html](https://www.fvcm.med.uni-greifswald.de/publikationen_engl.html).\"},\"access_fees\":false,\"access_restrictions\":false,\"otherMarkerPapers\":[{\"paper\":\"Völzke H, Alte D, Schmidt CO, et al. Cohort profile: the study of health in Pomerania. International Journal of Epidemiology. 2011;40(2):294-307.\",\"pubmedId\":\"20167617\"}],\"NoAccess\":{\"en\":\"\"},\"access_supplementary_info\":{\"en\":\"Data will be made available for the NEXT cohort once the data collection has been terminated.\"}}"
+      },
+      {
+        "id": "sebas",
+        "timestamps": {
+          "created": "2019-07-23T14:15:12.312",
+          "lastUpdate": "2020-06-22T18:44:08.594"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Social Environment and Biomarkers of Aging Study in Taiwan"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SEBAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2024
+        },
+        "countries": [
+          "TWN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The Social Environment and Biomarkers of Aging Study (SEBAS) in Taiwan was initially developed to explore how understanding the relationships among life challenges, the social environment&nbsp;and health can be enhanced by incorporating biological markers of health and stress. Specific aims of the initial study included:</span></p>\n\n<ol>\n\t<li><span>Investigating the extent to which biological markers of stress and chronic illness are related to reports of life events;</span></li>\n\t<li><span>Examining the extent to which biological markers help to explain variation in health across social hierarchies and networks; and</span></li>\n\t<li><span>Exploring the associations among biological markers, data from physicians' examinations, and self-reported health status, and their links to survival. &nbsp;</span></li>\n</ol>\n\n<p><span>​With the addition of longitudinal data, the goals of the project have expanded to understanding the antecedents, correlates,and consequences of levels and changes in biological measures, health, and survival. &nbsp;</span></p>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2024},\"sample\":{\"noLimit\":false,\"number\":1420}},\"website\":\"https://cph.georgetown.edu/research/taiwan/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr Dana Glei\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants were assessed in 2000 and 2006.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2000,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Dana Glei\"},\"markerPaper\":\"Cornman, Glei, Goldman et al. Cohort Profile: The Social Environment and Biomarkers of Aging Study (SEBAS) in Taiwan. IJE 2014. \",\"endYear\":2007,\"pubmedId\":\"25205853\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def3\",\"title\":\"Dr.\",\"firstName\":\"Yi-Li\",\"lastName\":\"Chuang\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yi-Li Chuang\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def4\",\"title\":\"Dr.\",\"firstName\":\"Ming-Cheng\",\"lastName\":\"Chang\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ming-Cheng Chang\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def5\",\"title\":\"Dr.\",\"firstName\":\"Shu-Hui\",\"lastName\":\"Lin\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Shu-Hui Lin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def6\",\"title\":\"Dr.\",\"firstName\":\"Hui-Sheng\",\"lastName\":\"Lin\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Hui-Sheng Lin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def7\",\"title\":\"Dr.\",\"firstName\":\"Dana A.\",\"lastName\":\"Glei\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Georgetown University\"},\"department\":{\"en\":\"Center for Population and Health\"},\"address\":{\"city\":{\"en\":\"Washington\"},\"state\":\"DC\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Dana A. Glei\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def8\",\"title\":\"Dr.\",\"firstName\":\"Hsia-Yuan\",\"lastName\":\"Liu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Hsia-Yuan Liu\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2def9\",\"title\":\"Dr.\",\"firstName\":\"Noreen\",\"lastName\":\"Goldman\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Princeton University\"},\"department\":{\"en\":\"Office of Population Research\"},\"address\":{\"city\":{\"en\":\"Princeton\"},\"state\":\"NJ\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Noreen Goldman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2defa\",\"title\":\"Dr.\",\"firstName\":\"Baai-Shyun\",\"lastName\":\"Hurng\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Baai-Shyun Hurng\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2defb\",\"title\":\"Dr.\",\"firstName\":\"I-Wen\",\"lastName\":\"Liu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"I-Wen Liu\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2defc\",\"title\":\"Dr.\",\"firstName\":\"Yu-Hsuan\",\"lastName\":\"Lin\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ministry of Health and Welfare\"},\"department\":{\"en\":\"Health Promotion Administration\"},\"address\":{\"city\":{\"en\":\"Taichung\"},\"countryIso\":\"TW\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yu-Hsuan Lin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2defd\",\"title\":\"Dr.\",\"firstName\":\"Maxine \",\"lastName\":\"Weinstein\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Georgetown University\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Maxine  Weinstein\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"59c3c705e4b0d9d77cd2defe\",\"title\":\"Dr.\",\"firstName\":\"Dana A.\",\"lastName\":\"Glei\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Georgetown University\"},\"department\":{\"en\":\"Center for Population and Health\"},\"address\":{\"city\":{\"en\":\"Washington\"},\"state\":\"DC\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"sebas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Dana A. Glei\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "uncahs",
+        "timestamps": {
+          "created": "2019-07-23T14:15:38.663",
+          "lastUpdate": "2020-02-05T11:08:14.809"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "University of North Carolina Alumni Heart Study"
+          },
+          {
+            "lang": "fr",
+            "value": "University of North Carolina Alumni Heart Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "UNCAHS"
+          },
+          {
+            "lang": "fr",
+            "value": "UNCAHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4705
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The UNCAHS study examines the hypothesis that hostility and related psychosocial factors are involved in the pathogenesis of coronary heart disease.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The UNCAHS study examines the hypothesis that hostility and related psychosocial factors are involved in the pathogenesis of coronary heart disease.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4705},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.uncahs.org/\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Ilene Siegler\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>The cohort is followed-up in yearly and bi-yearly waves from 1986&nbsp;onwards.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1986,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Ilene Siegler\"},\"markerPaper\":\"Siegler IC, Peterson BL, Barefoot JC, Harvin SH, Dahlstrom WG, Kaplan BH, Costa PT Jr, Williams RB Jr. Using college alumni populations in epidemiologic research: the UNC Alumni Heart Study. Journal of clinical epidemiology, 1992; 45(11): 1243-50.\",\"pubmedId\":\"1432005\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694a2\",\"title\":\"Dr.\",\"firstName\":\"Ilene \",\"lastName\":\"Siegler\",\"email\":\"Ilene.Siegler@dm.duke.edu\",\"phone\":\"(919) 684-6352\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Duke University\"},\"department\":{\"en\":\"Department of Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Durham\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"uncahs\",\"role\":\"investigator\"},{\"parentId\":\"uncahs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ilene  Siegler\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694a2\",\"title\":\"Dr.\",\"firstName\":\"Ilene \",\"lastName\":\"Siegler\",\"email\":\"Ilene.Siegler@dm.duke.edu\",\"phone\":\"(919) 684-6352\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Duke University\"},\"department\":{\"en\":\"Department of Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Durham\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"uncahs\",\"role\":\"investigator\"},{\"parentId\":\"uncahs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ilene  Siegler\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "ros",
+        "timestamps": {
+          "created": "2019-07-23T14:15:00.491",
+          "lastUpdate": "2021-05-05T09:39:29.700"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Religious Order Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ROS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1200
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "a1a1bc60-4a72-4714-88de-9e769bab41a0",
+          "fileName": "ROS-Logo.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 9787,
+          "md5": "51ece57fd899c9b19ff497fe3cff26b7",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.870"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>Researchers are using the information from the study to discover what changes in the brain are responsible for memory and movement problems. The study also looks closely at the transition from normal functioning of the aging brain to the mild cognitive impairment that can be an early sign of Alzheimer’s disease.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1200},\"sample\":{\"noLimit\":false,\"number\":1200}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"David Bennett\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Annual follow-up</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1994,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"David Bennett\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Bennett DA, Schneider JA, Arvanitakis Z, Wilson RS. Overview and Findings from the Religious Orders Study. Curr Alzheimer Res. 2011; 9(6):628-645. \",\"pubmedId\":\"22471860\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869394\",\"title\":\"MD.\",\"firstName\":\"David A. \",\"lastName\":\"Bennett\",\"email\":\"David_A_Bennett@rush.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush University Medical Center\"},\"address\":{\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"investigator\"},{\"parentId\":\"ros\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David A.  Bennett\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869395\",\"firstName\":\"Annie \",\"lastName\":\"Barz\",\"email\":\"Anne_Barz@rush.edu\",\"phone\":\"312-942-8974\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"department\":{\"en\":\"Rush Univeristy Medical Center\"},\"address\":{\"street\":{\"en\":\"600 S. Paulina, room 1029\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60612\",\"state\":\"IL\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Annie  Barz\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549162e4b0107838869396\",\"firstName\":\"Gregory \",\"lastName\":\"Klein\",\"email\":\"Gregory_Klein@rush.edu\",\"phone\":\"312-942-3365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"address\":{\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Gregory  Klein\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>The overall goal of this proposed renewal of the Rush Alzheimer's Disease Core Center (Rush ADCC) is to continue to provide an infrastructure to support cutting edge research on MCI, AD, and other dementias by providing researchers with clinical data and biologic specimens from persons with and without cognitive impairment for independently funded projects. The Rush ADCC has been in continuous operation since 1991. It has six Cores carefully designed to support a variety of timely and important areas of research including: 1) Studies of the neurobiology of MCI, AD, and other dementias; 2) Studies linking risk factors to ante-mortem and post-mortem indices of MCI, AD, and other dementias; 3) Studies with substantial participation by racial and ethnic minorities; and 4) Studies that facilitate the overall goals and mission of the Rush ADCC, the Alzheimer's Disease Centers program, and the AD research community. The six Rush ADCC cores are designed to achieve these overall goals. The Administrative Core provides scientific leadership to the ADCC as a whole. The Clinical Core collects data using the uniform data set procedures as designed and implemented by the AD Centers Clinical Task Force, and emphasizes careful follow-up and autopsy of racial and ethnic minorities, and persons with atypical dementias. The Religious Orders Study Core, begun in 1993, follows a group of more than 1000 older men and women members of Catholic religious communities who have agreed to annual detailed clinical evaluations and to brain donation at death. The Neuropathology Core stores obtains, processes, stores and evaluates ante-mortem and postmortem biologic specimens tissue in accordance with the Neuropathology Data Set defined by NACC from persons evaluated by the Clinical and Religious Orders Study Cores. The Education and Information Transfer Core provides a wide range of educational programs to support outreach and recruitment of racial and ethnic minorities into the Clinical and Religious Orders Study Core. The Data Management and Biostatistics Core, begun in 1995, supplies computer systems for data acquisition and unified data management for all ADCC cores, biostatistical consultation both to the Cores and to investigators using Core data, and transfer of data to NACC and approved investigators outside the Rush ADCC utilizing the data and resource sharing policies in the Administrative Core.</p>\\r\\n\\r\\n<p><strong>Data/Bio-specimen Access: </strong> To apply for access to RADC data/tissue, please enter an electronic request at our website: https://www.radc.rush.edu/res/ext/home.htm.</p>\\r\\n\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "alspac",
+        "timestamps": {
+          "created": "2019-07-23T14:12:03.775",
+          "lastUpdate": "2020-02-05T11:07:19.595"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Avon Longitudinal Study of Parents and Children"
+          },
+          {
+            "lang": "fr",
+            "value": "Avon Longitudinal Study of Parents and Children"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ALSPAC"
+          },
+          {
+            "lang": "fr",
+            "value": "ALSPAC"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 42710
+        },
+        "countries": [
+          "GBR"
+        ],
+        "logo": {
+          "id": "5d30a4c40b8ed61921318318",
+          "fileName": "co90s-logo-rgb.png",
+          "lang": "en",
+          "size": 9736,
+          "md5": "9b64e083987ae35be030d168c67de3a3",
+          "timestamps": {
+            "created": "2019-07-18T15:56:35.078"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The original aim of ALSPAC was to determine which biological, environmental, social, psychological and psychosocial factors are associated with the survival and optimal health and development of the fetus, infant and child, and the ways in which causal relationships might vary with the genetic composition of mother and/or child.</p>\r\n\r\n<p>To identify the complex ways in which environmental features may be associated with the optimal development, health and well-being of the child, will involve a study of the ways in which genes and the environment interact. A child's ability to meet environmental and social challenges is influenced by genetic variation, but the interactions are complex. Genetic susceptibility or resistance to common disorders is likely to be bestowed by one or more genetic polymorphisms, the impact of which will change as various environmental and developmental stresses on the child change. ALSPAC was specifically designed to analyse this interplay between genes and environment with respect to important relatively common health outcomes.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The original aim of ALSPAC was to determine which biological, environmental, social, psychological and psychosocial factors are associated with the survival and optimal health and development of the fetus, infant and child, and the ways in which causal relationships might vary with the genetic composition of mother and/or child.</p>\n\n<p>To identify the complex ways in which environmental features may be associated with the optimal development, health and well-being of the child, will involve a study of the ways in which genes and the environment interact. A child's ability to meet environmental and social challenges is influenced by genetic variation, but the interactions are complex. Genetic susceptibility or resistance to common disorders is likely to be bestowed by one or more genetic polymorphisms, the impact of which will change as various environmental and developmental stresses on the child change. ALSPAC was specifically designed to analyse this interplay between genes and environment with respect to important relatively common health outcomes.</p>"
+          }
+        ],
+        "dataSources": [
+          "biological_samples",
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases",
+          "others",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":42710},\"sample\":{\"noLimit\":true,\"number\":22000},\"info\":{\"en\":\"<p>ALSPAC recruited 14,541 pregnant women resident in Avon, UK with expected dates of delivery 1st April 1991 to 31st December 1992.&nbsp; 14,541 is the <em>initial</em> number of pregnancies for which the mother enrolled in the ALSPAC study and had either returned at least one questionnaire or attended a “Children in Focus” clinic by 19/07/99. Of these <em>initial</em> pregnancies, there was a total of 14,676 fetuses, resulting in 14,062 live births and 13,988 children who were alive at 1 year of age.</p>\\r\\n\\r\\n<p>When the oldest children were approximately 7 years of age, an attempt was made to bolster the initial sample with eligible cases who had failed to join the study originally. As a result, when considering variables collected from the age of seven onwards (and potentially abstracted from obstetric notes) there are data available for more than the 14,541 pregnancies mentioned above.</p>\\r\\n\\r\\n<p>The number of <strong>new pregnancies</strong> not in the initial sample (known as Phase I enrolment) that are currently represented on the built files and reflecting enrolment status at the age of 18 is 706 (452 and 254 recruited during Phases II and III respectively), resulting in an additional 713 children being enrolled. The phases of enrolment are described in more detail in the cohort profile paper which should be used for referencing purposes: &lt;<u>http://ije.oxfordjournals.org/content/early/2012/04/14/ije.dys064.full.pdf+html</u>&gt;.</p>\\r\\n\\r\\n<p>&nbsp;The total sample size for analyses using any data collected after the age of seven is therefore 15,247 pregnancies, resulting in &nbsp;15,458 fetuses.&nbsp; Of this <strong>total sample</strong> of 15,458 fetuses, 14,775 were <strong>live births</strong> and 14,701 were <strong>alive at 1 year of age</strong>.</p>\\r\\n\\r\\n<p>&nbsp;A 10% sample of the ALSPAC cohort, known as the <strong>Children in Focus (CiF) group</strong>, attended clinics at the University of Bristol at various time intervals between 4 to 61 months of age. The CiF group were chosen at random from the last 6 months of ALSPAC births (1432 families attended at least one clinic). Excluded were those mothers who had moved out of the area or were lost to follow-up, and those partaking in another study of infant development in Avon.</p>\\r\\n\\r\\n<p>&nbsp;</p>\\r\\n\"}},\"website\":\"http://www.bristol.ac.uk/alspac/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Paul Burton\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>During the index pregnancy, most women were sent 3 questionnaires. Since then, over a period of some 25 years, women have been sent 22 additional questionnaires that refer to their own health and well-being. Since 2008, women have attended four focus clinical ssessments</p>\\n\\n<p>Assessments of the children have been administered frequently, with 64 data collection time points between birth and 24 years of age. These include 34 child-completed questionnaires, 20 focus clinical assessments and 23 questionnaires about the child completed by the mother or other main caregiver.</p>\\n\\n<p> Partners have been sent 17 questionnaires and have attended 1 focus clinic assessment. </p>\\n\\n<p>Siblings and grandparents have been recruited. </p>\"},\"recruitments\":[\"families\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1990,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Paul Burton\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Boyd A., Golding J., Macleod J., Lawlor D.A., Fraser A., Henderson J., Molloy L., Ness A., Ring S., Davey Smith G. Cohort Profile: The ‘Children of the 90s’—the index offspring of the Avon Longitudinal Study of Parents and Children. International Journal of Epidemiology 2012;1-17\",\"pubmedId\":\"22507743\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869262\",\"title\":\"Prof.\",\"firstName\":\"George  \",\"lastName\":\"Smith\",\"email\":\"kz.davey-smith@bristol.ac.uk\",\"phone\":\"+44 (0) 117 3310095\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"alspac\",\"role\":\"investigator\"},{\"parentId\":\"boyd\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"George   Smith\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869263\",\"title\":\"Prof.\",\"firstName\":\"Paul \",\"lastName\":\"Burton\",\"email\":\"p.burton@bristol.ac.uk\",\"phone\":\"+44 (0) 117 3310072\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"alspac\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Burton\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869264\",\"firstName\":\"Lynn \",\"lastName\":\"Molloy\",\"email\":\"lynn.molloy@bristol.ac.uk\",\"phone\":\"+44 (0) 117 3310080\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"alspac\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Lynn  Molloy\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "add-health",
+        "timestamps": {
+          "created": "2019-07-23T14:11:56.358",
+          "lastUpdate": "2021-10-04T16:11:30.934"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "National Longitudinal Study of Adolescent to Adult Health"
+          },
+          {
+            "lang": "fr",
+            "value": "National Longitudinal Study of Adolescent to Adult Health"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Add Health"
+          },
+          {
+            "lang": "fr",
+            "value": "Add Health"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 20745
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "56994f9de4b01cdcef74ded6",
+          "fileName": "logo (1).png",
+          "lang": "en",
+          "size": 274421,
+          "md5": "9e5ae56a0a14313b1e3c05dc00be85e7",
+          "timestamps": {
+            "created": "2016-01-15T14:59:34.932"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The original purpose of the Add Health study was to help understand the causes of adolescent health and health behavior with special emphasis on the effects of multiple contexts of adolescent life.</p>\n\n<p>The cohort was then followed through their transition to adulthood and research turned to understanding the determinants and consequences of developmental and health trajectories from adolescence into adulthood.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The original purpose of the Add Health study was to help understand the causes of adolescent health and health behavior with special emphasis on the effects of multiple contexts of adolescent life.</p>\n\n<p>The cohort was then followed through their transition to adulthood and research turned to understanding the determinants and consequences of developmental and health trajectories from adolescence into adulthood.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "others",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":20745},\"sample\":{\"noLimit\":false,\"number\":20745},\"info\":{}},\"website\":\"http://www.cpc.unc.edu/projects/addhealth\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Kathleen Mullan Harris\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p><span>After the in-school survey in 1994-1995, the participants were sampled and followed-up with an in-home interview in 1995, 1996, 2001-2002 and 2007-2008.</span></p>\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"Number of participants refers to wave I.\"}},\"startYear\":1994,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Kathleen Mullan Harris\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Resnick MD, Bearman PS, Blum RW, et al. Protecting adolescents from harm. Findings from the National Longitudinal Study on Adolescent Health. JAMA, 1997; 278(10): 823-32.\",\"pubmedId\":\"9293990\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869241\",\"title\":\"Prof.\",\"firstName\":\"Kathleen \",\"lastName\":\"Harris\",\"academicLevel\":\"Director\",\"email\":\"kathie_harris@unc.edu\",\"phone\":\"(919) 962-6158\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of North Carolina at Chapel Hill\"},\"department\":{\"en\":\"Carolina Population Center\"},\"address\":{\"city\":{\"en\":\"Chapel Hill\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"add-health\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Kathleen  Harris\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869242\",\"firstName\":\"Ashley Lauren\",\"lastName\":\"Sorgi\",\"academicLevel\":\"Add Health Data Dissemination Coordinator\",\"email\":\"sorgia@email.unc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of North Carolina at Chapel Hill\"},\"department\":{\"en\":\"Carolina Population Center\"},\"address\":{\"street\":{\"en\":\"Campus Box #8120 206 W. Franklin Street, Room 273\"},\"city\":{\"en\":\"Chapel Hill\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"add-health\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ashley Lauren Sorgi\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Detailed information about the study design here:&nbsp;http://www.cpc.unc.edu/projects/addhealth/design</p>\\r\\n\"}}"
+      },
+      {
+        "id": "betula",
+        "timestamps": {
+          "created": "2019-07-23T14:12:16.065",
+          "lastUpdate": "2021-07-26T16:33:32.517"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Betula Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Betula"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4425
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "57ff91aae4b08a6249a472d1",
+          "fileName": "156252_loggaram.jpg",
+          "lang": "en",
+          "size": 9448,
+          "md5": "60c3d40753f0550cabfbe3b5970c1ee8",
+          "timestamps": {
+            "created": "2016-10-13T09:52:48.860"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<ul>The main objectives of Betula study are: <li>To study how memory functions change during adult life and old age;</li>\n<li>To identify risk factors for dementia;</li>\n<li>To identify early preclinical signs of dementia.</li></ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4425},\"sample\":{\"noLimit\":false,\"number\":4300},\"info\":{}},\"website\":\"https://www.umu.se/en/research/projects/betula---aging-memory-and-dementia/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"A sub-sample of participants underwent MRI brain scanning at test wave 5 (2009-2010) and 6 (2013-2014).\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Mikael Stiernstedt\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"The participants were assessed at 6 different time points every 5 years: in 1988-1990, 1993-1995, 1998-2000, 2003-2005, 2008-2010 and 2013-2014.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1988,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Mikael Stiernstedt\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Nilsson L-G, Adolfsson R, Bäckman L, de Frias C, Molander B, Nyberg L. Betula: A Prospective Cohort Study on Memory, Health and Aging. Aging, Neuropsychology and Cognition,2004; 11 (2-3), 134-148.\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"58062f59e4b0c5ecab014e93\",\"title\":\"Prof.\",\"firstName\":\"Lars\",\"lastName\":\"Nyberg\",\"email\":\"lars.nyberg@umu.se\",\"phone\":\"+46 70 609 27 75\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Umeå University\"},\"department\":{\"en\":\"Department of Integrative Medical Biology\"},\"address\":{\"street\":{\"en\":\"SE-901 87, Petrus Laestadius väg\"},\"city\":{\"en\":\"Umeå\"},\"zip\":\"901 87\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lars Nyberg\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5835b90fe4b0e6bf51d46847\",\"title\":\"Prof.\",\"firstName\":\"Lars-Göran\",\"lastName\":\"Nilsson\",\"email\":\"lgn@psychology.su.se\",\"phone\":\"+46-8-159342\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stockholm University\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Frescati Hagväg 14, room 127\"},\"city\":{\"en\":\"Stockholm\"},\"zip\":\"SE-106 91\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lars-Göran Nilsson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5835bc72e4b0e6bf51d46848\",\"title\":\"Prof.\",\"firstName\":\"Rolf\",\"lastName\":\"Adolfsson\",\"email\":\"rolf.adolfsson@umu.se\",\"phone\":\"+46 90 786 69 63\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Umeå University\"},\"department\":{\"en\":\"Department of Clinical Sciences, Psychiatry unit\"},\"address\":{\"street\":{\"en\":\"Umeå universitet, Psykiatri, 901 85\"},\"city\":{\"en\":\"Umeå\"},\"zip\":\"SE-901 87\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Rolf Adolfsson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5835be9ce4b0e6bf51d46849\",\"title\":\"Dr.\",\"firstName\":\"Michael\",\"lastName\":\"Rönnlund\",\"email\":\"michael.ronnlund@umu.se\",\"phone\":\"+46 90 786 76 13\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Umeå University\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Hus Y Beteendevetarhuset, Vindarnas torg, Mediagränd 14, room B-112\"},\"city\":{\"en\":\"Umeå\"},\"zip\":\"SE-901 87\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michael Rönnlund\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5835bfe8e4b0e6bf51d4684a\",\"title\":\"Dr.\",\"firstName\":\"Anna\",\"lastName\":\"Sundström\",\"email\":\"anna.sundstrom@umu.se\",\"phone\":\"+46 90 786 61 39\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Umeå University\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Norra Beteendevetarhuset, NBVH3036\"},\"city\":{\"en\":\"Umeå\"},\"zip\":\"SE-901 87\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Anna Sundström\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"58012524e4b08a6249a472dd\",\"firstName\":\"Mikael\",\"lastName\":\"Stiernsted\",\"email\":\"mikael.stiernstedt@umu.se\",\"phone\":\"+46 90 786 78 69\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Umeå\"},\"department\":{\"en\":\"Department of Integrative Medical Biology (IMB)\"},\"address\":{\"street\":{\"en\":\"Umeå universitet\"},\"city\":{\"en\":\"Umeå\"},\"zip\":\"901 87\",\"state\":\"Västerbotten\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"betula\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mikael Stiernsted\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Nilsson, L.-Gör., Bäckman, L., Erngrund, K., et al. The Betula Prospective Cohort Study: Memory, Health, and Aging. Aging, Neuropsychology, and Cognition,1997; 4(1), 1–32.</p>\"},\"endYear\":2014,\"access_fees\":false,\"access_restrictions\":false,\"access_supplementary_info\":{\"en\":\"<p>1. Zimbardo Time Perspective Inventory\\nBased on: (ZTPI) Zimbardo o. Boyds skala (Zimbardo, P., and Boyd, J. N. (1999). \\nUsed in Betula: Carelli, M. G., Wiberg, B., & Wiberg, M. (2011). Development and Construct Validation of the Swedish Zimbardo Time Perspective Inventory. European Journal of Psychological Assessment, 27(4), 220–227. https://doi.org/10.1027/1015-5759/a000076</p>\\n\\n<p>2. Patient Health Questionnaire-9\\nBased on: Kroenke, K., Spitzer, RL. & Willimas, JB. (2001). The PHQ-9: validity of a brief depression severity measure. Journal of General Internal Medicine, 16(9), 606-613. https://doi.org/10.1046/j.1525-1497.2001.016009606.x\\nUsed in Betula: translated version. </p>\\n\\n<p>3. Perceived Stress Questionnaire\\nBased on: Levenstein S, Prantera C, Varvo V, Scribano ML, Berto E, Luzi C, Andreoli A. Development of the Perceived Stress Questionnaire: a new tool for psychosomatic research. J Psychosom Res 1993;37:19–32. https://doi.org/10.1016/0022-3999(93)90120-5. </p>\\n\\n<p>Bergdahl, J., and Bergdahl, M. (2002). Perceived stress in adults: prevalence and association of depression, anxiety and medication in a Swedish population. Stress Health 18, 235–241. doi: 10.1002/smi.946\\nUsed in Betula: translated version. </p>\\n\\n<p>4. Seasonal Pattern Assessment Questionnaire\\nBased on: Rosenthal, NE., Sack, DA., Gillin, JC., Lewy AJ., Goodwin, FK., Davenport, Y., Mueller, PS., Newsome, DA. & Wehr, TA. (1984). Seasonal affective disorder. A description of the syndrome and preliminary findings with light therapy. Arch Gen Psychiatry, 41(1), 72-80. https://doi.org/10.1001/archpsyc.1984.01790120076010\\nUsed in Betula: translated version</p>\"}}"
+      },
+      {
+        "id": "abc1921",
+        "timestamps": {
+          "created": "2019-07-23T14:11:51.243",
+          "lastUpdate": "2020-02-05T11:07:16.289"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Aberdeen 1921 Birth Cohort"
+          },
+          {
+            "lang": "fr",
+            "value": "Aberdeen 1921 Birth Cohort"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ABC1921"
+          },
+          {
+            "lang": "fr",
+            "value": "ABC1921"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 235
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aims of the ABC1921 were to model the relative effects of positive and negative predictors of late-life intelligence and dementia.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The aims of the ABC1921 were to model the relative effects of positive and negative predictors of late-life intelligence and dementia.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":235},\"sample\":{\"noLimit\":false,\"number\":225}},\"website\":\"http://www.abdn.ac.uk/birth-cohorts/1921/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Leone Craig\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The ABC1921&nbsp;participants undertook a general intelligence test at age 11 years, in 1932, and were recruited for the ABC1921&nbsp;cohort between 1997&nbsp;and 2001. They were then followed-up at 15 months intervals up to a maximum of 5 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>Sub-sample of the participants of the Scottish Mental Survey of 1932.</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1997,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Leone Craig\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Starr JM, Deary IJ, Lemmon H, Whalley LJ. Mental ability age 11 years and health status age 77 years. Age and ageing, 2000; 29(6): 523-8.\",\"endYear\":2006,\"pubmedId\":\"11191245\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869206\",\"title\":\"Dr.\",\"firstName\":\"Roy \",\"lastName\":\"Soiza\",\"email\":\"r.l.soiza@abdn.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Health Services Research Unit\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Roy  Soiza\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869207\",\"title\":\"Prof.\",\"firstName\":\"Alison \",\"lastName\":\"Murray\",\"email\":\"a.d.murray@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438362\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Aberdeen Biomedical Imaging Centre\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Alison  Murray\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869208\",\"title\":\"Prof.\",\"firstName\":\"Geraldine \",\"lastName\":\"McNeill\",\"email\":\"g.mcneill@abdn.ac.uk\",\"phone\":\"+44 (0)1224 437129\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Rowett Institute of Nutrition and Health\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Geraldine  McNeill\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869209\",\"title\":\"Prof.\",\"firstName\":\"Louise \",\"lastName\":\"Phillips\",\"email\":\"louise.phillips@abdn.ac.uk\",\"phone\":\"+44 (0)1224 272229\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"School of Psychology\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Louise  Phillips\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920a\",\"title\":\"Dr.\",\"firstName\":\"Leone \",\"lastName\":\"Craig\",\"email\":\"l.craig@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438040\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Applied Health Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Leone  Craig\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920b\",\"title\":\"Prof.\",\"firstName\":\"Paul \",\"lastName\":\"Haggarty\",\"email\":\"p.haggarty@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438630\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Rowett Institute of Nutrition and Health\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Haggarty\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886920c\",\"title\":\"Dr.\",\"firstName\":\"Roger \",\"lastName\":\"Staff\",\"email\":\"r.staff@abdn.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Medical Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Roger  Staff\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886920a\",\"title\":\"Dr.\",\"firstName\":\"Leone \",\"lastName\":\"Craig\",\"email\":\"l.craig@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438040\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Institute of Applied Health Sciences\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"investigator\"},{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"investigator\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Leone  Craig\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b010783886920d\",\"firstName\":\"Dawn \",\"lastName\":\"Younie\",\"email\":\"d.younie@abdn.ac.uk\",\"phone\":\"+44 (0)1224 438365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"department\":{\"en\":\"Aberdeen Biomedical Imaging Centre\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"abc1921\",\"role\":\"contact\"},{\"parentId\":\"abc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Dawn  Younie\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "elsa",
+        "timestamps": {
+          "created": "2019-07-23T14:12:58.890",
+          "lastUpdate": "2020-02-05T11:07:33.650"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "English Longitudinal Study of Ageing"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ELSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 12099
+        },
+        "countries": [
+          "GBR"
+        ],
+        "logo": {
+          "id": "beb74d36-cd75-4f25-a2d9-1f8483154e96",
+          "fileName": "ELSAlogo2.png",
+          "type": "logo",
+          "lang": "en",
+          "size": 2146,
+          "md5": "829d3125c6f4a93980d1b36cf700a489",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.183"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The primary objectives of ELSA were to design and implement data collection on a population aged 50 or older at inception, and to document and distribute the data that are produced. Specific issues addressed were: </p>\n<p>1. Health trajectories, disability and healthy life expectancy;</p>\n<p>2. The relationship between economic position and health;</p>\n<p>3. The determinants of economic position and economic activity at older ages;</p>\n<p>4. Social networks, support, and participation;</p>\n<p>5. Household and family structure, and the transfer of resources.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures",
+          "administratives_databases",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":12099},\"sample\":{\"noLimit\":false,\"number\":8643}},\"website\":\"http://www.ifs.org.uk/ELSA\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{\"en\":\"<p>Information on all currently archived and forthcoming ELSA derived variables can be found on the ESDS website (http://ukdataservice.ac.uk/)</p>\\r\\n\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Follow-up of participants every every 2 years\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2002,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Steptoe, A., Breeze, E., Banks, J., & Nazroo, J. (2012). Cohort profile: the English longitudinal study of ageing. International journal of epidemiology, dys168.\",\"pubmedId\":\"23143611\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692e0\",\"title\":\"Prof.\",\"firstName\":\"Michael \",\"lastName\":\"Marmot\",\"email\":\"m.marmot@ucl.ac.uk\",\"phone\":\"+44 (0)207 679 1694\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"UCL Institute of Health Equity\"},\"department\":{\"en\":\"Research Department of Epidemiology and Public Health\"},\"address\":{\"street\":{\"en\":\"1-19 Torrington Place\"},\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michael  Marmot\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e1\",\"title\":\"Prof.\",\"firstName\":\"James \",\"lastName\":\"Banks\",\"email\":\"james.banks@manchester.ac.uk\",\"phone\":\"0161 275 4473\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Manchester\"},\"department\":{\"en\":\"School of Social Sciences\"},\"address\":{\"street\":{\"en\":\"Arthur Lewis Building-3.020\"},\"city\":{\"en\":\"Manchester\"},\"zip\":\"M13 9PL\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"James  Banks\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e2\",\"title\":\"Prof.\",\"firstName\":\"James\",\"lastName\":\"Nazroo\",\"email\":\"james.nazroo@manchester.ac.uk\",\"phone\":\"0161 275 2495\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Manchester\"},\"department\":{\"en\":\"School of Social Sciences\"},\"address\":{\"street\":{\"en\":\"Humanities Bridgeford Street-G29\"},\"city\":{\"en\":\"Manchester\"},\"zip\":\"M13 9PL\",\"state\":\"Greater Manchester\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"James Nazroo\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e3\",\"title\":\"Dr.\",\"firstName\":\"Nina \",\"lastName\":\"Rogers\",\"email\":\"n.rogers@ucl.ac.uk\",\"phone\":\"+44 (0)20 7679 8318\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London UCL\"},\"department\":{\"en\":\"Research Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"},{\"parentId\":\"elsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nina  Rogers\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e4\",\"title\":\"Prof.\",\"firstName\":\"Andrew\",\"lastName\":\"Steptoe\",\"email\":\"a.steptoe@ucl.ac.uk\",\"phone\":\"+44 20 7679 1804\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London UCL\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"street\":{\"en\":\"1-19 Torrington Place\"},\"city\":{\"en\":\"London\"},\"zip\":\"WC1E 6BT\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Andrew Steptoe\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e5\",\"title\":\"Dr.\",\"firstName\":\"Nicholas\",\"lastName\":\"Steel\",\"email\":\"n.steel@uea.ac.uk\",\"phone\":\"+44 (0) 1603 59 1161\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of East Anglia\"},\"department\":{\"en\":\"Norwich Medical School\"},\"address\":{\"city\":{\"en\":\"Norwich\"},\"state\":\"Norfolk\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nicholas Steel\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692e6\",\"title\":\"Dr.\",\"firstName\":\"David\",\"lastName\":\"Batty\",\"email\":\"david.batty@ucl.ac.uk\",\"phone\":\"+44 20 3108 3149\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London UCL\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David Batty\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692e3\",\"title\":\"Dr.\",\"firstName\":\"Nina \",\"lastName\":\"Rogers\",\"email\":\"n.rogers@ucl.ac.uk\",\"phone\":\"+44 (0)20 7679 8318\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London UCL\"},\"department\":{\"en\":\"Research Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"elsa\",\"role\":\"investigator\"},{\"parentId\":\"elsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nina  Rogers\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Reports on each waves can be downloaded at: http://www.ifs.org.uk/ELSA/publications</p>\\r\\n\"}}"
+      },
+      {
+        "id": "deas",
+        "timestamps": {
+          "created": "2019-07-23T14:12:50.204",
+          "lastUpdate": "2021-05-05T09:38:58.300"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "German Ageing Survey"
+          },
+          {
+            "lang": "fr",
+            "value": "German Ageing Survey"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "DEAS"
+          },
+          {
+            "lang": "fr",
+            "value": "DEAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 14713
+        },
+        "countries": [
+          "DEU"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The German Ageing Survey (DEAS) is a nationwide representative cross-sectional and longitudinal survey of the German population aged over 40.</p>\n\n<p>The study focuses on two main perspectives:</p>\n\n<ul>\n\t<li><strong>Actual life situation:</strong>&nbsp;How do people live in the second half of their lives and how greatly do the life situations of these people differ?</li>\n\t<li><strong>Change in life situations:&nbsp;</strong>How have life situa­tions in the second half of life changed over the period 1996-2008? In which areas of life has the situation improved and in which has it deteriorated, in which areas are the situations of individuals becoming similar and in which do differences between people increase?</li>\n</ul>\n\n<p>DEAS microdata is available free of charge to scientific researchers for non-profitable purposes (<a>www.dza.de/en/fdz/german-ageing-survey.html</a>).</p>\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The German Ageing Survey (DEAS) is a nationwide representative cross-sectional and longitudinal survey of the German population aged over 40.</p>\n\n<p>The study focuses on two main perspectives:</p>\n\n<ul>\n\t<li><strong>Actual life situation:</strong>&nbsp;How do people live in the second half of their lives and how greatly do the life situations of these people differ?</li>\n\t<li><strong>Change in life situations:&nbsp;</strong>How have life situa­tions in the second half of life changed over the period 1996-2008? In which areas of life has the situation improved and in which has it deteriorated, in which areas are the situations of individuals becoming similar and in which do differences between people increase?</li>\n</ul>\n\n<p>DEAS microdata is available free of charge to scientific researchers for non-profitable purposes (www.dza.de/en/fdz/german-ageing-survey.html).</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "others",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":14713},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.dza.de/en/research/deas.html\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>The first survey took place in 1996, further waves followed in 2002, 2008 and 2011. Since 2011 participants are followed every 3 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1996,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Engstler, H., & Schmiade, N. (2013). The German Ageing Survey (DEAS) - a longitudinal and time-series study of people in the second half of life. Schmollers Jahrbuch, 133(1), 97-107. doi: 10.3790/schm.133.1.97\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692bc\",\"title\":\"Dr.\",\"firstName\":\"Katharina \",\"lastName\":\"Mahne\",\"phone\":\"+49 30 260740-18\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The German Centre of Gerontology\"},\"address\":{\"street\":{\"en\":\"Manfred-von-Richthofen-Str. 2\"},\"city\":{\"en\":\"Berlin\"},\"zip\":\"12101\",\"countryIso\":\"DE\"}},\"studyMemberships\":[{\"parentId\":\"deas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Katharina  Mahne\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692bd\",\"title\":\"Dr.\",\"firstName\":\"Julia \",\"lastName\":\"Wolff\",\"phone\":\"+49 30 260740-34\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The German Centre of Gerontology\"},\"address\":{\"street\":{\"en\":\"Manfred-von-Richthofen-Str. 2\"},\"city\":{\"en\":\"Berlin\"},\"zip\":\"12101\",\"countryIso\":\"DE\"}},\"studyMemberships\":[{\"parentId\":\"deas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Julia  Wolff\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692be\",\"title\":\"Prof.\",\"firstName\":\"Dr. Clemens \",\"lastName\":\"Tesch-Roemer\",\"email\":\"clemens.tesch-roemer@dza.de\",\"phone\":\"+49 30 260740-0\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The German Centre of Gerontology\"},\"address\":{\"street\":{\"en\":\"Manfred-von-Richthofen-Str. 2\"},\"city\":{\"en\":\"Berlin\"},\"zip\":\"12101\",\"countryIso\":\"DE\"}},\"studyMemberships\":[{\"parentId\":\"deas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Dr. Clemens  Tesch-Roemer\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "cls",
+        "timestamps": {
+          "created": "2019-07-23T14:12:35.030",
+          "lastUpdate": "2020-02-05T11:07:27.393"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Canberra Longitudinal Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Canberra Longitudinal Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CLS"
+          },
+          {
+            "lang": "fr",
+            "value": "CLS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1045
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Canberra Longitudinal Study is a large epidemiological survey of mental health and cognitive functioning in a community based sample living in or near Canberra, Australia.&nbsp;<span>The study aimed to investigate the epidemiology of cognitive decline, dementia and depressive disorders/symptoms over time and to identify factors influencing the course of cogni</span><span>tive decline and depression.</span></p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Canberra Longitudinal Study is a large epidemiological survey of mental health and cognitive functioning in a community based sample living in or near Canberra, Australia.&nbsp;<span>The study aimed to investigate the epidemiology of cognitive decline, dementia and depressive disorders/symptoms over time and to identify factors influencing the course of cogni</span><span>tive decline and depression.</span></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1045},\"sample\":{\"noLimit\":false,\"number\":0}},\"website\":\"\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr Phil Batterham\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The study commenced in 1990, with subsequent waves in 1994, 1998 and 2002.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1990,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Christensen H, Mackinnon A, Jorm AF, Korten A, Jacomb P, Hofer SM, Henderson F. 2004. The Canberra Longitudinal Study: Design, aims, methodology, outcomes, and recent empirical investigations. Aging, Neuropsychology, and Cognition; 11, 169‑195.\",\"endYear\":2002,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692a4\",\"title\":\"Prof.\",\"firstName\":\"Helen\",\"lastName\":\"Christensen\",\"email\":\"h.christensen@blackdog.org.au\",\"phone\":\"+61 2  9382 4530\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Black Dog Institute\"},\"address\":{\"street\":{\"en\":\"Hospital Road, Prince of Wales Hospital, Randwick\"},\"city\":{\"en\":\"Sydney\"},\"zip\":\"2031\",\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Helen Christensen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a5\",\"title\":\"Prof.\",\"firstName\":\"Andrew\",\"lastName\":\"MacKinnon\",\"email\":\"andrew.mackinnon@unimelb.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Melbourne\"},\"department\":{\"en\":\"Centre for Youth Mental Health\"},\"address\":{\"street\":{\"en\":\"35 Poplar Rd, Parkville\"},\"city\":{\"en\":\"Melbourne\"},\"zip\":\"3052\",\"state\":\"Victoria\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Andrew MacKinnon\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a6\",\"title\":\"Prof.\",\"firstName\":\"Scott\",\"lastName\":\"Henderson\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Australian National University\"},\"department\":{\"en\":\"Centre for Mental Health Research\"},\"address\":{\"street\":{\"en\":\"Building 63, Australian National University Campus, East Road, Acton\"},\"city\":{\"en\":\"Canberra\"},\"zip\":\"2601\",\"state\":\"Australian Capital Territory\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Scott Henderson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a7\",\"title\":\"Prof.\",\"firstName\":\"Anthony\",\"lastName\":\"Jorm\",\"email\":\"ajorm@unimelb.edu.au\",\"phone\":\"90357799\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Melbourne\"},\"department\":{\"en\":\"Centre for Mental Health, Melbourne School of Population & Global Health.\"},\"address\":{\"street\":{\"en\":\"Level: 04 Room: 435, 207-221 Bouverie St., Parkville\"},\"city\":{\"en\":\"Melbourne\"},\"zip\":\"3010\",\"state\":\"Victoria\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Anthony Jorm\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a8\",\"firstName\":\"Ailsa\",\"lastName\":\"Korten\",\"email\":\"ailsa.korten@anu.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Australian National University\"},\"department\":{\"en\":\"Centre for Mental Health Research\"},\"address\":{\"street\":{\"en\":\"Building 63, The Australian National University Canberra, Acton\"},\"city\":{\"en\":\"Canberra\"},\"zip\":\"2601\",\"state\":\"Australian Capital Territory\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ailsa Korten\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a9\",\"firstName\":\"Ruth\",\"lastName\":\"Scott\",\"email\":\"ruth.scott@anu.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Australian National University\"},\"department\":{\"en\":\"Centre for Mental Health Research\"},\"address\":{\"street\":{\"en\":\"Building 63, Australian National University Campus, East Road, Acton\"},\"city\":{\"en\":\"Canberra\"},\"zip\":\"2601\",\"state\":\"Australian Capital Territory\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ruth Scott\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692aa\",\"title\":\"Prof.\",\"firstName\":\"Colleen\",\"lastName\":\"Doyle\",\"email\":\"colleen.doyle@acu.edu.au\",\"phone\":\"+613 8862 9000\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Australian Catholic University\"},\"department\":{\"en\":\"National School of Nursing, Midwifery & Paramedicine\"},\"address\":{\"street\":{\"en\":\"115 Victoria Parade, The Mary Glowrey Building, Fitzroy\"},\"city\":{\"en\":\"Melbourne\"},\"zip\":\"3065\",\"state\":\"Victoria\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Colleen Doyle\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692ab\",\"title\":\"Dr.\",\"firstName\":\"Philip\",\"lastName\":\"Batterham\",\"email\":\"philip.batterham@anu.edu.au\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Centre for Mental Health Research, Australian National University\"},\"address\":{}},\"studyMemberships\":[{\"parentId\":\"cls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Philip Batterham\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"no\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "dcs-1905",
+        "timestamps": {
+          "created": "2019-07-23T14:12:47.908",
+          "lastUpdate": "2021-05-05T09:38:56.479"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Danish 1905 Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "DCS-1905"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2262
+        },
+        "countries": [
+          "DNK"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The overall goal was to establish a genetic-epidemiological database to shed light on the aging process among the extremely old, focusing on physical and cognitive functioning.&nbsp;</p>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2262},\"sample\":{\"noLimit\":false,\"number\":1651}},\"website\":\"\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kaare Christensen\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The first wave took place in 1998 and the follow-up in 2000, 2003 and 2005.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1998,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kaare Christensen\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Nybo H, Gaist D, Jeune B, Bathum L, McGue M, Vaupel JW, Christensen K. The Danish 1905 cohort: a genetic-epidemiological nationwide survey. Journal of aging and health, 2001; 13(1): 32-46.\",\"endYear\":2005,\"pubmedId\":\"11503846\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692ba\",\"title\":\"Prof.\",\"firstName\":\"Kaare \",\"lastName\":\"Christensen\",\"email\":\"kchristensen@health.sdu.dk\",\"phone\":\"65503049\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern Denmark\"},\"department\":{\"en\":\"Epidemiology, Biostatistics and Biodemography\"},\"address\":{\"city\":{\"en\":\"Odense\"},\"countryIso\":\"DNK\"}},\"studyMemberships\":[{\"parentId\":\"dcs-1905\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1905\",\"role\":\"contact\"},{\"parentId\":\"dcs-1915\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1915\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaare  Christensen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692bb\",\"title\":\"Prof.\",\"firstName\":\"Bernard \",\"lastName\":\"Jeune\",\"email\":\"bjeune@health.sdu.dk\",\"phone\":\"65503036\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern Denmark\"},\"department\":{\"en\":\"Epidemiology, Biostatistics and Biodemography\"},\"address\":{\"city\":{\"en\":\"Odense\"},\"countryIso\":\"DNK\"}},\"studyMemberships\":[{\"parentId\":\"dcs-1905\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Bernard  Jeune\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692ba\",\"title\":\"Prof.\",\"firstName\":\"Kaare \",\"lastName\":\"Christensen\",\"email\":\"kchristensen@health.sdu.dk\",\"phone\":\"65503049\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern Denmark\"},\"department\":{\"en\":\"Epidemiology, Biostatistics and Biodemography\"},\"address\":{\"city\":{\"en\":\"Odense\"},\"countryIso\":\"DNK\"}},\"studyMemberships\":[{\"parentId\":\"dcs-1905\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1905\",\"role\":\"contact\"},{\"parentId\":\"dcs-1915\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1915\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaare  Christensen\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "hrs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:33.562",
+          "lastUpdate": "2021-05-05T09:39:07.352"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Health and Retirement Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Health and Retirement Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HRS"
+          },
+          {
+            "lang": "fr",
+            "value": "HRS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "56d5be13e4b01cdcef74e0b8",
+          "fileName": "hrs_logo.png",
+          "lang": "en",
+          "size": 11963,
+          "md5": "530d73fe57865c634a973309ec48b074",
+          "timestamps": {
+            "created": "2016-03-01T11:07:15.734"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The University of Michigan Health and Retirement Study (HRS) is a longitudinal panel study that surveys a representative sample of approximately 20,000 people in America, supported by the National Institute on Aging (NIA U01AG009740) and the Social Security Administration.</p>\n<p>Through its unique and in-depth interviews, the HRS provides an invaluable and growing body of multidisciplinary data that researchers can use to address important questions about the challenges and opportunities of aging. The HRS helps to:</span></p>\n\n<ul>\n\t<li>\n\t<div><span>Explain the antecedents and consequences of retirement</span></div>\n\t</li>\n\t<li><span>Examine the relationships among health, income, and wealth over time</span></li>\n\t<li><span>Examine life cycle patterns of wealth accumula- tion and consumption</span></li>\n\t<li><span>Monitor work disability</span></li>\n\t<li><span>Examine how the mix and distribution of eco- nomic, family, and program resources affect key outcomes, including retirement, “dissaving,” health declines, and institutionalization</span></li>\n</ul>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The University of Michigan Health and Retirement Study (HRS) is a longitudinal panel study that surveys a representative sample of more than 26,000 Americans over the age of 50 every two years.&nbsp;<span>The HRS collects data to help:</span></p>\n\n<ul>\n\t<li>\n\t<div><span>Explain the antecedents and consequences of retirement</span></div>\n\t</li>\n\t<li><span>Examine the relationships among health, income, and wealth over time</span></li>\n\t<li><span>Examine life cycle patterns of wealth accumula- tion and consumption</span></li>\n\t<li><span>Monitor work disability</span></li>\n\t<li><span>Examine how the mix and distribution of eco- nomic, family, and program resources affect key outcomes, including retirement, “dissaving,” health declines, and institutionalization</span></li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "administratives_databases",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":true},\"sample\":{\"noLimit\":true}},\"website\":\"http://hrsonline.isr.umich.edu/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Amanda Sonnega\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Follow-up of participants every two years</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Amanda Sonnega\"},\"markerPaper\":\"Sonnega, A., Faul, J., Ofstedal, M.B., Langa, K., Phillips, J., & Weir, D. (2014). Cohort profile: the Health and Retirement Study (HRS). International Journal of Epidemiology, 43, 576-585. doi: 10.1093/ije/dyu067\",\"pubmedId\":\"24671021\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886933b\",\"firstName\":\"Charles\",\"lastName\":\"Brown\",\"email\":\"charlieb@umich.edu\",\"phone\":\"734.763.6867 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Charles Brown\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886933c\",\"firstName\":\"Eileen\",\"lastName\":\"Crimmins\",\"email\":\"crimmin@usc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eileen Crimmins\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5851b093e4b0b4ca5bd4cf9b\",\"firstName\":\"Jessica\",\"lastName\":\"Faul\",\"email\":\"jfaul@umich.edu\",\"phone\":\"(734) 763-7477\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"},\"department\":{\"en\":\"Department of Epidemiology\"},\"address\":{\"street\":{\"en\":\"426 Thompson Street,\"},\"city\":{\"en\":\"Ann Arbor\"},\"zip\":\"48104\",\"state\":\"Michigan\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jessica Faul\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886933d\",\"firstName\":\"Michael\",\"lastName\":\"Hurd\",\"email\":\"mhurd@rand.org\",\"phone\":\"310.393.0411 x6945\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"RAND Corporation\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michael Hurd\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886933e\",\"firstName\":\"Sharon\",\"lastName\":\"Kardia\",\"email\":\"skardia@umich.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Sharon Kardia\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886933f\",\"firstName\":\"Kenneth\",\"lastName\":\"Langa\",\"email\":\"klanga@umich.edu\",\"phone\":\"734.615.8341\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Kenneth Langa\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869340\",\"firstName\":\"Helen\",\"lastName\":\"Levy\",\"email\":\"hlevy@umich.edu\",\"phone\":\"734.936.4506\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Helen Levy\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869341\",\"firstName\":\"John\",\"lastName\":\"McArdle\",\"email\":\"JMCARDLE@USC.EDU\",\"phone\":\"213.740.2203\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John McArdle\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869342\",\"firstName\":\"Kathleen\",\"lastName\":\"McGarry\",\"email\":\"mcgarry@ucla.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Kathleen McGarry\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869343\",\"firstName\":\"Olivia\",\"lastName\":\"Mitchell\",\"email\":\"mitchelo@wharton.upenn.edu\",\"phone\":\"215-898-0424\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pennsylvania\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Olivia Mitchell\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869344\",\"firstName\":\"Mary Beth\",\"lastName\":\"Ofstedal\",\"email\":\"mbo@umich.edu\",\"phone\":\"734.647.9070\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mary Beth Ofstedal\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869345\",\"firstName\":\"Jacqui\",\"lastName\":\"Smith\",\"email\":\"smitjacq@umich.edu\",\"phone\":\"734.647.0591\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jacqui Smith\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869346\",\"firstName\":\"Robert\",\"lastName\":\"Wallace\",\"email\":\"robert-wallace@uiowa.edu\",\"phone\":\"319.384.1551\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Iowa College of Public Health\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert Wallace\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869347\",\"firstName\":\"David\",\"lastName\":\"Weir\",\"email\":\"dweir@umich.edu\",\"phone\":\"734.936-0314\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David Weir\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869348\",\"firstName\":\"Robert J.\",\"lastName\":\"Willis\",\"email\":\"rjwillis@umich.edu\",\"phone\":\"734.936.0314\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert J. Willis\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56d96b0ce4b01cdcef74e10f\",\"lastName\":\"Survey Research Center\",\"email\":\"hrsquestions@umich.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The University of Michigan\"},\"department\":{\"en\":\"Institute for Social Research\"},\"address\":{\"street\":{\"en\":\"426 Thompson Street\"},\"city\":{\"en\":\"Ann Arbor\"},\"zip\":\"48104\",\"state\":\"Michigan\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"hrs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Survey Research Center\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "gem",
+        "timestamps": {
+          "created": "2019-07-23T14:13:17.562",
+          "lastUpdate": "2021-05-13T13:54:11.518"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Ginkgo Evaluation of Memory Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Ginkgo Evaluation of Memory Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "GEMS"
+          },
+          {
+            "lang": "fr",
+            "value": "GEMS"
+          }
+        ],
+        "design": "clinical_trial",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 3069
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Ginkgo Evaluation of Memory (GEM) study aimed&nbsp;to test the hypothesis that 240 mg of ginkgo biloba daily would decrease the incidence of all-cause dementia and specifically reduce the incidence of Alzheimer's disease.</p>\r\n\r\n<p>Secondary objectives of the GEM study were to evaluate the effect of ginkgo biloba on the following end points: overall cognitive decline, functional disability, total mortality, and incidence of cardiovascular diseases.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Ginkgo Evaluation of Memory (GEM) study aimed&nbsp;to test the hypothesis that 240 mg of ginkgo biloba daily would decrease the incidence of all-cause dementia and specifically reduce the incidence of Alzheimer's disease.</p>\n\n<p>Secondary objectives of the GEM study were to evaluate the effect of ginkgo biloba on the following end points: overall cognitive decline, functional disability, total mortality, and incidence of cardiovascular diseases.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":3069},\"sample\":{\"noLimit\":false,\"number\":3069}},\"website\":\"http://www.nccam-ginkgo.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Beth Snitz\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"clinical_trial\"],\"design\":\"clinical_trial\",\"followUpInfo\":{\"en\":\"<p>Participants were followed-up every six months.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>The GEM&nbsp;<span>study is a randomized, double-blind, placebo-controlled, clinical trial.</span></p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":2000,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Beth Snitz\",\"date\":\"1969-12-31\"},\"markerPaper\":\"DeKosky S, Fitzpatrick A, Ives D, et al.  The Ginkgo Evaluation of Memory (GEM) study: design and baseline data of a randomized trial of Ginkgo biloba extract in prevention of dementia. Contemporary Clinical Trials, 2006; 27: 238-253\",\"endYear\":2008,\"pubmedId\":\"16627007\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886930c\",\"title\":\"MD.\",\"firstName\":\"Steven T.\",\"lastName\":\"DeKosky\",\"email\":\"martinba@upmc.edu\",\"phone\":\"(412) 692-4600\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"street\":{\"en\":\"3571 Fifth Avenue, Suite 811\"},\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"gem\",\"role\":\"investigator\"},{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Steven T. DeKosky\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886930d\",\"title\":\"Dr.\",\"firstName\":\"Beth E. \",\"lastName\":\"Snitz\",\"email\":\"snitbe@upmc.edu\",\"phone\":\"(412) 692-4820\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"gem\",\"role\":\"investigator\"},{\"parentId\":\"gem\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Beth E.  Snitz\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869299\",\"title\":\"Dr.\",\"firstName\":\"Michelle C.\",\"lastName\":\"Carlson\",\"email\":\"mcarlso2@jhmi.edu\",\"phone\":\"410-614-4887\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Johns Hopkins University\"},\"department\":{\"en\":\"Department of Mental Health\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"},{\"parentId\":\"gem\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michelle C. Carlson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886930d\",\"title\":\"Dr.\",\"firstName\":\"Beth E. \",\"lastName\":\"Snitz\",\"email\":\"snitbe@upmc.edu\",\"phone\":\"(412) 692-4820\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"gem\",\"role\":\"investigator\"},{\"parentId\":\"gem\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Beth E.  Snitz\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "lbc1921",
+        "timestamps": {
+          "created": "2019-07-23T14:13:55.288",
+          "lastUpdate": "2020-02-05T11:07:46.366"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Lothian Birth Cohort 1921"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LBC1921"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 550
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The original aim of the LBC1921 study was to seek influences on cognitive ageing in healthy old people.&nbsp;</span><span>The objectives were: </span></p>\r\n\r\n<ul>\r\n\t<li><span>to test the effect of&nbsp;</span><em>APOE</em><span>&nbsp;e4 status on lifetime cognitive ageing; </span></li>\r\n\t<li><span>to collect social, cognitive and medical data; </span></li>\r\n\t<li><span>to retain the phenotypic information and DNA in order to test other candidate genes.&nbsp;</span></li>\r\n</ul>\r\n\r\n<p><span>Subsequently, the study aimed at explaining variation in lifetime cognitive ageing, studied the effects of single nucleotide polymorphisms (SNPs) from over 100 oxidative-stress-related genes, and conducted a genome-wide association study (GWAS).&nbsp;The principal aims of&nbsp;waves 3 and 4 of the LBC1921 were to test the common cause hypothesis of cognitive ageing: i.e. they aimed to use the longitudinal data collected within old age to test the idea that age-related physical and cognitive changes proceed in parallel, owing to shared causes.</span></p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":550},\"sample\":{\"noLimit\":false,\"number\":550},\"info\":{\"en\":\"<p>234 men and 316 women.</p>\\r\\n\"}},\"website\":\"http://www.lothianbirthcohort.ed.ac.uk/\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Ian Deary\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>The participants in LBC1921 have been examined at mean ages of 79, 83, 87 and 90 years.</span></p>\\r\\n\"},\"recruitments\":[\"other\"],\"otherRecruitment\":{\"en\":\"Sub-sample of the participants of the Scottish Mental Survey of 1932 \"}},\"startYear\":1999,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Ian Deary\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Deary IJ, Gow AJ, Pattie A, Starr JM. Cohort profile: the Lothian Birth Cohorts of 1921 and 1936. Int J Epidemiol. 2012 Dec;41(6):1576-84.\",\"pubmedId\":\"22253310\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869339\",\"title\":\"MD.\",\"firstName\":\"Ian\",\"lastName\":\"Deary\",\"email\":\"i.deary@ed.ac.uk\",\"phone\":\"0131 650 3452\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Centre for Cognitive Ageing and Cognitive Epidemiology\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ian Deary\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869339\",\"title\":\"MD.\",\"firstName\":\"Ian\",\"lastName\":\"Deary\",\"email\":\"i.deary@ed.ac.uk\",\"phone\":\"0131 650 3452\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Centre for Cognitive Ageing and Cognitive Epidemiology\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ian Deary\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"no\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "ilsa",
+        "timestamps": {
+          "created": "2019-07-23T14:13:39.732",
+          "lastUpdate": "2020-07-28T12:12:46.619"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Italian Longitudinal Study on Aging"
+          },
+          {
+            "lang": "fr",
+            "value": "Italian Longitudinal Study on Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ILSA"
+          },
+          {
+            "lang": "fr",
+            "value": "ILSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5632
+        },
+        "countries": [
+          "ITA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objectives of the study were to investigate frequency, risk and protective factors of major age-associated chronic conditions (hypertension, myocardial infarction, angina pectoris, cardiac arrhythmia, congestive heart failure, diabetes, peripheral artery disease, stroke, dementia, parkinsonism, and distal symmetric neuropathy of lower limbs) and to study physical and functional changes in the cohort."
+          },
+          {
+            "lang": "fr",
+            "value": "to be completed"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "others",
+          "administratives_databases",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5632},\"sample\":{\"noLimit\":false,\"number\":3516}},\"website\":\"http://www.italz.it/CNRPFINV/ilsa.htm\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Emanuele Scafato\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"After the baseline in 1992, the participants were followed-up in 1995 and 2000. A 20-year follow-up of total and cause-specific mortality through record linkage with national death records is also available.\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"As part of the Targeted Project on Aging, the ILSA study was first supported by the Italian National Research Council (CNR) with grants to each research unit from 1991 through 1995. The study was then funded by the Italian Ministry of Health (D.L. 502/92, 1998), through the program \\\"Epidemiology of the Elderly\\\" (Istituto Superiore di Sanità) and the special program \\\"Estimates of Health Needs of the Elderly\\\" (Tuscany Region).\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Emanuele Scafato\"},\"markerPaper\":\"Maggi S, Zucchetto M, Grigoletto F, et al. The Italian Longitudinal Study on Aging (ILSA): design and methods. Aging Clin Exp Res 1994; 6: 464-73\",\"endYear\":2012,\"pubmedId\":\"7748921\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869356\",\"title\":\"Prof.\",\"firstName\":\"Emanuele\",\"lastName\":\"Scafato\",\"email\":\"emanuele.scafato@iss.it\",\"phone\":\"+39 06 4990 4028\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Istituto Superiore Sanità (ISS) - National Centre for Epidemiology, Surveillance and Health Promotion (CNESPS)\"},\"department\":{\"en\":\"Population Health and Health Determinants Unit\"},\"address\":{\"street\":{\"en\":\"Viale Regina Elena, 299\"},\"city\":{\"en\":\"Rome\"},\"zip\":\"00161\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"ilsa\",\"role\":\"investigator\"},{\"parentId\":\"iprea\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Emanuele Scafato\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869357\",\"title\":\"Dr.\",\"firstName\":\"Lucia\",\"lastName\":\"Galluzzo\",\"email\":\"lucia.galluzzo@iss.it\",\"phone\":\"+39 06 4990 4198\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Istituto Superiore Sanità (ISS) - National Centre for Epidemiology, Surveillance and Health Promotion (CNESPS)\"},\"department\":{\"en\":\"Population Health and Health Determinants Unit\"},\"address\":{\"street\":{\"en\":\"Viale Regina Elena, 299\"},\"city\":{\"en\":\"Rome\"},\"zip\":\"00161\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"ilsa\",\"role\":\"contact\"},{\"parentId\":\"iprea\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Lucia Galluzzo\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "kocoa",
+        "timestamps": {
+          "created": "2019-07-23T14:13:50.287",
+          "lastUpdate": "2020-02-05T11:07:45.150"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Keys to Optimal Cognitive Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "KOCOA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 197
+        },
+        "countries": [
+          "JPN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>Okinawa, Japan is known for their high concentration of centenarians and healthy agers. This is a pilot study where we examine key factors that could explain their healthy cognitive aging and compare them among the elderly recruited in the same way in Oregon, USA. This is a collaborative study between the University of the Ryukyus Graduate School of Medicine in Okinawa, Japan and the Layton Aging and  Alzheimer’s disease center at Oregon Health & Science University in Portland, OR, USA. We have a rich collection of nutrient markers including a full panel of plasma amino acids and food frequency questionnaire, metabolic assessments, inflammation markers and MRI.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":197},\"sample\":{\"noLimit\":false,\"number\":196},\"info\":{}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dodge, Hiroko\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p><span>3 years of annual follow-up (2007-2010) with MRI assessments among a part of original cohort and newly recruited subjects during 2011 – 2012</span></p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2007,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Dodge HH, Katsumata Y, Todoriki H, et al., Comparisons of plasma/serum micronutrients between Okinawan and Oregonian elders: a pilot study. J Gerontol A Biol Sci Med Sci. 2010 Oct;65(10):1060-7. doi: 10.1093/gerona/glq124.\",\"endYear\":2012,\"pubmedId\":\"20643702\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869363\",\"title\":\"Dr.\",\"firstName\":\"Hiroko H.\",\"lastName\":\"Dodge\",\"email\":\"dodgeh@ohsu.edu\",\"phone\":\"503 494 6977\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oregon Health & Science University\"},\"address\":{\"city\":{\"en\":\"Portland\"},\"state\":\"Oregon\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"kocoa\",\"role\":\"investigator\"},{\"parentId\":\"kocoa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Hiroko H. Dodge\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"5894d351e4b0e5540d14968d\",\"title\":\"Dr.\",\"firstName\":\"Oya\",\"lastName\":\"Yusuke\",\"email\":\"ohya@med.u-ryukyu.ac.jp\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of the Ryukyus\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Nishihara\"},\"state\":\"Okinawa\",\"countryIso\":\"Japan\"}},\"studyMemberships\":[{\"parentId\":\"kocoa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Oya Yusuke\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869363\",\"title\":\"Dr.\",\"firstName\":\"Hiroko H.\",\"lastName\":\"Dodge\",\"email\":\"dodgeh@ohsu.edu\",\"phone\":\"503 494 6977\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oregon Health & Science University\"},\"address\":{\"city\":{\"en\":\"Portland\"},\"state\":\"Oregon\",\"countryIso\":\"United States\"}},\"studyMemberships\":[{\"parentId\":\"kocoa\",\"role\":\"investigator\"},{\"parentId\":\"kocoa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Hiroko H. Dodge\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<ul>\\n\\t<li>Nishihira J, Tokashiki T, Higashiuesato Y, Willcox DC, Mattek N, Shinto L, Ohya Y, Dodge HH. Associations between Serum Omega-3 Fatty Acid Levels and Cognitive Functions among Community-Dwelling Octogenarians in Okinawa, Japan: The KOCOA Study. Journal of Alzheimer's disease : JAD. 2016. doi: 10.3233/JAD-150910. PubMed PMID: 26890763 (PMC4816662).</li>\\n</ul>\\n\\n<ul>\\n\\t<li>Katsumata Y, Todoriki H, Yasura S, Dodge HH. Timed up and go test predicts cognitive decline in healthy adults aged 80 and older in Okinawa: Keys to Optimal Cognitive Aging (KOCOA) Project. J Am Geriatr Soc. 2011 Nov;59(11):2188-9. doi: 10.1111/j.1532-5415.2011.03645.x. PubMed PMID: 22098046; PubMed Central PMCID: PMC3291095.</li>\\n</ul>\\n\\n<ul>\\n\\t<li>Katsumata Y, Todoriki H, Higashiuesato Y, Yasura S, Willcox DC, Ohya Y, Willcox BJ, Dodge HH. Metabolic syndrome and cognitive decline among the oldest old in Okinawa: in search of a mechanism. The KOCOA Project. J Gerontol A Biol Sci Med Sci. 2012 Feb;67(2):126-34. doi: 10.1093/gerona/glr189. Epub 2011 Oct 20. PubMed PMID: 22016359; PubMed Central PMCID: PMC3261441.</li>\\n</ul>\\n\\n<ul>\\n\\t<li>Katsumata Y, Todoriki H, Higashiuesato Y, Yasura S, Ohya Y, Willcox DC, Dodge HH. Very old adults with better memory function have higher low-density lipoprotein cholesterol levels and lower triglyceride to high-density lipoprotein cholesterol ratios: KOCOA Project. J Alzheimers Dis. 2013 Jan 1;34(1):273-9. doi: 10.3233/JAD-121138. PubMed PMID: 23207484; PubMed Central PMCID: PMC3586553.</li>\\n</ul>\\n<ul>\\n\\t<li>Silbert LC, Lahna D, Promjunyakul N, Boespflug E, Ohya Y, Higashiuesato Y, Nishihira J, Tokashiki T. Risk factors associated with decreased cortical thickness in dementia free Okinawan elderly Alzheimer's & Dementia: The Journal of the Alzheimer's Association, 2016: Vol. 12, Issue 7, P84–P85.</li>\\n</ul>\"}}"
+      },
+      {
+        "id": "hope",
+        "timestamps": {
+          "created": "2019-07-23T14:13:32.410",
+          "lastUpdate": "2021-05-13T14:36:34.334"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Healthy Old People of Edinburgh"
+          },
+          {
+            "lang": "fr",
+            "value": "Healthy Old People of Edinburgh"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HOPE"
+          },
+          {
+            "lang": "fr",
+            "value": "HOPE"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 603
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main aim of the study was to estimate the relationship between blood pressure and cognition.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The main aim of the study was to estimate the relationship between blood pressure and cognition.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":603},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"<p>Reliable information about blood pressure is available 294 participants in all 3 follow-ups.</p>\\r\\n\"}},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"John Starr\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>After the baseline examination (1990-1991), the participants were followed-up 3 times:in&nbsp;1994-1995 (Follow-up 1),&nbsp;1997-1998 (Follow-up 2) and&nbsp;1999-2000 (Follow-up 3).</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1990,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"John Starr\"},\"markerPaper\":\"Starr JM, Deary IJ, Macintyre S. Associations with successful ageing in the Healthy Old People in Edinburgh cohort: being well, fit and healthy. Aging Clinical & Experimental Research 2003;15:336-342.\",\"endYear\":2000,\"pubmedId\":\"14661826\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869338\",\"title\":\"Prof.\",\"firstName\":\"Lawrence\",\"lastName\":\"Whalley\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Aberdeen\"},\"address\":{\"city\":{\"en\":\"Aberdeen\"},\"state\":\"Scotland\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lawrence Whalley\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869339\",\"title\":\"MD.\",\"firstName\":\"Ian\",\"lastName\":\"Deary\",\"email\":\"i.deary@ed.ac.uk\",\"phone\":\"0131 650 3452\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Centre for Cognitive Ageing and Cognitive Epidemiology\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ian Deary\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886933a\",\"title\":\"Dr.\",\"firstName\":\"Sally\",\"lastName\":\"Macintyre\",\"email\":\"Sally.Macintyre@glasgow.ac.uk\",\"phone\":\"0141 353 7013\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Glasgow\"},\"department\":{\"en\":\"Social and Public Health Sciences Unit\"},\"address\":{\"city\":{\"en\":\"Glasgow\"},\"state\":\"Scotland\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Sally Macintyre\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "nhs",
+        "timestamps": {
+          "created": "2019-07-23T14:14:34.366",
+          "lastUpdate": "2021-05-05T17:46:50.277"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Nurses' Health Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Nurses' Health Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NHS"
+          },
+          {
+            "lang": "fr",
+            "value": "NHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 276146
+        },
+        "countries": [
+          "CAN",
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The study aimed initially to examine the relation between the use of oral contraceptives, cigarette smoking, and risk of major illnesses in women, mainly cancer and cardiovascular diseases.&nbsp;Since then, the study broadened to include &nbsp;the evaluation of health consequences of many lifestyle practices, including diet, physical activity, and specific forms of estrogen replacement therapy.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "À compléter"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "administratives_databases",
+          "others",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":276146},\"sample\":{\"noLimit\":false,\"number\":124869}},\"website\":\"http://www.nurseshealthstudy.org\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Francine Grodstein\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Every 2 years cohort members receive by mail a follow-up questionnaire inquiring about a number of exposures as well as the development of cancer, cardiovascular disease, and other major medical conditions diagnosed since the last follow-up.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"All participants are registered nurses in the United States\"}},\"startYear\":1976,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Francine Grodstein\"},\"markerPaper\":\"Colditz GA, Manson JE, Hankinson SE. The Nurses' Health Study: 20-year contribution to the understanding of health among women. Journal of women’s health, 1997; 6(1): 49-62.\",\"pubmedId\":\"9065374\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b010783886943d\",\"title\":\"MD.\",\"firstName\":\"Walter C. \",\"lastName\":\"Willett\",\"phone\":\"617-432-4680\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Harvard T.H. Chan School of Public Health\"},\"department\":{\"en\":\"Department of Nutrition\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Walter C.  Willett\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886943e\",\"title\":\"Dr.\",\"firstName\":\"Francine \",\"lastName\":\"Grodstein\",\"email\":\"Francine.Grodstein@channing.harvard.edu\",\"phone\":\"617-525-2279\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women’s Hospital and Harvard Medical School\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nhs\",\"role\":\"investigator\"},{\"parentId\":\"nhs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Francine  Grodstein\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56effdade4b0147570588871\",\"title\":\"Dr.\",\"firstName\":\"Meir\",\"lastName\":\"Stampfer\",\"phone\":\"(617) 525-2749\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women’s Hospital and Harvard Medical School\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Meir Stampfer\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56effebbe4b0147570588872\",\"title\":\"Dr.\",\"firstName\":\"Heather\",\"lastName\":\"Eliassen\",\"email\":\"heliasse@hsph.harvard.edu\",\"phone\":\"(617) 525-2104\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women’s Hospital and Harvard Medical School\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nhs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Heather Eliassen\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b010783886943e\",\"title\":\"Dr.\",\"firstName\":\"Francine \",\"lastName\":\"Grodstein\",\"email\":\"Francine.Grodstein@channing.harvard.edu\",\"phone\":\"617-525-2279\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women’s Hospital and Harvard Medical School\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nhs\",\"role\":\"investigator\"},{\"parentId\":\"nhs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Francine  Grodstein\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "nlsy79",
+        "timestamps": {
+          "created": "2019-07-23T14:14:35.606",
+          "lastUpdate": "2021-05-05T09:39:24.770"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "National Longitudinal Study of Youth 1979"
+          },
+          {
+            "lang": "fr",
+            "value": "National Longitudinal Study of Youth 1979"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NLSY79"
+          },
+          {
+            "lang": "fr",
+            "value": "NLSY79"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 12686
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The NLSY 1979 Cohort is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964. &nbsp;The study was intended to be representative of United States residents, both male and female. &nbsp;It observes the life-course experiences of young adults that had, typically, finished their schooling and were making decisions about education and training, entering the labour market, military service, marriage, and having families. &nbsp;Main topics addressed include:</p>\r\n\r\n<ul>\r\n\t<li>Labor market behavior</li>\r\n\t<li>Educational experiences (high school, college, training)</li>\r\n\t<li>Family background</li>\r\n\t<li>Armed Services Vocational Aptitude Battery (measures knowledge and skills including reading and mathematics)</li>\r\n\t<li>High school information received from respondents' schools and from respondents' school transcripts</li>\r\n\t<li>Government program participation</li>\r\n\t<li>Family life (marital status, fertility, and child care)</li>\r\n\t<li>Health issues</li>\r\n\t<li>Assets and income</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The NLSY 1979 Cohort is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964. &nbsp;The study was intended to be representative of United States residents, both male and female. &nbsp;It observes the life-course experiences of young adults that had, typically, finished their schooling and were making decisions about education and training, entering the labour market, military service, marriage, and having families. &nbsp;Main topics addressed include:</p>\n\n<ul>\n\t<li>Labor market behavior</li>\n\t<li>Educational experiences (high school, college, training)</li>\n\t<li>Family background</li>\n\t<li>Armed Services Vocational Aptitude Battery (measures knowledge and skills including reading and mathematics)</li>\n\t<li>High school information received from respondents' schools and from respondents' school transcripts</li>\n\t<li>Government program participation</li>\n\t<li>Family life (marital status, fertility, and child care)</li>\n\t<li>Health issues</li>\n\t<li>Assets and income</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":12686},\"sample\":{\"noLimit\":false}},\"website\":\"https://www.nlsinfo.org/content/cohorts/nlsy79\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Yearly personal interviews were conducted from 1979 - 1986. &nbsp;In 1987, a telephone interview was conducted. &nbsp;Personal interviews resumed in 1988 and continued yearly until 1994. &nbsp;Since 1994, NLSY79 participants have been interviewed in even-numbered years. &nbsp;</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1979,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"https://nlsinfo.org/content/cohorts/nlsy79\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b010783886943f\",\"title\":\"Dr.\",\"firstName\":\"Elizabeth\",\"lastName\":\"Cooksey\",\"email\":\"cooksey.1@osu.edu\",\"phone\":\"614 292-6484\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ohio State University\"},\"department\":{\"en\":\"Center for Human Resource Research \"},\"address\":{\"street\":{\"en\":\"104 Townshend Hall, 1885 Neil Avenue Mall\"},\"city\":{\"en\":\"Columbus\"},\"zip\":\"43210\",\"state\":\"Ohio\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nlsy79\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Elizabeth Cooksey\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869440\",\"title\":\"Dr.\",\"firstName\":\"Audrey\",\"lastName\":\"Light\",\"email\":\"light.20@osu.edu\",\"phone\":\"614.292.0493\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Center for Human Resource Research \"},\"department\":{\"en\":\"Ohio State University\"},\"address\":{\"street\":{\"en\":\"1945 N. High St., 443A Arps Hall\"},\"city\":{\"en\":\"Columbus\"},\"zip\":\"43210\",\"state\":\"Ohio\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nlsy79\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Audrey Light\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869441\",\"title\":\"Dr.\",\"firstName\":\"Dan A.\",\"lastName\":\"Black\",\"email\":\"black-dan@norc.org\",\"phone\":\"(312) 759-4011\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"NORC at the University of Chicago\"},\"address\":{\"street\":{\"en\":\"55 East Monroe Street, 30th Floor\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60603\",\"state\":\"IL\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nlsy79\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Dan A. Black\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869442\",\"firstName\":\"Kymn M.\",\"lastName\":\"Kochanek\",\"email\":\"kochanek-kymn@norc.org\",\"phone\":\"(312) 759-4064\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"NORC at the University of Chicago\"},\"address\":{\"street\":{\"en\":\"55 East Monroe Street, 30th Floor\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60603\",\"state\":\"IL\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nlsy79\",\"role\":\"investigator\"},{\"parentId\":\"nlsy79\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kymn M. Kochanek\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869442\",\"firstName\":\"Kymn M.\",\"lastName\":\"Kochanek\",\"email\":\"kochanek-kymn@norc.org\",\"phone\":\"(312) 759-4064\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"NORC at the University of Chicago\"},\"address\":{\"street\":{\"en\":\"55 East Monroe Street, 30th Floor\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60603\",\"state\":\"IL\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nlsy79\",\"role\":\"investigator\"},{\"parentId\":\"nlsy79\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kymn M. Kochanek\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "midus",
+        "timestamps": {
+          "created": "2019-07-23T14:14:18.918",
+          "lastUpdate": "2020-02-05T11:07:52.822"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Midlife in the U.S."
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MIDUS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 8727
+        },
+        "countries": [
+          "USA",
+          "JPN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>MIDUS is a national longitudinal study of how diverse factors interact to influence health and well-being as people age from early adulthood into midlife and old age. It was conceived by a multidisciplinary team of scholars interested in understanding aging as a bio-psycho-social integrative process.</span></p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":8727},\"sample\":{\"noLimit\":false,\"number\":1637}},\"website\":\"http://midus.wisc.edu/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"recruitments\":[\"individuals\",\"families\"],\"otherDesign\":{},\"followUpInfo\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1995,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b01078388693c6\",\"firstName\":\"Carol \",\"lastName\":\"Ryff\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin-Madison\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Ryff\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693c7\",\"title\":\"Dr.\",\"firstName\":\"David \",\"lastName\":\"Almeida\",\"email\":\"dalmeida@psu.edu\",\"phone\":\"(814) 865-2656\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The Pennsylvania State University\"},\"department\":{\"en\":\"Human Development and Family Studies\"},\"address\":{\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David  Almeida\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693c8\",\"firstName\":\"Margie \",\"lastName\":\"Lachman\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brandeis University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Margie  Lachman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693c9\",\"title\":\"Dr.\",\"firstName\":\"Maxine \",\"lastName\":\"Weinstein\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Georgetown University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Maxine  Weinstein\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693ca\",\"firstName\":\"Teresa \",\"lastName\":\"Seeman\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California Los Angeles\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Teresa  Seeman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693cb\",\"firstName\":\"Richard \",\"lastName\":\"Davidson\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin-Madison\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard  Davidson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693cc\",\"firstName\":\"David \",\"lastName\":\"Williams\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Harvard University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David  Williams\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693cd\",\"title\":\"Dr.\",\"firstName\":\"Daniel\",\"lastName\":\"Mroczek\",\"email\":\"daniel.mroczek@northwestern.edu\",\"phone\":\"(847) 491-5190\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Northwestern University\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"state\":\"Illinois\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Daniel Mroczek\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693ce\",\"firstName\":\"Deborah  \",\"lastName\":\"Carr\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rutgers University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Deborah   Carr\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693cf\",\"firstName\":\"Marsha \",\"lastName\":\"Mailick\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin-Madison\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Marsha  Mailick\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d0\",\"firstName\":\"Joseph  \",\"lastName\":\"Grzywacz\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oklahoma State University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Joseph   Grzywacz\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d1\",\"firstName\":\"Arun  \",\"lastName\":\"Karlamangla\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California Los Angeles\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Arun   Karlamangla\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d2\",\"firstName\":\"Christopher  \",\"lastName\":\"Coe\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of WIsconsin-Madison\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Christopher   Coe\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d3\",\"firstName\":\"Robert  \",\"lastName\":\"Krueger\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Minnesota\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert   Krueger\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d4\",\"firstName\":\"Richard  \",\"lastName\":\"Sloan\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard   Sloan\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d5\",\"firstName\":\"Shinobu \",\"lastName\":\"Kitayama\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Shinobu  Kitayama\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d6\",\"firstName\":\"Hazel Rose  \",\"lastName\":\"Markus\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Stanford University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Hazel Rose   Markus\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d7\",\"firstName\":\"Norito  \",\"lastName\":\"Kawakami\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Tokyo\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Norito   Kawakami\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693d8\",\"firstName\":\"Mayumi  \",\"lastName\":\"Karasawa\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Tokyo Woman's Christian University\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mayumi   Karasawa\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b01078388693d9\",\"firstName\":\"Barry \",\"lastName\":\"Radler\",\"email\":\"bradler@wisc.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Barry  Radler\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "lscc",
+        "timestamps": {
+          "created": "2019-07-23T14:14:04.307",
+          "lastUpdate": "2020-02-05T11:07:48.634"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Longitudinal Study of Cognitive Change in Normal Healthy Old Age"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LSCC"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 6342
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The aims of the study are to\n<li>to determine marked variations in rates of cognitive change between individuals</li> \n<li>to identify factors that slow or accelerate cognitive ageing and that prolong mental productivity</li>\n<li>to generate and test functional models for the processes of biological ageing, especially of ageing of the brain and the central nervous system</li>\n<li>to test whether the neurophysiological and consequent cognitive changes differ in idiosyncratic patterns between individuals</li>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":6342},\"sample\":{\"noLimit\":false,\"number\":2400}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Participants were seen, on average, every 24–30 months, and completed test cycles within approximately 60 months.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1983,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"P.M.A. Rabbitt et al., (2004) The University of Manchester Longitudinal Study of Cognition in Normal Healthy Old Age, 1983 through 2003. Aging, Neuropsychology, and Cognition: A Journal on Normal and Dysfunctional Development, 11:2-3, 245-279.\",\"endYear\":2003,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694c1\",\"title\":\"Dr.\",\"firstName\":\"P.M.A.\",\"lastName\":\"Rabbitt\",\"email\":\"patrick.rabbitt@psy.ox.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Manchester\"},\"department\":{\"en\":\"Age and Cognitive Performance Research Centre\"},\"address\":{\"street\":{\"en\":\"Oxford Road\"},\"city\":{\"en\":\"Manchester\"},\"zip\":\"M13 9PL\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"lscc\",\"role\":\"investigator\"},{\"parentId\":\"lscc\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"P.M.A. Rabbitt\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694c1\",\"title\":\"Dr.\",\"firstName\":\"P.M.A.\",\"lastName\":\"Rabbitt\",\"email\":\"patrick.rabbitt@psy.ox.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Manchester\"},\"department\":{\"en\":\"Age and Cognitive Performance Research Centre\"},\"address\":{\"street\":{\"en\":\"Oxford Road\"},\"city\":{\"en\":\"Manchester\"},\"zip\":\"M13 9PL\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"lscc\",\"role\":\"investigator\"},{\"parentId\":\"lscc\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"P.M.A. Rabbitt\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "movies",
+        "timestamps": {
+          "created": "2019-07-23T14:14:25.922",
+          "lastUpdate": "2021-05-05T09:39:19.653"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Monongahela Valley Independent Elders Survey"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MoVIES"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1681
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The purpose of the MoVIES project was to learn more about the process of aging in the small towns and rural areas of the United States. The researchers were interested both in normal aging and in various disorders and disabilities that occur in old age. It also studied the incidence, risk factors, and outcome in late-life dementia, including Alzheimer's disease.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1681},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.wpic.pitt.edu/research/dementia_epidemiology/movies/MoviesHomePage.htm\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Mary Ganguli\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The assessments were conducted primarily in participants' homes and repeated biennially over 15 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1987,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Mary Ganguli\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Kuller LH, Ganguli M, Ratcliff GG, Huff FJ, Belle SH, Detre KM. The University of Pittsburgh Alzheimer's Disease Patient Registry: the Monongahela Valley Independent EldersSurvey (MoVIES). Aging: Clinical and Experimental Research, 1990; 2(3): 302-5.\",\"endYear\":2002,\"pubmedId\":\"2094370\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b01078388693ff\",\"title\":\"MD.\",\"firstName\":\"Mary\",\"lastName\":\"Ganguli\",\"email\":\"gangulim@upmc.edu\",\"phone\":\"412-647-6516\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"},{\"parentId\":\"movies\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mary Ganguli\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869401\",\"title\":\"MD.\",\"firstName\":\"Lewis H.\",\"lastName\":\"Kuller\",\"email\":\"kullerl@edc.pitt.edu \",\"phone\":\"(412) 383-1895\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Epidemiology\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lewis H. Kuller\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869403\",\"title\":\"Dr.\",\"firstName\":\"Steven H.\",\"lastName\":\"Belle\",\"email\":\"belle@edc.pitt.edu\",\"phone\":\"412-624-4874\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Epidemiology\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Steven H. Belle\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869404\",\"title\":\"MD.\",\"firstName\":\"François M.\",\"lastName\":\"Boller\",\"email\":\"boller@broca.inserm.fr\",\"phone\":\"+33 1 45 81 44 21\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\" Institut National de la Santé et de la Recherche Médicale (INSERM)\"},\"address\":{\"city\":{\"en\":\"Paris\"},\"countryIso\":\"FRA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"François M. Boller\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869406\",\"title\":\"MD.\",\"firstName\":\"Lynn M.\",\"lastName\":\"Burmeister\",\"email\":\"tdoble@umn.edu\",\"phone\":\"(612) 624-5150\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Minnesota\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Minneapolis\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lynn M. Burmeister\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886930c\",\"title\":\"MD.\",\"firstName\":\"Steven T.\",\"lastName\":\"DeKosky\",\"email\":\"martinba@upmc.edu\",\"phone\":\"(412) 692-4600\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"street\":{\"en\":\"3571 Fifth Avenue, Suite 811\"},\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"gem\",\"role\":\"investigator\"},{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Steven T. DeKosky\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869408\",\"title\":\"MD.\",\"firstName\":\"Katherine\",\"lastName\":\"Detre\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Katherine Detre\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869409\",\"title\":\"MD.\",\"firstName\":\"Francis J.\",\"lastName\":\"Huff\",\"phone\":\"(949)458-5545\",\"dataAccessCommitteeMember\":false,\"institution\":{\"address\":{\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Francis J. Huff\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886940a\",\"title\":\"Dr.\",\"firstName\":\"Graham\",\"lastName\":\"Ratcliff\",\"dataAccessCommitteeMember\":false,\"institution\":{\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Graham Ratcliff\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886940c\",\"title\":\"MD.\",\"firstName\":\"Eric G. \",\"lastName\":\"Rodriguez\",\"email\":\"rodriguezeg@upmc.edu\",\"phone\":\"412-692-2360\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eric G.  Rodriguez\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886940e\",\"title\":\"Dr.\",\"firstName\":\"Gary P.\",\"lastName\":\"Stoehr\",\"email\":\"gps1+@pitt.edu\",\"phone\":\"648-8579\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"School of Pharmacy\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Gary P. Stoehr\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886940f\",\"title\":\"MD.\",\"firstName\":\"George\",\"lastName\":\"Zubenko\",\"phone\":\"412-624-2000\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Western Psychiatric Institute\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"George Zubenko\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b01078388693ff\",\"title\":\"MD.\",\"firstName\":\"Mary\",\"lastName\":\"Ganguli\",\"email\":\"gangulim@upmc.edu\",\"phone\":\"412-647-6516\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"movies\",\"role\":\"investigator\"},{\"parentId\":\"movies\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mary Ganguli\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "lbc1936",
+        "timestamps": {
+          "created": "2019-07-23T14:13:56.713",
+          "lastUpdate": "2020-02-05T11:07:46.596"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Lothian Birth Cohort 1936"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LBC1936"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1091
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The original aim of the LBC1936 study was to seek&nbsp;determinants of normal cognitive ageing in survivors of the Scottish Mental Survey 1947.&nbsp;Those determinants of lifetime cognitive ageing were to include genetic, information processing, medical, economic and psycho-social factors.&nbsp;Wave 2 of LBC1936 was intended to identify the mechanisms that cause white matter damage and how this causes cognitive decline with ageing. New to Wave 2 was that the LBC1936 subjects underwent detailed structural MRI brain scan.</span></p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1091},\"sample\":{\"noLimit\":false,\"number\":1091},\"info\":{\"en\":\"<p>548 men and 543 women.</p>\\r\\n\"}},\"website\":\"http://www.lothianbirthcohort.ed.ac.uk/\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Ian Deary\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>The LBC1936 participants undertook a general intelligence test at age 11 years and were recruited for the LBC1936 cohort at the mean age of 70. They&nbsp;have been examined at mean ages of 70, 73 and 76 years.</span></p>\\r\\n\"},\"recruitments\":[\"other\"],\"otherRecruitment\":{\"en\":\"Sub-sample of the participants of the Scottish Mental Survey of 1947\"}},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Ian Deary\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Deary IJ, Gow AJ, Pattie A, Starr JM. Cohort profile: the Lothian Birth Cohorts of 1921 and 1936. Int J Epidemiol. 2012 Dec;41(6):1576-84.\",\"pubmedId\":\"22253310\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869339\",\"title\":\"MD.\",\"firstName\":\"Ian\",\"lastName\":\"Deary\",\"email\":\"i.deary@ed.ac.uk\",\"phone\":\"0131 650 3452\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Centre for Cognitive Ageing and Cognitive Epidemiology\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ian Deary\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869385\",\"title\":\"Prof.\",\"firstName\":\"Joanna\",\"lastName\":\"Wardlaw\",\"email\":\"joanna.wardlaw@ed.ac.uk\",\"phone\":\"+44 131 537 2943\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Western General Hospital\"},\"department\":{\"en\":\"Division of Clinical Neurosciences\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Joanna Wardlaw\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869339\",\"title\":\"MD.\",\"firstName\":\"Ian\",\"lastName\":\"Deary\",\"email\":\"i.deary@ed.ac.uk\",\"phone\":\"0131 650 3452\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Centre for Cognitive Ageing and Cognitive Epidemiology\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ian Deary\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b0107838869337\",\"title\":\"MD.\",\"firstName\":\"John\",\"lastName\":\"Starr\",\"email\":\"jstarr@staffmail.ed.ac.uk\",\"phone\":\"0131 650 4340\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Edinburgh\"},\"department\":{\"en\":\"Alzheimer Scotland Dementia Research Centre\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"hope\",\"role\":\"investigator\"},{\"parentId\":\"hope\",\"role\":\"contact\"},{\"parentId\":\"lbc1921\",\"role\":\"investigator\"},{\"parentId\":\"lbc1921\",\"role\":\"contact\"},{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"John Starr\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549162e4b0107838869385\",\"title\":\"Prof.\",\"firstName\":\"Joanna\",\"lastName\":\"Wardlaw\",\"email\":\"joanna.wardlaw@ed.ac.uk\",\"phone\":\"+44 131 537 2943\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Western General Hospital\"},\"department\":{\"en\":\"Division of Clinical Neurosciences\"},\"address\":{\"city\":{\"en\":\"Edinburgh\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"lbc1936\",\"role\":\"investigator\"},{\"parentId\":\"lbc1936\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Joanna Wardlaw\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"no\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "ulsam",
+        "timestamps": {
+          "created": "2019-07-23T14:15:37.515",
+          "lastUpdate": "2020-02-05T11:08:14.417"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Uppsala Longitudinal Study of Adult Men"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ULSAM"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2322
+        },
+        "countries": [
+          "SWE"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Uppsala Longitudinal Study of Adult Men is an ongoing longitudinal, epidemiologic study aiming&nbsp;at identifying risk factors for cardiovascular disease and type 2 diabetes in middle-aged men. &nbsp;</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2322},\"sample\":{\"noLimit\":false,\"number\":2322},\"info\":{}},\"website\":\"http://www.pubcare.uu.se/ulsam/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Lars Lannfelt\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Participants were followed at the ages of 50, 60, 70, 77, 82, and 88. &nbsp;</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1970,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Lars Lannfelt\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Hedstrand H. A study of middle-aged men with particular reference to risk factors for cardiovascular disease. Ups J Med Sci Suppl. 1975;19:1-61. \",\"pubmedId\":\"1216390\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694a1\",\"title\":\"Prof.\",\"firstName\":\"Martin\",\"lastName\":\"Ingelsson\",\"email\":\"martin.ingelsson@pubcare.uu.se\",\"phone\":\"+46 18 471 41 07\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Uppsala Universitet\"},\"department\":{\"en\":\"Department of Public Health and Caring Sciences, Geriatrics; Molecular Geriatrics / Rudbeck laboratory\"},\"address\":{\"street\":{\"en\":\"Uppsala Science Park\"},\"city\":{\"en\":\"Uppsala\"},\"zip\":\"751 85\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"ulsam\",\"role\":\"investigator\"},{\"parentId\":\"ulsam\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Martin Ingelsson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694a1\",\"title\":\"Prof.\",\"firstName\":\"Martin\",\"lastName\":\"Ingelsson\",\"email\":\"martin.ingelsson@pubcare.uu.se\",\"phone\":\"+46 18 471 41 07\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Uppsala Universitet\"},\"department\":{\"en\":\"Department of Public Health and Caring Sciences, Geriatrics; Molecular Geriatrics / Rudbeck laboratory\"},\"address\":{\"street\":{\"en\":\"Uppsala Science Park\"},\"city\":{\"en\":\"Uppsala\"},\"zip\":\"751 85\",\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"ulsam\",\"role\":\"investigator\"},{\"parentId\":\"ulsam\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Martin Ingelsson\"},\"role\":\"contact\"}]},\"info\":{}}"
+      },
+      {
+        "id": "csha",
+        "timestamps": {
+          "created": "2019-07-23T14:12:45.379",
+          "lastUpdate": "2022-04-06T14:43:06.360"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Canadian Study of Health and Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CSHA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 10263
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "021b3187-333c-4404-8b9e-12b9d1efbd0b",
+          "fileName": "logo.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 75911,
+          "md5": "a39a41f87bb63dfb2a7ef07b93a13fec",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.116"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The CSHA objectives were presented at several levels:</p>\n\n<ol>\n\t<li>Four core objectives addressed the prevalence, incidence and risk factors for dementia including Alzheimer's disease and vascular dementia, and the impact of dementia on family and other informal caregivers.</li>\n\t<li>Secondary objectives covered other health topics (such as cognitive impairment not dementia (CIND), disability, frailty and healthy aging) that could readily be addressed in the context of the study.</li>\n\t<li>In addition, participating investigators were encouraged to propose supplementary “add-on” studies of personal interest to them, and for which they could obtain separate funding.</li>\n\t<li>Finally, it was anticipated that the CSHA results would generate “spin-off” studies (such as linking to health services utilization records and to death records) that could be undertaken subsequently by team members under separate funding arrangements.</li>\n</ol>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":10263},\"sample\":{\"noLimit\":false,\"number\":2129},\"info\":{\"en\":\"<p>There were 9008 community and 1255 institution residents; there were 1686 subject-caregiver pairs, including both community and institution participants with dementia plus a comparison group for each category.</p>\"}},\"website\":\"http://www.csha.ca/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Ian McDowell\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>Participants were assessed at 5-yearly intervals: in 1991, 1996, and 2001.</p>\\r\\n\"},\"recruitments\":[\"individuals\",\"other\"],\"otherRecruitment\":{\"en\":\"Family caregivers for selected study participants\"},\"info\":{\"en\":\"\"}},\"startYear\":1991,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Ian McDowell\"},\"markerPaper\":\"Canadian Study of Health and Aging Working Group. Canadian study of health and aging: study methods and prevalence of dementia.  CMAJ. 1994 Mar 15;150(6):899-913.\",\"endYear\":2002,\"pubmedId\":\"8131123\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692b5\",\"title\":\"Dr.\",\"firstName\":\"Ian\",\"lastName\":\"McDowell\",\"email\":\"mcdowell@uottawa.ca\",\"phone\":\"(613) 562-5800, ext. 8284\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Ottawa\"},\"department\":{\"en\":\"Department of Epidemiology and Community Medicine\"},\"address\":{\"street\":{\"en\":\"451 Smyth Road\"},\"city\":{\"en\":\"Ottawa\"},\"zip\":\" K1H 8M5\",\"state\":\"Ontario\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"csha\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ian McDowell\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692b6\",\"title\":\"Dr.\",\"firstName\":\"Joan\",\"lastName\":\"Lindsay\",\"email\":\"jplindsay75@gmail.com\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Ottawa\"},\"department\":{\"en\":\"Department of Epidemiology and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Ottawa\"},\"state\":\"Ontario\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"csha\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Joan Lindsay\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>McDowell I, Hill G, Lindsay J. An overview of the Canadian Study of Health and Aging. Int Psychogeriatr. 2001;13 Supp 1:7-18. PMID: 11892976</p>\\n\\n<p>The Canadian Study of Health and Aging. Patterns of caring for people with dementia in Canada. Can J Aging 1994;13:470-487.</p>\\n\\n<p>The Canadian Study of Health and Aging Working Group. The incidence of dementia in Canada. Neurology 2000;55:66-73. PMID: 10891908</p>\\n\\n<p>Lindsay J, Laurin D, Verreault R, Hébert R, Helliwell B, Hill GB, McDowell I. Risk factors for Alzheimer's disease: a prospective analysis from the Canadian Study of Health and Aging. Am J Epidemiol 2002;156:445-453. PMID: 12196314</p> \\n\\n<p>The Canadian Study of Health and Aging Working Group. Patterns and health effects of caring for people with dementia: the impact of changing cognitive and residential status. Gerontol 2002;42:643-652.</p>\\n\\n<p>Lindsay J, Sykes E, McDowell I, Verreault R, Laurin D. More than the epidemiology of Alzheimer's disease: contributions of the Canadian Study of Health and Aging. Can J Psychiatry 2004;49:83-91. PMID: 15065741</p>\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "chs",
+        "timestamps": {
+          "created": "2019-07-23T14:12:32.707",
+          "lastUpdate": "2019-11-12T18:15:19.457"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Cardiovascular Health Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5888
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "88be820e-8725-4ebc-aa17-29e02eb3b711",
+          "fileName": "CHSLogo.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 6396,
+          "md5": "2bd63c13ca254caab2381dedbb5373d6",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.178"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objective of the study is to identify factors related to the onset of coronary heart disease and stroke. CHS is designed to determine the importance of conventional cardiovascular disease (CVD) risk factors in older adults, and to identify new risk factors in this age group, especially those that may be protective and modifiable. Other objectives are the following:</p>\n\n<ol>\n\t<li>To quantify associations of conventional and hypothesized risk factors with CHD and stroke.</li>\n\t<li>To assess the association of indicators of subclinical disease, identified by noninvasive measures such as carotid ultrasonography and echocardiography, with incidence of CHD and stroke.</li>\n\t<li>To quantify the association of conventional and hypothesized risk factors with subclinical disease.</li>\n\t<li>To characterize the natural history of CHD and stroke, and identify factors associated with clinical course.</li>\n\t<li>To describe the prevalence and distributions of risk factors, subclinical disease, and clinically diagnosed CHD and stroke.</li>\n</ol>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5888},\"sample\":{\"noLimit\":false}},\"website\":\"https://chs-nhlbi.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Between enrollment and 1999, participants were seen in the clinic annually, and contacted by phone at 6-month intervals to collect information about hospitalizations and potential cardiovascular events. Since 1999, participants have been contacted every 6 months by phone, primarily to ascertain health status for events follow-up.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1987,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Fried LP, Borhani NO, Enright P, Furberg CD, Gardin JM, Kronmal RA, Kuller LH, Manolio TA, Mittelmark MB, Newman A, et al. The Cardiovascular Health Study: design and rationale. Annals of epidemiology, 1991; 1(3): 263-76.\",\"pubmedId\":\"1669507\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869295\",\"title\":\"MD\",\"firstName\":\"Jean \",\"lastName\":\"Olson\",\"academicLevel\":\"MD, MPH\",\"email\":\"jean.olson@ucsf.edu\",\"phone\":\"1 415-476-2727\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Francisco\"},\"department\":{\"en\":\"Department of Pathology\"},\"address\":{\"city\":{\"en\":\"San Francisco\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jean  Olson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869296\",\"title\":\"PhD\",\"firstName\":\"Richard \",\"lastName\":\"Kronmal\",\"email\":\"kronmal@u.washington.edu\",\"phone\":\"1 206-897-1915\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard  Kronmal\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869297\",\"title\":\"Dr.\",\"firstName\":\"Alice \",\"lastName\":\"Arnold\",\"academicLevel\":\"PhD\",\"email\":\"arnolda@uw.edu\",\"phone\":\"206-685-7123\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Alice  Arnold\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869298\",\"title\":\"MD\",\"firstName\":\"John \",\"lastName\":\"Robbins\",\"academicLevel\":\"MD, MHS\",\"email\":\"jarobbins@ucdavis.edu\",\"phone\":\"(916) 734-7005\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, Davis\"},\"department\":{\"en\":\"Department of Internal Medicine\"},\"address\":{\"city\":{\"en\":\"Sacramento\"},\"state\":\"California\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John  Robbins\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869299\",\"title\":\"Dr.\",\"firstName\":\"Michelle C.\",\"lastName\":\"Carlson\",\"email\":\"mcarlso2@jhmi.edu\",\"phone\":\"410-614-4887\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Johns Hopkins University\"},\"department\":{\"en\":\"Department of Mental Health\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"},{\"parentId\":\"gem\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Michelle C. Carlson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929a\",\"title\":\"MD\",\"firstName\":\"Gregory\",\"lastName\":\"Burke\",\"academicLevel\":\"MD\",\"email\":\"gburke@wakehealth.edu\",\"phone\":\"1 336-716-2930\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest Universiry School of Medicine\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Gregory Burke\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929b\",\"title\":\"MD\",\"firstName\":\"Lewis \",\"lastName\":\"Kuller\",\"academicLevel\":\"MD, Dr.PH\",\"email\":\"kullerl@edc.pitt.edu\",\"phone\":\"1 (412) 383-1895\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Pittsburgh\"},\"department\":{\"en\":\"Department of Epidemiology\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lewis  Kuller\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929c\",\"title\":\"Dr.\",\"firstName\":\"Russell \",\"lastName\":\"Tracy\",\"academicLevel\":\"PhD\",\"email\":\"Russell.Tracy@uvm.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Vermont\"},\"department\":{\"en\":\"Department of Pathology\"},\"address\":{\"city\":{\"en\":\"Colchester\"},\"state\":\"Vermont\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Russell  Tracy\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929d\",\"title\":\"MD\",\"firstName\":\"John \",\"lastName\":\"Gottdiener\",\"academicLevel\":\"MD\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Maryland\"},\"department\":{\"en\":\"University of Maryland Medical Center\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John  Gottdiener\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929e\",\"title\":\"MD\",\"firstName\":\"Ronald \",\"lastName\":\"Prineas\",\"academicLevel\":\"MD, PhD\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest Baptist Medical Center\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ronald  Prineas\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886929f\",\"title\":\"Dr.\",\"firstName\":\"James T.\",\"lastName\":\"Becker\",\"academicLevel\":\"PhD\",\"email\":\"beckerjt@upmc.edu\",\"phone\":\"1 412-246-6970\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universiry of Pittsburgh\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Pittsburgh\"},\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"James T. Becker\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a0\",\"title\":\"MD\",\"firstName\":\"Paul \",\"lastName\":\"Enright\",\"academicLevel\":\"MD\",\"email\":\"lungguy@aol.com\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Arizona\"},\"address\":{\"city\":{\"en\":\"Tucson\"},\"state\":\"Arizona\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Enright\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a1\",\"title\":\"MD\",\"firstName\":\"Ronald \",\"lastName\":\"Klein\",\"academicLevel\":\"MD\",\"email\":\"kleinr@epi.ophth.wisc.edu\",\"phone\":\"1 (608) 263-7171\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin\"},\"department\":{\"en\":\"School of Medicine and Public Health\"},\"address\":{\"city\":{\"en\":\"Madison\"},\"state\":\"Wisconsin\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ronald  Klein\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692a2\",\"title\":\"MD\",\"firstName\":\"Daniel \",\"lastName\":\"O'Leary\",\"academicLevel\":\"MD\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Tufts New England Medical Center\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Daniel  O'Leary\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692a3\",\"firstName\":\"Erika\",\"lastName\":\"Enright\",\"email\":\"eenright@u.washington.edu\",\"phone\":\"1 206-897-1922\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\"}},\"studyMemberships\":[{\"parentId\":\"chs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Erika Enright\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "cc75c",
+        "timestamps": {
+          "created": "2019-07-23T14:12:24.916",
+          "lastUpdate": "2021-05-05T09:38:53.740"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Cambridge City over-75s Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CC75C"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2166
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The CC75C is a long-term follow-up study of a representative population-based sample of older people. It aimed to study the p<span>revalence, incidence and risk factors for cognitive decline and dementia.</span></p>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2166},\"sample\":{\"noLimit\":false,\"number\":284}},\"website\":\"http://www.cc75c.group.cam.ac.uk/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Jane Fleming and Emily Zhao\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>After the first survey, participants were followed-up at year 2, 7, 10, 13, 17, 21, 23, 25 and 28, for a total of 10 surveys to date.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1985,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Jane Fleming and Emily Zhao\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Fleming J, Zhao E, O'Connor DW, Pollitt PA, Brayne C. Cohort profile: the Cambridge City over-75s Cohort (CC75C). International Journal of Epidemiology, 2007; 36(1): 40-6.\",\"pubmedId\":\"17510074\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886927e\",\"title\":\"Prof.\",\"firstName\":\"Carol \",\"lastName\":\"Brayne\",\"email\":\"cb105@medschl.cam.ac.uk\",\"phone\":\"01223 330334\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"},{\"parentId\":\"cfas\",\"role\":\"investigator\"},{\"parentId\":\"cfas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Brayne\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886927f\",\"title\":\"Dr.\",\"firstName\":\"Tom R. \",\"lastName\":\"Dening\",\"email\":\"Tom.Dening@nottingham.ac.uk\",\"phone\":\"0115 748 4230\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Nottingham\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Nottingham\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tom R.  Dening\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869280\",\"title\":\"Dr.\",\"firstName\":\"Jane \",\"lastName\":\"Fleming\",\"email\":\"jane.fleming@phpc.cam.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jane  Fleming\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869281\",\"title\":\"Prof.\",\"firstName\":\"Eugene S.\",\"lastName\":\"Paykel\",\"email\":\"esp10@cam.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eugene S. Paykel\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869282\",\"title\":\"Dr.\",\"firstName\":\"Stephen \",\"lastName\":\"Barclay\",\"email\":\"sigb2@medschl.cam.ac.uk\",\"phone\":\"01223 763082\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Stephen  Barclay\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869283\",\"title\":\"Dr.\",\"firstName\":\"Daniel \",\"lastName\":\"Davis\",\"email\":\"daniel.davis@ucl.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London\"},\"department\":{\"en\":\"MRC Unit for Lifelong Health and Ageing\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Daniel  Davis\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869284\",\"title\":\"Dr.\",\"firstName\":\"Morag\",\"lastName\":\"Farquhar\",\"email\":\"mcf22@medschl.cam.ac.uk\",\"phone\":\"01223 769294\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Morag Farquhar\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869285\",\"title\":\"Dr.\",\"firstName\":\"Elizabeta \",\"lastName\":\"Mukaetova-Ladinska\",\"email\":\"elizabeta.mukaetova-ladinska@ncl.ac.uk\",\"phone\":\"+44 (0)191 233 6161 ext 22439\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Newcastle University\"},\"department\":{\"en\":\"Institute for Ageing and Health\"},\"address\":{\"city\":{\"en\":\"Newcastle upon Tyne\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Elizabeta  Mukaetova-Ladinska\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886927e\",\"title\":\"Prof.\",\"firstName\":\"Carol \",\"lastName\":\"Brayne\",\"email\":\"cb105@medschl.cam.ac.uk\",\"phone\":\"01223 330334\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"},{\"parentId\":\"cfas\",\"role\":\"investigator\"},{\"parentId\":\"cfas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Brayne\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b0107838869286\",\"firstName\":\"Emily \",\"lastName\":\"Zhao\",\"email\":\"ez219@medschl.cam.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Emily  Zhao\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549160e4b0107838869280\",\"title\":\"Dr.\",\"firstName\":\"Jane \",\"lastName\":\"Fleming\",\"email\":\"jane.fleming@phpc.cam.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jane  Fleming\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "dmhds",
+        "timestamps": {
+          "created": "2019-07-23T14:12:53.768",
+          "lastUpdate": "2020-02-05T11:07:32.115"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Dunedin Multidisciplinary Health and Development Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "DMHDS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1037
+        },
+        "countries": [
+          "NZL"
+        ],
+        "logo": {
+          "id": "57e586bee4b099280256e7f0",
+          "fileName": "DMHDS.jpg",
+          "lang": "en",
+          "size": 3989,
+          "md5": "23e258a554097db82537b1795684d760",
+          "timestamps": {
+            "created": "2016-09-23T15:50:25.404"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Dunedin Multidisciplinary Health and Development Study aims to investigate the health and behavior of a representative birth cohort focusing on mental health and neuro-cognition, cardiovascular risk, respiratory health, oral health, sexual and reproductive health and psychosocial functioning.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1037},\"sample\":{\"noLimit\":false}},\"website\":\"http://dunedinstudy.otago.ac.nz/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{\"en\":\"http://dunedinstudy.otago.ac.nz/studies/dunedin-study-data-directories\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Terrie Moffitt\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Participants were assessed at ages 3, 5, 7, 9, 11, 13, 15, 18, 21, 26, 32 and 38 years. The cohort will be assessed again at age 45 in 2017.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1975,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Terrie Moffitt\"},\"markerPaper\":\"Poulton, Richie, Terrie E. Moffitt, and Phil A. Silva. The Dunedin Multidisciplinary Health And Development Study: Overview Of The First 40 Years, With An Eye To The Future. Social Psychiatry and Psychiatric Epidemiology 50.5 (2015): 679-693.\",\"pubmedId\":\"25835958\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"57e59139e4b099280256e816\",\"title\":\"Dr.\",\"firstName\":\"Richie\",\"lastName\":\"Poulton\",\"email\":\"richie.poulton@otago.ac.nz\",\"phone\":\"+64 3 479 8507\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Otago\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"362 Leith St, North Dunedin\"},\"city\":{\"en\":\"Dunedin\"},\"zip\":\"9016\",\"countryIso\":\"NZL\"}},\"studyMemberships\":[{\"parentId\":\"dmhds\",\"role\":\"investigator\"},{\"parentId\":\"dmhds\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richie Poulton\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57e5919fe4b099280256e817\",\"title\":\"Dr.\",\"firstName\":\"Terrie\",\"lastName\":\"Mofﬁtt\",\"email\":\"terrie.moffitt@duke.edu\",\"phone\":\"+1 919 684-5831\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Duke University\"},\"department\":{\"en\":\"Psychology and Neuroscience\"},\"address\":{\"street\":{\"en\":\"417 Chapel Drive\"},\"city\":{\"en\":\"Durham\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"dmhds\",\"role\":\"investigator\"},{\"parentId\":\"dmhds\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Terrie Mofﬁtt\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"57e5919fe4b099280256e817\",\"title\":\"Dr.\",\"firstName\":\"Terrie\",\"lastName\":\"Mofﬁtt\",\"email\":\"terrie.moffitt@duke.edu\",\"phone\":\"+1 919 684-5831\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Duke University\"},\"department\":{\"en\":\"Psychology and Neuroscience\"},\"address\":{\"street\":{\"en\":\"417 Chapel Drive\"},\"city\":{\"en\":\"Durham\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"dmhds\",\"role\":\"investigator\"},{\"parentId\":\"dmhds\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Terrie Mofﬁtt\"},\"role\":\"contact\"},{\"person\":{\"id\":\"57e59139e4b099280256e816\",\"title\":\"Dr.\",\"firstName\":\"Richie\",\"lastName\":\"Poulton\",\"email\":\"richie.poulton@otago.ac.nz\",\"phone\":\"+64 3 479 8507\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Otago\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"362 Leith St, North Dunedin\"},\"city\":{\"en\":\"Dunedin\"},\"zip\":\"9016\",\"countryIso\":\"NZL\"}},\"studyMemberships\":[{\"parentId\":\"dmhds\",\"role\":\"investigator\"},{\"parentId\":\"dmhds\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richie Poulton\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"All the data-capture forms for ages 3, 5, 7, 9, 11, 13, 15 18, 21, 26, and 32 are available <a href=\\\"http://dunedinstudy.otago.ac.nz/studies/dunedin-study-data-directories\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">here</a>\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "h-70",
+        "timestamps": {
+          "created": "2019-07-23T14:13:23.451",
+          "lastUpdate": "2021-05-06T13:10:25.766"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "The Gothenburg H70 Birth Cohort Studies"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "H70"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 9209
+        },
+        "countries": [
+          "SWE"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The main objective of the Gothenburg H70 Birth Cohort Studies is to examine mental, cognitive and somatic health, and its impact on functional ability and well-being, taking into account the complex interactions with age, sex, gender, socio-economic gradients, secular changes, psychosocial, neurobiological, and genetic factors occurring across the life course."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":9209},\"sample\":{\"noLimit\":false,\"number\":3565},\"info\":{\"en\":\"For the H70 study: Cohort 1: 973 participants; Cohort 2: 1036 participants; Cohort 3: 619 participants; Cohort 4: 500 participants; Cohort 5: 522 participants; Cohort 6: 1203 participants.\\n\\nFor the H85 study: Cohort 1 had 962 participants; Cohort 2 had 571 participants; Cohort 3 had 491 participants.\\n\\nFor the 95+ study: 1020 participants.\\n\\nFor the Prospective Population Study of Women (PPSW), there were 1427 women participating in the study.\"}},\"website\":\"www.epinep.gu.se\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Ingmar Skoog\",\"date\":\"2018-05-21\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"For the H70 study: cohort 1 was followed-up at 75, 79, 81, 83, 85, 88, 90, 92, 95, 97, 99 and 100 years old; cohort 2 was followed-up at 75 and 79 years old; cohort 3 was followed-up at 72 and 76 years old; cohort 4 was followed-up at ages 78, 83 and 87 year; cohort 5 was followed-up at ages 75, 79, and 85 years; cohort 6 is planned to be followed-up at ages 75, 79, and 85 years.\\n\\nFor the H85 study, cohort 1 was followed-up at ages 88, 90, 92, 95, 97, 99, 100, 102, and 103 years; cohort 2 was followed-up at ages 88 and 90 years, and planned at ages 92 and 95 years etc...; cohort 3 was planned for re-examinations at ages 88, 90, 92 and 95.\\n\\nFor the 95+ study,  there were longitudinal examinations of 95-year olds and older born between 1901 and 1911 in 2007, 2010, 2011, 2012, 2013, 2014 and 2015.\\n\\nFor the Prospective Population Study of Women (PPSW), all 5 cohorts of women born 1908, 1914, 1918, 1922 and 1930 were followed-up in 1974-75, 1981-82, 1992-93, 2000-02, 2005-06, 2009-11 and 2015-16.\"},\"recruitments\":[\"individuals\"]},\"startYear\":1968,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Ingmar Skoog\"},\"markerPaper\":\"Steen B, Djurfeldt H. The gerontological and geriatric population studies in Gothenburg, Sweden. Z Gerontol. 1993 May-Jun;26(3):163-9.\",\"pubmedId\":\"8337910\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869318\",\"title\":\"Dr.\",\"firstName\":\"Ingmar \",\"lastName\":\"Skoog\",\"email\":\"ingmar.skoog@neuro.gu.se\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Department of Psychiatry and Neurochemistry\"},\"address\":{\"city\":{\"en\":\"Gothenburg\"},\"countryIso\":\"SE\"}},\"studyMemberships\":[{\"parentId\":\"h-70\",\"role\":\"investigator\"},{\"parentId\":\"h-70\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ingmar  Skoog\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869319\",\"title\":\"Dr.\",\"firstName\":\"Boo \",\"lastName\":\"Johansson\",\"email\":\"boo.johansson@psy.gu.se\",\"phone\":\"+46 (31) 786 16 56\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Gothenburg\"},\"countryIso\":\"SE\"}},\"studyMemberships\":[{\"parentId\":\"h-70\",\"role\":\"investigator\"},{\"parentId\":\"nora\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Boo  Johansson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869318\",\"title\":\"Dr.\",\"firstName\":\"Ingmar \",\"lastName\":\"Skoog\",\"email\":\"ingmar.skoog@neuro.gu.se\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Gothenburg\"},\"department\":{\"en\":\"Department of Psychiatry and Neurochemistry\"},\"address\":{\"city\":{\"en\":\"Gothenburg\"},\"countryIso\":\"SE\"}},\"studyMemberships\":[{\"parentId\":\"h-70\",\"role\":\"investigator\"},{\"parentId\":\"h-70\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ingmar  Skoog\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"Rydberg Sterner T., Ahlner F., et Al. The Gothenburg H70 Birth Cohort Study 2014-16: design, methods and study population. European Journal of Epidemiology. 2019 Feb;34(2):191-209\"}}"
+      },
+      {
+        "id": "health-abc",
+        "timestamps": {
+          "created": "2019-07-23T14:13:30.189",
+          "lastUpdate": "2022-02-04T15:57:33.018"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Health, Aging, and Body Composition Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Health ABC"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 3075
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objectives of the HEALTH ABC were:</p>\n\n<ul>\n\t<li>To assess the association of baseline body weight, lean body mass, body fat, and bone mineral content with incidence of functional limitation, incidence and change in severity of weight-related health conditions, recovery of physical function after an acute event, baseline measures of strength, fitness and physical performance, gender, ethnicity and socioeconomic status;</li>\n\t<li>To assess the contribution of episodes of severe acute illness in healthier older persons to changes in body weight, bone mineral content, lean body mass and body fat, and the relationship of these episodes to risk of functional limitation and recovery;</li>\n\t<li>To assess the impact of weight-related comorbid illness on the risk of functional limitation and recovery;</li>\n\t<li>To assess the ways in which physiologic mediators of change in body composition influence and are influenced by changes in health in older adults and contribute to change in body composition;</li>\n\t<li>To understand how changes in body composition affect weight-related cardiovascular disease risk factors such as lipids, blood pressure and glucose tolerance;</li>\n\t<li>To assess the interdependency of behavioral factors, such as nutrition and physical activity, co-morbid health conditions, and their association with change in body composition in old age;</li>\n\t<li>To provide a firm scientific basis for understanding issues related to weight recommendations in old age through increased knowledge of the potential trade-offs between weight and risk of functional limitation, disability, morbidity and death;</li>\n\t<li>To provide information critical for developing effective strategies for the maintenance of health in older persons.</li>\n</ul>\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":3075},\"sample\":{\"noLimit\":false,\"number\":3075}},\"website\":\"https://healthabc.nia.nih.gov/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Jingzhong Ding\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants were followed every year from 1997 to 2011.</p>\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1997,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Jingzhong Ding\"},\"markerPaper\":\"Beavers KM, Beavers DP, Houston DK et al. Associations between body composition and gait-speed decline: results from the Health, Aging, and Body Composition study. American Journal of Clinical Nutrition, 2013; 97(3), 552-560.\",\"endYear\":2011,\"pubmedId\":\"23364001\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869257\",\"title\":\"MD.\",\"firstName\":\"Tamara \",\"lastName\":\"Harris\",\"email\":\"harrista@nia.nih.gov\",\"phone\":\"301-496-6044\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Epidemiology, Demography, and Biometry\"},\"address\":{\"city\":{\"en\":\"Bethesda\"},\"state\":\"Maryland\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"ages\",\"role\":\"investigator\"},{\"parentId\":\"ages\",\"role\":\"contact\"},{\"parentId\":\"health-abc\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tamara  Harris\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886932b\",\"title\":\"Dr.\",\"firstName\":\"Jingzhong \",\"lastName\":\"Ding\",\"email\":\"jding@wakehealth.edu\",\"phone\":\"336-713-8601\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"department\":{\"en\":\"Department of Internal Medicine and Gerontology\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"health-abc\",\"role\":\"investigator\"},{\"parentId\":\"health-abc\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jingzhong  Ding\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886932b\",\"title\":\"Dr.\",\"firstName\":\"Jingzhong \",\"lastName\":\"Ding\",\"email\":\"jding@wakehealth.edu\",\"phone\":\"336-713-8601\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"department\":{\"en\":\"Department of Internal Medicine and Gerontology\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"health-abc\",\"role\":\"investigator\"},{\"parentId\":\"health-abc\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Jingzhong  Ding\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false,\"otherMarkerPapers\":[{}]}"
+      },
+      {
+        "id": "gender",
+        "timestamps": {
+          "created": "2019-07-23T14:13:19.814",
+          "lastUpdate": "2021-05-05T09:39:04.033"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Ageing in Women and Men: A Longitudinal Study of Gender Differences in Health Behaviour and Health among Elderly"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "GENDER"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1210
+        },
+        "countries": [
+          "SWE"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objective of this study is to investigate gender differences during the aging process.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1210},\"sample\":{\"noLimit\":false,\"number\":470}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Anna Dahl Aslan\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>GENDER is a study of unlike-sex twin pairs born between 1906 and 1925 (Gold et al., 2002). A survey concerning health and health behavior was mailed in 1994 with responses from 1210 twins from 605 pairs where both responded. Mean age at baseline questionnaire assessment was 74.43 (SD 4.28) and all are Caucasians. A baseline in-person evaluation of 498 twins from 249 pairs between 70 and 80 years of age was undertaken between 1995 and 1997, and included an interview and tests of cognitive and physical functioning. Two additional in-person waves followed at 4-year intervals. Finally, a second survey was mailed in 2007 to all living twins who participated in the first mailed survey.</p>\\r\\n\"},\"recruitments\":[\"families\"]},\"startYear\":1994,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Anna Dahl Aslan\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Gold, C. H., Malmberg, B., McClearn, G. E., Pedersen, N. L., & Berg, S. (2002). Gender and health: A study of older unlike-sex twins. Journals of Gerontology: Series B: Psychological Sciences and Social Sciences, 57B, S168-S176.\",\"endYear\":2007,\"pubmedId\":\"11983743\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886930e\",\"title\":\"Dr.\",\"firstName\":\"Anna \",\"lastName\":\"Aslan\",\"email\":\"anna.dahl.aslan@ki.se\",\"phone\":\"08-524 860 02\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institutionen för medicinsk epidemiologi och biostatistik (MEB), C8\"},\"address\":{\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"gender\",\"role\":\"investigator\"},{\"parentId\":\"gender\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Anna  Aslan\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886930f\",\"title\":\"Prof.\",\"firstName\":\"Bo \",\"lastName\":\"Malmberg\",\"email\":\"bo.malmberg@hhj.hj.se\",\"phone\":\"036-10 1316\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Jönköping university\"},\"department\":{\"en\":\"School of Health and Sciences\"},\"address\":{\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"gender\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Bo  Malmberg\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886930e\",\"title\":\"Dr.\",\"firstName\":\"Anna \",\"lastName\":\"Aslan\",\"email\":\"anna.dahl.aslan@ki.se\",\"phone\":\"08-524 860 02\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institutionen för medicinsk epidemiologi och biostatistik (MEB), C8\"},\"address\":{\"countryIso\":\"SWE\"}},\"studyMemberships\":[{\"parentId\":\"gender\",\"role\":\"investigator\"},{\"parentId\":\"gender\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Anna  Aslan\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "has",
+        "timestamps": {
+          "created": "2019-07-23T14:13:25.942",
+          "lastUpdate": "2020-02-05T11:07:40.015"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Hertfordshire Ageing Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Hertfordshire Ageing Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HAS"
+          },
+          {
+            "lang": "fr",
+            "value": "HAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1428
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The principal objective of the HAS is to examine life course influences on healthy ageing. The outcomes of interest are sarcopenia, frailty, falls, physical performance and cognitive function. The main potential determinants of healthy ageing under investigation are intra-uterine and post-natal size and growth, genetic characteristics and adult physical activity, diet, lifestyle and socioeconomic status.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The principal objective of the HAS is to examine life course influences on healthy ageing. The outcomes of interest are sarcopenia, frailty, falls, physical performance and cognitive function. The main potential determinants of healthy ageing under investigation are intra-uterine and post-natal size and growth, genetic characteristics and adult physical activity, diet, lifestyle and socioeconomic status.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1428},\"sample\":{\"noLimit\":false,\"number\":717}},\"website\":\"http://www.mrc.soton.ac.uk/herts\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Cyrus Cooper\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The NHSCR was used to trace 6,803 men and women born in North Hertfordshire between 1920 and 1930, for whom birth and infancy data had been recorded. The NHSCR identified 2,621 men and women as resident in the UK in 1994; 1,428 of these were still resident in North Hertfordshire. With permission from their GP, we invited these men and women to participate in a home interview and clinic at which a wide panel of markers of ageing were characterised (including grip strength, cognitive function, anthropometry, visual acuity and lens opacity, hearing threshold and skin thickness). This first HAS follow-up was conducted between 1994 and 1995 when the participants ranged in age from 63 to 73 years. A second follow-up was conducted in 2003-05, a median of 9 years after the first follow-up, when participants&nbsp;were aged 72-83 years<strong>.</strong></p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1920,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Cyrus Cooper\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Syddall HE, Simmonds SJ, Martin HJ, Watson C, Dennison EM, Cooper C, Sayer AA; Hertfordshire Cohort Study Group. Cohort profile: The Hertfordshire Ageing Study  (HAS). Int J Epidemiol. 2010 Feb;39(1):36-43. doi: 10.1093/ije/dyn275.\",\"pubmedId\":\"19131391\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886931a\",\"title\":\"Prof.\",\"firstName\":\"Cyrus \",\"lastName\":\"Cooper\",\"email\":\"cc@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"has\",\"role\":\"contact\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Cyrus  Cooper\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b010783886931b\",\"title\":\"Prof.\",\"firstName\":\"Avan Aihie \",\"lastName\":\"Sayer\",\"email\":\"aas@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Avan Aihie  Sayer\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886931a\",\"title\":\"Prof.\",\"firstName\":\"Cyrus \",\"lastName\":\"Cooper\",\"email\":\"cc@mrc.soton.ac.uk\",\"phone\":\"023 80777624\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"MRC Lifecourse Epidemiology Unit, University of Southampton\"},\"address\":{\"street\":{\"en\":\"Southampton General Hospital\"},\"city\":{\"en\":\"Southampton\"},\"zip\":\"SO16 6YD\",\"state\":\"Hampshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"has\",\"role\":\"investigator\"},{\"parentId\":\"has\",\"role\":\"contact\"},{\"parentId\":\"hcs\",\"role\":\"investigator\"},{\"parentId\":\"hcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Cyrus  Cooper\"},\"role\":\"contact\"}]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"no\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "mcsa",
+        "timestamps": {
+          "created": "2019-07-23T14:14:15.459",
+          "lastUpdate": "2020-02-05T11:07:52.070"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Mayo Clinic Study of Aging"
+          },
+          {
+            "lang": "fr",
+            "value": "Mayo Clinic Study of Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MCSA"
+          },
+          {
+            "lang": "fr",
+            "value": "MCSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objectives of the Mayo Clinic Study of Aging were to determine in the population of Olmsted County:</p>\r\n\r\n<ul>\r\n\t<li>the prevalence of mild cognitive impairment;</li>\r\n\t<li>the incidence of mild cognitive impairment;</li>\r\n\t<li>the conversion rates from mild cognitive impairment to dementia or Alzheimer's disease;</li>\r\n\t<li>the risk factors for mild cognitive impairment;</li>\r\n\t<li>the risk factors for the progression from&nbsp;mild cognitive impairment to dementia or Alzheimer's disease;</li>\r\n\t<li>develop risk models to predict MCI or dementia (including Alzheimer's disease).</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The objectives of the Mayo Clinic Study of Aging were to determine in the population of Olmsted County:</p>\n\n<ul>\n\t<li>the prevalence of mild cognitive impairment;</li>\n\t<li>the incidence of mild cognitive impairment;</li>\n\t<li>the conversion rates from mild cognitive impairment to dementia or Alzheimer's disease;</li>\n\t<li>the risk factors for mild cognitive impairment;</li>\n\t<li>the risk factors for the progression from&nbsp;mild cognitive impairment to dementia or Alzheimer's disease;</li>\n\t<li>develop risk models to predict MCI or dementia (including Alzheimer's disease).</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":true},\"sample\":{\"noLimit\":true},\"info\":{\"en\":\"<p>The goal is to maintain approximately&nbsp;3,000 active participants.</p>\\r\\n\"}},\"website\":\"http://www.mayoclinic.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Ronald Petersen\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>First recruitment started in October 2004; the replenishment of the cohort&nbsp;make up for attrition due to death, refusal, or&nbsp;inability to contact began in 2008 and 2009. Recruitment is ongoing to maintain a sample size of approximately 3,000. &nbsp;The follow-up interval was approximately 15 months.&nbsp;</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Ronald Petersen\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Roberts RO, Geda YE, Knopman DS, et al. The Mayo Clinic Study of Aging: design and sampling, participation, baseline measures and sample characteristics. Neuroepidemiology, 2008; 30(1): 58-69.\",\"pubmedId\":\"18259084\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869247\",\"title\":\"MD.\",\"firstName\":\"Ronald C.\",\"lastName\":\"Petersen\",\"email\":\"peter8@mayo.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Neurology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ronald C. Petersen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693ad\",\"title\":\"MD.\",\"firstName\":\"Rosebud \",\"lastName\":\"Roberts\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Epidemiology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"mcsa\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Rosebud  Roberts\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869247\",\"title\":\"MD.\",\"firstName\":\"Ronald C.\",\"lastName\":\"Petersen\",\"email\":\"peter8@mayo.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Neurology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"adni\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"investigator\"},{\"parentId\":\"mcsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ronald C. Petersen\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549162e4b01078388693af\",\"title\":\"MD.\",\"firstName\":\"Rosebud \",\"lastName\":\"Roberts\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Mayo Clinic\"},\"department\":{\"en\":\"Epidemiology\"},\"address\":{\"city\":{\"en\":\"Rochester\"},\"state\":\"Minnesota\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"mcsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Rosebud  Roberts\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p><span>Number with follow-up visits is shown below:<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>Visits&nbsp;&nbsp;&nbsp; Frequency&nbsp;&nbsp;&nbsp;&nbsp; Percent<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>-------------------------------<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp; 1+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4801&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100.00<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3609&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75.17<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2499&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52.05<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1754&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36.53<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1261&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 26.27<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 849&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17.68<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 562&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.71<o p=\\\"\\\"></o></span></p>\\r\\n\\r\\n<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;125 &nbsp; &nbsp; &nbsp; &nbsp; 2.60<o p=\\\"\\\"></o></span></p>\\r\\n\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "lsog",
+        "timestamps": {
+          "created": "2019-07-23T14:14:05.489",
+          "lastUpdate": "2021-05-05T09:39:15.131"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Longitudinal Study of Generations"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LSOG"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2044
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The study objectives were:</p>\r\n\r\n<ul>\r\n\t<li>To track life-course trajectories of family intergenerational solidarity and conflict over three decades of adulthood, and across successive generations of family members;</li>\r\n\t<li>To identify how intergenerational solidarity&nbsp;and conflict influence the well-being of family members throughout the adult life-course and across successive generations;</li>\r\n\t<li>To chart the effects of socio-historical change on families, intergenerational relationships, and individual life-course development during the past three decades;</li>\r\n\t<li>To examine women’s roles and relationships in multigenerational families over 30 years of rapid change in the social trajectories of women’s lives.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2044},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"<p>Wave 1: 2044 participants from 345 multigenerational families</p>\\r\\n\\r\\n<p>Wave 2: 1331 participants</p>\\r\\n\\r\\n<p>Wave 3: 1483 participants</p>\\r\\n\\r\\n<p>Wave 4: 1734 participants</p>\\r\\n\\r\\n<p>Wave 5: 1682 participants</p>\\r\\n\"}},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Merril Silverstein\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The baseline survey took place in 1971. Follow-up mailed surveys were administered every 3&nbsp;years between&nbsp;1984 and 2000.</p>\\r\\n\"},\"recruitments\":[\"families\"]},\"startYear\":1971,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Merril Silverstein\"},\"markerPaper\":\"Bengtson, V. L. (1975). Generation and family effects in value socialization. American Sociological Review, 40, 358–371.\",\"endYear\":2000,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b010783886938d\",\"title\":\"Dr.\",\"firstName\":\"Merril \",\"lastName\":\"Silverstein\",\"email\":\"merrils@syr.edu\",\"phone\":\"(315) 443-3969\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Syracuse University\"},\"department\":{\"en\":\"Aging Studies Institute\"},\"address\":{\"city\":{\"en\":\"Syracuse\"},\"state\":\"New York\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"lsog\",\"role\":\"investigator\"},{\"parentId\":\"lsog\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Merril  Silverstein\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886938e\",\"title\":\"Dr.\",\"firstName\":\"Vern L. \",\"lastName\":\"Bengtson\",\"email\":\"bengtson@usc.edu\",\"phone\":\"213-740-2465\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"lsog\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Vern L.  Bengtson\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886938f\",\"title\":\"Dr.\",\"firstName\":\"Margaret \",\"lastName\":\"Gatz\",\"email\":\"gatz@usc.edu\",\"phone\":\"(213) 740-2212\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"state\":\"California\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"lsog\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Margaret  Gatz\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b010783886938d\",\"title\":\"Dr.\",\"firstName\":\"Merril \",\"lastName\":\"Silverstein\",\"email\":\"merrils@syr.edu\",\"phone\":\"(315) 443-3969\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Syracuse University\"},\"department\":{\"en\":\"Aging Studies Institute\"},\"address\":{\"city\":{\"en\":\"Syracuse\"},\"state\":\"New York\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"lsog\",\"role\":\"investigator\"},{\"parentId\":\"lsog\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Merril  Silverstein\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "ndhwb",
+        "timestamps": {
+          "created": "2019-07-23T14:14:30.510",
+          "lastUpdate": "2021-05-05T09:39:22.137"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Notre Dame Study of Health & Well-being"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NDHWB"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1000
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The broad, long-term objective&nbsp;of this research is to build a multivariate theory of adult&nbsp;resilience that integrates developmental and psychosocial perspectives. The goal is to advance understanding of the multiple pathways that lead to successful development during the young (18-40 years of age),&nbsp;middle (40-60 years of age) and later years of adulthood (60-75 years of age).</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1000},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"<p>Including older participants, midlife cohort and younger subjects.</p>\\r\\n\"}},\"website\":\"http://adalab.nd.edu/studies.html\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Cindy S. Bergeman\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p><span>In each wave, participants filled&nbsp;out a 50-page questionnaire (older adults = 8&nbsp;waves, mid-life cohort = 7 waves and young adults = 2 waves).</span></p>\\r\\n\\r\\n<p><span>In wave one, three,&nbsp;five and&nbsp;seven&nbsp;participants also filled out a daily diary for 56 days (until wave 1&nbsp;for the young adults).</span></p>\\r\\n\\r\\n<p><span>In waves&nbsp;two and four, Bergeman and her colleagues interviewed a subsample of the participants (not in the young adults cohort).</span></p>\\r\\n\\r\\n<p><span>Salivary cortisol was also measured (older adults = wave 7 or 9, mid-life cohort = wave 5 or 7, young adults = wave&nbsp;1 or 3).</span></p>\\r\\n\\r\\n<p><span>In-person medical exam was performed in the older adults cohort between wave 5 and 6.</span></p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2006,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Cindy S. Bergeman\"},\"markerPaper\":\"Bergeman CS, Deboeck PR. Trait Stress Resistance and Dynamic Stress Dissipation on Health and Well-Being: The Reservoir Model. Research in Human Development. 2014; 11: 108-125.\",\"endYear\":2016,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"59c3c7c7e4b0d9d77cd2df20\",\"title\":\"Dr.\",\"firstName\":\"Cindy\",\"lastName\":\"Bergeman\",\"email\":\"cbergema@nd.edu\",\"phone\":\"(574) 631-0881\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Notre Dame\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Notre Dame\"},\"state\":\"Indiana\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"ndhwb\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Cindy Bergeman\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"59c3c7c7e4b0d9d77cd2df21\",\"title\":\"Dr.\",\"firstName\":\"Cindy\",\"lastName\":\"Bergeman\",\"email\":\"cbergema@nd.edu\",\"phone\":\"(574) 631-0881\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Notre Dame\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"city\":{\"en\":\"Notre Dame\"},\"state\":\"Indiana\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"ndhwb\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Cindy Bergeman\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "nomas",
+        "timestamps": {
+          "created": "2019-07-23T14:14:36.730",
+          "lastUpdate": "2020-02-05T11:07:58.584"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Northern Manhattan Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Northern Manhattan Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NOMAS"
+          },
+          {
+            "lang": "fr",
+            "value": "NOMAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 3298
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The Northern Manhattan Stroke Study is an ongoing population-based study designed to evaluate the incidence of stroke and identify novel risk factors in a multiethnic urban community.</span></p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p><span>The Northern Manhattan Stroke Study is an ongoing population-based study designed to evaluate the incidence of stroke and identify novel risk factors in a multiethnic urban community.</span></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":3298},\"sample\":{\"noLimit\":false,\"number\":2939}},\"website\":\"http://columbianomas.org/index.html\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Hannah Gardener\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>All participants were enrolled between 1993 and 2001. All participants were prospectively followed annually by telephone. A 10% random sample of the cohort was followed annually in-person for 5 years.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"Number of participants with biological samples: for many/most markers data on the full cohort is available, but some markers were only collected in a subset. The subset varies substantially across different variables.\"}},\"startYear\":1993,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Hannah Gardener\"},\"markerPaper\":\"Sacco RL, Anand K, Lee HS, Boden-Albala B, Stabler S, Allen R, Paik MC. Homocysteine and the risk of ischemic stroke in a triethnic cohort: the NOrthern MAnhattan Study. Stroke, 2004; 35(10): 2263-9.\",\"pubmedId\":\"15345803\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869443\",\"title\":\"Dr.\",\"firstName\":\"Mitchell\",\"lastName\":\"Elkind\",\"email\":\"mse13@columbia.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University Medical Center\"},\"department\":{\"en\":\"Department of Neurology, The Neurological Institute of New York\"},\"address\":{\"street\":{\"en\":\"710 W 168th St\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10032\",\"state\":\"NY\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mitchell Elkind\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869444\",\"title\":\"Dr.\",\"firstName\":\"Hannah \",\"lastName\":\"Gardener\",\"email\":\"hgardener@miami.edu\",\"phone\":\"(305) 243-9283\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Miami\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Miami\"},\"state\":\"Florida\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"},{\"parentId\":\"nomas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Hannah  Gardener\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869445\",\"title\":\"Dr.\",\"firstName\":\"Bernadette\",\"lastName\":\"Boden-Albala\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Bernadette Boden-Albala\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869446\",\"title\":\"Dr.\",\"firstName\":\"Myunghee C.\",\"lastName\":\"Paik\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Myunghee C. Paik\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869447\",\"title\":\"Dr.\",\"firstName\":\"Yaakov\",\"lastName\":\"Stern\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yaakov Stern\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869448\",\"title\":\"MD.\",\"firstName\":\"Ralph L.\",\"lastName\":\"Sacco\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Miami\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ralph L. Sacco\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869449\",\"title\":\"MD.\",\"firstName\":\"Tanja\",\"lastName\":\"Rundek\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Miami\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tanja Rundek\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944a\",\"title\":\"MD.\",\"firstName\":\"Clinton\",\"lastName\":\"Wright\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Miami\"},\"address\":{\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Clinton Wright\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869444\",\"title\":\"Dr.\",\"firstName\":\"Hannah \",\"lastName\":\"Gardener\",\"email\":\"hgardener@miami.edu\",\"phone\":\"(305) 243-9283\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Miami\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"Miami\"},\"state\":\"Florida\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"nomas\",\"role\":\"investigator\"},{\"parentId\":\"nomas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Hannah  Gardener\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "sls",
+        "timestamps": {
+          "created": "2019-07-23T14:15:15.639",
+          "lastUpdate": "2020-07-21T11:44:41.725"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Seattle Longitudinal Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Seattle Longitudinal Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SLS"
+          },
+          {
+            "lang": "fr",
+            "value": "SLS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4854
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aim of the&nbsp;Seattle Longitudinal Study (SLS) is to study various aspects of psychological development during the adult years.</p>\r\n\r\n<p>The SLS&nbsp;charts the course of selected psychometric abilities frome young adulthood through old age. It investigates the individual differences and differential pattern of change, focusing not only on demonstrating the presence or absence of age-related changes and differences but also attending to the magnitude and relative importance of the observed phenomena.</p>\r\n\r\n<p>More recent phases of the study identify contextual, health and personality variables that offer explanations for differential change and that provide a scientific basis for possible interventions.&nbsp;</p>\r\n\r\n<p>The cognitive similarity within parent-offspring and sibling pairs is also studied and the acquisition of data on a third generation (participants who have both a parent and a grand-parent participating in the SLS) has begun.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The aim of the&nbsp;Seattle Longitudinal Study (SLS) is to study various aspects of psychological development during the adult years.</p>\n\n<p>The SLS&nbsp;charts the course of selected psychometric abilities frome young adulthood through old age. It investigates the individual differences and differential pattern of change, focusing not only on demonstrating the presence or absence of age-related changes and differences but also attending to the magnitude and relative importance of the observed phenomena.</p>\n\n<p>More recent phases of the study identify contextual, health and personality variables that offer explanations for differential change and that provide a scientific basis for possible interventions.&nbsp;</p>\n\n<p>The cognitive similarity within parent-offspring and sibling pairs is also studied and the acquisition of data on a third generation (participants who have both a parent and a grand-parent participating in the SLS) has begun.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4854},\"sample\":{\"noLimit\":false}},\"website\":\"https://sharepoint.washington.edu/uwsom/sls/Pages/default.aspx\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>The SLS was initiated in 1956 in Seattle, Washington, and includes eight samples recruited&nbsp;at seven-year intervals and followed longitudinally every seven years.</span></p>\\r\\n\"},\"recruitments\":[\"individuals\",\"families\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1956,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Schaie KW. Developmental influences on intelligence: The Seattle Longitudinal Study. Oxford University Press; New York, NY: 2005. doi:10.1093/acprof:oso/9780195156737.001.0001.\",\"pubmedId\":\"21517155\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869233\",\"title\":\"Dr.\",\"firstName\":\"Sherry L.\",\"lastName\":\"Willis\",\"email\":\"oldage@u.washington.edu\",\"phone\":\"(206) 281-4050\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"},{\"parentId\":\"active\",\"role\":\"contact\"},{\"parentId\":\"sls\",\"role\":\"investigator\"},{\"parentId\":\"sls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Sherry L. Willis\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b010783886948e\",\"title\":\"Dr.\",\"firstName\":\"Warner\",\"lastName\":\"Schaies\",\"email\":\"schaie@u.washington.edu\",\"phone\":\"(206) 281-4050 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Psychiatry and Behavioral Science\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"sls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Warner Schaies\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869233\",\"title\":\"Dr.\",\"firstName\":\"Sherry L.\",\"lastName\":\"Willis\",\"email\":\"oldage@u.washington.edu\",\"phone\":\"(206) 281-4050\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Washington\"},\"department\":{\"en\":\"Psychiatry and Behavioral Sciences\"},\"address\":{\"city\":{\"en\":\"Seattle\"},\"state\":\"Washington\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"active\",\"role\":\"investigator\"},{\"parentId\":\"active\",\"role\":\"contact\"},{\"parentId\":\"sls\",\"role\":\"investigator\"},{\"parentId\":\"sls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Sherry L. Willis\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "nuage",
+        "timestamps": {
+          "created": "2019-07-23T14:14:39.065",
+          "lastUpdate": "2021-05-05T17:16:27.074"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Quebec Longitudinal Study on Nutrition and Successful Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NuAge"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1793
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "aceed5ac-bd4d-47f3-aeb6-807793884570",
+          "fileName": "init_nuage.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 9199,
+          "md5": "4efcd9550ca7254cba9c4eea30a861d4",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.084"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>General objectives of the NuAge Study:</p>\n\n<ol>\n\t<li>To assess changes in dietary intakes of ageing men and women (foods, energy, macronutrients, micronutrients) and longterm exposure to functional foods from a qualitative and quantitative perspective;</li>\n\t<li>To assess the influence of longstanding and current dietary habits and evolving food choices on changes in numerous markers of physical and cognitive status, functional autonomy and social functioning;</li>\n\t<li>To assess the impact of age-related alterations in energy metabolism (utilisation and expenditure) and body composition, on changes in numerous markers of physical and cognitive status, functional autonomy and social functioning;</li>\n\t<li>To assess the impact of individual (biological, psychological, health, functional, behavioural) and environmental determinants on dietary intakes.</li>\n</ol>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1793},\"sample\":{\"noLimit\":false,\"number\":1657}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Hélène Payette\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>The study is a 5-year longitudinal observation of healthy men and women with yearly face-to-face comprehensive interview. A telephone interview at 6-month interval is also conducted.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Gaudreau P, Morais JA, Shatenstein B et al, Nutrition as a Determinant of Successful Aging: Description of the Quebec Longitudinal Study NuAge and results from cross-sectional pilot studies. Rejuvenation Research (2007) 10 (3): 377-86\",\"endYear\":2009,\"pubmedId\":\"17708689\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549156e4b01078388690da\",\"title\":\"Dr.\",\"firstName\":\"Hélène\",\"lastName\":\"Payette\",\"email\":\"helene.payette@usherbrooke.ca\",\"phone\":\"1-819-780-2220 ext.45636\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Research Center on Aging, Health and Social Services Centre — University Institute of Geriatrics of Sherbrooke (CSSS-IUGS)\"},\"address\":{\"street\":{\"en\":\"1036 Belvédère Street\"},\"city\":{\"en\":\"Sherbrooke\"},\"zip\":\"J1H 4C4\",\"state\":\"Québec\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"frele\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"contact\"}],\"networkMemberships\":[{\"parentId\":\"qsc\",\"role\":\"investigator\"}],\"fullName\":\"Hélène Payette\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b0107838869302\",\"title\":\"Dr.\",\"firstName\":\"Pierrette\",\"lastName\":\"Gaudreau\",\"email\":\"pierrette.gaudreau@umontreal.ca\",\"phone\":\"1-514-890-8000 ext.23613\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Montreal Hospital Research Centre\"},\"address\":{\"street\":{\"en\":\"900 St-Denis, Tour Viger, Bureau R05.436B-02\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H2X 0A9\",\"state\":\"Quebec\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"frele\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Pierrette Gaudreau\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944c\",\"title\":\"Dr.\",\"firstName\":\"Katherine\",\"lastName\":\"Gray-Donald\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McGill University\"}},\"studyMemberships\":[{\"parentId\":\"nuage\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Katherine Gray-Donald\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944d\",\"title\":\"Dr.\",\"firstName\":\"José\",\"lastName\":\"Morais\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"McGill University Health Centre\"}},\"studyMemberships\":[{\"parentId\":\"nuage\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"José Morais\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886944e\",\"title\":\"Dr.\",\"firstName\":\"Bryna\",\"lastName\":\"Shatenstein\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Institut universitaire de gériatrie de Montréal Research Centre\"}},\"studyMemberships\":[{\"parentId\":\"nuage\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Bryna Shatenstein\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549156e4b01078388690da\",\"title\":\"Dr.\",\"firstName\":\"Hélène\",\"lastName\":\"Payette\",\"email\":\"helene.payette@usherbrooke.ca\",\"phone\":\"1-819-780-2220 ext.45636\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Research Center on Aging, Health and Social Services Centre — University Institute of Geriatrics of Sherbrooke (CSSS-IUGS)\"},\"address\":{\"street\":{\"en\":\"1036 Belvédère Street\"},\"city\":{\"en\":\"Sherbrooke\"},\"zip\":\"J1H 4C4\",\"state\":\"Québec\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"frele\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"contact\"}],\"networkMemberships\":[{\"parentId\":\"qsc\",\"role\":\"investigator\"}],\"fullName\":\"Hélène Payette\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549161e4b0107838869302\",\"title\":\"Dr.\",\"firstName\":\"Pierrette\",\"lastName\":\"Gaudreau\",\"email\":\"pierrette.gaudreau@umontreal.ca\",\"phone\":\"1-514-890-8000 ext.23613\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Montreal Hospital Research Centre\"},\"address\":{\"street\":{\"en\":\"900 St-Denis, Tour Viger, Bureau R05.436B-02\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H2X 0A9\",\"state\":\"Quebec\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"frele\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"investigator\"},{\"parentId\":\"nuage\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Pierrette Gaudreau\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "tilda",
+        "timestamps": {
+          "created": "2019-07-23T14:15:32.189",
+          "lastUpdate": "2021-05-05T09:39:33.472"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Irish Longitudinal Study on Ageing"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "TILDA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 8500
+        },
+        "countries": [
+          "IRL"
+        ],
+        "logo": {
+          "id": "b1e0eb52-406a-4f68-8f64-7dcf9a5e5d8a",
+          "fileName": "tilda.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 13145,
+          "md5": "ce81f1875f354412f262b512ca71aec1",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.923"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The principal objective of the Irish Longitudinal Study on Ageing are to determine:</p>\r\n\r\n<ul>\r\n\t<li>the health status and health needs of older people</li>\r\n\t<li>the social and economic status and needs of older people</li>\r\n\t<li>the health, economic and social needs of families and carers of older people</li>\r\n\t<li>the biological and environmental components of \"successful ageing\"</li>\r\n\t<li>the contributions that older people are making to society and the economy</li>\r\n\t<li>how each of these key components (health, wealth, happiness) interact such that we can ensure that Ireland meets the needs and choices of its citizens in a personalised and positive environment and with due dignity and respect</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":8500},\"sample\":{\"noLimit\":false,\"number\":5800}},\"website\":\"http://www.tilda.ie\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Ann Hever\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p><span>Participants in the first wave will be invited to complete a follow-up interview every two years and a health assessment every three to four years for a ten year period.</span></p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2009,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Whelan BJ, Savva GM. Design and methodology of the Irish Longitudinal Study on Ageing. J Am Geriatr Soc. 2013 May;61 Suppl 2:S265-8. doi: 10.1111/jgs.12199. PubMed PMID: 23662718.\",\"pubmedId\":\"23662718\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b010783886948f\",\"title\":\"Prof.\",\"firstName\":\"Rose Anne \",\"lastName\":\"Kenny\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Trinity College Dublin\"},\"address\":{\"countryIso\":\"IRL\"}},\"studyMemberships\":[{\"parentId\":\"tilda\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Rose Anne  Kenny\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b0107838869490\",\"title\":\"Dr.\",\"firstName\":\"Ann \",\"lastName\":\"Hever\",\"email\":\"HEVERA@tcd.ie\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Trinity College Dublin\"}},\"studyMemberships\":[{\"parentId\":\"tilda\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Ann  Hever\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Kenny RA. An Introduction to the Irish Longitudinal Study on Ageing. J Am Geriatr Soc. 2013 May; Suppl2:S263-64. doi: 10.1111/jgs.12200&nbsp;PubMed PMID: 23662717.</p>\\r\\n\\r\\n<p>Cronin H, O'Regan C, Finucane C, Kearney P, Kenny RA. Health and ageing: development of the Irish Longitudinal Study on Ageing health assessment. J Am Geriatr Soc. 2013 May;61 Suppl 2:S269-78. doi: 10.1111/jgs.12197. PubMed PMID: 23662719.</p>\\r\\n\"}}"
+      },
+      {
+        "id": "cfas",
+        "timestamps": {
+          "created": "2019-07-23T14:12:26.336",
+          "lastUpdate": "2020-02-05T11:07:25.754"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Cognitive Function and Ageing Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Cognitive Function and Ageing Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CFAS"
+          },
+          {
+            "lang": "fr",
+            "value": "CFAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 25504
+        },
+        "countries": [
+          "GBR"
+        ],
+        "logo": {
+          "id": "5c51bc89a0bd0c0b854ec76b",
+          "fileName": "cfas.jpg",
+          "lang": "en",
+          "size": 30149,
+          "md5": "2fc0008db335cbd5116869eed4830956",
+          "timestamps": {
+            "created": "2019-01-30T10:02:34.040"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The aims of the CFAS study are:</p>\r\n\r\n<ul>\r\n\t<li>To find out how common dementia and associated conditions are in England and Wales and also, how many new cases of dementia develop each year in England and Wales;</li>\r\n\t<li>To find out if dementia varies around the country;</li>\r\n\t<li>To describe the service needs of dementia sufferers and the degree of disability suffered;</li>\r\n\t<li>To find out which factors increase the risk of someone developing dementia;</li>\r\n\t<li>To investigate the different diseases that cause dementia and how quickly dementia progresses.</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The aims of the CFAS study are:</p>\n\n<ul>\n\t<li>To find out how common dementia and associated conditions are in England and Wales and also, how many new cases of dementia develop each year in England and Wales;</li>\n\t<li>To find out if dementia varies around the country;</li>\n\t<li>To describe the service needs of dementia sufferers and the degree of disability suffered;</li>\n\t<li>To find out which factors increase the risk of someone developing dementia;</li>\n\t<li>To investigate the different diseases that cause dementia and how quickly dementia progresses.</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":25504},\"sample\":{\"noLimit\":false,\"number\":2670},\"info\":{\"en\":\"<p>Additional biological samples will be collected for CFAS II and CFAS Wales.</p>\\r\\n\"}},\"website\":\"http://www.cfas.ac.uk/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Prof. Carol Brayne\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The follow-up has been determined by funding and the design of associated bolt-on studies. CFAS is a group of studies with various follow-up intervals – please see the specific sections below for more detail.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1989,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Prof. Carol Brayne\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Brayne C, McCracken C, Matthews FE; Medical Research Council Coginitive Function and Ageing Study (CFAS). Cohort profile: the Medical Research Council Cognitive Function and Ageing Study (CFAS). International Journal of Epidemiology, 2006; 35(5): 1140-5.\",\"pubmedId\":\"16980700\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886927e\",\"title\":\"Prof.\",\"firstName\":\"Carol \",\"lastName\":\"Brayne\",\"email\":\"cb105@medschl.cam.ac.uk\",\"phone\":\"01223 330334\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"},{\"parentId\":\"cfas\",\"role\":\"investigator\"},{\"parentId\":\"cfas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Brayne\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869287\",\"title\":\"Prof.\",\"firstName\":\"Tony \",\"lastName\":\"Arthur\",\"email\":\"antony.arthur@uea.ac.uk\",\"phone\":\"+44 (0)1603 59 1094\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of East Anglia\"},\"department\":{\"en\":\"School of Health Sciences\"},\"address\":{\"city\":{\"en\":\"Norwich\"},\"state\":\"Norfolk\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Tony  Arthur\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869288\",\"title\":\"Prof.\",\"firstName\":\"John \",\"lastName\":\"Bond\",\"phone\":\"+44 (0) 191 208 6777\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Newcastle University\"},\"department\":{\"en\":\"Institute of Health and Society\"},\"address\":{\"city\":{\"en\":\"Newcastle upon Tyne\"},\"state\":\"Tyne and Wear\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John  Bond\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869289\",\"title\":\"Prof.\",\"firstName\":\"Paul \",\"lastName\":\"Ince\",\"email\":\"p.g.ince@sheffield.ac.uk\",\"phone\":\"+44 (0)114 22 22234\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Sheffield\"},\"department\":{\"en\":\"Department of Neuroscience\"},\"address\":{\"city\":{\"en\":\"Sheffield\"},\"state\":\"Yorkshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Paul  Ince\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928a\",\"title\":\"Prof.\",\"firstName\":\"Carol \",\"lastName\":\"Jagger\",\"email\":\"carol.jagger@ncl.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Newcastle University\"},\"department\":{\"en\":\"Institute for Ageing and Health\"},\"address\":{\"city\":{\"en\":\"Newcastle upon Tyne\"},\"state\":\"Tyne and Wear\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Jagger\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928b\",\"title\":\"Prof.\",\"firstName\":\"James \",\"lastName\":\"Lowe\",\"email\":\"james.lowe@nottingham.ac.uk\",\"phone\":\"0115 9709269\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Nottingham\"},\"department\":{\"en\":\"Faculty of Medicine & Health Sciences\"},\"address\":{\"city\":{\"en\":\"Nottingham\"},\"state\":\"Nottinghamshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"James  Lowe\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928c\",\"title\":\"Dr.\",\"firstName\":\"Fiona \",\"lastName\":\"Matthews\",\"email\":\"fiona.matthews@mrc-bsu.cam.ac.uk\",\"phone\":\"01223 330391\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Medical Research Council\"},\"department\":{\"en\":\"Biostatistics Unit\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Fiona  Matthews\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928d\",\"title\":\"Prof.\",\"firstName\":\"David \",\"lastName\":\"Melzer\",\"email\":\"D.Melzer@exeter.ac.uk\",\"phone\":\"+44 (0) 1392 406751\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Exeter\"},\"department\":{\"en\":\"Medical School\"},\"address\":{\"city\":{\"en\":\"Exeter\"},\"state\":\"Devon\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David  Melzer\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928e\",\"title\":\"Dr.\",\"firstName\":\"Cherie \",\"lastName\":\"McCracken\",\"email\":\"C.F.M.Mccracken@liverpool.ac.uk\",\"phone\":\"+44-151-795-5370\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Liverpool\"},\"department\":{\"en\":\"Department of Psychological Sciences\"},\"address\":{\"city\":{\"en\":\"Liverpool\"},\"state\":\"Merseyside\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Cherie  McCracken\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886928f\",\"title\":\"Prof.\",\"firstName\":\"Ian \",\"lastName\":\"McKeith\",\"email\":\"ian.mckeith@ncl.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Newcastle University\"},\"department\":{\"en\":\"Institute for Ageing and Health\"},\"address\":{\"city\":{\"en\":\"Newcastle upon Tyne\"},\"state\":\"Tyne and Wear\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cfas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ian  McKeith\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886927e\",\"title\":\"Prof.\",\"firstName\":\"Carol \",\"lastName\":\"Brayne\",\"email\":\"cb105@medschl.cam.ac.uk\",\"phone\":\"01223 330334\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Cambridge\"},\"department\":{\"en\":\"Department of Public Health and Primary Care\"},\"address\":{\"city\":{\"en\":\"Cambridge\"},\"state\":\"Cambridgeshire\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"cc75c\",\"role\":\"investigator\"},{\"parentId\":\"cc75c\",\"role\":\"contact\"},{\"parentId\":\"cfas\",\"role\":\"investigator\"},{\"parentId\":\"cfas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Brayne\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "boyd",
+        "timestamps": {
+          "created": "2019-07-23T14:12:18.702",
+          "lastUpdate": "2021-05-05T09:38:52.926"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Boyd Orr"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BOYD"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4999
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The initial aim of establishing the Boyd Orr cohort was to investigate the long-term impact of environmental factors in early life on adult coronary heart disease mortality.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "administratives_databases",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4999},\"sample\":{\"noLimit\":false,\"number\":728}},\"website\":\"http://www.bris.ac.uk/social-community-medicine/projects/boyd-orr/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Richard Martin\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The baseline happened in 1937-1939 and the follow-ups in 1997-1998 and 2002-2003 respectively.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1937,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Richard Martin\"},\"markerPaper\":\"Martin RM, Gunnell D, Pemberton J, Frankel S, Davey Smith G. Cohort profile: The Boyd Orr cohort--an historical cohort study based on the 65 year follow-up of the Carnegie Survey of Diet and Health (1937-39). Int J Epidemiol, 2005; 34(4): 742-9.\",\"endYear\":2005,\"pubmedId\":\"15964910\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b010783886926d\",\"title\":\"Prof.\",\"firstName\":\"David\",\"lastName\":\"Gunnell\",\"email\":\"d.j.gunnell@bristol.ac.uk\",\"phone\":\"+44 (0) 117 928 7253\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"boyd\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David Gunnell\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b010783886926e\",\"title\":\"Prof.\",\"firstName\":\"Richard\",\"lastName\":\"Martin\",\"email\":\"richard.martin@bristol.ac.uk\",\"phone\":\"+44 (0) 117 928 7321\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"street\":{\"en\":\" \"},\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"boyd\",\"role\":\"investigator\"},{\"parentId\":\"boyd\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richard Martin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869262\",\"title\":\"Prof.\",\"firstName\":\"George  \",\"lastName\":\"Smith\",\"email\":\"kz.davey-smith@bristol.ac.uk\",\"phone\":\"+44 (0) 117 3310095\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"alspac\",\"role\":\"investigator\"},{\"parentId\":\"boyd\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"George   Smith\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b010783886926e\",\"title\":\"Prof.\",\"firstName\":\"Richard\",\"lastName\":\"Martin\",\"email\":\"richard.martin@bristol.ac.uk\",\"phone\":\"+44 (0) 117 928 7321\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Bristol\"},\"department\":{\"en\":\"School of Social and Community Medicine\"},\"address\":{\"street\":{\"en\":\" \"},\"city\":{\"en\":\"Bristol\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"boyd\",\"role\":\"investigator\"},{\"parentId\":\"boyd\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richard Martin\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "chap",
+        "timestamps": {
+          "created": "2019-07-23T14:12:27.703",
+          "lastUpdate": "2020-02-05T11:07:26.005"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Chicago Health and Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CHAP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 10801
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>&nbsp;Population-based study to identify risk factors for Alzheimer's disease, disability, and other age-associated health conditions.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":10801},\"sample\":{\"noLimit\":false,\"number\":8000}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Carlos Mendes de Leon\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The CHAP study&nbsp;included in-person interviews that were conducted in the participants' homes in approximately three-year cycles, with each subsequent cycle starting immediately after completion of the previous one, for a total of 5 follow-up.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1993,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Carlos Mendes de Leon\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Bienias JL, Beckett LA, Bennett DA, Wilson RS, Evans DA. Design of the Chicago Health and Aging Project (CHAP). 2003; 5(5): 349-55.\",\"endYear\":2011,\"pubmedId\":\"14646025\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869290\",\"title\":\"Dr.\",\"firstName\":\"Carlos\",\"lastName\":\"Mendes de Leon\",\"email\":\"cmendes@med.umich.edu\",\"phone\":\" 734-615-2134\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"street\":{},\"city\":{},\"state\":\"Michigan\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chap\",\"role\":\"investigator\"},{\"parentId\":\"chap\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carlos Mendes de Leon\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869290\",\"title\":\"Dr.\",\"firstName\":\"Carlos\",\"lastName\":\"Mendes de Leon\",\"email\":\"cmendes@med.umich.edu\",\"phone\":\" 734-615-2134\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Michigan\"},\"department\":{\"en\":\"School of Public Health\"},\"address\":{\"street\":{},\"city\":{},\"state\":\"Michigan\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"chap\",\"role\":\"investigator\"},{\"parentId\":\"chap\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carlos Mendes de Leon\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "dcs-1915",
+        "timestamps": {
+          "created": "2019-07-23T14:12:48.977",
+          "lastUpdate": "2021-05-05T09:38:57.404"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Danish 1915 Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "DCS-1915"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1584
+        },
+        "countries": [
+          "DNK"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The overall goal was to establish a genetic-epidemiological database to shed light on the aging process among the extremely old, focusing on physical and cognitive functioning.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1584},\"sample\":{\"noLimit\":false,\"number\":1099}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kaare Christensen\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The study took place in 2010.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2010,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kaare Christensen\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Christensen K, Thinggaard M, Oksuzyan A, et al. Physical and cognitive functioning of people older than 90 years: a comparison of two Danish cohorts born 10 years apart. Lancet, 2013; 382(9903): 1507-13.\",\"pubmedId\":\"23849796\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692ba\",\"title\":\"Prof.\",\"firstName\":\"Kaare \",\"lastName\":\"Christensen\",\"email\":\"kchristensen@health.sdu.dk\",\"phone\":\"65503049\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern Denmark\"},\"department\":{\"en\":\"Epidemiology, Biostatistics and Biodemography\"},\"address\":{\"city\":{\"en\":\"Odense\"},\"countryIso\":\"DNK\"}},\"studyMemberships\":[{\"parentId\":\"dcs-1905\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1905\",\"role\":\"contact\"},{\"parentId\":\"dcs-1915\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1915\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaare  Christensen\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692ba\",\"title\":\"Prof.\",\"firstName\":\"Kaare \",\"lastName\":\"Christensen\",\"email\":\"kchristensen@health.sdu.dk\",\"phone\":\"65503049\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern Denmark\"},\"department\":{\"en\":\"Epidemiology, Biostatistics and Biodemography\"},\"address\":{\"city\":{\"en\":\"Odense\"},\"countryIso\":\"DNK\"}},\"studyMemberships\":[{\"parentId\":\"dcs-1905\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1905\",\"role\":\"contact\"},{\"parentId\":\"dcs-1915\",\"role\":\"investigator\"},{\"parentId\":\"dcs-1915\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaare  Christensen\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "eas",
+        "timestamps": {
+          "created": "2019-07-23T14:12:56.402",
+          "lastUpdate": "2020-02-05T11:07:33.098"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Einstein Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "EAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2600
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "ddff51cc-e7ff-42fc-852a-e4ba2183d2a7",
+          "fileName": "Einstein.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 48625,
+          "md5": "d4a7d7ba4129455aa969ec3ab060625d",
+          "timestamps": {
+            "created": "2015-07-22T08:31:03.027"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Einstein Aging Study (EAS), first funded by the NIA in 1993, has since its inception focused on remediable risk factors and biological pathways that lead to cognitive decline, dementing disorders, and the intermediate states that precede them.</p>\n<p> Its goals are:\n<li>To describe the changes in memory and thinking which occur in normal aging.</li>\n<li>To develop tests which help identify early Alzheimer's disease and individuals at high risk for future disease.</li>\n<li>To study the causes of Alzheimer's disease.</li>\n<li>To discover the changes in the brain which cause memory loss and other cognitive symptoms.</li>\n<li>To help devise treatment strategies which delay or reverse such brain changes.\n<li>To provide education and information to EAS participants and the community about the aging brain.</li></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2600},\"sample\":{\"noLimit\":false,\"number\":2600}},\"website\":\"http://www.einstein.yu.edu/departments/neurology/clinical-research-program/eas/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Richard B. Lipton, M.D.\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>In-person evaluations were completed at baseline and at subsequent 12-month intervals.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"\"}},\"startYear\":1993,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Richard B. Lipton, M.D.\"},\"markerPaper\":\"Katz, M.J. et al.  Age-specific and sex-specific prevalence and incidence of mild cognitive impairment, dementia, and Alzheimer dementia in blacks and whites: a report from the Einstein Aging Study.  Alzheimer Dis Assoc Disord, 2012 Oct-Dec;26(4):335-43.\",\"pubmedId\":\"22156756\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b01078388692ce\",\"title\":\"Dr.\",\"firstName\":\"Richard B. \",\"lastName\":\"Lipton\",\"email\":\"richard.lipton@einstein.yu.edu\",\"phone\":\"(718) 430-3886\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine, Yeshiva University\"},\"department\":{\"en\":\"Saul B. Korey Department of Neurology\"},\"address\":{\"street\":{\"en\":\"Rousso Building, 1165 Morris Park Avenue, room 332\"},\"city\":{\"en\":\"Bronx, N.Y.\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"eas\",\"role\":\"investigator\"},{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard B.  Lipton\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b01078388692cf\",\"firstName\":\"Mindy\",\"lastName\":\"Katz\",\"email\":\"mindy.katz@einstein.yu.edu\",\"phone\":\"+1 718 430 3888 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine, Yeshiva University\"},\"department\":{\"en\":\"Saul B. Korey Department of Neurology\"},\"address\":{\"street\":{\"en\":\"Rousso Building, 1165 Morris Park Avenue , Room 334\"},\"city\":{\"en\":\"Bronx, N.Y.\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"eas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mindy Katz\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "iprea",
+        "timestamps": {
+          "created": "2019-07-23T14:13:44.284",
+          "lastUpdate": "2020-02-05T11:07:44.180"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Italian Project on the Epidemiology of Alzheimer's Disease"
+          },
+          {
+            "lang": "fr",
+            "value": "Italian Project on the Epidemiology of Alzheimer's Disease"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "IPREA"
+          },
+          {
+            "lang": "fr",
+            "value": "IPREA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4785
+        },
+        "countries": [
+          "ITA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The main objectives of IPREA were to define the prevalence, incidence, and risk factors of the preclinical phase of dementia (including Alzheimer's disease), analyzing also the transition to dementia and the predictive value of an extensive neuropsychological battery and of biological and instrumental markers."
+          },
+          {
+            "lang": "fr",
+            "value": "to be completed"
+          }
+        ],
+        "dataSources": [
+          "administratives_databases",
+          "others",
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4785},\"sample\":{\"noLimit\":false,\"number\":2324},\"info\":{\"en\":\"IPREA has been supported by the Italian Ministry of Health (“Progetti strategici di ricerca finalizzata sulla malattia di Alzheimer” - D.Lgs. 502/92 and D.Lgs. 229/99; RF-2009-1539347, grant no. 287/2011).\"}},\"website\":\"http://www.iss.it/biobankcnesps/index.php?lang=2&id=166&tipo=25\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Lucia Galluzzo\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"The baseline recruitment started 2003 and the follow-up took place one year later. A 10-year follow-up of mortality from national death records is also available.\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"The baseline recruitment started 2003 and the follow-up took place one year later. A 10-year follow-up of mortality from national death records is also available.\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":2003,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Lucia Galluzzo\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Scafato E, Gandin C, Galluzzo L, Ghirini S, Cacciatore F, Capurso A, Solfrizzi V, Panza F, Cocchi A, Consoli D, Enzi G, Frisoni GB, Gandolfo C, Giampaoli S, Inzitari D, Maggi S, Crepaldi G, Mariotti S, Mecocci P, Motta M, Negrini R, Postacchini D, Rengo F, Farchi G; I.PR.E.A. Working Group (Italian PRoject on Epidemiology of Alzheimer’s disease). Prevalence of Aging-Associated Cognitive Decline - AACD in an Italian elderly population: results from the cross sectional phase of the Italian PRoject on theEpidemiology of Alzheimer's disease (I.PR.E.A.). Aging Clin Exp Res 2010;22(5-6):440-9\",\"endYear\":2013,\"pubmedId\":\"20383053\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b0107838869356\",\"title\":\"Prof.\",\"firstName\":\"Emanuele\",\"lastName\":\"Scafato\",\"email\":\"emanuele.scafato@iss.it\",\"phone\":\"+39 06 4990 4028\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Istituto Superiore Sanità (ISS) - National Centre for Epidemiology, Surveillance and Health Promotion (CNESPS)\"},\"department\":{\"en\":\"Population Health and Health Determinants Unit\"},\"address\":{\"street\":{\"en\":\"Viale Regina Elena, 299\"},\"city\":{\"en\":\"Rome\"},\"zip\":\"00161\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"ilsa\",\"role\":\"investigator\"},{\"parentId\":\"iprea\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Emanuele Scafato\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b0107838869357\",\"title\":\"Dr.\",\"firstName\":\"Lucia\",\"lastName\":\"Galluzzo\",\"email\":\"lucia.galluzzo@iss.it\",\"phone\":\"+39 06 4990 4198\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Istituto Superiore Sanità (ISS) - National Centre for Epidemiology, Surveillance and Health Promotion (CNESPS)\"},\"department\":{\"en\":\"Population Health and Health Determinants Unit\"},\"address\":{\"street\":{\"en\":\"Viale Regina Elena, 299\"},\"city\":{\"en\":\"Rome\"},\"zip\":\"00161\",\"countryIso\":\"ITA\"}},\"studyMemberships\":[{\"parentId\":\"ilsa\",\"role\":\"contact\"},{\"parentId\":\"iprea\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Lucia Galluzzo\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "hbcs",
+        "timestamps": {
+          "created": "2019-07-23T14:13:27.058",
+          "lastUpdate": "2021-04-13T17:06:40.365"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Helsinki Birth Cohort Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "HBCS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 13345
+        },
+        "countries": [
+          "FIN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main aim of HBCS is to assess the importance of early life factor on later health outcomes taking into account adult lifestyle, socioeconomic factors and genetic factors.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "physical_measures",
+          "others",
+          "administratives_databases",
+          "questionnaires",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":13345},\"sample\":{\"noLimit\":false,\"number\":2003}},\"website\":\"http://research.med.helsinki.fi/obesity/Eriksson/\",\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Johan Eriksson\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>13 345 people born 1934-44 have been followed-up longitudinally – of them 2003 have been participating in a clinical study at several time points starting in 1995.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1934,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Johan Eriksson\"},\"markerPaper\":\"Barker DJ, Osmond C, Forsén TJ, Kajantie E, Eriksson JG. Trajectories of growth among children who have coronary events as adults. The New England Journal of Medicine, 2005; 353(17): 1802-9.\",\"pubmedId\":\"16251536\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549161e4b010783886931e\",\"title\":\"Prof.\",\"firstName\":\"Johan \",\"lastName\":\"Eriksson\",\"email\":\"johan.eriksson@helsinki.fi\",\"phone\":\"+358 2941 27557\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Helsinki\"},\"department\":{\"en\":\"Department of General Practice and Primary Health Care\"},\"address\":{\"city\":{\"en\":\"Helsinki\"},\"countryIso\":\"FI\"}},\"studyMemberships\":[{\"parentId\":\"hbcs\",\"role\":\"investigator\"},{\"parentId\":\"hbcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Johan  Eriksson\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549161e4b010783886931e\",\"title\":\"Prof.\",\"firstName\":\"Johan \",\"lastName\":\"Eriksson\",\"email\":\"johan.eriksson@helsinki.fi\",\"phone\":\"+358 2941 27557\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Helsinki\"},\"department\":{\"en\":\"Department of General Practice and Primary Health Care\"},\"address\":{\"city\":{\"en\":\"Helsinki\"},\"countryIso\":\"FI\"}},\"studyMemberships\":[{\"parentId\":\"hbcs\",\"role\":\"investigator\"},{\"parentId\":\"hbcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Johan  Eriksson\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>For access to the data and biosamples please apply&nbsp;to HBCS’s steering committee.</p>\\r\\n\"},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"no\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "lbls",
+        "timestamps": {
+          "created": "2019-07-23T14:13:57.821",
+          "lastUpdate": "2021-05-05T09:39:13.385"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Long Beach Longitudinal Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LBLS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2125
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The Long Beach Longitudinal Study (LBLS) of cognition and aging seeks to study change and the predictors of change in cognitive processes across the adult life span. The LBLS approach to cognitive change and aging involves:</span></p>\r\n\r\n<ul>\r\n\t<li>evaluating individual differences in performance on cognitive measures</li>\r\n\t<li>relating sociodemographic phenomena (e.g. birth cohort, gender) to cognitive performance</li>\r\n\t<li>understanding how individual charateristics (e.g. personality, physical and mental health, affect) influence cognitive abilities.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2125},\"sample\":{\"noLimit\":false,\"number\":69}},\"website\":\"http://gero.usc.edu/lbls/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"]},\"startYear\":1978,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Zelinski EM, Kennison RF; Long Beach Longitudinal Study. The Long Beach Longitudinal Study: evaluation of longitudinal effects of aging on memory and cognition. Home Health Care Serv Q. 2001;19(3):45-55.\",\"pubmedId\":\"11436406\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869386\",\"firstName\":\"Elizabeth\",\"lastName\":\"Zelinski\",\"academicLevel\":\"Ph.D.\",\"email\":\"zelinski@usc.edu\",\"phone\":\"(213) 740-4918\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"Davis School of Gerontology\"},\"address\":{\"street\":{\"en\":\"3715 McClintock Avenue\"},\"city\":{\"en\":\"Los Angeles\"},\"zip\":\"CA 90089-0191\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lbls\",\"role\":\"investigator\"},{\"parentId\":\"lbls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Elizabeth Zelinski\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869387\",\"firstName\":\"Robert\",\"lastName\":\"Kennison\",\"academicLevel\":\"Ph.D.\",\"email\":\"rkennis@exchange.calstatela.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"California State University\"},\"address\":{\"city\":{\"en\":\"Los Angeles\"},\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lbls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Robert Kennison\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869386\",\"firstName\":\"Elizabeth\",\"lastName\":\"Zelinski\",\"academicLevel\":\"Ph.D.\",\"email\":\"zelinski@usc.edu\",\"phone\":\"(213) 740-4918\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Southern California\"},\"department\":{\"en\":\"Davis School of Gerontology\"},\"address\":{\"street\":{\"en\":\"3715 McClintock Avenue\"},\"city\":{\"en\":\"Los Angeles\"},\"zip\":\"CA 90089-0191\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lbls\",\"role\":\"investigator\"},{\"parentId\":\"lbls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Elizabeth Zelinski\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "lgp",
+        "timestamps": {
+          "created": "2019-07-23T14:14:00.628",
+          "lastUpdate": "2020-02-05T11:07:47.577"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Longevity Genes Project"
+          },
+          {
+            "lang": "fr",
+            "value": "Longevity Genes Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LGP"
+          },
+          {
+            "lang": "fr",
+            "value": "LGP"
+          }
+        ],
+        "design": "case_control",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2680
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main purpose of the Longevity Genes Project (LGP) is to identify and characterize factors, biological markers and mechanisms leading to exceptionally long life span in healthy Ashkenazi Jews.<br> \nThe LPG study is divided into two phases: phase 1 intends to explain the longevity phenotype of this specific population (how Ashkenazi Jews escape or delay many age-related diseases such as cancer, cardiovascular diseases, dementia and infections); whereas phase 2 (LonGenity) serves as a prospective validation cohort to confirm the findings from LGP.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "to be completed"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2680},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"Most super agers were recruited as family units.\"}},\"website\":\"http://www.einstein.yu.edu/centers/aging/longevity-genes-project/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Milman\",\"date\":\"2017-04-27\"},\"methods\":{\"designs\":[\"case_control\"],\"design\":\"case_control\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Phase 1 participants were visited once by a member of the Einstein Institute for aging research and were not followed-up. Phase 2 participants were followed annually.\"},\"recruitments\":[\"families\"],\"otherRecruitment\":{},\"info\":{\"en\":\"\"}},\"startYear\":1998,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Milman\",\"date\":\"2017-04-27\"},\"markerPaper\":\"Barzilai N, Atzmon G, Schechter C, Schaefer EJ, Cupples AL, Lipton R, Cheng S, Shuldiner AR. 2014. Unique lipoprotein phenotype and genotype associated with exceptional longevity. JAMA; 290(15):2030-40.\",\"pubmedId\":\"14559957\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"57f7f421e4b08a6249a4727f\",\"title\":\"Dr.\",\"firstName\":\"Nir\",\"lastName\":\"Barzilai\",\"email\":\"nir.barzilai@einstein.yu.edu\",\"phone\":\"(718) 430.3144\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Aging Research Center\"},\"address\":{\"street\":{\"en\":\"1300 Morris Park Avenue,  Belfer Building, Room 701\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"contact\"},{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nir Barzilai\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcf36ee4b08a6249a47280\",\"title\":\"Dr.\",\"firstName\":\"Gil\",\"lastName\":\"Atzmon\",\"email\":\"gil.atzmon@einstein.yu.edu\",\"phone\":\"(718) 430-3628\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"street\":{\"en\":\"1300 Morris Park Avenue, Room 502B\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Gil Atzmon\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcf49be4b08a6249a47281\",\"title\":\"Dr.\",\"firstName\":\"Aviv\",\"lastName\":\"Bergman\",\"email\":\"aviv.bergman@einstein.yu.edu\",\"phone\":\"(718) 678-1063\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Systems & Computational Biology\"},\"address\":{\"street\":{\"en\":\"1301 Morris Park Avenue, Room 153C\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Aviv Bergman\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcf58fe4b08a6249a47282\",\"title\":\"Dr.\",\"firstName\":\"Jill\",\"lastName\":\"Crandall\",\"email\":\"jill.crandall@einstein.yu.edu\",\"phone\":\"(718) 430-3765\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"street\":{\"en\":\"1300 Morris Park Avenue, Room 702\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jill Crandall\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcf63ee4b08a6249a47283\",\"title\":\"Dr.\",\"firstName\":\"Mimi\",\"lastName\":\"Kim\",\"email\":\"mimi.kim@einstein.yu.edu\",\"phone\":\"(718) 430-2017\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Epidemiology and Population Health\"},\"address\":{\"street\":{\"en\":\"1300 Morris Park Avenue, Room 1303B\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mimi Kim\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549161e4b01078388692ce\",\"title\":\"Dr.\",\"firstName\":\"Richard B. \",\"lastName\":\"Lipton\",\"email\":\"richard.lipton@einstein.yu.edu\",\"phone\":\"(718) 430-3886\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine, Yeshiva University\"},\"department\":{\"en\":\"Saul B. Korey Department of Neurology\"},\"address\":{\"street\":{\"en\":\"Rousso Building, 1165 Morris Park Avenue, room 332\"},\"city\":{\"en\":\"Bronx, N.Y.\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"eas\",\"role\":\"investigator\"},{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Richard B.  Lipton\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcf91be4b08a6249a47284\",\"title\":\"Dr.\",\"firstName\":\"Swapnil\",\"lastName\":\"Rajpathak\",\"email\":\"srajpath@aecom.yu.edu\",\"phone\":\"(718) 430-8717\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Epidemiology and Population Health\"},\"address\":{\"street\":{\"en\":\"1300 Morris Park Avenue, Room 1308D\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Swapnil Rajpathak\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcfa59e4b08a6249a47285\",\"title\":\"Dr.\",\"firstName\":\"Yousin\",\"lastName\":\"Suh\",\"email\":\"yousin.suh@einstein.yu.edu\",\"phone\":\"(718) 678-1111\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"Department of Genetics\"},\"address\":{\"street\":{\"en\":\"1301 Morris Park Avenue, Room 475\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yousin Suh\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"57fcfb11e4b08a6249a47286\",\"title\":\"Dr.\",\"firstName\":\"Joe\",\"lastName\":\"Verghese\",\"email\":\"joe.verghese@einstein.yu.edu\",\"phone\":\"(718) 430-3877\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"department\":{\"en\":\"The Saul R. Korey Department of Neurology\"},\"address\":{\"street\":{\"en\":\"1225 Morris Park Avenue, Room 308\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Joe Verghese\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"57fe9062e4b08a6249a472cd\",\"firstName\":\"Wanda\",\"lastName\":\"Guzman\",\"email\":\"wanda.guzman@einstein.yu.edu\",\"phone\":\"(718) 430-3880\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Albert Einstein College of Medicine\"},\"address\":{\"street\":{\"en\":\"1225 Morris Park Avenue\"},\"city\":{\"en\":\"New York\"},\"zip\":\"10461\",\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"lgp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Wanda Guzman\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "path",
+        "timestamps": {
+          "created": "2019-07-23T14:14:48.667",
+          "lastUpdate": "2020-02-05T11:08:01.090"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Personality and Total Health through life"
+          },
+          {
+            "lang": "fr",
+            "value": "Personality and Total Health through life"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "PATH"
+          },
+          {
+            "lang": "fr",
+            "value": "PATH"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 7485
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p><span>The original aims of the study were</span></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;(a) to delineate the course of depression, anxiety, substance use and cognitive ability with increasing age across the adult life span;</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;(b) to identify environmental and genetic risk factors influencing individual differences in the courses of these characteristics; and</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;(c) to investigate inter-relationships over time between the three domains of depression and anxiety, substance use, and cognitive ability and dementia.</p>\n\n<p><b>Magnetic Resonance Imaging substudy:</b></p>\n<p>The aim of the neuroimaging substudy is to study brain ageing in a non-clinical sample; the factors that predict accelerated brain atrophy, white matter hyperintensities and other neuropathology; and neural correlates of mental disorders, personality and cognitive function.</p>\n\n<p><b>Health and Memory substudy:</b></p>\n<p>This study aim to provide clinical diagnoses of dementia or pre-clinical dementia syndromes such as mild cognitive impairment (MCI) in participants who performed poorly on selected cognitive tests.</p>\n\n<p><b>Cardiovascular substudy:&nbsp;</b></p>\n<p>This study aim to investigate associations between more sensitive markers of cardiovascular function&nbsp;and cognition. This study may also identify cardiac biomarkers particularly predictive of cognitive decline and dementia.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Personality and Total Health (PATH) through life project is a large, on-going, population-based, longitudinal cohort study comprising approximately 7500 participants ranging from early to late adulthood.</p>\n\n<p><span>The original aims of the study were</span></p>\n\n<p>(a) to delineate the course of depression, anxiety, substance use and cognitive ability with increasing age across the adult life span;</p>\n\n<p>(b) to identify environmental and genetic risk factors influencing individual differences in the courses of these characteristics; and</p>\n\n<p>(c) to investigate inter-relationships over time between the three domains of depression and anxiety, substance use, and cognitive ability and dementia.</p>\n\n<p>The study aims to follow participants for 20 years, thus spanning the ages from 20 to 84 years.</p>\n\n<p>&nbsp;</p>\n\n<p>Magnetic Resonance Imaging substudy:</p>\n\n<p>The aim of the neuroimaging substudy is to study brain ageing in a non-clinical sample; the factors that predict accelerated brain atrophy, white matter hyperintensities and other neuropathology; and neural correlates of mental disorders, personality and cognitive function.</p>\n\n<p>&nbsp;</p>\n\n<p>Health and Memory substudy:</p>\n\n<p>This study aim to provide clinical diagnoses of dementia or pre-clinical dementia syndromes such as mild cognitive impairment (MCI) in participants who performed poorly on selected cognitive tests.</p>\n\n<p>&nbsp;</p>\n\n<p>Cardiovascular substudy:&nbsp;</p>\n\n<p>This study aim to investigate associations between more sensitive markers of cardiovascular function&nbsp;and cognition. This study may also identify cardiac biomarkers particularly predictive of cognitive decline and dementia.</p>\n\n<p>&nbsp;</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":7485},\"sample\":{\"noLimit\":false}},\"website\":\"http://rsph.anu.edu.au/research/projects/personality-total-health-path-through-life\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Kaarin Anstey\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Four waves of data were collected for all three cohorts with 4-year intervals between interviews. Each cohort was interviewed over one year starting with the cohort aged 20-24 years old.</p>\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1999,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Kaarin Anstey\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Anstey KJ et al. (2011). Cohort profile: the PATH through life project. Int J Epidemiol. 2012 Aug;41(4):951-60. doi: 10.1093/ije/dyr025. Epub 2011 Feb 24.\",\"pubmedId\":\"21349904\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b0107838869459\",\"title\":\"Prof.\",\"firstName\":\"Kaarin\",\"lastName\":\"Anstey\",\"email\":\"kaarin.anstey@anu.edu.au\",\"phone\":\"+61 2 6125 8410\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"ANU College of Medicine, Biology and Environment\"},\"department\":{\"en\":\" Centre for Research on Ageing, Health and Wellbeing\"},\"address\":{\"city\":{\"en\":\"Canberra\"},\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"path\",\"role\":\"investigator\"},{\"parentId\":\"path\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaarin Anstey\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b010783886945a\",\"title\":\"Prof.\",\"firstName\":\"Peter\",\"lastName\":\"Butterworth\",\"email\":\"peter.butterworth@anu.edu.au\",\"phone\":\"+61 2 6125 8097\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"ANU College of Medicine, Biology and Environment\"},\"department\":{\"en\":\"Centre for Research on Ageing, Health and Wellbeing\"},\"address\":{\"city\":{\"en\":\"Canberra\"},\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"path\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Peter Butterworth\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b010783886945b\",\"title\":\"Dr.\",\"firstName\":\"Nicolas\",\"lastName\":\"Cherbuin\",\"email\":\"nicolas.cherbuin@anu.edu.au\",\"phone\":\"+61 2 6125 3858\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"ANU College of Medicine, Biology and Environment\"},\"department\":{\"en\":\"Centre for Research on Ageing, Health and Wellbeing\"},\"address\":{\"city\":{\"en\":\"Canberra\"},\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"path\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nicolas Cherbuin\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b0107838869459\",\"title\":\"Prof.\",\"firstName\":\"Kaarin\",\"lastName\":\"Anstey\",\"email\":\"kaarin.anstey@anu.edu.au\",\"phone\":\"+61 2 6125 8410\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"ANU College of Medicine, Biology and Environment\"},\"department\":{\"en\":\" Centre for Research on Ageing, Health and Wellbeing\"},\"address\":{\"city\":{\"en\":\"Canberra\"},\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"path\",\"role\":\"investigator\"},{\"parentId\":\"path\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kaarin Anstey\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Access to data is via collaboration on a joint publication/manuscript,</p>\\r\\n\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "prosper",
+        "timestamps": {
+          "created": "2019-07-23T14:14:55.913",
+          "lastUpdate": "2020-02-05T11:08:02.834"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Prospective Study of Pravastatin in the Elderly at Risk"
+          },
+          {
+            "lang": "fr",
+            "value": "Prospective Study of Pravastatin in the Elderly at Risk"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "PROSPER"
+          },
+          {
+            "lang": "fr",
+            "value": "PROSPER"
+          }
+        ],
+        "design": "clinical_trial",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 5804
+        },
+        "countries": [
+          "IRL",
+          "GBR",
+          "NLD"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objective of this study was&nbsp;to examine the hypothesis that pravastatin, at a dose of 40 mg/day, would&nbsp;reduce the risk of cardiovascular and cerebrovascular events in elderly subjects with vascular disease or at high risk of developing vascular disease.</p>"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The objective of this study was&nbsp;to examine the hypothesis that pravastatin, at a dose of 40 mg/day, would&nbsp;reduce the risk of cardiovascular and cerebrovascular events in elderly subjects with vascular disease or at high risk of developing vascular disease.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":5804},\"sample\":{\"noLimit\":false,\"number\":5804}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stella Trompet\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"clinical_trial\"],\"design\":\"clinical_trial\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>There were 4 screening assessments, then participants were reviewed every 3 months following the randomization.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"<p>The PROSPER study was a double-blind, randomized, placebo-controlled trial.</p>\\r\\n\"}},\"startYear\":1997,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stella Trompet\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Shepherd J, Blauw GJ, Murphy MB, et al. Pravastatin in elderly individuals at risk of vascular disease (PROSPER): a randomised controlled trial. Lancet, 2002; 360(9346): 1623-30.\",\"endYear\":2002,\"pubmedId\":\"12457784\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b010783886945f\",\"title\":\"Prof.\",\"firstName\":\"Wouter\",\"lastName\":\"Jukema\",\"email\":\"j.w.jukema@lumc.nl\",\"phone\":\"071 526 2020\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Leiden University Medical Center\"},\"address\":{\"city\":{\"en\":\"Leiden\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"prosper\",\"role\":\"investigator\"},{\"parentId\":\"prosper\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Wouter Jukema\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b0107838869460\",\"title\":\"Prof.\",\"firstName\":\"Ian\",\"lastName\":\"Ford\",\"email\":\"Ian.Ford@glasgow.ac.uk\",\"phone\":\"01413304048\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Glasgow\"},\"department\":{\"en\":\"Robertson Centre for Biostatistics\"},\"address\":{\"city\":{\"en\":\"Glasgow\"},\"state\":\"Scotland\",\"countryIso\":\"GBR\"}},\"studyMemberships\":[{\"parentId\":\"prosper\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Ian Ford\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b010783886945f\",\"title\":\"Prof.\",\"firstName\":\"Wouter\",\"lastName\":\"Jukema\",\"email\":\"j.w.jukema@lumc.nl\",\"phone\":\"071 526 2020\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Leiden University Medical Center\"},\"address\":{\"city\":{\"en\":\"Leiden\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"prosper\",\"role\":\"investigator\"},{\"parentId\":\"prosper\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Wouter Jukema\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Shepherd J, Blauw GJ, Murphy MB, et al. The design of a prospective study of Pravastatin in the Elderly at Risk (PROSPER). The American journal of cardiology, 1999; 84(10): 1192-7.</p>\\r\\n\"}}"
+      },
+      {
+        "id": "nacc",
+        "timestamps": {
+          "created": "2019-07-23T14:14:28.233",
+          "lastUpdate": "2020-02-05T11:07:55.605"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "National Alzheimer's Coordinating Center"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NACC"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 40424
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The National Alzheimer’s Coordinating Center (NACC), established in 1999, maintains a cumulative database including clinical evaluations, neuropathology data when available, and now MRI imaging. The data are contributed by the 34 past and present Alzheimer’s Disease Centers (ADCs) supported by the U.S. National Institute on Aging/NIH, where all enrolled subjects undergo a standardized evaluation. The clinic-based population includes subjects with Alzheimer’s disease and related disorders, as well as cognitively normal subjects and those with MCI."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":40424}},\"website\":\"https://www.alz.washington.edu\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Continuous data collection and annual follow-up.\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"Alzheimer's Disease Centers (ADCs) have been contributing data to the Uniform Data Set (UDS), using a prospective, standardized, and longitudinal clinical evaluation of the subjects in the National Institute on Aging's ADC Program.  In 2012, a new module was added to the UDS to collect detailed clinical information related to frontotemporal lobar degeneration (FTLD). The FTLD Module is voluntarily completed by ADCs.\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":2005,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"https://www.alz.washington.edu/NONMEMBER/PAPERS/Morris2006.pdf\\nhttps://www.alz.washington.edu/NONMEMBER/PAPERS/Beekly2007.pdf\\nhttps://www.alz.washington.edu/NONMEMBER/PAPERS/Weintraub2009.pdf\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869418\",\"firstName\":\"Walter A.\",\"lastName\":\"Kukull\",\"academicLevel\":\"PhD\",\"email\":\"kukull@uw.edu\",\"phone\":\"+1 (206) 543-4560\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Alzheimer's Coordinating Center\"},\"address\":{\"street\":{\"en\":\"4311 - 11th Avenue NE, Suite 300\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98105\",\"state\":\"WA\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"nacc\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Walter A. Kukull\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869419\",\"firstName\":\"Duane\",\"lastName\":\"Beekly\",\"email\":\"NACCmail@uw.edu\",\"phone\":\"+1 (206) 543-8637\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Alzheimer's Coordinating Center\"},\"address\":{\"street\":{\"en\":\"4311 - 11th Avenue NE, Suite 300\"},\"city\":{\"en\":\"Seattle\"},\"zip\":\"98105\",\"state\":\"WA\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"nacc\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Duane Beekly\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "mars",
+        "timestamps": {
+          "created": "2019-07-23T14:14:10.385",
+          "lastUpdate": "2021-05-05T09:39:17.381"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Minority Aging Research Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MARS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 950
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The goal of the proposed project is to conduct an epidemiologic longitudinal study to identify risk factors for change in cognitive function in older African Americans</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":950},\"sample\":{\"noLimit\":false,\"number\":950},\"info\":{\"en\":\"<p class=\\\"western\\\" lang=\\\"en-US\\\">blood collected and stored on most participants, goal is for 100 brain autopsies</p>\\r\\n\"}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Lisa L. Barnes, Phd\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Annual follow-up</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2004,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Lisa L. Barnes, PhD\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Barnes LL, Shah RC, Aggarwal NT, Bennett DA, Schneider JA. The Minority Aging Research Study: Ongoing Efforts to Obtain Brain Donation in African Americans without dementia. Current Alzheimer’s Research. 2012; 9:736-747.\",\"pubmedId\":\"22471868\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869397\",\"firstName\":\"Lisa L.\",\"lastName\":\"Barnes\",\"academicLevel\":\"PhD\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush University Medical Center\"}},\"studyMemberships\":[{\"parentId\":\"mars\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Lisa L. Barnes\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869395\",\"firstName\":\"Annie \",\"lastName\":\"Barz\",\"email\":\"Anne_Barz@rush.edu\",\"phone\":\"312-942-8974\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"department\":{\"en\":\"Rush Univeristy Medical Center\"},\"address\":{\"street\":{\"en\":\"600 S. Paulina, room 1029\"},\"city\":{\"en\":\"Chicago\"},\"zip\":\"60612\",\"state\":\"IL\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Annie  Barz\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549162e4b0107838869396\",\"firstName\":\"Gregory \",\"lastName\":\"Klein\",\"email\":\"Gregory_Klein@rush.edu\",\"phone\":\"312-942-3365\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Rush Alzheimer's Disease Center\"},\"address\":{\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"map\",\"role\":\"contact\"},{\"parentId\":\"mars\",\"role\":\"contact\"},{\"parentId\":\"ros\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Gregory  Klein\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>The Minority Aging Research Study (MARS), a longitudinal clinical-pathologic study of aging and risk factors for cognitive decline, enrolls older African Americans free of dementia, and performs annual uniform, structured, clinical evaluations that include a detailed assessment of risk factors, neurological examination, donation of a blood sample for genetic testing, and comprehensive neuropsychological testing. To be eligible, potential participants have to be 65 years or older, no prior diagnosis of dementia, not taking medications typically prescribed for Alzheimer’s disease, and selfidentify as African Americans using questions from the 1990 U.S. Census. The specific question is: With which group do you most closely identify yourself? White; Black, Negro, African-American; Native American, Indian; Eskimo; Aleut; Asian or Pacific Island. They are then asked whether they are of Spanish/Hispanic/Latino origin (yes/no). The study is funded by the National Institute on Aging and was approved by the Institutional Review Board of Rush University Medical Center.</p>\\r\\n\\r\\n<p><strong>Data/Bio-specimen Access: </strong> To apply for access to RADC data/tissue, please enter an electronic request at our website: https://www.radc.rush.edu/res/ext/home.htm.</p>\\r\\n\"}}"
+      },
+      {
+        "id": "sydney-centenarian-study",
+        "timestamps": {
+          "created": "2019-07-23T14:15:27.596",
+          "lastUpdate": "2020-02-05T11:08:10.796"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Sydney Centenarian Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SCS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 345
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The main objectives of the Sydney Centenarian Study were:\n<ul><li> To determine the “cognitive profile” of exceptionally old individuals (95+ years, hereafter “centenarians”);</li>\n<li> To relate cognition in this age group to brain imaging parameters\non MRI and to neuropathology in brain donors within the group;</li>\n<li> To examine centenarians from neuropsychiatric, medical, nutritional, and lifestyle\nperspectives to establish a “centenarian phenotype”; and</li>\n<li>To examine the determinants of “autonomy” in centenarians.</li>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":345},\"sample\":{\"noLimit\":false,\"number\":224}},\"website\":\"https://cheba.unsw.edu.au/project/sydney-centenarian-study\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Participants were followed up 6, 12 and 18 months after their baseline assessment.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2009,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Sachdev P., Levitan C., Crawford J., Sidhu M., Slavin M., Richmond R., Kochan N., Brodaty H., Wen W., Kang K., Mather K.A., Sydney Centenarian Study team. The Sydney Centenarian Study: Methodology And Profile Of Centenarians And Near-Centenarians. International Psychogeriatrics. 2013; 25(6): 993-1005.\",\"pubmedId\":\"23510643\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869398\",\"title\":\"Prof.\",\"firstName\":\"Perminder \",\"lastName\":\"Sachdev\",\"email\":\"p.sachdev@unsw.edu.au\",\"phone\":\"02-93823763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"mas\",\"role\":\"contact\"},{\"parentId\":\"oats\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"contact\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Perminder  Sachdev\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"5835fdfce4b0e6bf51d46854\",\"firstName\":\"Adam\",\"lastName\":\"Theobald\",\"email\":\"a.theobald@unsw.edu.au\",\"phone\":\"61 (2) 9382 3816\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Sydney\"},\"zip\":\"2031\",\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Adam Theobald\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "va-nas",
+        "timestamps": {
+          "created": "2019-07-23T14:15:39.881",
+          "lastUpdate": "2020-02-05T11:08:15.217"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Veterans Affairs Normative Aging Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Veterans Affairs Normative Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "VA NAS"
+          },
+          {
+            "lang": "fr",
+            "value": "VA NAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2280
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Normative Aging Study (NAS) is a longitudinal study of aging in men initiated by the US Department of Veterans Affairs (VA) in 1963. The objectives of the NAS are to:</p>\r\n\r\n<p>- Characterize the biomedical and psychosocial parameters of normal aging as distinct from the development of disease;</p>\r\n\r\n<p>- Define the incidence and precursors of the diseases accompanying aging; and</p>\r\n\r\n<p>- Examine the influence of lifestyle and major life events on the aging process.</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Normative Aging Study (NAS) is a longitudinal study of aging in men initiated by the US Department of Veterans Affairs (VA) in 1963. The objectives of the NAS are to:</p>\n\n<p>- Characterize the biomedical and psychosocial parameters of normal aging as distinct from the development of disease;</p>\n\n<p>- Define the incidence and precursors of the diseases accompanying aging; and</p>\n\n<p>- Examine the influence of lifestyle and major life events on the aging process.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2280},\"sample\":{\"noLimit\":false,\"number\":2280}},\"website\":\"http://knowledge.sagepub.com/view/aging/n201.xml\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Avron Spiro III\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Originally, participants reported every 3 years (age 52 or older) or 5 years (younger than age 52) for their exam. Since 1986, a 3-year interval has been used for all men. In the month before their scheduled exam, men are mailed a packet of surveys to complete and bring with them to their exam.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":1963,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Avron Spiro III\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Bell B, Rose CL, Damon H. The Normative Aging Study: an interdisciplinary and longitudinal study of health and aging. Aging and Human Development, 1972; 3: 5-17.\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694a3\",\"title\":\"Dr.\",\"firstName\":\"Avron\",\"lastName\":\"Spiro III\",\"email\":\"aspiro3@bu.edu\",\"phone\":\"(857) 364-2888\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Veterans Administration Medical Center\"},\"department\":{},\"address\":{\"street\":{},\"city\":{},\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"va-nas\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Avron Spiro III\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694a4\",\"title\":\"Dr.\",\"firstName\":\"Carolyn\",\"lastName\":\"Aldwin\",\"email\":\"carolyn.aldwin@oregonstate.edu\",\"phone\":\"(541) 737-2024\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Oregon State University\"},\"department\":{\"en\":\"Center for Healthy Aging Research\"},\"address\":{\"state\":\"Oregon\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"va-nas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Carolyn Aldwin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693c7\",\"title\":\"Dr.\",\"firstName\":\"David \",\"lastName\":\"Almeida\",\"email\":\"dalmeida@psu.edu\",\"phone\":\"(814) 865-2656\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"The Pennsylvania State University\"},\"department\":{\"en\":\"Human Development and Family Studies\"},\"address\":{\"state\":\"Pennsylvania\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"David  Almeida\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693cd\",\"title\":\"Dr.\",\"firstName\":\"Daniel\",\"lastName\":\"Mroczek\",\"email\":\"daniel.mroczek@northwestern.edu\",\"phone\":\"(847) 491-5190\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Northwestern University\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"state\":\"Illinois\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"midus\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Daniel Mroczek\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694a3\",\"title\":\"Dr.\",\"firstName\":\"Avron\",\"lastName\":\"Spiro III\",\"email\":\"aspiro3@bu.edu\",\"phone\":\"(857) 364-2888\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Veterans Administration Medical Center\"},\"department\":{},\"address\":{\"street\":{},\"city\":{},\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"va-nas\",\"role\":\"investigator\"},{\"parentId\":\"va-nas\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Avron Spiro III\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>Access to data is by request to the PI’s and is considered on a case-by-case basis. The data are not publicly available.</p>\\r\\n\\r\\n<p>&nbsp;</p>\\r\\n\\r\\n<p>Second marker paper:</p>\\r\\n\\r\\n<p>Bossé, R., Ekerdt, D., &amp; Silbert, J. (1984).&nbsp; The Veterans Administration Normative Aging Study.&nbsp; In S. A. Mednick, M. Harway, &amp; K. M. Finello (Eds.), <u>Handbook of longitudinal research:&nbsp; Vol 2.&nbsp; Teenage and adult cohorts</u> (pp. 273-289).&nbsp; New York:&nbsp; Praeger.</p>\\r\\n\"}}"
+      },
+      {
+        "id": "w-ii",
+        "timestamps": {
+          "created": "2019-07-23T14:15:43.153",
+          "lastUpdate": "2021-05-05T09:39:35.115"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Whitehall II"
+          },
+          {
+            "lang": "fr",
+            "value": "Whitehall II"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WH-II"
+          },
+          {
+            "lang": "fr",
+            "value": "WH-II"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 10308
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The first Whitehall study, set up in 1967, included 18,000 men in the British Civil Service. It showed that men in the lowest employment grades were much more likely to die prematurely than men in the highest grades. Furthermore, these socio-economic inequalities in health did not appear to be fully accounted for by differences in well-known risk factors, such as smoking.</p>\r\n\r\n<p>The Whitehall II (WII)&nbsp;study,&nbsp;also known as the Stress &amp; Health Study,&nbsp;was established in 1985&nbsp;to explore the relationship between socio-economic status, stress and cardiovascular disease, this time also including&nbsp;women.&nbsp;A cohort of 10,308 participants aged 35-55, of whom 3,413 were women and 6,895 men, was recruited from the British Civil Service in 1985. Since this first wave of data collection, self-completion questionnaires and clinical data have been collected from the cohort every two to five years with a high level of participation. As a consequence, the WII study is currently very well placed to answer questions about how previous and current circumstances affect health and quality of life in an ageing cohort. To this end, the WII study continues to collect data in order to examine the interrelationships between socioeconomic &nbsp;biological, psychosocial, and behavioural factors in the ageing process, and identify key determinants of late life depression, cognitive decline, chronic disease, and physical functioning. Data collection is intended to continue until 2030.&nbsp;</p>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The first Whitehall study, set up in 1967, included 18,000 men in the British Civil Service. It showed that men in the lowest employment grades were much more likely to die prematurely than men in the highest grades. Furthermore, these socio-economic inequalities in health did not appear to be fully accounted for by differences in well-known risk factors, such as smoking.</p>\n\n<p>The Whitehall II (WII)&nbsp;study,&nbsp;also known as the Stress &amp; Health Study,&nbsp;was established in 1985&nbsp;to explore the relationship between socio-economic status, stress and cardiovascular disease, this time also including&nbsp;women.&nbsp;A cohort of 10,308 participants aged 35-55, of whom 3,413 were women and 6,895 men, was recruited from the British Civil Service in 1985. Since this first wave of data collection, self-completion questionnaires and clinical data have been collected from the cohort every two to five years with a high level of participation. As a consequence, the WII study is currently very well placed to answer questions about how previous and current circumstances affect health and quality of life in an ageing cohort. To this end, the WII study continues to collect data in order to examine the interrelationships between socioeconomic &nbsp;biological, psychosocial, and behavioural factors in the ageing process, and identify key determinants of late life depression, cognitive decline, chronic disease, and physical functioning. Data collection is intended to continue until 2030.&nbsp;</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":10308},\"sample\":{\"noLimit\":false,\"number\":10308}},\"website\":\"http://www.ucl.ac.uk/whitehallII\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Mika Kivimaki\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"<p>The whole cohort has been&nbsp;invited to fill in a comprehensive self-completion questionnaire&nbsp;and to&nbsp;attend the research clinic at 5-year intervals, which has been reduced to a 3-years interval&nbsp;from 2012.&nbsp;A&nbsp;postal self-completion questionnaire was sent to participants between clinic phases up to 2006.&nbsp;</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":1985,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Mika Kivimaki\"},\"markerPaper\":\"Marmot M, Brunner E. Cohort Profile: the Whitehall II study. Int J Epidemiol.  2005 Apr;34(2):251-6. Epub 2004 Dec 2.\",\"pubmedId\":\"15576467\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694aa\",\"title\":\"Prof.\",\"firstName\":\"Mika\",\"lastName\":\"Kivimaki\",\"email\":\"m.kivimaki@ucl.ac.uk\",\"phone\":\"442076798260\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"w-ii\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Mika Kivimaki\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694ab\",\"title\":\"Prof.\",\"firstName\":\"Eric\",\"lastName\":\"Brunner\",\"email\":\"e.brunner@ucl.ac.uk\",\"phone\":\"0044 20 7679 1689\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"w-ii\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Eric Brunner\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694ac\",\"title\":\"Dr.\",\"firstName\":\"Archana\",\"lastName\":\"Singh-Manoux\",\"email\":\"a.singh-manoux@ucl.ac.uk\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"city\":{\"en\":\"London\"},\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"w-ii\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Archana Singh-Manoux\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694ad\",\"title\":\"Dr.\",\"firstName\":\"Aida\",\"lastName\":\"Sanchez\",\"email\":\"a.sanchez@ucl.ac.uk\",\"phone\":\" +44 (0)20 7679 5652 (Extension 45652)\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University College London\"},\"department\":{\"en\":\"Department of Epidemiology and Public Health\"},\"address\":{\"street\":{\"en\":\"1-19 Torrington Place\"},\"city\":{\"en\":\"London\"},\"zip\":\"WC1E 6BT\",\"countryIso\":\"GB\"}},\"studyMemberships\":[{\"parentId\":\"w-ii\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Aida Sanchez\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p><span><span>The Whilehall II study is a member of the following networks:</span></span></p>\\r\\n\\r\\n<p><span>- &nbsp; &nbsp; &nbsp; HALCyon (Healthy Ageing across the Life Course)</span></p>\\r\\n\\r\\n<p><span>-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>ERFC &nbsp;(Emerging Risk Factors Collaboration)</span></p>\\r\\n\\r\\n<p><span>-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>IPD-Work Consortium (\\\"Individual-participant-data meta-analysis of working populations\\\")</span></p>\\r\\n\\r\\n<p><span>-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>LEAD Consortium (Leadership in&nbsp;Epidemiological Analysis of longitudinal&nbsp;Diabetes-related data)</span></p>\\r\\n\\r\\n<p><span>-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>IL6R MR Consortium (Interleukin-6 Receptor Mendelian Randomisation Analysis)</span></p>\\r\\n\\r\\n<p><span>-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>ICBP (International Consortium for Blood Pressure)&nbsp;</span></p>\\r\\n\"}}"
+      },
+      {
+        "id": "whims",
+        "timestamps": {
+          "created": "2019-07-23T14:15:46.509",
+          "lastUpdate": "2021-10-27T17:10:42.675"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Women's Health Initiative Memory Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Women's Health Initiative Memory Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WHIMS"
+          },
+          {
+            "lang": "fr",
+            "value": "WHIMS"
+          }
+        ],
+        "design": "clinical_trial",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 7479
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The WHIMS study aimed to determine the incidence of all-cause dementia, diagnosed through the screening of cognitive functioning and neurologic&nbsp;and neuropsychological evaluations in women participating in the hormone&nbsp;replacement therapy (HRT) trial of the Women's Health Initiative (WHI).</p>\n\n<p>Specifically WHIMS aimed to:</p>\n\n<ul>\n\t<li>Quantify the efficacy of HRT in reducing the incidence of clinically diagnosed all-cause dementia separately in women who have had a hysterectomy and are assigned to unopposed therapy to those who have not had a hysterectomy and are assigned to combined estrogen and progestin therapy;</li>\n\t<li>Quantify the efficacy of HRT in reducing the age-associated decline in global cognitive functioning&nbsp;separately in women who have had a hysterectomy and are assigned to unopposed therapy to those who have not had a hysterectomy and are assigned to combined estrogen and progestin therapy;</li>\n\t<li>Describe the effects of HRT on all-cause dementia in subgroups defined by age, ethnicity, and clinical site;</li>\n\t<li>Describe the incidence of Alzheimer's disease and other subtypes of dementia in the WHIMS cohort;</li>\n\t<li>Describe the effects of HRT on the progression of symptoms associated with dementia in women with all-cause and Alzheimer's-type dementia.</li>\n</ul>\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The WHIMS study aimed to determine the incidence of all-cause dementia, diagnosed through the screening of cognitive functioning and neurologic&nbsp;and neuropsychological evaluations in women participating in the hormone&nbsp;replacement therapy (HRT) trial of the Women's Health Initiative (WHI).</p>\n\n<p>Specifically WHIMS aimed to:</p>\n\n<ul>\n\t<li>Quantify the efficacy of HRT in reducing the incidence of clinically diagnosed all-cause dementia separately in women who have had a hysterectomy and are assigned to unopposed therapy to those who have not had a hysterectomy and are assigned to combined estrogen and progestin therapy;</li>\n\t<li>Quantify the efficacy of HRT in reducing the age-associated decline in global cognitive functioning&nbsp;separately in women who have had a hysterectomy and are assigned to unopposed therapy to those who have not had a hysterectomy and are assigned to combined estrogen and progestin therapy;</li>\n\t<li>Describe the effects of HRT on all-cause dementia in subgroups defined by age, ethnicity, and clinical site;</li>\n\t<li>Describe the incidence of Alzheimer's disease and other subtypes of dementia in the WHIMS cohort;</li>\n\t<li>Describe the effects of HRT on the progression of symptoms associated with dementia in women with all-cause and Alzheimer's-type dementia.</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":7479},\"sample\":{\"noLimit\":false,\"number\":7479},\"info\":{\"en\":\"<p>Participants enrolled in the estrogen plus progesterone trial: 4532</p>\\r\\n\\r\\n<p>Paticipants enrolled in the estrogen alone trial: 2947</p>\\r\\n\"}},\"website\":\"\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephen Rapp\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"clinical_trial\"],\"design\":\"clinical_trial\",\"followUpInfo\":{\"en\":\"<p>The participants were followed-up annually.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>WHIMS was&nbsp;a double-blind, placebo-controlled, clinical trial.</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1996,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephen Rapp\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Shumaker SA, Reboussin BA, Espeland MA, et al. The Women's Health Initiative Memory Study (WHIMS): a trial of the effect of estrogen therapy in preventing andslowing the progression of dementia. Controlled clinical trials, 1998; 19(6): 604-21.\",\"endYear\":2004,\"pubmedId\":\"9875839\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694b1\",\"title\":\"Dr.\",\"firstName\":\"Stephen R.\",\"lastName\":\"Rapp\",\"email\":\"srapp@wakehealth.edu\",\"phone\":\"336-716-4551\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whims\",\"role\":\"contact\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephen R. Rapp\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b2\",\"title\":\"Dr.\",\"firstName\":\"Sally A. \",\"lastName\":\"Shumaker\",\"email\":\"sshumake@wakehealth.edu\",\"phone\":\"336-716-3838\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Sally A.  Shumaker\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b3\",\"title\":\"Dr.\",\"firstName\":\"Mark \",\"lastName\":\"Espeland\",\"email\":\"mespelan@wakehealth.edu\",\"phone\":\"336-716-2826\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mark  Espeland\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694b1\",\"title\":\"Dr.\",\"firstName\":\"Stephen R.\",\"lastName\":\"Rapp\",\"email\":\"srapp@wakehealth.edu\",\"phone\":\"336-716-4551\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whims\",\"role\":\"contact\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephen R. Rapp\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "whisca",
+        "timestamps": {
+          "created": "2019-07-23T14:15:47.613",
+          "lastUpdate": "2020-02-05T11:08:17.771"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Women’s Health Initiative Study of Cognitive Aging"
+          },
+          {
+            "lang": "fr",
+            "value": "Women’s Health Initiative Study of Cognitive Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WHISCA"
+          },
+          {
+            "lang": "fr",
+            "value": "WHISCA"
+          }
+        ],
+        "design": "clinical_trial",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2302
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The goal of WHISCA was to determine the effect of hormone therapy on age-related declines in cognition in women 65 years and older who had not received diagnoses of dementia.</p>\r\n\r\n<p>Secondary goals of WHISCA were to:</p>\r\n\r\n<ul>\r\n\t<li>Determine the rates of change in memory and other cognitive functions in a large cohort of elderly women and in subgroups defined by age, ethnicity and cognitive function at entry;</li>\r\n\t<li>Identify predictors of cognitive changes;</li>\r\n\t<li>Identify predictors of dementia and cognitive impairment and to characterize the transition from normal aging to cognitive impairment to dementia through the interface with the WHIMS adjudicated diagnoses of probable dementia and mild cognitive impairment.</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The goal of WHISCA was to determine the effect of hormone therapy on age-related declines in cognition in women 65 years and older who had not received diagnoses of dementia.</p>\n\n<p>Secondary goals of WHISCA were to:</p>\n\n<ul>\n\t<li>Determine the rates of change in memory and other cognitive functions in a large cohort of elderly women and in subgroups defined by age, ethnicity and cognitive function at entry;</li>\n\t<li>Identify predictors of cognitive changes;</li>\n\t<li>Identify predictors of dementia and cognitive impairment and to characterize the transition from normal aging to cognitive impairment to dementia through the interface with the WHIMS adjudicated diagnoses of probable dementia and mild cognitive impairment.</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":2302},\"sample\":{\"noLimit\":false}},\"website\":\"https://www.nhlbi.nih.gov/whi/index.html\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephen R. Rapp\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"clinical_trial\"],\"design\":\"clinical_trial\",\"followUpInfo\":{\"en\":\"<p>The participants were followed-up annually.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"<p>WHISCA was a double-blind, placebo-controlled, clinical trial.</p>\\r\\n\"},\"otherDesign\":{},\"otherRecruitment\":{}},\"startYear\":1999,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Stephen R. Rapp\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Resnick SM, Coker LH, Maki PM, et al. The Women's Health Initiative Study of Cognitive Aging (WHISCA): a randomized clinical trial of the effects of hormone therapy on age-associated cognitive decline. Clinical trials, 2004; 1(5): 440-50.\",\"endYear\":2007,\"pubmedId\":\"16279282\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694b1\",\"title\":\"Dr.\",\"firstName\":\"Stephen R.\",\"lastName\":\"Rapp\",\"email\":\"srapp@wakehealth.edu\",\"phone\":\"336-716-4551\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whims\",\"role\":\"contact\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephen R. Rapp\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b4\",\"title\":\"Dr.\",\"firstName\":\"Susan \",\"lastName\":\"Resnick\",\"email\":\"resnicks@mail.nih.gov \",\"phone\":\"410-558-8618\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Behavioral Neuroscience\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Susan  Resnick\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b3\",\"title\":\"Dr.\",\"firstName\":\"Mark \",\"lastName\":\"Espeland\",\"email\":\"mespelan@wakehealth.edu\",\"phone\":\"336-716-2826\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mark  Espeland\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694b1\",\"title\":\"Dr.\",\"firstName\":\"Stephen R.\",\"lastName\":\"Rapp\",\"email\":\"srapp@wakehealth.edu\",\"phone\":\"336-716-4551\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whims\",\"role\":\"contact\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Stephen R. Rapp\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694b4\",\"title\":\"Dr.\",\"firstName\":\"Susan \",\"lastName\":\"Resnick\",\"email\":\"resnicks@mail.nih.gov \",\"phone\":\"410-558-8618\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"National Institute on Aging\"},\"department\":{\"en\":\"Laboratory of Behavioral Neuroscience\"},\"address\":{\"city\":{\"en\":\"Baltimore\"},\"state\":\"Maryland\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Susan  Resnick\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694b3\",\"title\":\"Dr.\",\"firstName\":\"Mark \",\"lastName\":\"Espeland\",\"email\":\"mespelan@wakehealth.edu\",\"phone\":\"336-716-2826\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Wake Forest School of Medicine\"},\"department\":{\"en\":\"Department of Biostatistics\"},\"address\":{\"city\":{\"en\":\"Winston-Salem\"},\"state\":\"North Carolina\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whims\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"investigator\"},{\"parentId\":\"whisca\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mark  Espeland\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "cag",
+        "timestamps": {
+          "created": "2019-07-23T14:12:20.002",
+          "lastUpdate": "2021-08-06T12:17:23.875"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "CARTaGENE"
+          },
+          {
+            "lang": "fr",
+            "value": "CARTaGENE"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CaG"
+          },
+          {
+            "lang": "fr",
+            "value": "CaG"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 43046
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "5aba9ca5e4b0e00282f6b5fd",
+          "fileName": "CARTaGENE_Logo_RGB_200 x 141 px_2018.jpg",
+          "lang": "en",
+          "size": 44086,
+          "md5": "1c348516d5466de8e8b3175bca036e64",
+          "timestamps": {
+            "created": "2018-03-27T15:33:57.878"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "CARTaGENE is a long-term cohort study for the investigation of modifiable environmental and lifestyle factors and the genomic determinants of chronic diseases in Quebec, Canada."
+          },
+          {
+            "lang": "fr",
+            "value": "<p><span style=\"line-height: 1.6em;\">CARTaGENE's objectives are:</span></p>\n\n<ol>\n\t<li>To create a platform containing data on health and a biobank containing biological material from a random sample of adults aged between 40 and 69 years representative of the urban-dwelling population from the province of Quebec.&nbsp;Data and samples are accessible to researchers in Canada and elsewhere. To allow access to these banks, projects must meet the scientific and ethical requirements described in CARTaGENE’s access policies;</li>\n\t<li>To help researchers understand the genetic, environmental and lifestyle factors involved in common diseases such as heart disease, diabetes and cancer. This increased understanding of the determinants of health and disease will, in the long term, translate into improved disease prevention, diagnostics and treatment, and contribute to a better allocation of health care resources;</li>\n\t<li>To contribute to the international harmonization of research tools and methods and governance approaches for population genomics studies. This will help to increase the statistical power and reliability of all population genomics studies, and to translate the studies into health benefits faster.&nbsp;</li>\n</ol>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "others",
+          "cognitive_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":43046},\"sample\":{\"noLimit\":false,\"number\":29792},\"info\":{\"en\":\"\"}},\"website\":\"http://www.cartagene.qc.ca/en\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"Genetic data (Genotyping, RNA-seq, Whole Exome-seq, …)\"},\"maelstromAuthorization\":{\"authorized\":true},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"After two recruitment phases, A in 2009 and B in 2012, preceded by a pilot phase (2008), a first follow-up was realized in 2017. Further follow-ups are planned regularly.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{\"en\":\"\"}},\"startYear\":2007,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Awadalla P, Boileau C, Payette Y, Idaghdour Y, Goulet JP, Knoppers B, Hamet P, Laberge C, on behalf of the CARTaGENE Project, Cohort profile of the CARTaGENE study: Quebec's population-based biobank for public health and personalized genomics. Int J Epidemiol, 2013; 42:1285-1299.\",\"pubmedId\":\"23071140\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549160e4b0107838869271\",\"title\":\"Dr.\",\"firstName\":\"Anne-Monique\",\"lastName\":\"Nuyt\",\"email\":\"anne-monique.nuyt@recherche-ste-justine.qc.ca\",\"phone\":\"514 345-4931 #3971\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"CHU Sainte-Justine Research Centre\"},\"address\":{\"street\":{\"en\":\"3175 Côte Sainte-Catherine\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H3T 1C5\",\"state\":\"Quebec\",\"countryIso\":\"Canada\"}},\"studyMemberships\":[{\"parentId\":\"cag\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"cptp\",\"role\":\"investigator\"}],\"fullName\":\"Anne-Monique Nuyt\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549160e4b0107838869272\",\"title\":\"Dr.\",\"firstName\":\"Sébastien\",\"lastName\":\"Jacquemont\",\"email\":\"sebastien.jacquemont@umontreal.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"CHU Sainte-Justine Research Centre\"},\"address\":{\"street\":{\"en\":\"3175 Côte Sainte-Catherine\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H3T 1C5\",\"state\":\"Quebec\",\"countryIso\":\"Canada\"}},\"studyMemberships\":[{\"parentId\":\"cag\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"cptp\",\"role\":\"investigator\"}],\"fullName\":\"Sébastien Jacquemont\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549160e4b0107838869273\",\"firstName\":\"Access\",\"lastName\":\"Officer\",\"email\":\"access@cartagene.qc.ca\",\"phone\":\"514-343-7703 ext. 6393\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"CHU Sainte-Justine Research Centre\"},\"address\":{\"street\":{\"en\":\"3333 Queen-Mary, Office 490/493\"},\"city\":{\"en\":\"Montreal\"},\"zip\":\"H3V 1A2\",\"state\":\"Qc\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"cag\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Access Officer\"},\"role\":\"contact\"}]},\"info\":{},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "atlantic-path",
+        "timestamps": {
+          "created": "2019-07-23T14:12:08.893",
+          "lastUpdate": "2021-08-06T12:22:20.667"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Atlantic Partnership for Tomorrow's Health"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "Atlantic PATH"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 35935
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "5bed807b9c212a77153b58f8",
+          "fileName": "atlaticLogo.png",
+          "lang": "en",
+          "size": 16280,
+          "md5": "97dcaf0b7d2faaf5c71147cee0866628",
+          "timestamps": {
+            "created": "2018-11-15T09:19:39.149"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "Atlantic PATH has two primary objectives: (i) to develop a databank containing health and health-related measures, as well as biological samples; and (ii) to encourage and facilitate the use of the databank by researchers, with an emphasis on cancer aetiology and other chronic disease."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":35935},\"sample\":{\"noLimit\":false,\"number\":32700},\"info\":{\"en\":\"\"}},\"website\":\"http://atlanticpath.ca/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"maelstromAuthorization\":{\"authorized\":true},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"From baseline recruitment between 2009 and 2015, participants have consented to be followed over a 30-year period. Data will be collected actively and passively at regular intervals. The first online follow-up questionnaire was implemented in the fall of 2016.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2009,\"specificAuthorization\":{\"authorized\":false},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694c2\",\"title\":\"Dr.\",\"firstName\":\"Louise \",\"lastName\":\"Parker\",\"email\":\"louise.parker@iwk.nshealth.ca\",\"phone\":\"902-494-3566\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Dalhousie University\"},\"address\":{\"street\":{\"en\":\"1494 Carlton Street\"},\"city\":{\"en\":\"Halifax\"},\"zip\":\"B3H 4R2\",\"state\":\"NS\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"atlantic-path\",\"role\":\"investigator\"},{\"parentId\":\"atlantic-path\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Louise  Parker\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694c3\",\"title\":\"Dr.\",\"firstName\":\"Trevor\",\"lastName\":\"Dummer\",\"email\":\"trevor.dummer@iwk.nshealth.ca\",\"phone\":\"604–827–2708\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of British Columbia\"},\"department\":{\"en\":\"School of Population and Public Health\"},\"address\":{\"street\":{\"en\":\"2206 East Mall\"},\"city\":{\"en\":\"Vancouver\"},\"zip\":\"V6T 1Z3\",\"state\":\"British Columbia\",\"countryIso\":\"Canada\"}},\"studyMemberships\":[{\"parentId\":\"atlantic-path\",\"role\":\"investigator\"}],\"networkMemberships\":[{\"parentId\":\"cptp\",\"role\":\"investigator\"}],\"fullName\":\"Trevor Dummer\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694c2\",\"title\":\"Dr.\",\"firstName\":\"Louise \",\"lastName\":\"Parker\",\"email\":\"louise.parker@iwk.nshealth.ca\",\"phone\":\"902-494-3566\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Dalhousie University\"},\"address\":{\"street\":{\"en\":\"1494 Carlton Street\"},\"city\":{\"en\":\"Halifax\"},\"zip\":\"B3H 4R2\",\"state\":\"NS\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"atlantic-path\",\"role\":\"investigator\"},{\"parentId\":\"atlantic-path\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Louise  Parker\"},\"role\":\"contact\"}]},\"markerPaper\":\"Sweeney E, Cui Y, DeClercq V, Devichand P, et al. Cohort Profile: The Atlantic Partnership for Tomorrow's Health (Atlantic PATH) Study. Int J Epidemiol. 2017, 46(6):1762-1763i.\",\"pubmedId\":\"29025120\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "vetsa",
+        "timestamps": {
+          "created": "2019-07-23T14:15:40.953",
+          "lastUpdate": "2021-05-05T09:39:34.267"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Vietnam Era Twin Study of Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "VETSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1237
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "2274aec5-c2be-4b55-ab73-64b1811d839b",
+          "fileName": "logo.jpg",
+          "type": "logo",
+          "lang": "en",
+          "size": 34077,
+          "md5": "da5b2b1927027a8b8a3938346e506058",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.918"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The major focus of the primary VETSA project is to elucidate factors affecting cognitive aging starting in midlife. To that end, it seeks to understand aging processes by clarifying the relationships between cognition, health, personality, and psychosocial factors, and by quantifying the relative influences of genetic and environmental factors in these major domains of adult development and aging.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1237},\"sample\":{\"noLimit\":false,\"number\":1237},\"info\":{\"en\":\"<p>Biological samples were collected from the attrition replacement participants</p>\\r\\n\"}},\"website\":\"http://www.vetsatwins.org/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"<p>VETSA 2 data are not yet publicly available—contact the PIs</p>\\r\\n\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. William Kremen & Dr. Michael Lyons\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The study design calls for follow-up every 5 years. The first follow-up (VETSA 2) was conducted 2009-2013: 1014/1237 twins participated in the follow-up. VETSA 2 also assessed 247 attrition replacements (ages 51 to 65). VETSA 3 follow-up is scheduled to start in Fall 2015.</p>\\r\\n\"},\"recruitments\":[\"families\"],\"info\":{\"en\":\"<p>Data are collected at an individual level for each twin.</p>\\r\\n\"}},\"startYear\":2003,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. William Kremen & Dr. Michael Lyons\"},\"markerPaper\":\"Kremen WS, Thompson-Brenner H, Leung YM, Grant MD, Franz CE, Eisen SA, Jacobson KC, Boake C, Lyons MJ. Genes, environment, and time: the Vietnam Era Twin Study of Aging (VETSA). 2006; 9(6): 1009-22.\",\"pubmedId\":\"17254445\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694a5\",\"title\":\"Dr.\",\"firstName\":\"William\",\"lastName\":\"Kremen\",\"email\":\"wkremen@ucsd.edu\",\"phone\":\"(858) 822-2393\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Diego\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"state\":\"California\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"vetsa\",\"role\":\"investigator\"},{\"parentId\":\"vetsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"William Kremen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694a6\",\"title\":\"Dr.\",\"firstName\":\"Michael\",\"lastName\":\"Lyons\",\"email\":\"mlyons@bu.edu\",\"phone\":\"(617) 353-3820\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Boston University\"},\"department\":{\"en\":\"Psychological & Brain Sciences\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"vetsa\",\"role\":\"investigator\"},{\"parentId\":\"vetsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Michael Lyons\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694a5\",\"title\":\"Dr.\",\"firstName\":\"William\",\"lastName\":\"Kremen\",\"email\":\"wkremen@ucsd.edu\",\"phone\":\"(858) 822-2393\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Diego\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"state\":\"California\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"vetsa\",\"role\":\"investigator\"},{\"parentId\":\"vetsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"William Kremen\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694a7\",\"title\":\"Dr.\",\"firstName\":\"Carol \",\"lastName\":\"Franz\",\"email\":\"cfranz@ucsd.edu\",\"phone\":\"(858) 822-1793\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of California, San Diego\"},\"department\":{\"en\":\"Department of Psychiatry\"},\"address\":{\"city\":{\"en\":\"La Jolla\"},\"state\":\"California\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"vetsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol  Franz\"},\"role\":\"contact\"},{\"person\":{\"id\":\"56549163e4b01078388694a6\",\"title\":\"Dr.\",\"firstName\":\"Michael\",\"lastName\":\"Lyons\",\"email\":\"mlyons@bu.edu\",\"phone\":\"(617) 353-3820\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Boston University\"},\"department\":{\"en\":\"Psychological & Brain Sciences\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"vetsa\",\"role\":\"investigator\"},{\"parentId\":\"vetsa\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Michael Lyons\"},\"role\":\"contact\"}]},\"info\":{\"en\":\"<p>DNA has already been extracted; biological samples are only available through the VETR, per registry guidelines.</p>\\r\\n\\r\\n<p>Kremen, W. S., Franz, C. E., &amp; Lyons, M. J. (2013a). VETSA: the Vietnam Era Twin Study of Aging. Twin Res Hum Genet, 16(1), 399-402. PMID: 23110957</p>\\r\\n\\r\\n<p>Kremen, W. S., Franz, C. E., &amp; Lyons, M. J. (2013b). VETSA: the Vietnam Era Twin Study of Aging - ADDENDUM. Twin Res Hum Genet, 16(1), 403. PMID: 23394194</p>\\r\\n\"}}"
+      },
+      {
+        "id": "wghs",
+        "timestamps": {
+          "created": "2019-07-23T14:15:44.310",
+          "lastUpdate": "2020-02-05T11:08:16.523"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Women’s Genome Health Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WGHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 28345
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The primary aim of the WGHS is&nbsp;to create a comprehensive, fully searchable genome-wide database of more than 360 000 single nucleotide polymorphisms among at least 25 000 initially healthy American women participating in the ongoing Women's Health Study.</p>\r\n\r\n<p>Investigations within the WGHS&nbsp;seek to identify relevant patterns of genetic polymorphism that relate to multiple intermediate phenotypes and will also allow exploration of gene-environment and gene-gene interactions as they relate to incident disease states.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":28345},\"sample\":{\"noLimit\":false,\"number\":28345}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Daniel I. Chasman\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Ongoing DNA analyses from the participants' blood sample provided at baseline (1992-1995) of the WHS study.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2006,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Daniel I. Chasman\"},\"markerPaper\":\"Ridker PM, Chasman DI, Zee RY, Parker A, et al. Rationale, design, and methodology of the Women's Genome Health Study: a genome-wide association study of more than 25,000 initially healthy american women. Clinical Chemistry, 2008; 54(2): 249-55.\",\"pubmedId\":\"18070814\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694ae\",\"title\":\"Dr.\",\"firstName\":\"Daniel I.\",\"lastName\":\"Chasman\",\"email\":\"dchasman@rics.bwh.harvard.edu\",\"phone\":\"617-278-0821\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women's Hospital\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"wghs\",\"role\":\"investigator\"},{\"parentId\":\"wghs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Daniel I. Chasman\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694ae\",\"title\":\"Dr.\",\"firstName\":\"Daniel I.\",\"lastName\":\"Chasman\",\"email\":\"dchasman@rics.bwh.harvard.edu\",\"phone\":\"617-278-0821\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Brigham and Women's Hospital\"},\"department\":{\"en\":\"Department of Medicine\"},\"address\":{\"city\":{\"en\":\"Boston\"},\"state\":\"Massachusetts\",\"countryIso\":\"US\"}},\"studyMemberships\":[{\"parentId\":\"wghs\",\"role\":\"investigator\"},{\"parentId\":\"wghs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Daniel I. Chasman\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "zarademp",
+        "timestamps": {
+          "created": "2019-07-23T14:15:49.832",
+          "lastUpdate": "2020-02-05T11:08:18.274"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "ZARAgoza DEMentia DEPression Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ZARADEMP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4803
+        },
+        "countries": [
+          "ESP"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objective is to document the association between hypothesized risk factors and cases of dementia (and depression) and its most frequent subtypes, dementia of the Alzheimer’s type (DAT) and vascular dementia (VD).</p>\n\n<p><span>The secondary objectives are:in the first place, to document related cultural aspects like: the course and natural history of both dementia and depression in this population; the prevalence, incidence and associations of disability; the prevalence, incidence and implications of physical morbidity, as well as non-cognitive, non-depressive morbidity; and the mortality outcomes and factors influencing them. ​Secondly, its objective is to compare incidence rates of dementia, as well as depression, and risk factors for both conditions. Finally, ZARADEMP aims to document the prevalence and incidence of physical and psychiatric co-morbidity, as well as its associations and related risk factors. </span></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4803},\"sample\":{\"noLimit\":false,\"number\":500}},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Antonio Lobo\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The&nbsp;baseline was a&nbsp;cross-sectional&nbsp;study and the two waves followed-up (2 and 4&nbsp;years later, respectively) with the cohort of cognitively intact individuals.</p>\\r\\n\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"\"}},\"startYear\":1994,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Antonio Lobo\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Lobo A., Saz P., Marcos G. et al. Prevalence of dementia in a southern European population in two different time periods: the ZARADEMP Project.. The context and the objectives. Acta Psychiatr Scand. 2007 Oct;116(4):299-307.\",\"endYear\":2015,\"pubmedId\":\"17803760\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694b7\",\"title\":\"MD.\",\"firstName\":\"Antonio\",\"lastName\":\"Lobo\",\"email\":\"alobo@unizar.es\",\"phone\":\"+34976551167 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"},\"department\":{\"en\":\"Servicio de Psiquiatría and Departamento de Medicina y Psiquiatría, Facultad de Medicina\"},\"address\":{\"street\":{\"en\":\"Facultad de Medicina. Domingo Miral\"},\"city\":{\"en\":\"Zaragoza\"},\"zip\":\"50009\",\"countryIso\":\"ESP\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"},{\"parentId\":\"zarademp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Antonio Lobo\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b8\",\"title\":\"Dr.\",\"firstName\":\"Raúl\",\"lastName\":\"López-Antón\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Raúl López-Antón\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b9\",\"title\":\"Dr.\",\"firstName\":\"Javier\",\"lastName\":\"Santabárbara\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Javier Santabárbara\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694ba\",\"title\":\"MD.\",\"firstName\":\"Concepción\",\"lastName\":\"Cámara\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Hospital Clínico Universitario de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Concepción Cámara\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694bb\",\"title\":\"MD.\",\"firstName\":\"Guillermo\",\"lastName\":\"Marcos\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Guillermo Marcos\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694bc\",\"title\":\"MD.\",\"firstName\":\"Pedro\",\"lastName\":\"Saz\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Pedro Saz\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694bd\",\"title\":\"Dr.\",\"firstName\":\"Elena\",\"lastName\":\"Lobo\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Elena Lobo\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694b7\",\"title\":\"MD.\",\"firstName\":\"Antonio\",\"lastName\":\"Lobo\",\"email\":\"alobo@unizar.es\",\"phone\":\"+34976551167 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Universidad de Zaragoza\"},\"department\":{\"en\":\"Servicio de Psiquiatría and Departamento de Medicina y Psiquiatría, Facultad de Medicina\"},\"address\":{\"street\":{\"en\":\"Facultad de Medicina. Domingo Miral\"},\"city\":{\"en\":\"Zaragoza\"},\"zip\":\"50009\",\"countryIso\":\"ESP\"}},\"studyMemberships\":[{\"parentId\":\"zarademp\",\"role\":\"investigator\"},{\"parentId\":\"zarademp\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Antonio Lobo\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "mas",
+        "timestamps": {
+          "created": "2019-07-23T14:14:11.821",
+          "lastUpdate": "2020-02-05T11:07:51.242"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Sydney Memory and Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SydneyMAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1037
+        },
+        "countries": [
+          "AUS"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objectives of the Sydney MAS study are:</p>\r\n\r\n<ul>\r\n\t<li>To examine the clinical characteristiques and prevalence of mild cognitive impairment&nbsp;and related syndromes in non-demented older Australians;</li>\r\n\t<li>To determine the rate of change in cognitive function over time;</li>\r\n\t<li>To examine predictors of cognitive decline from sociodemographic, clinical, neuropsychological, neuroimaging, biochemical, genetics and proteomics perspectives;</li>\r\n\t<li>To assess behavioral and psychological symptoms in mild cognitive impairment.</li>\r\n</ul>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1037},\"sample\":{\"noLimit\":false,\"number\":943},\"info\":{}},\"website\":\"https://cheba.unsw.edu.au/project/sydney-memory-and-ageing-study\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"otherAccess\":{\"en\":\"MRI data (raw images and extracted features); blood-derived measures (e.g. genetics measures, proteomics).\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kristan Kang\",\"date\":\"2019-03-13\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"The baseline assessment was repeated at two-yearly intervals, with repeat blood sampling and MRI scans occurring in waves 1, 2 and 4 (+ wave 7 for blood sample). In the intervening years, participants were contacted by telephone for a brief assessment.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2005,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Kristan Kang\",\"date\":\"2019-03-13\"},\"markerPaper\":\"Sachdev PS, et al. The Sydney Memory and Ageing Study (MAS): methodology and baseline medical and neuropsychiatric characteristics of an elderly epidemiological non-demented cohort of Australians aged 70-90 years. Int Psychogeriatr, 2010; 22(8): 1248-64.\",\"pubmedId\":\"20637138\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869398\",\"title\":\"Prof.\",\"firstName\":\"Perminder \",\"lastName\":\"Sachdev\",\"email\":\"p.sachdev@unsw.edu.au\",\"phone\":\"02-93823763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"mas\",\"role\":\"contact\"},{\"parentId\":\"oats\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"contact\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Perminder  Sachdev\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869399\",\"title\":\"Prof.\",\"firstName\":\"Henry \",\"lastName\":\"Brodaty\",\"email\":\"h.brodaty@unsw.edu.au\",\"phone\":\"02 9385 2585\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Henry  Brodaty\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939a\",\"title\":\"Dr.\",\"firstName\":\"Simone \",\"lastName\":\"Reppermund\",\"email\":\"s.reppermund@unsw.edu.au\",\"phone\":\"+61 2 9385 0438\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Simone  Reppermund\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939b\",\"title\":\"Dr.\",\"firstName\":\"Nicole \",\"lastName\":\"Kochan\",\"email\":\"n.kochan@unsw.edu.au\",\"phone\":\"(02) 9385 0417\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nicole  Kochan\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939c\",\"title\":\"Dr.\",\"firstName\":\"Julian \",\"lastName\":\"Trollor\",\"phone\":\"02 9931 9160\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Julian  Trollor\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939d\",\"title\":\"Dr.\",\"firstName\":\"John \",\"lastName\":\"Crawford\",\"email\":\"john.crawford@unsw.edu.au\",\"phone\":\"+61 2 9385-0440\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"John  Crawford\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939e\",\"title\":\"Dr.\",\"firstName\":\"Kristan \",\"lastName\":\"Kang\",\"email\":\"k.kang@unsw.edu.au\",\"phone\":\"02 9385 0430\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Kristan  Kang\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b010783886939f\",\"title\":\"Dr.\",\"firstName\":\"Wei \",\"lastName\":\"Wen\",\"email\":\"Wei.Wen@unsw.edu.au\",\"phone\":\"02-93823730\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Wei  Wen\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b01078388693a0\",\"title\":\"Prof.\",\"firstName\":\"Brian \",\"lastName\":\"Draper\",\"email\":\"b.draper@unsw.edu.au\",\"phone\":\"02 9382 3753\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Brian  Draper\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869398\",\"title\":\"Prof.\",\"firstName\":\"Perminder \",\"lastName\":\"Sachdev\",\"email\":\"p.sachdev@unsw.edu.au\",\"phone\":\"02-93823763\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of New South Wales\"},\"department\":{\"en\":\"School of Psychiatry\"},\"address\":{\"city\":{\"en\":\"Kensington\"},\"state\":\"New South Wales\",\"countryIso\":\"AUS\"}},\"studyMemberships\":[{\"parentId\":\"mas\",\"role\":\"investigator\"},{\"parentId\":\"mas\",\"role\":\"contact\"},{\"parentId\":\"oats\",\"role\":\"investigator\"},{\"parentId\":\"oats\",\"role\":\"contact\"},{\"parentId\":\"sydney-centenarian-study\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Perminder  Sachdev\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "whicap",
+        "timestamps": {
+          "created": "2019-07-23T14:15:45.408",
+          "lastUpdate": "2021-05-05T09:39:35.928"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Washington Heights/Inwood Columbia Aging Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WHICAP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 4308
+        },
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<div>\r\n<div><span><span>The Washington Heights-Inwood Columbia Aging Project (WHICAP) objectives are&nbsp;to identify risk factors and biomarkers for aging and Alzheimer's disease in a multi-ethnic cohort which includes Caucasian, African-American and Hispanic participants.</span></span></div>\r\n</div>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":4308},\"sample\":{\"noLimit\":false,\"number\":4308}},\"website\":\"http://columbianeuroresearch.org/taub/res-normal.html\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Richard Mayeux\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants of WHICAP I were followed-up at intervals of 24 months and the participants of WHICAP II are followed-up at intervals of 18 months for a maximum of 4 assessments (baseline + 3 follow-ups).</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":false,\"authorizer\":\"Dr. Richard Mayeux\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Tang MX, Cross P, Andrews H, Jacobs DM, Small S, Bell K, Merchant C, Lantigua R, Costa R, Stern Y, Mayeux R. Incidence of AD in African-Americans, Caribbean Hispanics, and Caucasians in northern Manhattan. Neurology, 2001; 56(1): 49-56.\",\"pubmedId\":\"11148235\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694af\",\"title\":\"MD.\",\"firstName\":\"Richard \",\"lastName\":\"Mayeux\",\"email\":\"rpm2@Columbia.edu\",\"phone\":\" 212-305-2391\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University Medical Center\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"New York\"},\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whicap\",\"role\":\"investigator\"},{\"parentId\":\"whicap\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richard  Mayeux\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694b0\",\"title\":\"Dr.\",\"firstName\":\"Nicole \",\"lastName\":\"Shupf\",\"email\":\"ns24@columbia.edu\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University Medical Center\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"New York\"},\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whicap\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Nicole  Shupf\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694af\",\"title\":\"MD.\",\"firstName\":\"Richard \",\"lastName\":\"Mayeux\",\"email\":\"rpm2@Columbia.edu\",\"phone\":\" 212-305-2391\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Columbia University Medical Center\"},\"department\":{\"en\":\"Department of Neurology\"},\"address\":{\"city\":{\"en\":\"New York\"},\"state\":\"New York\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"whicap\",\"role\":\"investigator\"},{\"parentId\":\"whicap\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Richard  Mayeux\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "wls",
+        "timestamps": {
+          "created": "2019-07-23T14:15:48.764",
+          "lastUpdate": "2021-05-05T09:39:36.800"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Wisconsin Longitudinal Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "WLS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 22334
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "a6537949-b52c-4783-b9b1-ac1be24a2b95",
+          "fileName": "wls_logo.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 9973,
+          "md5": "df4ed9dd4751be4aa39fc7f08a1a8fe5",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.957"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The WLS follows a cohort of male and female high school graduates, born primarily in 1939, from adolescence through their early 70s (to date). In addition, WLS also follows a randomly selected brother or sister of the original high school graduate panel member. The WLS includes measures of intergenerational transfers and relationships, family characteristics and events, physical and mental health and well-being, social background, youthful aspirations, schooling, employment, military service, labor market experiences, social participation, psychological characteristics, retirement, and morbidity and mortality. The content of the study changed as the life-course stage of the participants advanced. For example, early measures concentrated on education&nbsp;and occupational attainment, while more recent measures include a focus on health and cognition.&nbsp;These rich data allow users to link early-life characteristics to later life outcomes. &nbsp;</p>\r\n\r\n<p>Genetic data, collected via saliva samples, are available for many of the graduate and sibling participants. &nbsp;Current measures include 95 SNPs for 4,600 members of the graduate panel and 2,500 members of the sibling panel. &nbsp;Future plans will allow qualified researchers to access GWAS data for 6,000 graduate panel members and 3,400 sibling panel members. &nbsp;Researchers also have the potential to link to complete Social Security Earnings and Benefits File as well as Medicare records.</p>\r\n\r\n<p>As examples, the study allows researchers to:</p>\r\n\r\n<ol>\r\n\t<li>Extend models of occupation and earnings and to elaborate the roles of aspirations in adolescence and at mid-life, of previous achievements, and of familial responsibilities in current economic and social standing, subjective well-being, mental and physical health, disability, and wealth;</li>\r\n\t<li>Identify and measure local effects on opportunity, that is, specific characteristics of a person, firm, or economic sector that directly influence the chances of obtaining a job or a limited range of jobs;</li>\r\n\t<li>Extend and elaborate models of sibling resemblance that will elucidate influences of the family of origin on the life course;</li>\r\n\t<li>Investigate self-assessments of well-being in the context of aspirations, accomplishments, and social relationships with significant others; and</li>\r\n\t<li>Measure social and economic exchange relationships with parents, children, and siblings and assess the consequences of those relationships for well-being.</li>\r\n</ol>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "biological_samples",
+          "physical_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":22334},\"sample\":{\"noLimit\":false,\"number\":9407},\"info\":{\"en\":\"<p>Saliva samples from 5967 graduates and 3440 siblings.</p>\\r\\n\"}},\"website\":\"http://www.ssc.wisc.edu/wlsresearch/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Pamela Herd\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>In the spring of 1957, a state-sponsored questionnaire was administered to all Wisconsin High School seniors. In 1964, a randomly selected one-third of the members of the class of 1957 were followed up with a brief questionnaire to parents asking about their child’s post high-school education and occupation. Direct contact with the graduate began with a telephone interview in 1975, and subsequent telephone and mail surveys in 1993 and 2004. In 1977 a subset of graduate’s siblings were interviewed by phone and in 1995 and 2005 interviews were conducted with one sibling from each family whenever possible. Spouses of Graduates and Siblings who were married at the time of the 2004/2005 interview were also interviewed by phone. Most recently in-person interviews with a leave-behind questionnaire were administered in 2011 to both the graduate and sibling panels. Saliva was collected from both graduate and sibling participants via a mail-effort in 2008 and during the in-person 2011 interview.</p>\\r\\n\"},\"recruitments\":[\"individuals\",\"families\"],\"info\":{\"en\":\"<p>Additionally the WLS has collected a variety of administrative data including tax records, information from high-school yearbooks, voting records, and information on school district resources.</p>\\r\\n\"}},\"startYear\":1957,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Pamela Herd\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Herd P, Carr D, Roan C. Cohort Profile: Wisconsin longitudinal study (WLS). Int J Epidemiol. 2014 Feb;43(1):34-41. doi: 10.1093/ije/dys194.\",\"pubmedId\":\"24585852\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694b5\",\"title\":\"Dr.\",\"firstName\":\"Pamela \",\"lastName\":\"Herd\",\"email\":\"pherd@lafollette.wisc.edu\",\"phone\":\"608-262-9451\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin - Madison\"},\"department\":{\"en\":\"Department of Sociology\"},\"address\":{\"street\":{\"en\":\"1180 Observatory Drive\"},\"city\":{\"en\":\"Madison\"},\"zip\":\"WI 53706\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"wls\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Pamela  Herd\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694b6\",\"title\":\"Dr.\",\"firstName\":\"Carol L\",\"lastName\":\"Roan\",\"email\":\"roan@ssc.wisc.edu\",\"phone\":\"(608) 265-6196 \",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Wisconsin-Madison\"},\"address\":{\"street\":{\"en\":\"1180 Observatory Drive\"},\"city\":{\"en\":\"Madison\"},\"zip\":\"53706\",\"state\":\"Wisconsin\",\"countryIso\":\"USA\"}},\"studyMemberships\":[{\"parentId\":\"wls\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Carol L Roan\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "ohs",
+        "timestamps": {
+          "created": "2019-07-23T14:14:47.295",
+          "lastUpdate": "2021-06-11T13:47:03.567"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Ontario Health Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Ontario Health Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "OHS"
+          },
+          {
+            "lang": "fr",
+            "value": "OHS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 225000
+        },
+        "countries": [
+          "CAN"
+        ],
+        "logo": {
+          "id": "fdbc4e5f-ae6a-41db-87be-eebbc3139900",
+          "fileName": "logo.gif",
+          "type": "logo",
+          "lang": "en",
+          "size": 4765,
+          "md5": "3ba790dd88469c4fcc55e51e8cff2c30",
+          "timestamps": {
+            "created": "2015-07-22T08:31:02.988"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The Ontario Health Study (OHS) is a prospective cohort study investigtating environmental, lifestyle, clinical, and molecular and/or genetic risk factors on cancer and other chronic diseases (diabetes, heart disease, asthma, Alzheimer's), in Ontario, Canada."
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Ontario Health Study (OHS) is a prospective cohort study that will serve as a platform for investigating environmental, lifestyle, clinical and molecular/genetic factors that potentially affect risk of developing cancer and other chronic diseases. Ontario residents aged 18 or older are eligible to participate, and the intent is to follow participants for their entire lifespan. The OHS is committed to allowing access to data and samples for bona fide researchers with the appropriate scientific and ethical approvals.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":225000},\"sample\":{\"noLimit\":false,\"number\":41000},\"info\":{\"en\":\"\"}},\"website\":\"http://www.ontariohealthstudy.ca/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"maelstromAuthorization\":{\"authorized\":true},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"The baseline participants were recruited between 2010 and 2017. A follow-up was performed in 2016-2018 and additional follow-ups are planned in the future.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2009,\"specificAuthorization\":{\"authorized\":false},\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869457\",\"title\":\"Prof.\",\"firstName\":\"Philip\",\"lastName\":\"Awadalla\",\"email\":\"philip.awadalla@oicr.on.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ontario Institute for Cancer Research\"},\"department\":{\"en\":\"MaRS Centre, Heritage Building\"},\"address\":{\"street\":{\"en\":\"661 University Avenue, Suite 510\"},\"city\":{\"en\":\"Toronto\"},\"zip\":\"M5G 0A3\",\"state\":\"Ontario\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"ohs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Philip Awadalla\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549162e4b0107838869458\",\"firstName\":\"Kelly\",\"lastName\":\"McDonald\",\"email\":\"Kelly.mcdonald@ontariohealthstudy.ca\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Ontario Health Study\"},\"department\":{\"en\":\"MaRS Centre, Heritage Building\"},\"address\":{\"street\":{\"en\":\"661 University Avenue, Suite 510\"},\"city\":{\"en\":\"Toronto\"},\"zip\":\"M5G 0A3\",\"state\":\"Ontario\",\"countryIso\":\"CA\"}},\"studyMemberships\":[{\"parentId\":\"ohs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Kelly McDonald\"},\"role\":\"contact\"}]},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "tcs",
+        "timestamps": {
+          "created": "2019-07-23T14:15:31.109",
+          "lastUpdate": "2020-02-05T11:08:12.139"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Tokyo Centenarian Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "TCS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 513
+        },
+        "countries": [
+          "JPN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objective of the Tokyo Centenarian Study (TCS) was to determine the most important drivers of successful aging (extreme longevity) in Japanese centenarians.</p>\n<p>More precisely, goals of TCS were: <ul>\n<li> To characterize the ultimate aging phenotype in humans; </li>\n<li>To identify the factors associated with longevity and healthy aging; and</li>\n<li>To describe adaptation to functional decline by centenarians and their families.</li></ul></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":513},\"sample\":{\"noLimit\":false,\"number\":255}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"After investigation in 2000, information on mortality was ascertained annually by telephone contact or mail survey until September 30 2012.\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2000,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Arai, Y., Takayama, M., Inagaki, H., Gondo, Y., Masui, Y., & Hirose, N. (2015). Centenarian Studies: An Interdisciplinary Research on Healthy Longevity. In Aging Mechanisms; pp. 31-49. Springer Japan\",\"endYear\":2012,\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"57eac518e4b046cc7d442d2a\",\"title\":\"Dr.\",\"firstName\":\"Nobuyoshi\",\"lastName\":\"Hirose\",\"email\":\"hirosen@keio.jp\",\"phone\":\"+81 (3) 3353-1211\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Keio University\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"street\":{\"en\":\"35 Shinanomachi, Shinjuku-ku\"},\"city\":{\"en\":\"Tokyo\"},\"zip\":\"160-8582\",\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"tcs\",\"role\":\"investigator\"},{\"parentId\":\"tcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nobuyoshi Hirose\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"584f106be4b0b4ca5bd4cf78\",\"title\":\"Dr.\",\"firstName\":\"Yasuyuki\",\"lastName\":\"Gondo\",\"email\":\"ygondo@hus.osaka-u.ac.jp\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Osaka University\"},\"department\":{\"en\":\"School of Human Sciences\"},\"address\":{\"city\":{\"en\":\"Osaka\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"tcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yasuyuki Gondo\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"584f1146e4b0b4ca5bd4cf79\",\"title\":\"Dr.\",\"firstName\":\"Yasumichi\",\"lastName\":\"Arai\",\"email\":\"yasumich@keio.jp\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Keio University\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"city\":{\"en\":\"Tokyo\"},\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"tcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yasumichi Arai\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"584f11eee4b0b4ca5bd4cf7a\",\"title\":\"Dr.\",\"firstName\":\"Yoshiko Lily\",\"lastName\":\"Ishioka\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Keio University\"},\"department\":{\"en\":\"Graduate School of Science and Technology\"},\"address\":{\"street\":{},\"city\":{\"en\":\"Tokyo\"},\"zip\":\"\",\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"tcs\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Yoshiko Lily Ishioka\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"57eac518e4b046cc7d442d2a\",\"title\":\"Dr.\",\"firstName\":\"Nobuyoshi\",\"lastName\":\"Hirose\",\"email\":\"hirosen@keio.jp\",\"phone\":\"+81 (3) 3353-1211\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Keio University\"},\"department\":{\"en\":\"School of Medicine\"},\"address\":{\"street\":{\"en\":\"35 Shinanomachi, Shinjuku-ku\"},\"city\":{\"en\":\"Tokyo\"},\"zip\":\"160-8582\",\"countryIso\":\"JPN\"}},\"studyMemberships\":[{\"parentId\":\"tcs\",\"role\":\"investigator\"},{\"parentId\":\"tcs\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Nobuyoshi Hirose\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "zulu",
+        "timestamps": {
+          "created": "2019-07-23T14:15:50.889",
+          "lastUpdate": "2021-05-05T09:39:37.607"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Zurich Longitudinal Study on Cognitive Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ZULU"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 364
+        },
+        "countries": [
+          "CHE"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Zurich Longitudinal Study on Cognitive Aging (ZULU) is an ongoing longitudinal study on the structure and development of cognition in old age. &nbsp;The aims were twofold.&nbsp;First, based on different structural models, the goal was to find an adequate representation of the six cognitive abilities sampled in ZULU. &nbsp;Second, a variety of increasingly general age-cognition models were estimated in order to capture the degree of shared age-related influences on cognitive performance in the elderly.</p>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":364},\"sample\":{\"noLimit\":false}},\"website\":\"http://www.ialsa.org/study/zurich-longitudinal-sudy-cognitive-aging-zulu\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Mike Martin\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The first assessment was completed in 2005, with plans to continue as an ongoing longitudinal study.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2005,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Mike Martin\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Zimprich D, Martin M, Kligel M et al. Cognitive Abilities in Old Age: Results from the Zurich Longitudinal Study on Cognitive Aging.  Swiss Journal of Psychology 67 (3), 2008; 177 - 195\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549163e4b01078388694be\",\"title\":\"Dr.\",\"firstName\":\"Mike\",\"lastName\":\"Martin\",\"email\":\"m.martin@psychologie.uzh.ch\",\"phone\":\"+41 44 635 74 10\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Zurich\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Rämistrasse 71\"},\"city\":{\"en\":\"Zurich\"},\"zip\":\"CH-8006\",\"countryIso\":\"CHE\"}},\"studyMemberships\":[{\"parentId\":\"zulu\",\"role\":\"investigator\"},{\"parentId\":\"zulu\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mike Martin\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694bf\",\"title\":\"Dr.\",\"firstName\":\"Daniel \",\"lastName\":\"Zimprich\",\"email\":\"daniel.zimprich@uni-ulm.de\",\"phone\":\"+49 731 50 31720\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Ulm\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Universität Ulm\"},\"city\":{\"en\":\"Ulm\"},\"zip\":\"89069\",\"countryIso\":\"DEU\"}},\"studyMemberships\":[{\"parentId\":\"zulu\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Daniel  Zimprich\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549163e4b01078388694c0\",\"title\":\"Dr.\",\"firstName\":\"Philippe\",\"lastName\":\"Rast\",\"email\":\"prast@uvic.ca\",\"phone\":\"(250) 472-4869\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Victoria\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"3800 Finnerty Road\"},\"city\":{\"en\":\"Victoria\"},\"zip\":\"V8P 5C2\",\"state\":\"BC\",\"countryIso\":\"CAN\"}},\"studyMemberships\":[{\"parentId\":\"zulu\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Philippe Rast\"},\"role\":\"investigator\"}],\"contact\":[{\"person\":{\"id\":\"56549163e4b01078388694be\",\"title\":\"Dr.\",\"firstName\":\"Mike\",\"lastName\":\"Martin\",\"email\":\"m.martin@psychologie.uzh.ch\",\"phone\":\"+41 44 635 74 10\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"University of Zurich\"},\"department\":{\"en\":\"Department of Psychology\"},\"address\":{\"street\":{\"en\":\"Rämistrasse 71\"},\"city\":{\"en\":\"Zurich\"},\"zip\":\"CH-8006\",\"countryIso\":\"CHE\"}},\"studyMemberships\":[{\"parentId\":\"zulu\",\"role\":\"investigator\"},{\"parentId\":\"zulu\",\"role\":\"contact\"}],\"networkMemberships\":[],\"fullName\":\"Mike Martin\"},\"role\":\"contact\"}]}}"
+      },
+      {
+        "id": "kloscad",
+        "timestamps": {
+          "created": "2019-07-23T14:13:49.243",
+          "lastUpdate": "2020-07-28T16:44:35.640"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Korean Longitudinal Study on Cognitive Aging and Dementia"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "KLOSCAD"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 6818
+        },
+        "countries": [
+          "KOR"
+        ],
+        "logo": {
+          "id": "5c3ca0ce266b473452fb3752",
+          "fileName": "kloscad.png",
+          "lang": "en",
+          "size": 212528,
+          "md5": "5481ecde151e7f96870637cc132bff6e",
+          "timestamps": {
+            "created": "2019-01-14T09:46:39.047"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Korean Longitudinal Study on Cognitive Aging and Dementia (KLOSCAD) is the first nationwide multi-center population-based prospective cohort study in South Korea for investigating the epidemiology, biopsychosocial risk factors, and outcomes of normal cognitive aging and various dementing illnesses.</p> \n<p>The objectives of the KLOSCAD are first to estimate the epidemiology of dementia and related disorders in South Korea, second to explore the diagnostic markers of dementia and establish their normative data in elderly Koreans, third to propose optimal strategies for preventing and managing dementia in Koreans, and finally to provide evidence for developing cost-effective dementia policies in South Korea. </p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":6818},\"sample\":{\"noLimit\":false,\"number\":6814}},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"memberships\":{\"investigator\":[],\"contact\":[]},\"startYear\":2009,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"After baseline assessment, participants are followed-up every two years.\"}},\"pubmedId\":\"30086611\",\"markerPaper\":\"Han JW, Kim TH, Kwak KP, Kim K, Kim BJ, Kim SG, Kim JL, Kim TH, Moon SW, Park JY, Park JH. Overview of the Korean Longitudinal Study on Cognitive Aging and Dementia. Psychiatry investigation. 2018 Aug;15(8):767.\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"website\":\"http://kloscad.com/\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "sweold",
+        "timestamps": {
+          "created": "2019-07-23T14:15:25.375",
+          "lastUpdate": "2020-02-05T11:08:09.934"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Swedish Panel Study of Living Conditions of the Oldest Old"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SWEOLD"
+          }
+        ],
+        "design": "cross_sectional",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "5dd7f82b0b8ed60f5c8f4f38",
+          "fileName": "Sweold Liggande - RGB.png",
+          "lang": "en",
+          "size": 56412,
+          "md5": "dc7bfe650014abf66836e85252c83de7",
+          "timestamps": {
+            "created": "2019-11-22T10:00:58.616"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The study's aim is to describe and analyze the living conditions of older people in Sweden, including health, care and social services, financial situation, housing, occupational activities, family situation, leisure activities, and engagement in society in general.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "administratives_databases",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":true},\"info\":{\"en\":\"The number of participants are dependent on how many persons from the LNU sample has survived to old age.\\n\\nIn 2011, the SWEOLD sample was complemented by an additional representative sample of the Swedish population aged 85–99. This additional sample allows for more detailed analyses in smaller age and sex subgroups for those over 85 years of age.\"}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1992,\"website\":\"https://www.sweold.se/en/englishhome/\",\"methods\":{\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"\"},\"info\":{\"en\":\"The SWEOLD sample was initially designed based on an existing nationally representative sample of the total adult population in Sweden – the Swedish Level of Living Survey (LNU). SWEOLD comprises those persons previously included in the LNU sample who have passed the LNU’s upper age limit of 75 years (in 1992, 2002, and 2011) or 69 years old (in 2004 and 2014), and are still living in Sweden at the time of the survey waves, with the exception of the first survey wave that was restricted to persons who had previously been interviewed at least once in any of the previous LNU surveys. The data waves represent sequential, repeated, cross-sectional surveys.\"},\"design\":\"cross_sectional\"},\"pubmedId\":\"24651397\",\"markerPaper\":\"Lennartsson, C., Agahi, N., Hols-Salén, L., Kelfve, S., Kåreholt, I., Lundberg, O., Parker, M., & Thorslund, M. (2014). Data resource profile: the Swedish Panel Study of living conditions of the oldest old (SWEOLD). International Journal of Epidemiology, 43(3), 731-738.\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "snac-n",
+        "timestamps": {
+          "created": "2019-07-23T14:15:20.362",
+          "lastUpdate": "2020-09-09T14:25:57.067"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Swedish National Study of Aging and Care in Nordanstig"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SNAC-N"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 1504
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "5c47223ba0bd0c0b854ec74e",
+          "fileName": "d313812f1f-SNAC-liten-webb.jpg",
+          "lang": "en",
+          "size": 4558,
+          "md5": "d313812f1f1b5af4f5d054ef25f4cde2",
+          "timestamps": {
+            "created": "2019-01-22T09:01:31.470"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "SNAC-N is a longitudinal study on the influence of life-time environmental and biological factors on medical, psychological, and social health in late adulthood.\n\nThe objective of this study is to increase the understanding of the aging process and to identify possible preventive strategies to improve the health and the care of older adults."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":800},\"participant\":{\"noLimit\":true,\"number\":1504}},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Anders Wimo\",\"date\":\"2018-05-25\"},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2001,\"access\":{\"access_bio_samples\":\"yes\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Participants were followed up every 2 years then every 4 years repeatedly.\\nNew cohorts of 60- and 81-year olds joined the study in 2006, and 2013.\\n\\nParticipants in the Care System Study are followed up each time the decision for assistance is re-evaluated. This should be done at least once a year.\"},\"info\":{\"en\":\"\"}},\"markerPaper\":\"Lagergren M, Fratiglioni L, Hallberg IR et al., A longitudinal study integrating population, care and social services data. The Swedish National study on Aging and Care (SNAC). Aging Clin Exp Res. 2004 Apr;16(2):158-68.\",\"pubmedId\":\"15195992\",\"website\":\"www.snacnordanstig.se\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "snac-b",
+        "timestamps": {
+          "created": "2019-07-23T14:15:17.938",
+          "lastUpdate": "2020-06-30T16:46:33.690"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Swedish National Study and Care in Blekinge"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SNAC-B"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 1817
+        },
+        "countries": [
+          "SWE"
+        ],
+        "logo": {
+          "id": "5c4727a0a0bd0c0b854ec754",
+          "fileName": "snac-b.jpg",
+          "lang": "en",
+          "size": 4671,
+          "md5": "d9612ccc942804b58044d30443bb94e8",
+          "timestamps": {
+            "created": "2019-01-22T09:24:32.439"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>SNAC-B is a longitudinal study on the influence of life-time environmental and biological factors on medical, psychological, and social health in late adulthood. It aims to increase the understanding of the aging process and to identify possible preventive strategies to improve the health and the care of older adults.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":1800},\"participant\":{\"noLimit\":true,\"number\":1817}},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Johan Sanmartin Berglund\",\"date\":\"2018-05-16\"},\"specificAuthorization\":{\"authorized\":false},\"methods\":{\"followUpInfo\":{\"en\":\"All participants of the Population Study are followed-up each time they reach the age of an older cohort at base time, i.e. at the age of 66, 72, 78, 81, 84, 87, 90, 93, 96 and 99+ years.\\n\\nParticipants in the Care System Study are followed up each time the decision for assistance is re-evaluated. This should be done at least once a year.\"},\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"For the Population Study, a panel of elders is taken from 10 different age cohorts, beginning at the age of 60 up to 96 years with a 6-year interval between the younger cohorts (up to 78 years) and a 3-year intervals thereafter. New cohorts of 60- and 81-year olds joined the study in 2007-2010, and 2014-2016, respectively.\\n\\nThe Care System Study is a systematic, longitudinal, individually-based collection of data of all persons 65+ years living in the area with their registration connected to assistance decisions.\"}},\"website\":\"https://www.bth.se/forskning/forskningsomraden/manniska-halsa-och-teknik/snac-b/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Lagergren M, Fratiglioni L, Hallberg IR et al., A longitudinal study integrating population, care and social services data. The Swedish National study on Aging and Care (SNAC). Aging Clin Exp Res. 2004 Apr;16(2):158-68.\",\"pubmedId\":\"15195992\",\"startYear\":2001,\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "nzhwr",
+        "timestamps": {
+          "created": "2019-07-23T14:14:40.125",
+          "lastUpdate": "2022-10-04T11:03:30.256"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "New Zealand Health, Work and Retirement Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NZHWR"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "NZL"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The New Zealand Health, Work and Retirement Study (NZHWR) is a longitudinal study of people aged 55 years and over conducted by the Health and Ageing Research Team at Massey University.\nThe NZHWR study aims to track and describe factors associated with health, retirement and \"ageing well\" in the older New Zealand population, and features an oversampling of Māori participants so as to adequately represent this section of the older New Zealand community."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "administratives_databases",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":true}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2006,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Every two years, people who have previously filled out a questionnaire are re-surveyed. Follow-up surveys occurred in 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020 and 2022. Off-wave surveys have also been administered in 2009, 2013 and 2021. Face-to-face cognitive interviews have been conducted with subsamples in 2010 and 2012 and life course history interviews have been conducted with the original Wave 1 (2006) cohort in 2017. De-identified administrative data from national health databases are linked on a biennial basis for consenting participants.\"},\"info\":{\"en\":\"The NZHWR study began in 2006 as a cohort-based study following a cohort of New Zealanders aged 55–70 at Wave 1. Additional cohorts have been recruited in 2009 (49-89 years old), in 2010 (50-84 years old), in 2014 (55-65 years old), in 2016 (55-65 years old), in 2018 (55-57 years old), in 2020 (55-65 years old) and in 2022 (55-65 years old).\"}},\"info\":{\"en\":\"\"},\"markerPaper\":\"Allen J, Alpass F M, and Stephens C V. New Zealand health, work and retirement longitudinal study.  In: Gu, D., Dupre, M.E. (eds) Encyclopedia of Gerontology and Population Aging. Cham: Springer International Publishing, 2021; 3484-3490. https://doi.org/10.1007/978-3-030-22009-9_977\",\"website\":\"http://www.massey.ac.nz/massey/learning/departments/school-of-psychology/research/hart/new-zealand-health-work-and-retirement-study/new-zealand-health-work-and-retirement-study_home.cfm\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false,\"otherMarkerPapers\":[{}]}"
+      },
+      {
+        "id": "mmap",
+        "timestamps": {
+          "created": "2019-07-23T14:14:22.255",
+          "lastUpdate": "2020-02-05T11:07:53.690"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Marikina Memory and Aging Project"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MMAP"
+          }
+        ],
+        "design": "cross_sectional",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1367
+        },
+        "countries": [
+          "PHL"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objective of MMAP is to provide a reliable estimate of dementia prevalence and associated risk factors in the Filipino population 60 years and older."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":1367}},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Jacqueline C. Dominguez\",\"date\":\"2019-03-05\"},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2011,\"endYear\":2012,\"methods\":{\"design\":\"cross_sectional\",\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"This project is part of the St. Luke's Institute for Neurosciences database on aging and dementia. A random sample of individuals older than 60 years old was drawn from the senior citizen registry of Marikina City, proportionally representing the percentages of senior citizens residing in all 16 barangays (villages).\"},\"followUpInfo\":{\"en\":\"After baseline participants were followed-up 5 years later.\"}},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Dominguez J., Fe de Guzman M., Reandelar Jr M., Thi Phung T.K. Prevalence of dementia and associated risk factors: A population-based study in the Philippines. Journal of Alzheimer's Disease 2018;63:1065-1073\",\"pubmedId\":\"29710725\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "maas",
+        "timestamps": {
+          "created": "2019-07-23T14:14:07.839",
+          "lastUpdate": "2020-02-05T11:07:49.421"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Maastricht Ageing Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "MAAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1823
+        },
+        "countries": [
+          "NLD"
+        ],
+        "logo": {
+          "id": "5c7018298801bc485be04055",
+          "fileName": "maas.png",
+          "lang": "en",
+          "size": 7513,
+          "md5": "16ff2cd05ea0e43d90beb9deae84145d",
+          "timestamps": {
+            "created": "2019-02-22T10:41:29.398"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "A major objective of this study is to find determinants of cognitive deterioration with age, and to estimate their relative impact. The aim of MAAS is to relate various factors (biological, medical, psychological and social) in an integrative study of cognitive aging."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1823},\"sample\":{\"noLimit\":false,\"number\":954}},\"website\":\"http://breinweb.nl/maas/index.html\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"date\":\"2019-03-05\",\"authorizer\":\"Sebastian Koehler\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"The frequency of follow-up depends on actual age, i.e. three, six, nine, twelve and 25 years for subjects aged 50 years and older, and six, nine, twelve and 25-years for younger subjects. The third follow-up (9 years) consists of a full questionnaire survey. The total duration of the follow-up program is 25 years, closing with a full questionnaire survey and the final cognitive assessment in the laboratory.\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"\"}},\"startYear\":1992,\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"markerPaper\":\"Jolles, J., van Boxtel, M. P. J., Ponds, R. W. H. M., Metsemakers, J. F. M., & Houx, P. J. (1998). De Maastricht Aging Study (MAAS): Het longitudinaal perspectief van cognitieve veroudering. Tijdschrift voor Gerontologie en Geriatrie 29(3): 120-129\",\"endYear\":2020,\"pubmedId\":\"9675779\",\"memberships\":{\"investigator\":[{\"person\":{\"id\":\"56549162e4b0107838869390\",\"title\":\"Dr.\",\"firstName\":\"Jelle \",\"lastName\":\"Jolles\",\"email\":\"j.jolles@vu.nl\",\"phone\":\"+31 20 59 88859\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Vrije Universiteit Amsterdam\"},\"department\":{\"en\":\"Faculteit der Psychologie en Pedagogiek\"},\"address\":{\"city\":{\"en\":\"Amsterdam\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"maas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Jelle  Jolles\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869391\",\"title\":\"Dr.\",\"firstName\":\"Martin \",\"lastName\":\"Boxtel\",\"email\":\"martin.vanboxtel@maastrichtuniversity.nl\",\"phone\":\"+31 43-3881028\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Maastricht University\"},\"department\":{\"en\":\"Department of Psychiatry and Neuropsychology\"},\"address\":{\"city\":{\"en\":\"Maastricht\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"maas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Martin  Boxtel\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869392\",\"title\":\"Dr.\",\"firstName\":\"Frans \",\"lastName\":\"Verhey\",\"email\":\"f.verhey@maastrichtuniversity.nl\",\"phone\":\"+31-43-3874175\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Maastricht University\"},\"department\":{\"en\":\"Department of Psychiatry and Neuropsychology\"},\"address\":{\"city\":{\"en\":\"Maastricht\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"maas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Frans  Verhey\"},\"role\":\"investigator\"},{\"person\":{\"id\":\"56549162e4b0107838869393\",\"title\":\"Dr.\",\"firstName\":\"Pascal \",\"lastName\":\"Gerven\",\"email\":\"p.vangerven@maastrichtuniversity.nl\",\"phone\":\"+31 43 3884512\",\"dataAccessCommitteeMember\":false,\"institution\":{\"name\":{\"en\":\"Maastricht University\"},\"department\":{\"en\":\"Department of Psychiatry and Neuropsychology\"},\"address\":{\"city\":{\"en\":\"Maastricht\"},\"countryIso\":\"NLD\"}},\"studyMemberships\":[{\"parentId\":\"maas\",\"role\":\"investigator\"}],\"networkMemberships\":[],\"fullName\":\"Pascal  Gerven\"},\"role\":\"investigator\"}],\"contact\":[]},\"info\":{\"en\":\"Four panel studies (A1-A2-A3-A4) were executed between 1993 and 1995, sharing the same methodology with respect to sample frame, subject inclusion and stratification criteria, and basic measurement protocol. Each A-study includes an independent population sample and a set of specific variables in addition to the set of variables that is constant for all A-studies. \\nFollowing this cross-sectional phase, panels were assessed in the longitudinal phase of the study.\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "bcsa",
+        "timestamps": {
+          "created": "2019-07-23T14:12:14.909",
+          "lastUpdate": "2020-02-05T11:07:22.156"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Bambui Cohort Study of Ageing"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BCSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1606
+        },
+        "countries": [
+          "BRA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objective of the Bambuí (Brazil) Cohort Study of Ageing is to examine the separate and joint effects of chronic Trypanosoma cruzi infection and non-communicable diseases on health outcomes in old age."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":1496},\"participant\":{\"noLimit\":false,\"number\":1606}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1997,\"endYear\":2013,\"methods\":{\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Participant were followed-up annually for an interview, with other procedures repeated in selected years.\"},\"recruitments\":[\"individuals\"]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Lima-Costa MF, Firmo JO, Uchoa E. Cohort profile: the Bambuí (Brazil) Cohort Study of Ageing. Int J Epidemiol. 2011;40(4):862-7\",\"pubmedId\":\"20805109\"}"
+      },
+      {
+        "id": "esprit",
+        "timestamps": {
+          "created": "2019-07-23T14:13:08.076",
+          "lastUpdate": "2020-07-28T17:44:33.189"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Enquête de Santé Psychologique-Risques, Incidence et Traitement"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ESPRIT"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2270
+        },
+        "countries": [
+          "FRA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "Objective of ESPRIT is to study the etiopathogenesis of psychiatric disorders in elderly people, to determine life risk factors in older persons with a psychiatric history.\n\n- To determine current and lifetime prevalence and incidence of psychiatric disorders in the elderly;\n- To identify sub-groups of depressive symptoms;\n- To describe modifications of stress responses related to age;\n- To examine risk factors for psychiatric disorders and their interactions;\n- To evaluate usefulness of a complete genome investigation based on haplotypes and of a pilot study on clinical pools based on symptoms severity;\n- To find etiological models derived from multiple risk factors and interactions to explain disease onset and symptoms severity;\n- To suggest, based on these models, future prevention and intervention strategies."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":2270},\"participant\":{\"noLimit\":false,\"number\":2270}},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Karen Ritchie\",\"date\":\"2019-03-04\"},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1999,\"methods\":{\"recruitments\":[\"individuals\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"Participants were followed up after 2, 4, 7, 10, 12, and 15 years.\"}},\"markerPaper\":\"Ritchie, K., Carrière, I., Ritchie, C.W., Berr, C., Artero, S., Ancelin, M-L. Designing prevention programmes to reduce incidence of dementia: prospective cohort study of modifiable risk factors. BMJ 2010; 341:c3885\",\"pubmedId\":\"20688841\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "salsa",
+        "timestamps": {
+          "created": "2019-07-23T14:15:07.789",
+          "lastUpdate": "2021-08-06T14:12:36.895"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Sacramento Area Latino Study on Aging"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SALSA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1789
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "5d0a95ae7f19736b6587576d",
+          "fileName": "SALSA LOGO.jpg",
+          "lang": "en",
+          "size": 34464,
+          "md5": "4e03f594e64d2eede298667daad8889f",
+          "timestamps": {
+            "created": "2019-06-19T16:06:05.956"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<ul>\n  The main objectives of this study were: \n\n <li>To estimate the prevalence of dementia in older Hispanics,</li>\n\n <li>To explore the contribution of metabolic, vascular, socioeconomic, cultural and genetic factors to the incidence of dementia, cognitive decline, and depression and type 2 diabetes,</li>\n\n <li>To assess the overall health: cognitive, physical and social functions, in this understudies older, ethnic population, </li>\n\n <li>To examine the association between type 2 diabetes, metabolic syndrome, hypertension and obesity on cognitive and functional limitations over time. </li> </ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":1614},\"participant\":{\"noLimit\":false,\"number\":1789},\"info\":{\"en\":\"\"}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1999,\"endYear\":2008,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Participants were followed every 12 to 15 months, for a maximum of 6 follow-ups, via home visits that included clinical and cognitive assessments. Brief semi annual phone visits were also conducted.\"},\"info\":{\"en\":\"<p>The main study was a cohort study design, however, a cross-sectional prevalence study design was used at baseline. </p>\\n\\n<p>A number of substudies were done, including MRIs in demented, impact of dementia in caregiver health, and intergenerational studies.</p>\"}},\"markerPaper\":\"Haan, Mary N.; Mungas, Dan M.; Gonzalez, Hector M.; Ortiz, Teresa A.; Acharya, Ananth; Jagust, William J. (2003). \\\"Prevalence of Dementia in Older Latinos: The Influence of Type 2 Diabetes Mellitus, Stroke and Genetic Factors.\\\" Journal of the American Geriatrics Society 51(2): 169-177.\",\"pubmedId\":\"12558712\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"yes\"},\"info\":{\"en\":\"Field work stopped in 2008; writing and substudies continue\"},\"otherAccess\":{\"en\":\"There are about 200 MRIs cases that should be approached by Dr. William Jagust at UC Berkeley.\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "epidemca",
+        "timestamps": {
+          "created": "2019-07-23T14:13:05.809",
+          "lastUpdate": "2020-02-05T11:07:35.296"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Epidemiology of Dementia in Central Africa"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "EPIDEMCA"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2002
+        },
+        "countries": [
+          "CAF",
+          "COG"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objectives of EPIDEMCA are:\n1. To estimate and compare the prevalence of dementia and related syndromes in urban and rural areas in Central Africa (Central African Republic and Republic\nof Congo), and to study the neuropsychological profiles of demented and non-demented subjects,\n2. To investigate factors associated with dementia and cognitive disorders: sociodemographic, environmental factors including vascular, nutritional, lifestyle and biological factors,\n3. To determine if genetic variations can modify the risk of dementia in African populations,\n4. To create a biobank from native elderly Africans in order to carry out further biological, genotypic and phenotypic researches in the future.\n\nThe EPIDEMCA-FU study was then set-up to follow participants identified during EPIDEMCA during 2-3 years only in the Republic of Congo. This study aimed at:\n1. Estimating mortality and its predictors among older people with dementia, with MCI and with no cognitive impairment,\n2. Estimate the incidence of dementia and conversion rates between different cognitive statuses,\n3. Assess a range of risk factors for dementia and cognitive impairment, particularly cardiovascular risk factors (stroke, hypertension, peripheral artery disease, obesity, …),\n4. Explore the experiences of people living with dementia and their relatives, including stigma."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":1662},\"participant\":{\"noLimit\":false,\"number\":2002},\"info\":{\"en\":\"EPIDEMCA follow-up: 1029 participants\"}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2011,\"endYear\":2015,\"website\":\"http://www.unilim.fr/ient/blog/anr-epidemca/\",\"markerPaper\":\"Guerchet M., Mbelesso P., Ndamba-Bandzouzi B., Pilleron, S., Desormais, I., Lacroix, P., Aboyans, V., Jésus, P., Desport, J-C, Tchalla, A.E., Marin, B., Lambert, J-C, Clément, J-P, Dartigues, J-F, Preux, P-M and for the EPIDEMCA group. Epidemiology of dementia in Central Africa (EPIDEMCA): protocol for a multicentre population-based study in rural and urban areas of the Central African Republic and the Republic of Congo. Springerplus. 2014;3:338\",\"pubmedId\":\"25045613\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Participants from the Central African Republic and the Congo were first assessed in the cross-sectional two-phase surveys making up EPIDEMCA. \\nParticipants in Congo were followed-up annually between 2012 and 2015 (EPIDEMCA-FU).\"}}}"
+      },
+      {
+        "id": "soep",
+        "timestamps": {
+          "created": "2019-07-23T14:15:22.638",
+          "lastUpdate": "2021-08-04T18:15:37.343"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "German Socio-Economic Panel Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SOEP"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": true,
+          "number": 0
+        },
+        "countries": [
+          "DEU"
+        ],
+        "logo": {
+          "id": "5c37b122266b473452fb373e",
+          "fileName": "soep-logo.jpg",
+          "lang": "en",
+          "size": 20616,
+          "md5": "37a592ce6de3146cb04aca0b0b1d9fee",
+          "timestamps": {
+            "created": "2019-01-10T15:54:58.853"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The German Socio-Economic Panel is a wide-ranging representative longitudinal study on Germans living in the Old and New German States (since 1984 in the Federal Republic and since 1990 in former East Germany).\nOne of the SOEP’s key goal is to provide panel data that allow users to conduct longitudinal and cross-sectional analyses with state-of-the-art scientific methodologies to better understand mechanisms underlying human behavior and social change within the household context, the neighborhood context, and different institutional settings and policy regimes. SOEP aims to provide representative longitudinal and micro-data of private households in Germany to measure stability and change in living conditions."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "cognitive_measures"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":true},\"info\":{\"en\":\"In June 1990, SOEP expanded to include households from the states of the former German Democratic Republic (GDR). Immigrant and refugee samples were added as well to account for the changes that took place in German society in 1994/95, 2013, 2015 to 2017. Further new samples were added in 1998, 2000, 2002, 2006, 2009, 2011, 2012, 2014 and 2017.\"}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"website\":\"https://www.diw.de/en/soep\",\"startYear\":1984,\"info\":{\"en\":\"Headey, B., Muffels, R., & Wagner, G. G. (2010). Long-running German panel survey shows that personal and economic choices, not just genes, matter for happiness. PNAS: Proceedings of the National Academy of Sciences of the United States of America, 107, 17922–17926. doi:10.1073/pnas.1008612107\"},\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"families\"]},\"markerPaper\":\"Goebel, J., Grabka, M., Liebig, S., Kroh, M., Richter, D., Schröder, C., Schupp, J. (2018). The German Socio-Economic Panel (SOEP) . Jahrbücher für Nationalökonomie und Statistik / Journal of Economics and Statistics (online first), doi:10.1515/jbnst-2018-0022\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "leila75_",
+        "timestamps": {
+          "created": "2019-07-23T14:13:58.865",
+          "lastUpdate": "2020-02-05T11:07:47.343"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Leipzig Longitudinal Study of the Aged"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LEILA75+"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1265
+        },
+        "countries": [
+          "DEU"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "LEILA75+ is a prospective population-based cohort study on the epidemiology of dementia and mild cognitive impairment (MCI). The aims of the study are to determine the prevalence and incidence of dementia and of MCI, as well as the occurrence of related conditions such as subjective cognitive decline, and to identify their risk factors."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":1265}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1997,\"endYear\":2014,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Five follow-up assessments scheduled every 18 months. A final long-term follow-up was conducted 8 years after follow-up 5, for a total observation period of 16 years.\"}},\"markerPaper\":\"Riedel-Heller, S.G., Busse, A., Aurich, C., Matschinger, H., Angermeyer, M.C. Prevalence of dementia according to DSM-III-R and ICD-10. Results of the Leipzig Longitudinal Study of the Aged (LEILA75+) Part I. British Journal of Psychiatry (2018) 179, 250-254\",\"pubmedId\":\"11532803\",\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"yes\",\"access_other\":\"na\"}}"
+      },
+      {
+        "id": "clas",
+        "timestamps": {
+          "created": "2019-07-23T14:12:33.843",
+          "lastUpdate": "2020-02-05T11:07:27.105"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Chinese Longitudinal Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "CLAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 3514
+        },
+        "countries": [
+          "CHN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objectives of this study are:\n<li>1. To estimate the prevalence of dementia and other mental disorders in the Chinese elderly,</li>\n<li>2. To establish national norms for measures of cognitive functioning, psychological symptoms, quality of life, social support and subjective happiness in the Chinese elderly and assess fluctuations in these parameters,</li>\n<li>3. To develop and implement a screening program for mild cognitive impairment and sub-clinical depression,</li>\n<li>4. To develop standardized, China-specific treatment protocols for the non-pharmacological treatment of mild cognitive impairment and sub-clinical depression,</li>\n<li>5. To establish a bank of biological samples and norms for brain volumes and other measures obtained from MRI assessments for elderly individuals in China.</li></p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":3514},\"participant\":{\"noLimit\":false,\"number\":3514}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2011,\"methods\":{\"followUpInfo\":{\"en\":\"Participants are followed-up after 1, and 7 years.\"},\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Xiao, S., Li, J., Tang, M., Chen, W., Bao, F., Wang, H., Wang, Y., Liu, Y., Wang, Y., Yuan, Y., Zuo, X., Chen, Z., Zhang, X., Cui, L., Li, X., Wang, T., Wu, W., Zhang, M. Methodology of China's national study on the evaluation, early recognition, and treatment of psychological problems in the elderly: The China Longitudinal Aging Study (CLAS). Shanghai Archives of Psychiatry 2013:25;91-98\",\"pubmedId\":\"24991140\"}"
+      },
+      {
+        "id": "leiden85",
+        "timestamps": {
+          "created": "2019-03-06T12:04:51.577",
+          "lastUpdate": "2020-02-05T11:07:47.124"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Leiden 85-plus Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "LEIDEN85"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 599
+        },
+        "countries": [
+          "NLD"
+        ],
+        "logo": {
+          "id": "5d56b4c9ba94c12e7bd69738",
+          "fileName": "log85+.jpg",
+          "lang": "en",
+          "size": 112854,
+          "md5": "72e284155645fdcb54b0ac8da7301cd6",
+          "timestamps": {
+            "created": "2019-08-16T09:51:05.198"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The objective of this study was to explore whether there is an effect of gender on cognitive function and whether differences in limited formal education explain differences on cognitive function between elderly women and men.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":559},\"participant\":{\"noLimit\":false,\"number\":599},\"info\":{\"en\":\"\"}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":1997,\"endYear\":2015,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Participants born between 1912 and 1914 were recruited between September 1997 and September 1999 and followed-up yearly until they reached 90 years old.\"},\"info\":{\"en\":\"Complete cause specific mortality data are available\"}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"A. Bootsma-van der Wiel, E., van Exel, E., de Craen, A.J.M., Gussekloo, J., Lagaay, A.M., Knook, D.L., Westendorp, R.G.J. A high response is not essential to prevent selection bias: Results from the Leiden 85-plus study. Journal of Clinical Epidemiology 2002;55:1119-1125\",\"pubmedId\":\"12507676\",\"access_fees\":false,\"access_restrictions\":false,\"access_supplementary_info\":{\"en\":\"van Exel, E., Gussekloo, J., Houx, P., de Craen, A.J.M., Macfarlane, P.W., Bootsma-van der Wiel, A., Blauw, G.J., Westendorp, R.G.J. Atherosclerosis and cognitive impairment are linked in the elderly. The Leiden 85-plus Study. Atherosclerosis 2002;165:353-359. \\nPMID: 12417287\\n\\nvon Faber M, Bootsma-van der Wiel A, van Exel E, Gussekloo J, Lagaay AM, van Dongen E, Knook DL, van der Geest S, Westendorp RG Successful aging in the oldest old: Who can be characterized as successfully aged? . Arch Intern Med. 2001 Dec 10-24;161(22):2694-700. \\nPMID: 11732934\"}}"
+      },
+      {
+        "id": "newcastle-85-plus",
+        "timestamps": {
+          "created": "2019-10-01T14:41:51.009",
+          "lastUpdate": "2020-02-05T11:07:57.767"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Newcastle 85+ Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Newcastle 85+ Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "85+ Study"
+          },
+          {
+            "lang": "fr",
+            "value": "Newcastle 85-plus"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 854
+        },
+        "countries": [
+          "GBR"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The Newcastle 85+ Study aimed to:</p>\r\n\r\n<ul>\r\n\t<li>Assess the spectrum of health in the oldest old;</li>\r\n\t<li>Examine the associations of health trajectories and outcomes with biological, clinical and social factors as the cohort ages;</li>\r\n\t<li>Identify factors which contribute to the maintenance of health and independence;</li>\r\n\t<li>Advance understanding of the biological nature of human ageing.</li>\r\n</ul>\r\n"
+          },
+          {
+            "lang": "fr",
+            "value": "<p>The Newcastle 85+ Study aimed to:</p>\n\n<ul>\n\t<li>Assess the spectrum of health in the oldest old;</li>\n\t<li>Examine the associations of health trajectories and outcomes with biological, clinical and social factors as the cohort ages;</li>\n\t<li>Identify factors which contribute to the maintenance of health and independence;</li>\n\t<li>Advance understanding of the biological nature of human ageing.</li>\n</ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":854},\"sample\":{\"noLimit\":false,\"number\":854}},\"website\":\"http://research.ncl.ac.uk/85plus/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Tom Kirkwood\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Assessments were conducted at baseline, 18 months,&nbsp;36 months and 60 months.</p>\"},\"recruitments\":[\"individuals\"],\"otherDesign\":{},\"otherRecruitment\":{},\"info\":{}},\"startYear\":2006,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Prof. Tom Kirkwood\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Collerton J, Barrass K, Bond J, et al. The Newcastle 85+ study: biological, clinical and psychosocial factors associated with healthy ageing: study protocol. BMC Geriatrics, 2007; 7: 14-20.\",\"endYear\":2013,\"pubmedId\":\"17594470\",\"access_fees\":false,\"access_restrictions\":false}"
+      },
+      {
+        "id": "ntr",
+        "timestamps": {
+          "created": "2015-03-09T13:38:48.550",
+          "lastUpdate": "2020-10-26T12:17:53.980"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Netherlands Twin Register"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "NTR"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 140000
+        },
+        "countries": [
+          "NLD"
+        ],
+        "logo": {
+          "id": "5f96f6a7fe98771a2981a048",
+          "fileName": "NTR_rgb_NL_EN-1.png",
+          "lang": "en",
+          "size": 28861,
+          "md5": "5607bc70456ac57419dbffbcc0686c6a",
+          "timestamps": {
+            "created": "2020-10-26T12:17:43.279"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objectives of this study are to facilitate longitudinal research on twins by creating a large national database, and to study the role of genes and environment and their interaction in individual variation in personality, lifestyle, and health, and the development of disease and psychopathology."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "administratives_databases"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":140000},\"sample\":{\"noLimit\":false},\"info\":{\"en\":\"Around 50% of the participants have provided data at more than one time point and 40% of the participants have provided more than twice (up to a maximum of 13 times).\"}},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"memberships\":{\"investigator\":[],\"contact\":[]},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"access_fees\":false,\"access_restrictions\":false,\"startYear\":1986,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"Participants are assessed every 2 to 3 years.\"}},\"markerPaper\":\"Ligthart L, Beijsterveldt CE, Kevenaar ST, et al. The Netherlands Twin Register: Longitudinal Research Based on Twin and Twin-Family Designs. Twin Research and Human Genetics, 22(6), 2019. 623-636.\"}"
+      },
+      {
+        "id": "albion",
+        "timestamps": {
+          "created": "2021-05-17T09:19:09.856",
+          "lastUpdate": "2021-08-10T16:25:16.810"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Aiginition Longitudinal Biomarker Investigation Of Neurodegeneration"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ALBION"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 112
+        },
+        "countries": [
+          "GRC"
+        ],
+        "logo": {
+          "id": "60ec41851a32432d9bf2c447",
+          "fileName": "Albion logo_final_CMYK.png",
+          "lang": "en",
+          "size": 178708,
+          "md5": "c46994bed6c8dadc5e77e4e59c5129b7",
+          "timestamps": {
+            "created": "2021-07-12T09:20:05.950"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objective of the study is to address research questions concerning the preclinical and prodromal stage of Alzheimer's disease, more  specifically to address pathways of disease development, providing evidence to the biological mechanisms that may explain observed relationships."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":112},\"participant\":{\"noLimit\":false,\"number\":112}},\"maelstromAuthorization\":{\"authorized\":false},\"access_fees\":false,\"specificAuthorization\":{\"authorized\":false},\"access_restrictions\":false,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"All participants are evaluated annually after their baseline assessment. Participants are followed up longitudinally for a period of at least 10 years.\"}},\"startYear\":2018,\"pubmedId\":\"31483196\",\"markerPaper\":\"Kalligerou F, Ntanasi E, Voskou P, et al. Aiginition Longitudinal Biomarker Investigation Of Neurodegeneration (ALBION): study design, cohort description, and preliminary data. Postgrad Med. 2019 Sep;131(7):501-508.\",\"access\":{\"access_data\":\"yes\",\"access_bio_samples\":\"yes\",\"access_other\":\"no\"}}"
+      },
+      {
+        "id": "gcat",
+        "timestamps": {
+          "created": "2019-07-23T14:13:16.420",
+          "lastUpdate": "2020-02-05T11:07:37.966"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Genomes for life"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "GCAT"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 19386
+        },
+        "countries": [
+          "ESP"
+        ],
+        "logo": {
+          "id": "5c6ffc9b8801bc485be0404d",
+          "fileName": "logo-GCAT.png",
+          "lang": "en",
+          "size": 3355,
+          "md5": "627665dc4468ab593f3e6a4ed58cb02b",
+          "timestamps": {
+            "created": "2019-02-22T08:43:55.349"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The main objective of GCAT is to integrate and to assess the role of genomic, epigenomic, environmental and lifestyle factors in the development of major chronic diseases (e.g. cancer, cardiovascular, respiratory, autoimmune, neurological or metabolic diseases) in Catalonia, Spain. Furthermore, GCAT aimed to assess the prevalence of epidemiological and genetic risk factors associated with the incidence of chronic diseases.</p>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false,\"number\":19386},\"participant\":{\"noLimit\":false,\"number\":19386}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"methods\":{\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>The active first follow-up through web-based questionnaire began in March 2018 and ended in December 2018. Electronic Health Register linking participants from Public Health Care System begins in January 2019 and will then be followed annually.</p>\"},\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"\"}},\"startYear\":2014,\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Obón-Santacana M, Vilardell M, Carreras A, et al.  GCAT|Genomes for life: a prospective cohort study of the genomes of Catalonia. BMJ Open 2018 Mar 27;8:e018324.\",\"pubmedId\":\"29593016\",\"website\":\"http://www.genomesforlife.com\",\"info\":{\"en\":\"Galván-Femenía I, Obón-Santacana M, Piñeyro D, Guindo-Martinez M, Duran X, Carreras A, Pluvinet R, Velasco J, Ramos L, Aussó S, Mercader JM, Puig L, Perucho M, Torrents D, Moreno V, Sumoy L, de Cid R. Multitrait genome association analysis identifies new susceptibility genes for human anthropometric variation in the GCAT cohort. Journal of Medical Genetics 2018;55:765-77. PMID 30166351\"}}"
+      },
+      {
+        "id": "ialsa_brain-qual-hi",
+        "timestamps": {
+          "created": "2022-08-10T10:52:01.128",
+          "lastUpdate": "2022-09-19T14:23:06.738"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "IALSA/BRAIN Qualitative Harmonization Initiative"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "IALSA/BRAIN-Qual-HI"
+          }
+        ],
+        "logo": {
+          "id": "6324a25bc260d054402c9ad5",
+          "fileName": "logo_r_a.png",
+          "lang": "en",
+          "size": 41586,
+          "md5": "1ce4cce05a102a3eea7d9b179298e716",
+          "timestamps": {
+            "created": "2022-09-16T12:20:43.355"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The objective of the IALSA/BRAIN Qualitative Harmonization Initiative was to evaluate the harmonization potential of international cohorts to understand the determinants of within-person aging-related changes in cognitive and physical capabilities and mental health."
+          }
+        ],
+        "published": true,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "harmonization-study",
+        "content": "{\"startYear\":2018,\"endYear\":2018}"
+      },
+      {
+        "id": "bas",
+        "timestamps": {
+          "created": "2015-03-09T13:39:03.045",
+          "lastUpdate": "2017-11-22T15:10:49.934"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Bronx Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "BAS"
+          }
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>TO BE COMPLETED...</p>\r\n"
+          }
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false},\"sample\":{\"noLimit\":false}},\"maelstromAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"specificAuthorization\":{\"authorized\":false,\"date\":\"1969-12-31\"},\"access\":{\"access_bio_samples\":\"na\",\"access_data\":\"no\",\"access_other\":\"na\"}}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 5,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      },
+      {
+        "id": "regards",
+        "timestamps": {
+          "created": "2015-03-09T13:38:26.403",
+          "lastUpdate": "2017-11-22T15:10:59.692"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "Reasons for Geographic and Racial Differences in Stroke"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "REGARDS"
+          }
+        ],
+        "design": "cohort_study",
+        "countries": [
+          "USA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "<p>The&nbsp;REasons for Geographic and Racial Differences in Stroke (REGARDS)&nbsp;project, sponsored by the National Institutes of Health (NIH), is an American national study focusing on learning more about the factors that increase a person's risk of having a stroke. The primary aims are:</p>\r\n\r\n<ol>\r\n\t<li>To provide national data on stroke incidence and case fatality and assess geographic variations and racial differences in these measures;</li>\r\n\t<li>To provide national data on prevalence and levels of stroke risk factors and assess geographic and racial variation in the prevalence of these risk factors;</li>\r\n\t<li>To assess the degree to which geographic and racial variations in stroke incidence, case fatality, and mortality are attributable to variations in risk factor prevalence;</li>\r\n\t<li>To assess geographic and racial variations in stroke incidence, case fatality, and mortality are attributable to variations in risk factor prevalence;</li>\r\n\t<li>To assess the impact of migration on stroke incidence, case fatality and mortality;</li>\r\n\t<li>To create blood, urine, and DNA respository as a resource for future studies.</li>\r\n</ol>\r\n"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases",
+          "others"
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":30239},\"sample\":{\"noLimit\":false,\"number\":30239}},\"website\":\"http://www.regardsstudy.org/home\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"maelstromAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Frederick Unverzagt\",\"date\":\"1969-12-31\"},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"<p>Participants completed a telephone interview followed by an in-home physical exam. &nbsp;At six month intervals thereafter, participants are contacted by phone. &nbsp;The study is ongoing.</p>\\r\\n\"},\"recruitments\":[\"individuals\"]},\"startYear\":2003,\"specificAuthorization\":{\"authorized\":true,\"authorizer\":\"Dr. Frederick Unverzagt\",\"date\":\"1969-12-31\"},\"markerPaper\":\"Howard V, Cushman M, Pulley L.  The reasons for geographic and racial differences in stroke study: objectives and design.  Neuroepidemiology 25(3): 135-143 2005\",\"pubmedId\":\"15990444\"}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 5,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      },
+      {
+        "id": "90_-study",
+        "timestamps": {
+          "created": "2016-09-26T16:11:03.998",
+          "lastUpdate": "2017-08-14T16:49:30.251"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "The 90+ Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "90+ Study"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1363
+        },
+        "countries": [
+          "USA"
+        ],
+        "logo": {
+          "id": "58488a77e4b0b4ca5bd4cf21",
+          "fileName": "90+-logo2-300x236.jpg",
+          "lang": "en",
+          "size": 9346,
+          "md5": "af3820a190029a46153ceae8e67994e5",
+          "timestamps": {
+            "created": "2016-12-07T17:17:29.028"
+          }
+        },
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The main objectives of the 90+ Study are: <ul><li> to determine factors associated with longevity, such as what makes people live to age 90 and beyond, and the types of food, activities or lifestyles that are associated with living longer;</li>\n<li>to examine the epidemiology of dementia in the oldest-old, such as how many people aged 90 years and older have dementia, how many become demented each year and what are ways to remain dementia-free into your 90s;</li>\n<li> to examine rates of cognitive and functional decline in the oldest-old, such as how memory loss and disability affect those in their 90s and how people can prevent memory loss and disability at this age; </li> <li>to examine clinical pathological correlations in the oldest-old, such as if the brains of people in their 90s show evidence of memory loss and dementia, or if people with dementia have differences in their brains that can be detected and treated; and</li> <li>to determe modifiable risk factors for mortality and dementia, such as the kinds of things people can change in their lives to live longer, and if people can change their risk of dementia through diet, exercise or supplements. </li> </ul>"
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "biological_samples"
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"participant\":{\"noLimit\":false,\"number\":1363},\"sample\":{\"noLimit\":false,\"number\":120},\"info\":{}},\"website\":\"https://www.mind.uci.edu/research/90plus-study/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"otherAccess\":{},\"maelstromAuthorization\":{\"authorized\":false},\"methods\":{\"designs\":[\"cohort_study\"],\"design\":\"cohort_study\",\"otherDesign\":{},\"followUpInfo\":{\"en\":\"Participants are assessed every 6 months.\"},\"recruitments\":[\"individuals\"],\"otherRecruitment\":{},\"info\":{}},\"startYear\":2003,\"specificAuthorization\":{\"authorized\":false},\"markerPaper\":\"Corrada MM, et al. A Population-Based Clinicopathological Study In The Oldest-Old: The 90+ Study. 2012. Current Alzheimer Research; 9 (6): 709-17.\",\"pubmedId\":\"22471863\"}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 205,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      },
+      {
+        "id": "slas",
+        "timestamps": {
+          "created": "2019-03-01T14:01:13.962",
+          "lastUpdate": "2019-03-01T15:22:32.800"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "The Singapore Longitudinal Ageing Studies (SLAS-1 & -2)"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SLAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 6183
+        },
+        "countries": [
+          "SGP"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "SLAS is a community-based longitudinal epidemiologic study that aims to increase the understanding of ageing and health, and the factors that influence the ageing process. Its objective is to identify the cognitive, biomedical, lifestyle and behavioral, as well as psychosocial risk and protective factors that affect the transition from healthy ageing to functional impairment, illness and death."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples",
+          "administratives_databases"
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":6183}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2002,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"info\":{\"en\":\"Feng, L., Chong, M. S., Lim, W. S., Lee, T. S., Collinson, S. L., Yap, P., and Ng, T. P. Metabolic syndrome and amnestic mild cognitive impairment: Singapore Longitudinal Ageing Study-2 findings. Journal of Alzheimer's Disease (2013) 34: 649-657. PMID: 23246920\"},\"followUpInfo\":{\"en\":\"Participants in SLAS-1 were followed up in 2007-2008 and 2010-2011. SLAS-2 started in 2009-2010 and its first follow-up was in 2012.\"}},\"markerPaper\":\"Niti, M., Yap, K-B, Kua, E-H, Tan, C-H, and Ng, T-P. Physical, social and productive leisure activities, cognitive decline and interaction with APOE-e4 genotype in Chinese older adults. International Psychogeriatrics (2008) 20:2, 237-251\",\"pubmedId\":\"18190728\",\"website\":\"http://nusmedicine.nus.edu.sg/pcm/research-2/research-programmes/gerontology-research-programme-grp/\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"}}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 28,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      },
+      {
+        "id": "spah",
+        "timestamps": {
+          "created": "2019-03-05T10:52:27.826",
+          "lastUpdate": "2019-03-05T14:34:56.738"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "São Paulo Ageing and Health Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "SPAH"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 2072
+        },
+        "countries": [
+          "BRA"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The primarily objective of SPAH study was to determine the prevalence of dementia in a socio-economically disadvantaged population of older adults living in São Paulo, Brazil. It aimed to investigate the association between dementia and socio-economic factors such as age, gender, literacy, income, education attainment, and place of birth throughout the life course; and to analyse some causal pathways of dementia."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":2072}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2003,\"endYear\":2007,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"There was one follow-up after 2 years.\"}},\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"},\"markerPaper\":\"Scazufca et al. High prevalence of dementia among older adults from poor socioeconomic backgrounds in São Paulo, Brazil. Int Psychogeriatr 2008;20:394-405\",\"pubmedId\":\"17559708\"}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 10,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      },
+      {
+        "id": "ilas",
+        "timestamps": {
+          "created": "2019-03-05T15:20:13.323",
+          "lastUpdate": "2019-03-05T15:56:56.767"
+        },
+        "name": [
+          {
+            "lang": "en",
+            "value": "I-Lan Longitudinal Aging Study"
+          }
+        ],
+        "acronym": [
+          {
+            "lang": "en",
+            "value": "ILAS"
+          }
+        ],
+        "design": "cohort_study",
+        "targetNumber": {
+          "noLimit": false,
+          "number": 1839
+        },
+        "countries": [
+          "TWN"
+        ],
+        "objectives": [
+          {
+            "lang": "en",
+            "value": "The I-Lan Longitudinal Aging Study (ILAS) is a population-based aging cohort study in I-Lan County of Taiwan, aiming to evaluate the complex interrelationship between aging, frailty, sarcopenia and cognitive decline."
+          }
+        ],
+        "dataSources": [
+          "questionnaires",
+          "cognitive_measures",
+          "physical_measures",
+          "biological_samples"
+        ],
+        "published": false,
+        "variables": 0,
+        "permissions": {
+          "view": true,
+          "edit": true,
+          "delete": true,
+          "publish": true
+        },
+        "studyResourcePath": "individual-study",
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":1839}},\"maelstromAuthorization\":{\"authorized\":false},\"specificAuthorization\":{\"authorized\":false},\"startYear\":2011,\"methods\":{\"design\":\"cohort_study\",\"recruitments\":[\"individuals\"],\"followUpInfo\":{\"en\":\"A first follow-up is planned in 2018.\"}},\"markerPaper\":\"Liu, L-K, Chen, C-H, Lee, W-J, Wu, Y-H, Hwang, A-C, Lin, M-H, Shimada, H., Peng, L-N, Loh, C-H, Arai, H., Chen, L-K. Cognitive frailty and its association with all-cause mortality among community-dwelling older adults in Taiwan: Results from I-Lan Longitudinal Aging Study. Rejuvenation Research 2018; 21(6):510-517\",\"pubmedId\":\"29644921\",\"access\":{\"access_bio_samples\":\"no\",\"access_data\":\"yes\",\"access_other\":\"na\"}}",
+        "obiba.mica.EntityStateDto.studySummaryState": {
+          "revisionsAhead": 9,
+          "revisionStatus": "DRAFT",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "delete": true,
+            "publish": true
+          }
+        }
+      }
+    ]
   }
 
   function getStudies() {
@@ -2725,7 +10377,7 @@
         "published": true,
         "variables": 0,
         "studyResourcePath": "individual-study",
-        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":1037}},\"maelstromAuthorization\":{\"authorized\":false},\"access_fees\":false,\"specificAuthorization\":{\"authorized\":false},\"access_restrictions\":false,\"website\":\"http://gripinfo.ca/grip/consultation/etudes/infoGen.asp?TS=1606938119807&id_etude=1#L30\",\"startYear\":1900,\"endYear\":2006,\"methods\":{\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"For the longitudinal group, after the first evaluation in kindergarten, evaluations were made starting at age 10. The children were assessed annually for behavior problems and delinquency from age 10 to 15 years, and substance use from age 13 to 17 years.These evaluations were made by parents, teachers, classmates, and the children themselves.\\nFor the experimental group, follow-up was done when participants were 11 and 12.\"},\"recruitments\":[\"individuals\"]},\"access\":{\"access_data\":\"yes\",\"access_bio_samples\":\"yes\"},\"markerPaper\":\"Tremblay RE, Vitaro F, Bertrand L, et al. Parent and child training to prevent early onset of delinquency: The Montréal longitudinal–experimental study. In J. McCord & R. E. Tremblay (Eds.), Preventing antisocial behavior: Interventions from birth through adolescence, 1992; 117–138\"}"
+        "content": "{\"numberOfParticipants\":{\"sample\":{\"noLimit\":false},\"participant\":{\"noLimit\":false,\"number\":1037}},\"maelstromAuthorization\":{\"authorized\":false},\"access_fees\":false,\"specificAuthorization\":{\"authorized\":false},\"access_restrictions\":false,\"website\":\"http://gripinfo.ca/grip/consultation/etudes/infoGen.asp?TS=1606938119807&id_etude=1#L30\",\"startYear\":1990,\"endYear\":2006,\"methods\":{\"design\":\"cohort_study\",\"followUpInfo\":{\"en\":\"For the longitudinal group, after the first evaluation in kindergarten, evaluations were made starting at age 10. The children were assessed annually for behavior problems and delinquency from age 10 to 15 years, and substance use from age 13 to 17 years.These evaluations were made by parents, teachers, classmates, and the children themselves.\\nFor the experimental group, follow-up was done when participants were 11 and 12.\"},\"recruitments\":[\"individuals\"]},\"access\":{\"access_data\":\"yes\",\"access_bio_samples\":\"yes\"},\"markerPaper\":\"Tremblay RE, Vitaro F, Bertrand L, et al. Parent and child training to prevent early onset of delinquency: The Montréal longitudinal–experimental study. In J. McCord & R. E. Tremblay (Eds.), Preventing antisocial behavior: Interventions from birth through adolescence, 1992; 117–138\"}"
       }
     ]
   }

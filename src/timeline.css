@@ -33,5 +33,4 @@ ul.timeline-legend svg {
 .grid-tooltip .tick {
     stroke: red;  /* for debugging */
     opacity: 0 !important;
-    stroke-width: 30px;
 }

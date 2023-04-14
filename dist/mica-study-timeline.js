@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-04-11
+* Date: 2023-04-14
  */
 (function () {
 
@@ -35,7 +35,8 @@
       stacked = false,
       rotateTicks = false,
       itemHeight = 10,
-      itemMargin = 5;
+      itemMargin = 5,
+      strokeWidth = 10;
 
     function timeline(gParent) {
       var g = gParent.append("g");
@@ -87,15 +88,15 @@
       var xScale = d3.time.scale()
         .domain([beginning.getFullYear(), ending.getFullYear()])
         .range([margin.left, width - margin.right]);
+      var tickValues = d3.range(beginning.getFullYear(), ending.getFullYear() + 1);
 
       var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient(orient)
         .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
-        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
-        ;
+        .tickValues(tickValues)
+        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0);
 
       // draw axis
       g.append("g")
@@ -127,7 +128,7 @@
 
       // Add tooltip
       d3.selectAll('.grid-tooltip > .tick').each(function (d, i) {
-        d3.select(this).insert("title", ":first-child").html(d);
+        d3.select(this).attr("stroke-width", strokeWidth + 'px').insert("title", ":first-child").html(d);
       });
 
       // draw the chart
@@ -355,6 +356,11 @@
 
     timeline.stack = function () {
       stacked = !stacked;
+      return timeline;
+    };
+
+    timeline.strokeWidth = function (s) {
+      strokeWidth = s;
       return timeline;
     };
 
@@ -993,22 +999,52 @@
     return { width: size.width, height: size.height };
   }
 
+  function calculateTickTextSize(text) {
+    if (!d3) return;
+    var container = d3.select('body').append('svg');
+    container.append('g')
+      .attr("class", "axis")
+      .append('text')
+      .attr({ x: -99999, y: -99999 }) // place off screen
+      .text(text);
+    var size = container.node().getBBox();
+    container.remove();
+    return { width: size.width, height: size.height };
+  }
+
   function createTimeline(timeline, timelineData, selectee, studyDto) {
     var width = $(selectee).width();
     var margin = { left: 15 + (timelineData.longestLabel ? calculateTextSize(timelineData.longestLabel).width : 0), right: 15, top: 0, bottom: 20 };
+    var numberOfTicks = timelineData.max.getFullYear() - timelineData.min.getFullYear() + 1;
+    var strokeWidth = Math.floor((width - margin.right - margin.left) / numberOfTicks);
+    var tickTextWidth = Math.floor(calculateTickTextSize("9999").width);
+    var formatter = function (d, i) { return d3.format("d")(d); };
+
+    if (strokeWidth < 12) {
+      var chunks = Math.floor((width - margin.right - margin.left) / (tickTextWidth));
+      var steps = Math.ceil(numberOfTicks / chunks);
+
+      formatter = function (d, i) {
+        if (i % steps === 0) return d3.format("d")(d);
+        else return '';
+      };
+    }
+
+
     var chart = d3.timeline()
       .beginning(timelineData.min)
       .ending(timelineData.max)
       .width(width)
       .stack()
       .tickFormat({
-        format: d3.format("d"),
+        format: formatter,
         tickTime: 1,
         tickNumber: 1,
         tickSize: 10
       })
       .margin(margin)
-      .rotateTicks(timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 30 ? 45 : 0)
+      .strokeWidth(strokeWidth)
+      .rotateTicks(strokeWidth >= 12 && timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 15 ? 45 : 0)
       .click(function (d, i, datum) {
         if (timeline.popupIdFormatter) {
           var popup = $(timeline.popupIdFormatter(studyDto, datum, d));

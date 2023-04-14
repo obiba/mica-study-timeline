@@ -26,7 +26,8 @@
       stacked = false,
       rotateTicks = false,
       itemHeight = 10,
-      itemMargin = 5;
+      itemMargin = 5,
+      strokeWidth = 10;
 
     function timeline(gParent) {
       var g = gParent.append("g");
@@ -78,15 +79,15 @@
       var xScale = d3.time.scale()
         .domain([beginning.getFullYear(), ending.getFullYear()])
         .range([margin.left, width - margin.right]);
+      var tickValues = d3.range(beginning.getFullYear(), ending.getFullYear() + 1);
 
       var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient(orient)
         .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
-        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
-        ;
+        .tickValues(tickValues)
+        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0);
 
       // draw axis
       g.append("g")
@@ -118,7 +119,7 @@
 
       // Add tooltip
       d3.selectAll('.grid-tooltip > .tick').each(function (d, i) {
-        d3.select(this).insert("title", ":first-child").html(d);
+        d3.select(this).attr("stroke-width", strokeWidth + 'px').insert("title", ":first-child").html(d);
       });
 
       // draw the chart
@@ -346,6 +347,11 @@
 
     timeline.stack = function () {
       stacked = !stacked;
+      return timeline;
+    };
+
+    timeline.strokeWidth = function (s) {
+      strokeWidth = s;
       return timeline;
     };
 
