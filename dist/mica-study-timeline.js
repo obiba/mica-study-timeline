@@ -954,8 +954,8 @@
    */
   $.MicaTimeline.prototype = {
 
-    create: function (selectee, studyDto) {
-      var clone = jQuery.extend(true, {}, studyDto);
+    create: function (selectee, dto) {
+      var clone = jQuery.extend(true, {}, dto);
       if (this.parser === null || clone === null) return;
       var timelineData = this.parser.parse(clone);
       if (timelineData) createTimeline(this, timelineData, selectee, clone);
@@ -1012,7 +1012,7 @@
     return { width: size.width, height: size.height };
   }
 
-  function createTimeline(timeline, timelineData, selectee, studyDto) {
+  function createTimeline(timeline, timelineData, selectee, dto) {
     var width = $(selectee).width();
     var margin = { left: 15 + (timelineData.longestLabel ? calculateTextSize(timelineData.longestLabel).width : 0), right: 15, top: 0, bottom: 20 };
     var numberOfTicks = timelineData.max.getFullYear() - timelineData.min.getFullYear() + 1;
