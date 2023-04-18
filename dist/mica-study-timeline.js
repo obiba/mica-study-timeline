@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-04-14
+* Date: 2023-04-18
  */
 (function () {
 
@@ -942,9 +942,9 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
+  $.MicaTimeline = function (dtoParser, clickHandler, useBootstrapTooltip) {
     this.parser = dtoParser;
-    this.popupIdFormatter = popupIdFormatter;
+    this.clickHandler = clickHandler;
     this.useBootstrapTooltip = useBootstrapTooltip;
   };
 
@@ -955,7 +955,7 @@
   $.MicaTimeline.prototype = {
 
     create: function (selectee, studyDto) {
-      var clone = jQuery.extend(true,{} , studyDto);
+      var clone = jQuery.extend(true, {}, studyDto);
       if (this.parser === null || clone === null) return;
       var timelineData = this.parser.parse(clone);
       if (timelineData) createTimeline(this, timelineData, selectee, clone);
@@ -969,7 +969,7 @@
       $(this.selectee).after(ul);
 
       var processedPopulations = {};
-      $.each(this.timelineData.data, function(i, item) {
+      $.each(this.timelineData.data, function (i, item) {
         if (!processedPopulations.hasOwnProperty(item.title)) {
           processedPopulations[item.title] = true;
           var li = $(createLegendRow(item.color, item.title));
@@ -980,7 +980,7 @@
       return this;
     },
 
-    reset: function() {
+    reset: function () {
       $(this.selectee).empty();
       $('.timeline-legend').remove();
       return this;
@@ -1044,11 +1044,10 @@
       })
       .margin(margin)
       .strokeWidth(strokeWidth)
-      .rotateTicks(strokeWidth >= 12 && timelineData.max.getFullYear() -  timelineData.min.getFullYear() > 15 ? 45 : 0)
+      .rotateTicks(strokeWidth >= 12 && timelineData.max.getFullYear() - timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
-        if (timeline.popupIdFormatter) {
-          var popup = $(timeline.popupIdFormatter(studyDto, datum, d));
-          if (popup.length > 0) popup.modal();
+        if (timeline.clickHandler) {
+          timeline.clickHandler.call(null, dto, datum, d);
         }
       });
 
@@ -1074,8 +1073,8 @@
    * @returns {*|HTMLElement}
    */
   function createLegendRow(color, title) {
-    var rect ="<rect width='20' height='20' x='2' y='2' rx='5' ry='5' style='fill:COLOR;'>".replace(/COLOR/, color);
-    return $("<li><svg width='25' height='25'>"+rect+"</svg>"+title+"</li>");
+    var rect = "<rect width='20' height='20' x='2' y='2' rx='5' ry='5' style='fill:COLOR;'>".replace(/COLOR/, color);
+    return $("<li><svg width='25' height='25'>" + rect + "</svg>" + title + "</li>");
   }
 
   /**

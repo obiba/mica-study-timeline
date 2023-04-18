@@ -6,9 +6,9 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, popupIdFormatter, useBootstrapTooltip) {
+  $.MicaTimeline = function (dtoParser, clickHandler, useBootstrapTooltip) {
     this.parser = dtoParser;
-    this.popupIdFormatter = popupIdFormatter;
+    this.clickHandler = clickHandler;
     this.useBootstrapTooltip = useBootstrapTooltip;
   };
 
@@ -110,9 +110,8 @@
       .strokeWidth(strokeWidth)
       .rotateTicks(strokeWidth >= 12 && timelineData.max.getFullYear() - timelineData.min.getFullYear() > 30 ? 45 : 0)
       .click(function (d, i, datum) {
-        if (timeline.popupIdFormatter) {
-          var popup = $(timeline.popupIdFormatter(studyDto, datum, d));
-          if (popup.length > 0) popup.modal();
+        if (timeline.clickHandler) {
+          timeline.clickHandler.call(null, dto, datum, d);
         }
       });
 
