@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-04-18
+* Date: 2023-05-08
  */
 (function () {
 
@@ -166,15 +166,7 @@
               .attr("text-anchor", "end")
               .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")
               .text(hasLabel ? datum.label : datum.id)
-              .on("click", function (d, i) {
-                console.log("label click!");
-                var point = mouse(this);
-                gParent.append("rect")
-                  .attr("id", "clickpoint")
-                  .attr("x", point[0])
-                  .attr("width", 10)
-                  .attr("height", itemHeight);
-              });
+              .insert("title", ":first-child").html(datum.title);
           }
 
           if (typeof (datum.icon) != "undefined") {
