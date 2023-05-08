@@ -153,7 +153,7 @@
               click(d, index, datum);
             })
             .append("title").text(function (d) {
-              return d.title;
+              return d.title + " (" + d.starting_time.getFullYear() + " - " + d.ending_time.getFullYear()  + ")";
             });
 
           // add the label
