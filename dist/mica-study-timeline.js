@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-05-08
+* Date: 2023-05-09
  */
 (function () {
 
@@ -164,8 +164,11 @@
             gParent.append("text")
               .attr("class", "timeline-label")
               .attr("text-anchor", "end")
-              .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")
+              .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")              
               .text(hasLabel ? datum.label : datum.id)
+              .on("click", function (d, i) {
+                click(d, index, datum);
+              })
               .insert("title", ":first-child").html(datum.title);
           }
 
