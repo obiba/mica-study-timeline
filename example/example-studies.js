@@ -1,6 +1,8 @@
 (function () {
+  var customColorGenerator = new $.ColorGenerator(["#618D2F"]);
 
-  new $.MicaTimeline(new $.StudiesDtoParser(), timelinePopupIdFormatter).create("#vis", getLotsOfStudies());
+
+  new $.MicaTimeline(new $.StudiesDtoParser().setColorGenerator(customColorGenerator), timelinePopupIdFormatter).create("#vis", getLotsOfStudies());
 
   function timelinePopupIdFormatter(studyDto, datum, dceId) {
     console.log('Format a valid pop id.');

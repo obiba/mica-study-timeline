@@ -4,6 +4,7 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+  var colorGenerator;
 
   /**
    * Constructor
@@ -11,6 +12,7 @@
    */
   $.StudiesDtoParser = function (localSetting) {
     locale = localSetting ? localSetting : 'en';
+    colorGenerator = new $.ColorGenerator();
   };
 
   /**
@@ -18,6 +20,13 @@
    * @type {{create: create}}
    */
   $.StudiesDtoParser.prototype = {
+    setColorGenerator: function(generator) {
+      if (generator) {
+        colorGenerator = generator;
+      }
+
+      return this;
+    },
 
     parse: function (studiesDto) {
       if (studiesDto) {
@@ -107,7 +116,7 @@
    * @param bounds
    */
   function parseStudies(studyDtos, bounds) {
-    var color = new $.ColorGenerator().nextColor();
+    var color = colorGenerator.nextColor();
     var studies = [];
     var studyData;
     var longestLabel = "";

@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.0.3
-* Date: 2023-05-09
+* Date: 2023-05-17
  */
 (function () {
 
@@ -369,12 +369,15 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+  var colorGenerator;
+
   /**
    * Constructor
    * @constructor
    */
   $.StudyDtoParser = function (localSetting) {
     locale = localSetting ? localSetting : 'en';
+    colorGenerator = new $.ColorGenerator();
   };
 
   /**
@@ -382,6 +385,14 @@
    * @type {{create: create}}
    */
   $.StudyDtoParser.prototype = {
+
+    colorGenerator: function(generator) {
+      if (generator) {
+        colorGenerator = generator;
+      }
+
+      return this;
+    },
 
     parse: function (studyDto) {
       if (studyDto.populations) {
@@ -494,26 +505,24 @@
   function parsePopulations(studyDto, bounds) {
     if (studyDto === null || !studyDto.hasOwnProperty('populations')) return;
 
-    var colors = new $.ColorGenerator();
     var populations = [];
     var populationData;
-    $.each(studyDto.populations, parsePopulationsInternal(populations, colors));
+    $.each(studyDto.populations, parsePopulationsInternal(populations));
 
     return populations;
 
     /**
      * Defined merely to pass extra arguments to the $.each iterator closure
      * @param populations
-     * @param colors
      * @returns {Function}
      */
-    function parsePopulationsInternal(populations, colors) {
+    function parsePopulationsInternal(populations) {
       return function (i, populationDto) {
         var lines = [];
         populationData = {};
         setId(populationData, populationDto, 'id');
         setTitle(populationData, populationDto, 'name');
-        populationData.color = colors.nextColor();
+        populationData.color = colorGenerator.nextColor();
         if (populationDto.hasOwnProperty('dataCollectionEvents') && populationDto.dataCollectionEvents.length > 0) {
           parseEvents(lines, populationData, populationDto.dataCollectionEvents, bounds);
           // use a loop instead of array.concat() in order to add lines to the same populations variable (same instance)
@@ -663,6 +672,7 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+  var colorGenerator;
 
   /**
    * Constructor
@@ -670,6 +680,7 @@
    */
   $.StudiesDtoParser = function (localSetting) {
     locale = localSetting ? localSetting : 'en';
+    colorGenerator = new $.ColorGenerator();
   };
 
   /**
@@ -677,6 +688,13 @@
    * @type {{create: create}}
    */
   $.StudiesDtoParser.prototype = {
+    setColorGenerator: function(generator) {
+      if (generator) {
+        colorGenerator = generator;
+      }
+
+      return this;
+    },
 
     parse: function (studiesDto) {
       if (studiesDto) {
@@ -766,7 +784,7 @@
    * @param bounds
    */
   function parseStudies(studyDtos, bounds) {
-    var color = new $.ColorGenerator().nextColor();
+    var color = colorGenerator.nextColor();
     var studies = [];
     var studyData;
     var longestLabel = "";
