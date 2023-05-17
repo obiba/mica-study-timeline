@@ -2,9 +2,14 @@
   var customColorGenerator = new $.ColorGenerator(["#618D2F"]);
 
 
-  new $.MicaTimeline(new $.StudiesDtoParser().setColorGenerator(customColorGenerator), timelinePopupIdFormatter).create("#vis", getLotsOfStudies());
+  new $.MicaTimeline(new $.StudiesDtoParser().setColorGenerator(customColorGenerator), clickHandler, null, tooltipFormatter).create("#vis", getLotsOfStudies());
 
-  function timelinePopupIdFormatter(studyDto, datum, dceId) {
+  function tooltipFormatter(d, i, datum) {
+    var event = (d.events || datum.events)[0];
+    return event.title + " (" + event.starting_time.getFullYear() + " - " + event.ending_time.getFullYear()  + ")";
+  }
+
+  function clickHandler(studyDto, datum, dceId) {
     console.log('Format a valid pop id.');
     return '';
   }

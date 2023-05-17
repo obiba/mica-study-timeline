@@ -7,7 +7,8 @@
 
     var hover = function () { },
       click = function () { },
-      scroll = function () { },
+      tooltipFormatter = function(d, i , datum) { return d.title;},
+      scroll = function () { },            
       orient = "bottom",
       width = null,
       heightWithoutRotation = null,
@@ -144,7 +145,7 @@
               click(d, index, datum);
             })
             .append("title").text(function (d) {
-              return d.title + " (" + d.starting_time.getFullYear() + " - " + d.ending_time.getFullYear()  + ")";
+              return tooltipFormatter(d, i, datum);
             });
 
           // add the label
@@ -160,7 +161,7 @@
               .on("click", function (d, i) {
                 click(d, index, datum);
               })
-              .insert("title", ":first-child").html(datum.title);
+              .insert("title", ":first-child").html(tooltipFormatter(d, i, datum));
           }
 
           if (typeof (datum.icon) != "undefined") {
@@ -347,6 +348,13 @@
 
     timeline.strokeWidth = function (s) {
       strokeWidth = s;
+      return timeline;
+    };
+
+    timeline.tooltipFormatter = function(f) {
+      if (f) {
+        tooltipFormatter = f;
+      }
       return timeline;
     };
 

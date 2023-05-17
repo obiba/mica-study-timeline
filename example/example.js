@@ -1,9 +1,9 @@
 (function () {
 
-  new $.MicaTimeline(new $.StudyDtoParser(), timelinePopupIdFormatter).create("#vis", getStartYearOnly()).addLegend();
+  new $.MicaTimeline(new $.StudyDtoParser(), clickHandler).create("#vis", getStartYearOnly()).addLegend();
 
-  function timelinePopupIdFormatter(studyDto, datum,dceId) {
-    console.log('Format a valid pop id.');
+  function clickHandler(studyDto, datum, dceId) {
+    console.log('Timeline bar clicked', arguments);
     return '';
   }
 

@@ -6,10 +6,11 @@
    * Constructor
    * @constructor
    */
-  $.MicaTimeline = function (dtoParser, clickHandler, useBootstrapTooltip) {
+  $.MicaTimeline = function (dtoParser, clickHandler, useBootstrapTooltip, tooltipFormatter) {
     this.parser = dtoParser;
     this.clickHandler = clickHandler;
     this.useBootstrapTooltip = useBootstrapTooltip;
+    this.tooltipFormatter = tooltipFormatter;
   };
 
   /**
@@ -113,7 +114,8 @@
         if (timeline.clickHandler) {
           timeline.clickHandler.call(null, dto, datum, d);
         }
-      });
+      })
+      .tooltipFormatter(timeline.tooltipFormatter);
 
     d3.select(selectee).append("svg").attr("width", width).datum(timelineData.data).call(chart);
 
