@@ -4,12 +4,15 @@
 
   var currentYear = new Date().getFullYear();
   var locale;
+  var colorGenerator;
+
   /**
    * Constructor
    * @constructor
    */
   $.StudyDtoParser = function (localSetting) {
     locale = localSetting ? localSetting : 'en';
+    colorGenerator = new $.ColorGenerator();
   };
 
   /**
@@ -17,6 +20,14 @@
    * @type {{create: create}}
    */
   $.StudyDtoParser.prototype = {
+
+    colorGenerator: function(generator) {
+      if (generator) {
+        colorGenerator = generator;
+      }
+
+      return this;
+    },
 
     parse: function (studyDto) {
       if (studyDto.populations) {
@@ -129,26 +140,24 @@
   function parsePopulations(studyDto, bounds) {
     if (studyDto === null || !studyDto.hasOwnProperty('populations')) return;
 
-    var colors = new $.ColorGenerator();
     var populations = [];
     var populationData;
-    $.each(studyDto.populations, parsePopulationsInternal(populations, colors));
+    $.each(studyDto.populations, parsePopulationsInternal(populations));
 
     return populations;
 
     /**
      * Defined merely to pass extra arguments to the $.each iterator closure
      * @param populations
-     * @param colors
      * @returns {Function}
      */
-    function parsePopulationsInternal(populations, colors) {
+    function parsePopulationsInternal(populations) {
       return function (i, populationDto) {
         var lines = [];
         populationData = {};
         setId(populationData, populationDto, 'id');
         setTitle(populationData, populationDto, 'name');
-        populationData.color = colors.nextColor();
+        populationData.color = colorGenerator.nextColor();
         if (populationDto.hasOwnProperty('dataCollectionEvents') && populationDto.dataCollectionEvents.length > 0) {
           parseEvents(lines, populationData, populationDto.dataCollectionEvents, bounds);
           // use a loop instead of array.concat() in order to add lines to the same populations variable (same instance)
@@ -207,7 +216,7 @@
         if (i === "0") {
           lines.push(createPopulationItem(populationData, dceDto, bounds));
         } else {
-          var lastItems = lines[lines.length - 1].population.events;
+          var lastItems = lines[lines.length - 1].events;
           var startingTime = dceDto.startDate;
           var endingTime = dceDto.endDate;
           var overlapped = false;
@@ -250,7 +259,7 @@
       function createPopulationItem(populationData, dceDto, bounds) {
         var cloneObject = jQuery.extend({}, populationData);
         cloneObject.events = [createEventItem(dceDto, bounds)];
-        return {population: cloneObject};
+        return cloneObject;
       }
 
       /**

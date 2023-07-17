@@ -5,11 +5,13 @@
   d3.timeline = function () {
     var DISPLAY_TYPES = ["circle", "rect"];
 
-    var hover = function () {},
-      click = function () {},
-      scroll = function () {},
+    var hover = function () { },
+      click = function () { },
+      tooltipFormatter = function(d, i , datum) { return d.title;},
+      scroll = function () { },            
       orient = "bottom",
       width = null,
+      heightWithoutRotation = null,
       height = null,
       tickFormat = {
         format: d3.format("d"),
@@ -21,11 +23,12 @@
       display = "rect",
       beginning = 0,
       ending = 0,
-      margin = {left: 30, right: 30, top: 30, bottom: 30},
+      margin = { left: 30, right: 30, top: 30, bottom: 30 },
       stacked = false,
       rotateTicks = false,
       itemHeight = 10,
-      itemMargin = 5;
+      itemMargin = 5,
+      strokeWidth = 10;
 
     function timeline(gParent) {
       var g = gParent.append("g");
@@ -77,54 +80,54 @@
       var xScale = d3.time.scale()
         .domain([beginning.getFullYear(), ending.getFullYear()])
         .range([margin.left, width - margin.right]);
+      var tickValues = d3.range(beginning.getFullYear(), ending.getFullYear() + 1);
 
       var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient(orient)
         .tickFormat(tickFormat.format)
         .tickSubdivide(1)
-        .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
-        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0)
-      ;
+        .tickValues(tickValues)
+        .tickSize(tickFormat.tickSize, tickFormat.tickSize / 2, 0);
 
       // draw axis
       g.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * maxStack) + ")")
-        .call(xAxis);        
-             
+        .call(xAxis);
+
+      setHeightWithoutRotation(g[0][0].getBoundingClientRect());
+
       if (rotateTicks) {
         g.selectAll("text")
-          .attr("transform", function (d) {
-            return "rotate(" + rotateTicks + ")translate(" +
-              (this.getBBox().width / 2 + 10) + "," + // TODO: change this 10
-              this.getBBox().height / 2 + ")";
-          });
+          .style("text-anchor", "end")
+          .attr("dx", "3em")
+          .attr("dy", ".15em")
+          .attr("transform", "rotate("+rotateTicks+")");
       }
 
-      var gSize = g[0][0].getBoundingClientRect();
-      setHeight();
+      setHeight(g[0][0].getBoundingClientRect());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
-      g.append("g")         
+      g.append("g")
         .attr("class", "grid-tooltip")
-        .attr("transform", "translate(0," + (height - tickFormat.tickSize*2) + ")")
+        .attr("transform", "translate(0," + (heightWithoutRotation - tickFormat.tickSize * 2) + ")")
         .call(make_vertical_gridline());
 
       // Add tooltip
-      d3.selectAll('.grid-tooltip > .tick').each(function(d, i) {
-        d3.select(this).insert("title",":first-child").html(d);
+      d3.selectAll('.grid-tooltip > .tick').each(function (d, i) {
+        d3.select(this).attr("stroke-width", strokeWidth + 'px').insert("title", ":first-child").html(d);
       });
 
       // draw the chart
       g.each(function (d, i) {
         d.forEach(function (datum, index) {
-          var data = datum.population.events;
-          var hasLabel = (typeof(datum.label) != "undefined");
+          var data = datum.events;
+          var hasLabel = (typeof (datum.label) != "undefined");
           g.selectAll("svg").data(data).enter()
             .append("path")
             .attr('id', 'line-path')
@@ -134,7 +137,7 @@
               var rectWidth = getWidth(d, i);
               return rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
-            .style("fill", datum.population.color)
+            .style("fill", datum.color)
             .on("mouseover", function (d, i) {
               hover(d, index, datum);
             })
@@ -142,18 +145,26 @@
               click(d, index, datum);
             })
             .append("title").text(function (d) {
-              return d.title;
+              return tooltipFormatter(d, i, datum);
             });
 
           // add the label
           if (hasLabel) {
-            gParent.append('text')
+            var fullItemHeight = itemHeight + itemMargin;
+            var rowsDown = margin.top + (fullItemHeight / 2) + fullItemHeight * (yAxisMapping[index] || 1);
+
+            gParent.append("text")
               .attr("class", "timeline-label")
-              .attr("transform", "translate(" + 0 + "," + (itemHeight / 2 + margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
-              .text(hasLabel ? datum.label : datum.id);
+              .attr("text-anchor", "end")
+              .attr("transform", "translate(" + (margin.left - itemMargin) + "," + rowsDown + ")")              
+              .text(hasLabel ? datum.label : datum.id)
+              .on("click", function (d, i) {
+                click(d, index, datum);
+              })
+              .insert("title", ":first-child").html(tooltipFormatter(d, i, datum));
           }
 
-          if (typeof(datum.icon) != "undefined") {
+          if (typeof (datum.icon) != "undefined") {
             gParent.append('image')
               .attr("class", "timeline-label")
               .attr("transform", "translate(" + 0 + "," + (margin.top + (itemHeight + itemMargin) * yAxisMapping[index]) + ")")
@@ -168,16 +179,16 @@
         });
       });
 
-      function make_vertical_gridline() {        
+      function make_vertical_gridline() {
         return d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .tickFormat("")
-            .tickSubdivide(1)
-            .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear()+1))
-            .tickSize(-height, tickFormat.tickSize / 2, 0);
+          .scale(xScale)
+          .orient("bottom")
+          .tickFormat("")
+          .tickSubdivide(1)
+          .tickValues(d3.range(beginning.getFullYear(), ending.getFullYear() + 1))
+          .tickSize(-heightWithoutRotation, tickFormat.tickSize / 2, 0);
       }
-    
+
       function getXPos(d, i) {
         return margin.left + (d.starting_time - beginning) * scaleFactor;
       }
@@ -186,7 +197,24 @@
         return (d.ending_time - d.starting_time) * scaleFactor;
       }
 
-      function setHeight() {
+      function setHeightWithoutRotation(gSize) {
+        if (!gParentItem.attr("height")) {
+          if (itemHeight) {
+            // set height based off of item height
+            heightWithoutRotation = gSize.height + gSize.top - gParentSize.top;
+          } else {
+            throw "height of the timeline is not set";
+          }
+        } else {
+          if (!height) {
+            heightWithoutRotation = gParentItem.attr("height");
+          } else {
+            heightWithoutRotation = height;
+          }
+        }
+      }
+
+      function setHeight(gSize) {
         if (!height && !gParentItem.attr("height")) {
           if (itemHeight) {
             // set height based off of item height
@@ -315,6 +343,18 @@
 
     timeline.stack = function () {
       stacked = !stacked;
+      return timeline;
+    };
+
+    timeline.strokeWidth = function (s) {
+      strokeWidth = s;
+      return timeline;
+    };
+
+    timeline.tooltipFormatter = function(f) {
+      if (f) {
+        tooltipFormatter = f;
+      }
       return timeline;
     };
 

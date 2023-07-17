@@ -3,6 +3,7 @@
     fill: none;
     stroke: black;
     shape-rendering: crispEdges;
+    stroke-width: 0.05rem;
 }
 
 .axis text {
@@ -32,5 +33,4 @@ ul.timeline-legend svg {
 .grid-tooltip .tick {
     stroke: red;  /* for debugging */
     opacity: 0 !important;
-    stroke-width: 30px;
 }
