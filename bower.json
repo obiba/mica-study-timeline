@@ -1,10 +1,10 @@
 {
   "name": "mica-study-timeline",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "authors": [
     "Cedric Thiebault <cthiebault@p3g.com>"
   ],
-  "description": "D3 Timeline for Mica Studies", 
+  "description": "D3 Timeline for Mica Studies",
   "main": ["./dist/mica-study-timeline.js", "./dist/mica-study-timeline.css"],
   "dependencies": {
     "d3": "3.5.5",
