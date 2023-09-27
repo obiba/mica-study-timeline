@@ -144,7 +144,7 @@
               var rectX = getXPos(d, i);
               var rectY = getStackPosition(d, i);
               var rectWidth = getWidth(d, i);
-              return d.on_going ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
+              return d.ongoing ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
             .style("fill", datum.color)
             .on("mouseover", function (d, i) {
@@ -754,7 +754,7 @@
     study.model.startDate = makeStartDate(startYear);
 
     var endYear = study.model.endYear;
-    study.model.onGoing = !endYear;
+    study.model.ongoing = !endYear;
     
     if (!endYear) {
       endYear = currentYear > startYear ? currentYear : startYear;
@@ -916,7 +916,7 @@
    * @param bounds
    */
   function setOnGoing(dce, studyDto) {
-    dce.on_going = studyDto.model.onGoing;
+    dce.ongoing = studyDto.model.ongoing;
     dce.ending_time = studyDto.model.endDate;
   }
 
