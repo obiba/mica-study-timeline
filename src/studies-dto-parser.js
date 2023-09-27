@@ -69,7 +69,7 @@
     study.model.startDate = makeStartDate(startYear);
 
     var endYear = study.model.endYear;
-    study.model.onGoing = !endYear;
+    study.model.ongoing = !endYear;
     
     if (!endYear) {
       endYear = currentYear > startYear ? currentYear : startYear;
@@ -231,7 +231,7 @@
    * @param bounds
    */
   function setOnGoing(dce, studyDto) {
-    dce.on_going = studyDto.model.onGoing;
+    dce.ongoing = studyDto.model.ongoing;
     dce.ending_time = studyDto.model.endDate;
   }
 
