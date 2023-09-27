@@ -69,6 +69,8 @@
     study.model.startDate = makeStartDate(startYear);
 
     var endYear = study.model.endYear;
+    study.model.onGoing = !endYear;
+    
     if (!endYear) {
       endYear = currentYear > startYear ? currentYear : startYear;
     }
@@ -198,6 +200,7 @@
     setTitle(study, studyDto, 'name');
     setStartingTime(study, studyDto);
     setEndingTime(study, studyDto);
+    setOnGoing(study, studyDto);
     return study;
   }
 
@@ -218,6 +221,17 @@
    * @param bounds
    */
   function setEndingTime(dce, studyDto) {
+    dce.ending_time = studyDto.model.endDate;
+  }
+
+  /**
+   * Sets the ending time of an event in months
+   * @param dce
+   * @param studyDto
+   * @param bounds
+   */
+  function setOnGoing(dce, studyDto) {
+    dce.on_going = studyDto.model.onGoing;
     dce.ending_time = studyDto.model.endDate;
   }
 
