@@ -85,6 +85,8 @@
           dce.startDate = dce.startDay ? makeDateFromString(dce.startDay) : makeStartDate(dce.startYear, dce.startMonth);
 
           var endYear = dce.endYear;
+          dce.ongoing = !endYear;
+
           if (!endYear) {
             endYear = currentYear > dce.startYear ? currentYear : dce.startYear;
           }
@@ -274,6 +276,7 @@
         setTitle(dce, dceDto, 'name');
         setStartingTime(dce, dceDto, bounds);
         setEndingTime(dce, dceDto, bounds);
+        setOnGoing(study, studyDto);
         return dce;
       }
 
@@ -296,6 +299,18 @@
       function setEndingTime(dce, dceDto, bounds) {
         dce.ending_time = dceDto.endDate;
       }
+
+      /**
+       * Sets the ending time of an event in months
+       * @param dce
+       * @param studyDto
+       * @param bounds
+       */
+      function setOnGoing(dce, studyDto) {
+        dce.ongoing = studyDto.ongoing;
+        dce.ending_time = studyDto.endDate;
+      }
+
     }
   }
 
