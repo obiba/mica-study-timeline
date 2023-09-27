@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.2.0
-* Date: 2023-07-17
+* Date: 2023-09-27
  */
 (function () {
 
@@ -144,7 +144,7 @@
               var rectX = getXPos(d, i);
               var rectY = getStackPosition(d, i);
               var rectWidth = getWidth(d, i);
-              return rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
+              return d.on_going ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
             .style("fill", datum.color)
             .on("mouseover", function (d, i) {
@@ -253,6 +253,15 @@
           }
         }
         // if both are set, do nothing
+      }
+
+      function rightArrowRect(x, y, width, height, radius) {
+        return "M" + x + "," + y +
+          "h" + (width - radius) +
+          "l" + (radius) + ", " + (height/2) +
+          "l" + (-radius) + ", " + (height/2) +
+          "h" + (radius - width) +
+          "z";
       }
 
       function rightRoundedRect(x, y, width, height, radius) {
@@ -745,6 +754,8 @@
     study.model.startDate = makeStartDate(startYear);
 
     var endYear = study.model.endYear;
+    study.model.onGoing = !endYear;
+    
     if (!endYear) {
       endYear = currentYear > startYear ? currentYear : startYear;
     }
@@ -874,6 +885,7 @@
     setTitle(study, studyDto, 'name');
     setStartingTime(study, studyDto);
     setEndingTime(study, studyDto);
+    setOnGoing(study, studyDto);
     return study;
   }
 
@@ -894,6 +906,17 @@
    * @param bounds
    */
   function setEndingTime(dce, studyDto) {
+    dce.ending_time = studyDto.model.endDate;
+  }
+
+  /**
+   * Sets the ending time of an event in months
+   * @param dce
+   * @param studyDto
+   * @param bounds
+   */
+  function setOnGoing(dce, studyDto) {
+    dce.on_going = studyDto.model.onGoing;
     dce.ending_time = studyDto.model.endDate;
   }
 
