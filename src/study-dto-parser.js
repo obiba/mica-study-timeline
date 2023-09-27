@@ -276,7 +276,7 @@
         setTitle(dce, dceDto, 'name');
         setStartingTime(dce, dceDto, bounds);
         setEndingTime(dce, dceDto, bounds);
-        setOnGoing(study, studyDto);
+        setOnGoing(dce, dceDto);
         return dce;
       }
 
