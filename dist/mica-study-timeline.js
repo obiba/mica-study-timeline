@@ -5,7 +5,7 @@
 * along with this program.  If not, see  <http://www.gnu.org/licenses>
 
 * mica-study-timeline - v1.2.0
-* Date: 2023-09-27
+* Date: 2023-10-04
  */
 (function () {
 
@@ -144,7 +144,7 @@
               var rectX = getXPos(d, i);
               var rectY = getStackPosition(d, i);
               var rectWidth = getWidth(d, i);
-              return d.ongoing ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
+              return d.ongoing ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : simpleRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
             .style("fill", datum.color)
             .on("mouseover", function (d, i) {
@@ -261,6 +261,14 @@
           "l" + (radius) + ", " + (height/2) +
           "l" + (-radius) + ", " + (height/2) +
           "h" + (radius - width) +
+          "z";
+      }
+
+      function simpleRect(x, y, width, height, radius) {
+        return "M" + x + "," + y +
+          "h" + (width) +
+          "v" + (height) +
+          "h" + (-width) +
           "z";
       }
 
@@ -761,7 +769,7 @@
   }
 
   /**
-   * Ensurre all dates are normalized; no need to for start/end year/month
+   * Ensure all dates are normalized; no need to for start/end year/month
    * @param studies
    */
   function ensureStartEndDates(study) {
