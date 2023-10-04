@@ -61,7 +61,7 @@
   }
 
   /**
-   * Ensurre all dates are normalized; no need to for start/end year/month
+   * Ensure all dates are normalized; no need to for start/end year/month
    * @param studies
    */
   function ensureStartEndDates(study) {

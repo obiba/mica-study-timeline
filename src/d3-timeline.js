@@ -135,7 +135,7 @@
               var rectX = getXPos(d, i);
               var rectY = getStackPosition(d, i);
               var rectWidth = getWidth(d, i);
-              return d.ongoing ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : rightRoundedRect(rectX, rectY, rectWidth, itemHeight, 5);
+              return d.ongoing ? rightArrowRect(rectX, rectY, rectWidth, itemHeight, 5) : simpleRect(rectX, rectY, rectWidth, itemHeight, 5);
             })
             .style("fill", datum.color)
             .on("mouseover", function (d, i) {
@@ -252,6 +252,14 @@
           "l" + (radius) + ", " + (height/2) +
           "l" + (-radius) + ", " + (height/2) +
           "h" + (radius - width) +
+          "z";
+      }
+
+      function simpleRect(x, y, width, height, radius) {
+        return "M" + x + "," + y +
+          "h" + (width) +
+          "v" + (height) +
+          "h" + (-width) +
           "z";
       }
 
